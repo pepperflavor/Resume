@@ -1,0 +1,32 @@
+{
+  "generated": "2026-09-20",
+  "note": "Second floor staircase for the Guild Interior, re-measured after the art was replaced at the same path. RGBA with a transparent background; no backdrop is baked in. The frame is the alpha>=16 bounding box, which drops the faint sub-6% halo the file carries outside the art. No asset was modified.",
+  "sheets": [
+    {
+      "key": "guild-stairs",
+      "url": "/assets/game/maps/guild/interior/props/guild_interior_second_floor_stairs.png",
+      "width": 1402,
+      "height": 1122,
+      "frames": {
+        "stairs-second-floor": {
+          "x": 323,
+          "y": 101,
+          "width": 806,
+          "height": 886
+        }
+      }
+    }
+  ],
+  "measurements": {
+    "visiblePixels": 479270,
+    "bottomTreadSpan": {
+      "lo": 713,
+      "hi": 798
+    },
+    "topLandingSpan": {
+      "lo": 399,
+      "hi": 435
+    },
+    "aspect": 0.9097
+  }
+}

@@ -1,0 +1,2671 @@
+[
+  {
+    "file": "characters/player_racoon.png",
+    "width": 512,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 4,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 84,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 95,
+          "y": 74,
+          "width": 209,
+          "height": 245,
+          "pixels": 38948
+        },
+        "sourceRect": {
+          "x": 91,
+          "y": 70,
+          "width": 217,
+          "height": 253
+        },
+        "footY": 319,
+        "centerX": 199.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.34285714285714286,
+        "targetRect": {
+          "x": 27,
+          "y": 17,
+          "width": 74,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 393,
+          "y": 69,
+          "width": 201,
+          "height": 251,
+          "pixels": 34975
+        },
+        "sourceRect": {
+          "x": 389,
+          "y": 65,
+          "width": 209,
+          "height": 259
+        },
+        "footY": 320,
+        "centerX": 493.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3346613545816733,
+        "targetRect": {
+          "x": 157,
+          "y": 17,
+          "width": 70,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 688,
+          "y": 69,
+          "width": 202,
+          "height": 256,
+          "pixels": 36030
+        },
+        "sourceRect": {
+          "x": 684,
+          "y": 65,
+          "width": 210,
+          "height": 264
+        },
+        "footY": 325,
+        "centerX": 789,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.328125,
+        "targetRect": {
+          "x": 286,
+          "y": 17,
+          "width": 69,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 0,
+        "col": 3,
+        "sourceCore": {
+          "x": 989,
+          "y": 73,
+          "width": 202,
+          "height": 246,
+          "pixels": 37531
+        },
+        "sourceRect": {
+          "x": 985,
+          "y": 69,
+          "width": 210,
+          "height": 254
+        },
+        "footY": 319,
+        "centerX": 1090,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.34146341463414637,
+        "targetRect": {
+          "x": 412,
+          "y": 17,
+          "width": 72,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 80,
+          "y": 361,
+          "width": 234,
+          "height": 231,
+          "pixels": 33330
+        },
+        "sourceRect": {
+          "x": 76,
+          "y": 357,
+          "width": 242,
+          "height": 239
+        },
+        "footY": 592,
+        "centerX": 197,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.36363636363636365,
+        "targetRect": {
+          "x": 20,
+          "y": 145,
+          "width": 88,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 372,
+          "y": 354,
+          "width": 241,
+          "height": 239,
+          "pixels": 32705
+        },
+        "sourceRect": {
+          "x": 368,
+          "y": 350,
+          "width": 249,
+          "height": 247
+        },
+        "footY": 593,
+        "centerX": 492.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3514644351464435,
+        "targetRect": {
+          "x": 148,
+          "y": 145,
+          "width": 88,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 693,
+          "y": 355,
+          "width": 219,
+          "height": 238,
+          "pixels": 31773
+        },
+        "sourceRect": {
+          "x": 689,
+          "y": 351,
+          "width": 227,
+          "height": 246
+        },
+        "footY": 593,
+        "centerX": 802.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.35294117647058826,
+        "targetRect": {
+          "x": 280,
+          "y": 145,
+          "width": 80,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 1,
+        "col": 3,
+        "sourceCore": {
+          "x": 973,
+          "y": 357,
+          "width": 231,
+          "height": 236,
+          "pixels": 31648
+        },
+        "sourceRect": {
+          "x": 969,
+          "y": 353,
+          "width": 239,
+          "height": 244
+        },
+        "footY": 593,
+        "centerX": 1088.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3559322033898305,
+        "targetRect": {
+          "x": 405,
+          "y": 145,
+          "width": 85,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 74,
+          "y": 631,
+          "width": 228,
+          "height": 239,
+          "pixels": 32340
+        },
+        "sourceRect": {
+          "x": 70,
+          "y": 627,
+          "width": 236,
+          "height": 247
+        },
+        "footY": 870,
+        "centerX": 188,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3514644351464435,
+        "targetRect": {
+          "x": 23,
+          "y": 273,
+          "width": 83,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 378,
+          "y": 632,
+          "width": 222,
+          "height": 238,
+          "pixels": 31417
+        },
+        "sourceRect": {
+          "x": 374,
+          "y": 628,
+          "width": 230,
+          "height": 246
+        },
+        "footY": 870,
+        "centerX": 489,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.35294117647058826,
+        "targetRect": {
+          "x": 151,
+          "y": 273,
+          "width": 81,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 674,
+          "y": 632,
+          "width": 217,
+          "height": 239,
+          "pixels": 31244
+        },
+        "sourceRect": {
+          "x": 670,
+          "y": 628,
+          "width": 225,
+          "height": 247
+        },
+        "footY": 871,
+        "centerX": 782.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3514644351464435,
+        "targetRect": {
+          "x": 280,
+          "y": 273,
+          "width": 79,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 2,
+        "col": 3,
+        "sourceCore": {
+          "x": 965,
+          "y": 630,
+          "width": 236,
+          "height": 237,
+          "pixels": 33080
+        },
+        "sourceRect": {
+          "x": 961,
+          "y": 626,
+          "width": 244,
+          "height": 245
+        },
+        "footY": 867,
+        "centerX": 1083,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.35443037974683544,
+        "targetRect": {
+          "x": 405,
+          "y": 273,
+          "width": 86,
+          "height": 87
+        },
+        "baseline": 102
+      },
+      {
+        "index": 12,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 90,
+          "y": 904,
+          "width": 196,
+          "height": 268,
+          "pixels": 35712
+        },
+        "sourceRect": {
+          "x": 86,
+          "y": 900,
+          "width": 204,
+          "height": 276
+        },
+        "footY": 1118,
+        "centerX": 188,
+        "anchorMethod": "visually estimated supporting feet; hanging tail excluded",
+        "scale": 0.3925233644859813,
+        "targetRect": {
+          "x": 24,
+          "y": 400,
+          "width": 80,
+          "height": 108
+        },
+        "baseline": 102
+      },
+      {
+        "index": 13,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 393,
+          "y": 904,
+          "width": 191,
+          "height": 273,
+          "pixels": 36751
+        },
+        "sourceRect": {
+          "x": 389,
+          "y": 900,
+          "width": 199,
+          "height": 281
+        },
+        "footY": 1120,
+        "centerX": 488.5,
+        "anchorMethod": "visually estimated supporting feet; hanging tail excluded",
+        "scale": 0.3888888888888889,
+        "targetRect": {
+          "x": 153,
+          "y": 400,
+          "width": 77,
+          "height": 109
+        },
+        "baseline": 102
+      },
+      {
+        "index": 14,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 688,
+          "y": 904,
+          "width": 198,
+          "height": 268,
+          "pixels": 37770
+        },
+        "sourceRect": {
+          "x": 684,
+          "y": 900,
+          "width": 206,
+          "height": 276
+        },
+        "footY": 1115,
+        "centerX": 787,
+        "anchorMethod": "visually estimated supporting feet; hanging tail excluded",
+        "scale": 0.3981042654028436,
+        "targetRect": {
+          "x": 279,
+          "y": 400,
+          "width": 82,
+          "height": 110
+        },
+        "baseline": 102
+      },
+      {
+        "index": 15,
+        "row": 3,
+        "col": 3,
+        "sourceCore": {
+          "x": 993,
+          "y": 904,
+          "width": 198,
+          "height": 274,
+          "pixels": 36382
+        },
+        "sourceRect": {
+          "x": 989,
+          "y": 900,
+          "width": 206,
+          "height": 282
+        },
+        "footY": 1122,
+        "centerX": 1092,
+        "anchorMethod": "visually estimated supporting feet; hanging tail excluded",
+        "scale": 0.3853211009174312,
+        "targetRect": {
+          "x": 408,
+          "y": 400,
+          "width": 79,
+          "height": 109
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_bear_blacksmith.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 100,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 100,
+          "y": 47,
+          "width": 274,
+          "height": 312,
+          "pixels": 61151
+        },
+        "sourceRect": {
+          "x": 96,
+          "y": 43,
+          "width": 282,
+          "height": 320
+        },
+        "footY": 359,
+        "centerX": 237,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32051282051282054,
+        "targetRect": {
+          "x": 19,
+          "y": 1,
+          "width": 90,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 433,
+          "y": 46,
+          "width": 262,
+          "height": 316,
+          "pixels": 58937
+        },
+        "sourceRect": {
+          "x": 429,
+          "y": 42,
+          "width": 270,
+          "height": 324
+        },
+        "footY": 362,
+        "centerX": 564,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.31645569620253167,
+        "targetRect": {
+          "x": 149,
+          "y": 1,
+          "width": 85,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 740,
+          "y": 48,
+          "width": 264,
+          "height": 312,
+          "pixels": 58670
+        },
+        "sourceRect": {
+          "x": 736,
+          "y": 44,
+          "width": 272,
+          "height": 320
+        },
+        "footY": 360,
+        "centerX": 872,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32051282051282054,
+        "targetRect": {
+          "x": 276,
+          "y": 1,
+          "width": 87,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 102,
+          "y": 383,
+          "width": 238,
+          "height": 310,
+          "pixels": 50951
+        },
+        "sourceRect": {
+          "x": 98,
+          "y": 379,
+          "width": 246,
+          "height": 318
+        },
+        "footY": 693,
+        "centerX": 221,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3225806451612903,
+        "targetRect": {
+          "x": 24,
+          "y": 129,
+          "width": 79,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 427,
+          "y": 386,
+          "width": 237,
+          "height": 304,
+          "pixels": 48750
+        },
+        "sourceRect": {
+          "x": 423,
+          "y": 382,
+          "width": 245,
+          "height": 312
+        },
+        "footY": 690,
+        "centerX": 545.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32894736842105265,
+        "targetRect": {
+          "x": 152,
+          "y": 129,
+          "width": 81,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 753,
+          "y": 386,
+          "width": 237,
+          "height": 313,
+          "pixels": 47854
+        },
+        "sourceRect": {
+          "x": 749,
+          "y": 382,
+          "width": 245,
+          "height": 321
+        },
+        "footY": 699,
+        "centerX": 871.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3194888178913738,
+        "targetRect": {
+          "x": 281,
+          "y": 129,
+          "width": 78,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 92,
+          "y": 724,
+          "width": 235,
+          "height": 323,
+          "pixels": 50660
+        },
+        "sourceRect": {
+          "x": 88,
+          "y": 720,
+          "width": 243,
+          "height": 331
+        },
+        "footY": 1047,
+        "centerX": 209.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30959752321981426,
+        "targetRect": {
+          "x": 26,
+          "y": 257,
+          "width": 75,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 420,
+          "y": 729,
+          "width": 239,
+          "height": 314,
+          "pixels": 50683
+        },
+        "sourceRect": {
+          "x": 416,
+          "y": 725,
+          "width": 247,
+          "height": 322
+        },
+        "footY": 1043,
+        "centerX": 539.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3184713375796178,
+        "targetRect": {
+          "x": 153,
+          "y": 257,
+          "width": 79,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 744,
+          "y": 726,
+          "width": 233,
+          "height": 321,
+          "pixels": 47857
+        },
+        "sourceRect": {
+          "x": 740,
+          "y": 722,
+          "width": 241,
+          "height": 329
+        },
+        "footY": 1047,
+        "centerX": 860.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3115264797507788,
+        "targetRect": {
+          "x": 282,
+          "y": 257,
+          "width": 75,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 73,
+          "y": 1067,
+          "width": 255,
+          "height": 323,
+          "pixels": 59536
+        },
+        "sourceRect": {
+          "x": 69,
+          "y": 1063,
+          "width": 263,
+          "height": 331
+        },
+        "footY": 1390,
+        "centerX": 200.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30959752321981426,
+        "targetRect": {
+          "x": 23,
+          "y": 385,
+          "width": 81,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 394,
+          "y": 1070,
+          "width": 265,
+          "height": 320,
+          "pixels": 59288
+        },
+        "sourceRect": {
+          "x": 390,
+          "y": 1066,
+          "width": 273,
+          "height": 328
+        },
+        "footY": 1390,
+        "centerX": 526.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3125,
+        "targetRect": {
+          "x": 149,
+          "y": 385,
+          "width": 85,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 719,
+          "y": 1069,
+          "width": 268,
+          "height": 321,
+          "pixels": 59758
+        },
+        "sourceRect": {
+          "x": 715,
+          "y": 1065,
+          "width": 276,
+          "height": 329
+        },
+        "footY": 1390,
+        "centerX": 853,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3115264797507788,
+        "targetRect": {
+          "x": 277,
+          "y": 385,
+          "width": 86,
+          "height": 102
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_bird.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 60,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 85,
+          "y": 106,
+          "width": 251,
+          "height": 289,
+          "pixels": 43771
+        },
+        "sourceRect": {
+          "x": 81,
+          "y": 102,
+          "width": 259,
+          "height": 297
+        },
+        "footY": 395,
+        "centerX": 210.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20761245674740483,
+        "targetRect": {
+          "x": 37,
+          "y": 41,
+          "width": 54,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 427,
+          "y": 105,
+          "width": 250,
+          "height": 290,
+          "pixels": 42408
+        },
+        "sourceRect": {
+          "x": 423,
+          "y": 101,
+          "width": 258,
+          "height": 298
+        },
+        "footY": 395,
+        "centerX": 552,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20689655172413793,
+        "targetRect": {
+          "x": 165,
+          "y": 41,
+          "width": 53,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 774,
+          "y": 109,
+          "width": 240,
+          "height": 287,
+          "pixels": 42654
+        },
+        "sourceRect": {
+          "x": 770,
+          "y": 105,
+          "width": 248,
+          "height": 295
+        },
+        "footY": 396,
+        "centerX": 894,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20905923344947736,
+        "targetRect": {
+          "x": 294,
+          "y": 41,
+          "width": 52,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 89,
+          "y": 444,
+          "width": 249,
+          "height": 258,
+          "pixels": 36965
+        },
+        "sourceRect": {
+          "x": 85,
+          "y": 440,
+          "width": 257,
+          "height": 266
+        },
+        "footY": 702,
+        "centerX": 213.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.23255813953488372,
+        "targetRect": {
+          "x": 34,
+          "y": 169,
+          "width": 60,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 426,
+          "y": 444,
+          "width": 254,
+          "height": 263,
+          "pixels": 37683
+        },
+        "sourceRect": {
+          "x": 422,
+          "y": 440,
+          "width": 262,
+          "height": 271
+        },
+        "footY": 707,
+        "centerX": 553,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.22813688212927757,
+        "targetRect": {
+          "x": 162,
+          "y": 169,
+          "width": 60,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 763,
+          "y": 444,
+          "width": 254,
+          "height": 264,
+          "pixels": 38005
+        },
+        "sourceRect": {
+          "x": 759,
+          "y": 440,
+          "width": 262,
+          "height": 272
+        },
+        "footY": 708,
+        "centerX": 890,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.22727272727272727,
+        "targetRect": {
+          "x": 290,
+          "y": 169,
+          "width": 60,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 82,
+          "y": 757,
+          "width": 247,
+          "height": 267,
+          "pixels": 39003
+        },
+        "sourceRect": {
+          "x": 78,
+          "y": 753,
+          "width": 255,
+          "height": 275
+        },
+        "footY": 1024,
+        "centerX": 205.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.2247191011235955,
+        "targetRect": {
+          "x": 35,
+          "y": 297,
+          "width": 57,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 425,
+          "y": 757,
+          "width": 255,
+          "height": 274,
+          "pixels": 39774
+        },
+        "sourceRect": {
+          "x": 421,
+          "y": 753,
+          "width": 263,
+          "height": 282
+        },
+        "footY": 1031,
+        "centerX": 552.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21897810218978103,
+        "targetRect": {
+          "x": 163,
+          "y": 297,
+          "width": 58,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 763,
+          "y": 757,
+          "width": 253,
+          "height": 274,
+          "pixels": 39466
+        },
+        "sourceRect": {
+          "x": 759,
+          "y": 753,
+          "width": 261,
+          "height": 282
+        },
+        "footY": 1031,
+        "centerX": 889.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21897810218978103,
+        "targetRect": {
+          "x": 291,
+          "y": 297,
+          "width": 57,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 82,
+          "y": 1071,
+          "width": 243,
+          "height": 288,
+          "pixels": 42434
+        },
+        "sourceRect": {
+          "x": 78,
+          "y": 1067,
+          "width": 251,
+          "height": 296
+        },
+        "footY": 1359,
+        "centerX": 203.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20833333333333334,
+        "targetRect": {
+          "x": 38,
+          "y": 425,
+          "width": 52,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 420,
+          "y": 1070,
+          "width": 241,
+          "height": 293,
+          "pixels": 41687
+        },
+        "sourceRect": {
+          "x": 416,
+          "y": 1066,
+          "width": 249,
+          "height": 301
+        },
+        "footY": 1363,
+        "centerX": 540.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20477815699658702,
+        "targetRect": {
+          "x": 167,
+          "y": 425,
+          "width": 51,
+          "height": 62
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 781,
+          "y": 1072,
+          "width": 239,
+          "height": 291,
+          "pixels": 42040
+        },
+        "sourceRect": {
+          "x": 777,
+          "y": 1068,
+          "width": 247,
+          "height": 299
+        },
+        "footY": 1363,
+        "centerX": 900.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20618556701030927,
+        "targetRect": {
+          "x": 295,
+          "y": 425,
+          "width": 51,
+          "height": 62
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_cat_alchemist.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 100,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 87,
+          "y": 37,
+          "width": 252,
+          "height": 329,
+          "pixels": 59695
+        },
+        "sourceRect": {
+          "x": 83,
+          "y": 33,
+          "width": 260,
+          "height": 337
+        },
+        "footY": 366,
+        "centerX": 213,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.303951367781155,
+        "targetRect": {
+          "x": 24,
+          "y": 1,
+          "width": 79,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 426,
+          "y": 34,
+          "width": 259,
+          "height": 335,
+          "pixels": 59572
+        },
+        "sourceRect": {
+          "x": 422,
+          "y": 30,
+          "width": 267,
+          "height": 343
+        },
+        "footY": 369,
+        "centerX": 555.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.29850746268656714,
+        "targetRect": {
+          "x": 152,
+          "y": 1,
+          "width": 80,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 776,
+          "y": 34,
+          "width": 245,
+          "height": 332,
+          "pixels": 58627
+        },
+        "sourceRect": {
+          "x": 772,
+          "y": 30,
+          "width": 253,
+          "height": 340
+        },
+        "footY": 366,
+        "centerX": 898.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30120481927710846,
+        "targetRect": {
+          "x": 282,
+          "y": 1,
+          "width": 76,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 81,
+          "y": 389,
+          "width": 273,
+          "height": 308,
+          "pixels": 53067
+        },
+        "sourceRect": {
+          "x": 77,
+          "y": 385,
+          "width": 281,
+          "height": 316
+        },
+        "footY": 697,
+        "centerX": 217.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3246753246753247,
+        "targetRect": {
+          "x": 18,
+          "y": 129,
+          "width": 91,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 428,
+          "y": 389,
+          "width": 265,
+          "height": 308,
+          "pixels": 52530
+        },
+        "sourceRect": {
+          "x": 424,
+          "y": 385,
+          "width": 273,
+          "height": 316
+        },
+        "footY": 697,
+        "centerX": 560.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3246753246753247,
+        "targetRect": {
+          "x": 148,
+          "y": 129,
+          "width": 89,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 777,
+          "y": 389,
+          "width": 263,
+          "height": 310,
+          "pixels": 51674
+        },
+        "sourceRect": {
+          "x": 773,
+          "y": 385,
+          "width": 271,
+          "height": 318
+        },
+        "footY": 699,
+        "centerX": 908.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3225806451612903,
+        "targetRect": {
+          "x": 276,
+          "y": 129,
+          "width": 87,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 70,
+          "y": 729,
+          "width": 255,
+          "height": 301,
+          "pixels": 50906
+        },
+        "sourceRect": {
+          "x": 66,
+          "y": 725,
+          "width": 263,
+          "height": 309
+        },
+        "footY": 1030,
+        "centerX": 197.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.33222591362126247,
+        "targetRect": {
+          "x": 20,
+          "y": 257,
+          "width": 87,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 410,
+          "y": 729,
+          "width": 262,
+          "height": 304,
+          "pixels": 52371
+        },
+        "sourceRect": {
+          "x": 406,
+          "y": 725,
+          "width": 270,
+          "height": 312
+        },
+        "footY": 1033,
+        "centerX": 541,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32894736842105265,
+        "targetRect": {
+          "x": 148,
+          "y": 257,
+          "width": 89,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 761,
+          "y": 730,
+          "width": 256,
+          "height": 303,
+          "pixels": 50702
+        },
+        "sourceRect": {
+          "x": 757,
+          "y": 726,
+          "width": 264,
+          "height": 311
+        },
+        "footY": 1033,
+        "centerX": 889,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.33003300330033003,
+        "targetRect": {
+          "x": 276,
+          "y": 257,
+          "width": 87,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 83,
+          "y": 1062,
+          "width": 226,
+          "height": 330,
+          "pixels": 52712
+        },
+        "sourceRect": {
+          "x": 79,
+          "y": 1058,
+          "width": 234,
+          "height": 338
+        },
+        "footY": 1392,
+        "centerX": 196,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30303030303030304,
+        "targetRect": {
+          "x": 29,
+          "y": 385,
+          "width": 71,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 429,
+          "y": 1062,
+          "width": 224,
+          "height": 332,
+          "pixels": 52739
+        },
+        "sourceRect": {
+          "x": 425,
+          "y": 1058,
+          "width": 232,
+          "height": 340
+        },
+        "footY": 1394,
+        "centerX": 541,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30120481927710846,
+        "targetRect": {
+          "x": 157,
+          "y": 385,
+          "width": 70,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 777,
+          "y": 1062,
+          "width": 221,
+          "height": 332,
+          "pixels": 52568
+        },
+        "sourceRect": {
+          "x": 773,
+          "y": 1058,
+          "width": 229,
+          "height": 340
+        },
+        "footY": 1394,
+        "centerX": 887.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30120481927710846,
+        "targetRect": {
+          "x": 286,
+          "y": 385,
+          "width": 69,
+          "height": 102
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_chicken.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 64,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 97,
+          "y": 55,
+          "width": 226,
+          "height": 317,
+          "pixels": 47371
+        },
+        "sourceRect": {
+          "x": 93,
+          "y": 51,
+          "width": 234,
+          "height": 325
+        },
+        "footY": 372,
+        "centerX": 210,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20189274447949526,
+        "targetRect": {
+          "x": 40,
+          "y": 37,
+          "width": 47,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 435,
+          "y": 53,
+          "width": 231,
+          "height": 319,
+          "pixels": 46952
+        },
+        "sourceRect": {
+          "x": 431,
+          "y": 49,
+          "width": 239,
+          "height": 327
+        },
+        "footY": 372,
+        "centerX": 550.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.2006269592476489,
+        "targetRect": {
+          "x": 168,
+          "y": 37,
+          "width": 48,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 783,
+          "y": 54,
+          "width": 217,
+          "height": 318,
+          "pixels": 46189
+        },
+        "sourceRect": {
+          "x": 779,
+          "y": 50,
+          "width": 225,
+          "height": 326
+        },
+        "footY": 372,
+        "centerX": 891.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20125786163522014,
+        "targetRect": {
+          "x": 297,
+          "y": 37,
+          "width": 45,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 80,
+          "y": 408,
+          "width": 256,
+          "height": 295,
+          "pixels": 44634
+        },
+        "sourceRect": {
+          "x": 76,
+          "y": 404,
+          "width": 264,
+          "height": 303
+        },
+        "footY": 703,
+        "centerX": 208,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21694915254237288,
+        "targetRect": {
+          "x": 35,
+          "y": 165,
+          "width": 57,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 430,
+          "y": 409,
+          "width": 251,
+          "height": 294,
+          "pixels": 42919
+        },
+        "sourceRect": {
+          "x": 426,
+          "y": 405,
+          "width": 259,
+          "height": 302
+        },
+        "footY": 703,
+        "centerX": 555.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21768707482993196,
+        "targetRect": {
+          "x": 164,
+          "y": 165,
+          "width": 56,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 768,
+          "y": 409,
+          "width": 258,
+          "height": 295,
+          "pixels": 44312
+        },
+        "sourceRect": {
+          "x": 764,
+          "y": 405,
+          "width": 266,
+          "height": 303
+        },
+        "footY": 704,
+        "centerX": 897,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21694915254237288,
+        "targetRect": {
+          "x": 291,
+          "y": 165,
+          "width": 58,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 76,
+          "y": 737,
+          "width": 255,
+          "height": 297,
+          "pixels": 44789
+        },
+        "sourceRect": {
+          "x": 72,
+          "y": 733,
+          "width": 263,
+          "height": 305
+        },
+        "footY": 1034,
+        "centerX": 203.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21548821548821548,
+        "targetRect": {
+          "x": 36,
+          "y": 293,
+          "width": 57,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 416,
+          "y": 737,
+          "width": 264,
+          "height": 297,
+          "pixels": 45513
+        },
+        "sourceRect": {
+          "x": 412,
+          "y": 733,
+          "width": 272,
+          "height": 305
+        },
+        "footY": 1034,
+        "centerX": 548,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21548821548821548,
+        "targetRect": {
+          "x": 163,
+          "y": 293,
+          "width": 59,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 776,
+          "y": 739,
+          "width": 261,
+          "height": 295,
+          "pixels": 45939
+        },
+        "sourceRect": {
+          "x": 772,
+          "y": 735,
+          "width": 269,
+          "height": 303
+        },
+        "footY": 1034,
+        "centerX": 906.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.21694915254237288,
+        "targetRect": {
+          "x": 291,
+          "y": 293,
+          "width": 58,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 92,
+          "y": 1061,
+          "width": 228,
+          "height": 313,
+          "pixels": 45034
+        },
+        "sourceRect": {
+          "x": 88,
+          "y": 1057,
+          "width": 236,
+          "height": 321
+        },
+        "footY": 1374,
+        "centerX": 206,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20447284345047922,
+        "targetRect": {
+          "x": 40,
+          "y": 421,
+          "width": 48,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 428,
+          "y": 1060,
+          "width": 234,
+          "height": 315,
+          "pixels": 45915
+        },
+        "sourceRect": {
+          "x": 424,
+          "y": 1056,
+          "width": 242,
+          "height": 323
+        },
+        "footY": 1375,
+        "centerX": 545,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20317460317460317,
+        "targetRect": {
+          "x": 167,
+          "y": 421,
+          "width": 49,
+          "height": 66
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 777,
+          "y": 1060,
+          "width": 226,
+          "height": 315,
+          "pixels": 45049
+        },
+        "sourceRect": {
+          "x": 773,
+          "y": 1056,
+          "width": 234,
+          "height": 323
+        },
+        "footY": 1375,
+        "centerX": 890,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.20317460317460317,
+        "targetRect": {
+          "x": 296,
+          "y": 421,
+          "width": 48,
+          "height": 66
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_deer_shopkeeper.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 100,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 101,
+          "y": 44,
+          "width": 235,
+          "height": 317,
+          "pixels": 46590
+        },
+        "sourceRect": {
+          "x": 97,
+          "y": 40,
+          "width": 243,
+          "height": 325
+        },
+        "footY": 361,
+        "centerX": 218.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.31545741324921134,
+        "targetRect": {
+          "x": 26,
+          "y": 1,
+          "width": 77,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 428,
+          "y": 44,
+          "width": 228,
+          "height": 317,
+          "pixels": 44937
+        },
+        "sourceRect": {
+          "x": 424,
+          "y": 40,
+          "width": 236,
+          "height": 325
+        },
+        "footY": 361,
+        "centerX": 542,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.31545741324921134,
+        "targetRect": {
+          "x": 155,
+          "y": 1,
+          "width": 74,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 756,
+          "y": 42,
+          "width": 228,
+          "height": 319,
+          "pixels": 45920
+        },
+        "sourceRect": {
+          "x": 752,
+          "y": 38,
+          "width": 236,
+          "height": 327
+        },
+        "footY": 361,
+        "centerX": 870,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.31347962382445144,
+        "targetRect": {
+          "x": 283,
+          "y": 1,
+          "width": 74,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 95,
+          "y": 388,
+          "width": 222,
+          "height": 292,
+          "pixels": 39082
+        },
+        "sourceRect": {
+          "x": 91,
+          "y": 384,
+          "width": 230,
+          "height": 300
+        },
+        "footY": 680,
+        "centerX": 206,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3424657534246575,
+        "targetRect": {
+          "x": 25,
+          "y": 129,
+          "width": 79,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 425,
+          "y": 394,
+          "width": 234,
+          "height": 286,
+          "pixels": 39698
+        },
+        "sourceRect": {
+          "x": 421,
+          "y": 390,
+          "width": 242,
+          "height": 294
+        },
+        "footY": 680,
+        "centerX": 542,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.34965034965034963,
+        "targetRect": {
+          "x": 150,
+          "y": 129,
+          "width": 85,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 764,
+          "y": 388,
+          "width": 232,
+          "height": 294,
+          "pixels": 39159
+        },
+        "sourceRect": {
+          "x": 760,
+          "y": 384,
+          "width": 240,
+          "height": 302
+        },
+        "footY": 682,
+        "centerX": 880,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3401360544217687,
+        "targetRect": {
+          "x": 279,
+          "y": 129,
+          "width": 82,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 97,
+          "y": 718,
+          "width": 232,
+          "height": 297,
+          "pixels": 40762
+        },
+        "sourceRect": {
+          "x": 93,
+          "y": 714,
+          "width": 240,
+          "height": 305
+        },
+        "footY": 1015,
+        "centerX": 213,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3367003367003367,
+        "targetRect": {
+          "x": 24,
+          "y": 257,
+          "width": 81,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 421,
+          "y": 723,
+          "width": 235,
+          "height": 292,
+          "pixels": 39697
+        },
+        "sourceRect": {
+          "x": 417,
+          "y": 719,
+          "width": 243,
+          "height": 300
+        },
+        "footY": 1015,
+        "centerX": 538.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3424657534246575,
+        "targetRect": {
+          "x": 150,
+          "y": 257,
+          "width": 83,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 756,
+          "y": 719,
+          "width": 230,
+          "height": 296,
+          "pixels": 40396
+        },
+        "sourceRect": {
+          "x": 752,
+          "y": 715,
+          "width": 238,
+          "height": 304
+        },
+        "footY": 1015,
+        "centerX": 871,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.33783783783783783,
+        "targetRect": {
+          "x": 280,
+          "y": 257,
+          "width": 80,
+          "height": 103
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 106,
+          "y": 1048,
+          "width": 230,
+          "height": 331,
+          "pixels": 46649
+        },
+        "sourceRect": {
+          "x": 102,
+          "y": 1044,
+          "width": 238,
+          "height": 339
+        },
+        "footY": 1379,
+        "centerX": 221,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3021148036253776,
+        "targetRect": {
+          "x": 28,
+          "y": 385,
+          "width": 72,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 431,
+          "y": 1044,
+          "width": 223,
+          "height": 341,
+          "pixels": 47521
+        },
+        "sourceRect": {
+          "x": 427,
+          "y": 1040,
+          "width": 231,
+          "height": 349
+        },
+        "footY": 1385,
+        "centerX": 542.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.2932551319648094,
+        "targetRect": {
+          "x": 158,
+          "y": 385,
+          "width": 68,
+          "height": 102
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 757,
+          "y": 1047,
+          "width": 229,
+          "height": 338,
+          "pixels": 46146
+        },
+        "sourceRect": {
+          "x": 753,
+          "y": 1043,
+          "width": 237,
+          "height": 346
+        },
+        "footY": 1385,
+        "centerX": 871.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.2958579881656805,
+        "targetRect": {
+          "x": 285,
+          "y": 385,
+          "width": 70,
+          "height": 102
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_fox_information.png",
+    "width": 384,
+    "height": 512,
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "cols": 3,
+    "rows": 4,
+    "baseline": 102,
+    "bodyHeight": 94,
+    "frames": [
+      {
+        "index": 0,
+        "row": 0,
+        "col": 0,
+        "sourceCore": {
+          "x": 103,
+          "y": 47,
+          "width": 257,
+          "height": 307,
+          "pixels": 53933
+        },
+        "sourceRect": {
+          "x": 99,
+          "y": 43,
+          "width": 265,
+          "height": 315
+        },
+        "footY": 354,
+        "centerX": 231.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.30618892508143325,
+        "targetRect": {
+          "x": 23,
+          "y": 7,
+          "width": 81,
+          "height": 96
+        },
+        "baseline": 102
+      },
+      {
+        "index": 1,
+        "row": 0,
+        "col": 1,
+        "sourceCore": {
+          "x": 434,
+          "y": 47,
+          "width": 257,
+          "height": 314,
+          "pixels": 54835
+        },
+        "sourceRect": {
+          "x": 430,
+          "y": 43,
+          "width": 265,
+          "height": 322
+        },
+        "footY": 361,
+        "centerX": 562.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.29936305732484075,
+        "targetRect": {
+          "x": 152,
+          "y": 7,
+          "width": 79,
+          "height": 96
+        },
+        "baseline": 102
+      },
+      {
+        "index": 2,
+        "row": 0,
+        "col": 2,
+        "sourceCore": {
+          "x": 764,
+          "y": 47,
+          "width": 256,
+          "height": 314,
+          "pixels": 53931
+        },
+        "sourceRect": {
+          "x": 760,
+          "y": 43,
+          "width": 264,
+          "height": 322
+        },
+        "footY": 361,
+        "centerX": 892,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.29936305732484075,
+        "targetRect": {
+          "x": 280,
+          "y": 7,
+          "width": 79,
+          "height": 96
+        },
+        "baseline": 102
+      },
+      {
+        "index": 3,
+        "row": 1,
+        "col": 0,
+        "sourceCore": {
+          "x": 85,
+          "y": 385,
+          "width": 270,
+          "height": 281,
+          "pixels": 46644
+        },
+        "sourceRect": {
+          "x": 81,
+          "y": 381,
+          "width": 278,
+          "height": 289
+        },
+        "footY": 666,
+        "centerX": 220,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.33451957295373663,
+        "targetRect": {
+          "x": 18,
+          "y": 135,
+          "width": 93,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 4,
+        "row": 1,
+        "col": 1,
+        "sourceCore": {
+          "x": 424,
+          "y": 385,
+          "width": 271,
+          "height": 281,
+          "pixels": 45216
+        },
+        "sourceRect": {
+          "x": 420,
+          "y": 381,
+          "width": 279,
+          "height": 289
+        },
+        "footY": 666,
+        "centerX": 559.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.33451957295373663,
+        "targetRect": {
+          "x": 145,
+          "y": 135,
+          "width": 93,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 5,
+        "row": 1,
+        "col": 2,
+        "sourceCore": {
+          "x": 764,
+          "y": 383,
+          "width": 267,
+          "height": 285,
+          "pixels": 46319
+        },
+        "sourceRect": {
+          "x": 760,
+          "y": 379,
+          "width": 275,
+          "height": 293
+        },
+        "footY": 668,
+        "centerX": 897.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3298245614035088,
+        "targetRect": {
+          "x": 275,
+          "y": 135,
+          "width": 91,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 6,
+        "row": 2,
+        "col": 0,
+        "sourceCore": {
+          "x": 57,
+          "y": 699,
+          "width": 263,
+          "height": 288,
+          "pixels": 46038
+        },
+        "sourceRect": {
+          "x": 53,
+          "y": 695,
+          "width": 271,
+          "height": 296
+        },
+        "footY": 987,
+        "centerX": 188.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.3263888888888889,
+        "targetRect": {
+          "x": 20,
+          "y": 263,
+          "width": 88,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 7,
+        "row": 2,
+        "col": 1,
+        "sourceCore": {
+          "x": 405,
+          "y": 699,
+          "width": 276,
+          "height": 287,
+          "pixels": 46177
+        },
+        "sourceRect": {
+          "x": 401,
+          "y": 695,
+          "width": 284,
+          "height": 295
+        },
+        "footY": 986,
+        "centerX": 543,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32752613240418116,
+        "targetRect": {
+          "x": 145,
+          "y": 263,
+          "width": 93,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 8,
+        "row": 2,
+        "col": 2,
+        "sourceCore": {
+          "x": 763,
+          "y": 700,
+          "width": 262,
+          "height": 289,
+          "pixels": 45675
+        },
+        "sourceRect": {
+          "x": 759,
+          "y": 696,
+          "width": 270,
+          "height": 297
+        },
+        "footY": 989,
+        "centerX": 894,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.32525951557093424,
+        "targetRect": {
+          "x": 276,
+          "y": 263,
+          "width": 88,
+          "height": 97
+        },
+        "baseline": 102
+      },
+      {
+        "index": 9,
+        "row": 3,
+        "col": 0,
+        "sourceCore": {
+          "x": 86,
+          "y": 1018,
+          "width": 240,
+          "height": 364,
+          "pixels": 59886
+        },
+        "sourceRect": {
+          "x": 82,
+          "y": 1014,
+          "width": 248,
+          "height": 372
+        },
+        "footY": 1382,
+        "centerX": 206,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.25824175824175827,
+        "targetRect": {
+          "x": 32,
+          "y": 391,
+          "width": 64,
+          "height": 96
+        },
+        "baseline": 102
+      },
+      {
+        "index": 10,
+        "row": 3,
+        "col": 1,
+        "sourceCore": {
+          "x": 426,
+          "y": 1019,
+          "width": 231,
+          "height": 364,
+          "pixels": 59492
+        },
+        "sourceRect": {
+          "x": 422,
+          "y": 1015,
+          "width": 239,
+          "height": 372
+        },
+        "footY": 1383,
+        "centerX": 541.5,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.25824175824175827,
+        "targetRect": {
+          "x": 161,
+          "y": 391,
+          "width": 62,
+          "height": 96
+        },
+        "baseline": 102
+      },
+      {
+        "index": 11,
+        "row": 3,
+        "col": 2,
+        "sourceCore": {
+          "x": 769,
+          "y": 1017,
+          "width": 232,
+          "height": 366,
+          "pixels": 60515
+        },
+        "sourceRect": {
+          "x": 765,
+          "y": 1013,
+          "width": 240,
+          "height": 374
+        },
+        "footY": 1383,
+        "centerX": 885,
+        "anchorMethod": "bottom of visible supporting foot / silhouette",
+        "scale": 0.2568306010928962,
+        "targetRect": {
+          "x": 289,
+          "y": 391,
+          "width": 62,
+          "height": 96
+        },
+        "baseline": 102
+      }
+    ]
+  },
+  {
+    "file": "items/golden_cat_world.png",
+    "width": 128,
+    "height": 128,
+    "source": "items/golden_cat_item.png",
+    "sourceRect": {
+      "x": 201,
+      "y": 101,
+      "width": 717,
+      "height": 837
+    },
+    "scale": 0.14336917562724014
+  },
+  {
+    "file": "items/golden_cat_icon.png",
+    "width": 64,
+    "height": 64,
+    "source": "items/golden_cat_item.png",
+    "sourceRect": {
+      "x": 1032,
+      "y": 547,
+      "width": 279,
+      "height": 321
+    },
+    "scale": 0.17445482866043613
+  }
+]

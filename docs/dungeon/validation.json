@@ -1,0 +1,13 @@
+{
+  "passes": [
+    "Home route, About, north entry cancel/reopen/confirm/fade/spawn",
+    "Timed BACK/CHANTING/FRONT WATCHING and stationary return to BACK",
+    "Guide single-page dialogue",
+    "Take/leave choice, world hide, HUD, dungeon exit preserving quest state",
+    "WATCHING movement -> CHASE -> contact -> Game Over; Enter resets quest/HUD and Hub spawn without URL change",
+    "Retry respawns statue/resets boss; exit without statue",
+    "Market round trip and Fox dialogue regression",
+    "One Canvas; no console/page/network errors"
+  ],
+  "errors": []
+}

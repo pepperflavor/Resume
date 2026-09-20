@@ -1,0 +1,315 @@
+[
+  {
+    "file": "npc/npc_adventurer_merchant.png",
+    "sha256": "13b1063d5bc21ca5c45a484fb5b9099777bb2991238a67c47c4124c59d07eab5",
+    "width": 1086,
+    "height": 1448,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 795644,
+    "partial": 776411,
+    "components": [
+      {
+        "x": 68,
+        "y": 17,
+        "width": 275,
+        "height": 326,
+        "pixels": 61217
+      },
+      {
+        "x": 425,
+        "y": 25,
+        "width": 273,
+        "height": 325,
+        "pixels": 57617
+      },
+      {
+        "x": 779,
+        "y": 25,
+        "width": 271,
+        "height": 325,
+        "pixels": 59189
+      },
+      {
+        "x": 68,
+        "y": 377,
+        "width": 290,
+        "height": 315,
+        "pixels": 59087
+      },
+      {
+        "x": 420,
+        "y": 379,
+        "width": 293,
+        "height": 314,
+        "pixels": 56252
+      },
+      {
+        "x": 779,
+        "y": 381,
+        "width": 287,
+        "height": 314,
+        "pixels": 57880
+      },
+      {
+        "x": 31,
+        "y": 731,
+        "width": 280,
+        "height": 306,
+        "pixels": 55717
+      },
+      {
+        "x": 385,
+        "y": 734,
+        "width": 274,
+        "height": 311,
+        "pixels": 55208
+      },
+      {
+        "x": 740,
+        "y": 738,
+        "width": 274,
+        "height": 308,
+        "pixels": 56519
+      },
+      {
+        "x": 70,
+        "y": 1065,
+        "width": 220,
+        "height": 347,
+        "pixels": 53252
+      },
+      {
+        "x": 425,
+        "y": 1072,
+        "width": 224,
+        "height": 342,
+        "pixels": 52002
+      },
+      {
+        "x": 781,
+        "y": 1072,
+        "width": 221,
+        "height": 340,
+        "pixels": 51991
+      }
+    ]
+  },
+  {
+    "file": "tilesets/dungeon_entrance_merchant_props.png",
+    "sha256": "f809af58b0f8d549a2c80086dfe367244c0c99db52d09f7159930917629852dd",
+    "width": 1536,
+    "height": 1024,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 647689,
+    "partial": 925175,
+    "components": [
+      {
+        "x": 1081,
+        "y": 14,
+        "width": 441,
+        "height": 458,
+        "pixels": 120565
+      },
+      {
+        "x": 579,
+        "y": 30,
+        "width": 498,
+        "height": 320,
+        "pixels": 121710
+      },
+      {
+        "x": 24,
+        "y": 68,
+        "width": 531,
+        "height": 274,
+        "pixels": 120587
+      },
+      {
+        "x": 329,
+        "y": 382,
+        "width": 146,
+        "height": 172,
+        "pixels": 18821
+      },
+      {
+        "x": 682,
+        "y": 395,
+        "width": 179,
+        "height": 149,
+        "pixels": 20768
+      },
+      {
+        "x": 80,
+        "y": 401,
+        "width": 100,
+        "height": 137,
+        "pixels": 8039
+      },
+      {
+        "x": 180,
+        "y": 412,
+        "width": 66,
+        "height": 106,
+        "pixels": 4932
+      },
+      {
+        "x": 892,
+        "y": 422,
+        "width": 165,
+        "height": 122,
+        "pixels": 14833
+      },
+      {
+        "x": 1318,
+        "y": 437,
+        "width": 182,
+        "height": 241,
+        "pixels": 26198
+      },
+      {
+        "x": 21,
+        "y": 449,
+        "width": 67,
+        "height": 96,
+        "pixels": 4471
+      },
+      {
+        "x": 518,
+        "y": 450,
+        "width": 127,
+        "height": 85,
+        "pixels": 7511
+      },
+      {
+        "x": 1066,
+        "y": 456,
+        "width": 172,
+        "height": 126,
+        "pixels": 15050
+      },
+      {
+        "x": 239,
+        "y": 460,
+        "width": 65,
+        "height": 102,
+        "pixels": 4713
+      },
+      {
+        "x": 22,
+        "y": 560,
+        "width": 273,
+        "height": 265,
+        "pixels": 49394
+      },
+      {
+        "x": 470,
+        "y": 564,
+        "width": 134,
+        "height": 105,
+        "pixels": 10151
+      },
+      {
+        "x": 634,
+        "y": 564,
+        "width": 155,
+        "height": 161,
+        "pixels": 20649
+      },
+      {
+        "x": 819,
+        "y": 569,
+        "width": 138,
+        "height": 170,
+        "pixels": 19528
+      },
+      {
+        "x": 346,
+        "y": 574,
+        "width": 92,
+        "height": 187,
+        "pixels": 12400
+      },
+      {
+        "x": 980,
+        "y": 591,
+        "width": 184,
+        "height": 165,
+        "pixels": 21880
+      },
+      {
+        "x": 1190,
+        "y": 596,
+        "width": 106,
+        "height": 130,
+        "pixels": 10284
+      },
+      {
+        "x": 1322,
+        "y": 690,
+        "width": 177,
+        "height": 299,
+        "pixels": 33901
+      },
+      {
+        "x": 470,
+        "y": 692,
+        "width": 163,
+        "height": 105,
+        "pixels": 11546
+      },
+      {
+        "x": 1055,
+        "y": 737,
+        "width": 252,
+        "height": 244,
+        "pixels": 43463
+      },
+      {
+        "x": 695,
+        "y": 744,
+        "width": 100,
+        "height": 180,
+        "pixels": 10190
+      },
+      {
+        "x": 827,
+        "y": 767,
+        "width": 149,
+        "height": 114,
+        "pixels": 15880
+      },
+      {
+        "x": 296,
+        "y": 786,
+        "width": 156,
+        "height": 127,
+        "pixels": 14918
+      },
+      {
+        "x": 485,
+        "y": 815,
+        "width": 106,
+        "height": 89,
+        "pixels": 7641
+      },
+      {
+        "x": 615,
+        "y": 827,
+        "width": 77,
+        "height": 85,
+        "pixels": 5145
+      },
+      {
+        "x": 52,
+        "y": 845,
+        "width": 204,
+        "height": 101,
+        "pixels": 11442
+      }
+    ]
+  }
+]

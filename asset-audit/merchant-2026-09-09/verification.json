@@ -1,0 +1,11 @@
+{
+  "originalsUnchanged": true,
+  "runtime": {
+    "width": 384,
+    "height": 512,
+    "format": "png",
+    "channels": 4,
+    "zeroAlphaPixels": 138512,
+    "sha256": "8d579fa74e96aa6e93bcc2df558dd7b74329759761857989d7a29acb703b011c"
+  }
+}

@@ -1,0 +1,3530 @@
+{
+  "boss_chamber_wall_treasure.png": {
+    "source": "tilesets/boss_chamber_wall_treasure.png",
+    "sourceSha256": "4321997c358e55fed5d659b893e4af544eeacb8956fd98b0467024c5ef5e801c",
+    "runtimeUrl": "/assets/game/runtime/boss_chamber_wall_treasure.png",
+    "width": 768,
+    "height": 675,
+    "runtimeSha256": "f85c8bb45fe7c168c0dc8ff4f673ba2bfb0df64c4f1ec9df3ec6cc0ea6551f33",
+    "frames": [
+      {
+        "name": "mound_arch_gold",
+        "sourceRect": {
+          "x": 211,
+          "y": 445,
+          "width": 169,
+          "height": 112
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 13,
+          "rect": {
+            "x": 425,
+            "y": 786,
+            "width": 338,
+            "height": 224,
+            "pixels": 37731
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_armor",
+        "sourceRect": {
+          "x": 190,
+          "y": 308,
+          "width": 174,
+          "height": 115
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 11,
+          "rect": {
+            "x": 763,
+            "y": 573,
+            "width": 347,
+            "height": 229,
+            "pixels": 42259
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_banner",
+        "sourceRect": {
+          "x": 4,
+          "y": 561,
+          "width": 203,
+          "height": 110
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 14,
+          "rect": {
+            "x": 1114,
+            "y": 792,
+            "width": 406,
+            "height": 219,
+            "pixels": 50138
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_barrel",
+        "sourceRect": {
+          "x": 519,
+          "y": 162,
+          "width": 234,
+          "height": 136
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 0,
+          "rect": {
+            "x": 16,
+            "y": 15,
+            "width": 467,
+            "height": 272,
+            "pixels": 62249
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_barrel_cloth",
+        "sourceRect": {
+          "x": 368,
+          "y": 308,
+          "width": 194,
+          "height": 114
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 8,
+          "rect": {
+            "x": 1130,
+            "y": 569,
+            "width": 388,
+            "height": 228,
+            "pixels": 45410
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_bedroll",
+        "sourceRect": {
+          "x": 4,
+          "y": 308,
+          "width": 182,
+          "height": 133
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 7,
+          "rect": {
+            "x": 744,
+            "y": 313,
+            "width": 363,
+            "height": 265,
+            "pixels": 55947
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_chest_book",
+        "sourceRect": {
+          "x": 566,
+          "y": 308,
+          "width": 180,
+          "height": 113
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 10,
+          "rect": {
+            "x": 388,
+            "y": 573,
+            "width": 360,
+            "height": 226,
+            "pixels": 40672
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_chest_crown",
+        "sourceRect": {
+          "x": 402,
+          "y": 4,
+          "width": 168,
+          "height": 149
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 3,
+          "rect": {
+            "x": 15,
+            "y": 281,
+            "width": 335,
+            "height": 297,
+            "pixels": 56129
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_chest_goblet",
+        "sourceRect": {
+          "x": 4,
+          "y": 445,
+          "width": 203,
+          "height": 112
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 12,
+          "rect": {
+            "x": 19,
+            "y": 786,
+            "width": 406,
+            "height": 224,
+            "pixels": 50677
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_goblets",
+        "sourceRect": {
+          "x": 211,
+          "y": 561,
+          "width": 157,
+          "height": 106
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 15,
+          "rect": {
+            "x": 774,
+            "y": 798,
+            "width": 314,
+            "height": 212,
+            "pixels": 38525
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_shields",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 189,
+          "height": 154
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 5,
+          "rect": {
+            "x": 374,
+            "y": 286,
+            "width": 378,
+            "height": 308,
+            "pixels": 60194
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_skeleton",
+        "sourceRect": {
+          "x": 319,
+          "y": 162,
+          "width": 196,
+          "height": 138
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 2,
+          "rect": {
+            "x": 1125,
+            "y": 17,
+            "width": 392,
+            "height": 275,
+            "pixels": 55645
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_skeleton_cloth",
+        "sourceRect": {
+          "x": 384,
+          "y": 445,
+          "width": 186,
+          "height": 110
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 9,
+          "rect": {
+            "x": 16,
+            "y": 570,
+            "width": 371,
+            "height": 220,
+            "pixels": 39129
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_sword_wide",
+        "sourceRect": {
+          "x": 4,
+          "y": 162,
+          "width": 311,
+          "height": 142
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 1,
+          "rect": {
+            "x": 492,
+            "y": 16,
+            "width": 622,
+            "height": 284,
+            "pixels": 88205
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_urn_crowns",
+        "sourceRect": {
+          "x": 197,
+          "y": 4,
+          "width": 201,
+          "height": 153
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_wall_treasure.png",
+          "component": 4,
+          "rect": {
+            "x": 1119,
+            "y": 281,
+            "width": 402,
+            "height": 306,
+            "pixels": 60191
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "boss_chamber_floor_treasure.png": {
+    "source": "tilesets/boss_chamber_floor_treasure.png",
+    "sourceSha256": "7ce25f7719b5ada0ed7b92a099826d98fbfc2e912955196d105e6e2a0bba6b3c",
+    "runtimeUrl": "/assets/game/runtime/boss_chamber_floor_treasure.png",
+    "width": 768,
+    "height": 351,
+    "runtimeSha256": "115b9ef1ca4a3f2b360106a5be5eb7aec97216b80a2038323f4585aa46542dd4",
+    "frames": [
+      {
+        "name": "chain",
+        "sourceRect": {
+          "x": 592,
+          "y": 296,
+          "width": 66,
+          "height": 30
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 5,
+          "rect": {
+            "x": 1151,
+            "y": 31,
+            "width": 131,
+            "height": 59,
+            "pixels": 3987
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "chest_closed_gold",
+        "sourceRect": {
+          "x": 474,
+          "y": 4,
+          "width": 107,
+          "height": 99
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 45,
+          "rect": {
+            "x": 1302,
+            "y": 379,
+            "width": 214,
+            "height": 197,
+            "pixels": 30909
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "chest_open_gold",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 145,
+          "height": 118
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 41,
+          "rect": {
+            "x": 1007,
+            "y": 345,
+            "width": 289,
+            "height": 235,
+            "pixels": 45954
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "cluster_gems",
+        "sourceRect": {
+          "x": 89,
+          "y": 296,
+          "width": 68,
+          "height": 49
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 60,
+          "rect": {
+            "x": 1195,
+            "y": 795,
+            "width": 136,
+            "height": 98,
+            "pixels": 7467
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_one",
+        "sourceRect": {
+          "x": 723,
+          "y": 296,
+          "width": 16,
+          "height": 15
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 14,
+          "rect": {
+            "x": 118,
+            "y": 44,
+            "width": 32,
+            "height": 29,
+            "pixels": 733
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_two",
+        "sourceRect": {
+          "x": 743,
+          "y": 296,
+          "width": 14,
+          "height": 12
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 29,
+          "rect": {
+            "x": 963,
+            "y": 132,
+            "width": 28,
+            "height": 24,
+            "pixels": 542
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_row",
+        "sourceRect": {
+          "x": 662,
+          "y": 296,
+          "width": 57,
+          "height": 26
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 26,
+          "rect": {
+            "x": 1155,
+            "y": 122,
+            "width": 114,
+            "height": 51,
+            "pixels": 3267
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_small",
+        "sourceRect": {
+          "x": 531,
+          "y": 296,
+          "width": 57,
+          "height": 32
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 64,
+          "rect": {
+            "x": 478,
+            "y": 810,
+            "width": 113,
+            "height": 64,
+            "pixels": 3027
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_tiny_group",
+        "sourceRect": {
+          "x": 471,
+          "y": 296,
+          "width": 56,
+          "height": 34
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 67,
+          "rect": {
+            "x": 1009,
+            "y": 831,
+            "width": 112,
+            "height": 67,
+            "pixels": 3446
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gem_single",
+        "sourceRect": {
+          "x": 422,
+          "y": 296,
+          "width": 45,
+          "height": 35
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 17,
+          "rect": {
+            "x": 1020,
+            "y": 113,
+            "width": 90,
+            "height": 69,
+            "pixels": 3820
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gems_blue",
+        "sourceRect": {
+          "x": 124,
+          "y": 225,
+          "width": 85,
+          "height": 65
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 32,
+          "rect": {
+            "x": 1167,
+            "y": 208,
+            "width": 170,
+            "height": 130,
+            "pixels": 12411
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gems_purple",
+        "sourceRect": {
+          "x": 614,
+          "y": 126,
+          "width": 75,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 34,
+          "rect": {
+            "x": 1365,
+            "y": 210,
+            "width": 149,
+            "height": 137,
+            "pixels": 12797
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gems_red",
+        "sourceRect": {
+          "x": 213,
+          "y": 225,
+          "width": 87,
+          "height": 65
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 33,
+          "rect": {
+            "x": 976,
+            "y": 210,
+            "width": 173,
+            "height": 129,
+            "pixels": 13783
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "goblet_pile",
+        "sourceRect": {
+          "x": 4,
+          "y": 126,
+          "width": 137,
+          "height": 95
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 46,
+          "rect": {
+            "x": 720,
+            "y": 384,
+            "width": 274,
+            "height": 189,
+            "pixels": 34495
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_center",
+        "sourceRect": {
+          "x": 145,
+          "y": 126,
+          "width": 135,
+          "height": 93
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 50,
+          "rect": {
+            "x": 545,
+            "y": 566,
+            "width": 270,
+            "height": 186,
+            "pixels": 28222
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mound_lean",
+        "sourceRect": {
+          "x": 330,
+          "y": 4,
+          "width": 140,
+          "height": 110
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 51,
+          "rect": {
+            "x": 1241,
+            "y": 570,
+            "width": 280,
+            "height": 219,
+            "pixels": 32824
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pile_a",
+        "sourceRect": {
+          "x": 304,
+          "y": 225,
+          "width": 91,
+          "height": 61
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 35,
+          "rect": {
+            "x": 24,
+            "y": 212,
+            "width": 182,
+            "height": 122,
+            "pixels": 13164
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pile_b",
+        "sourceRect": {
+          "x": 399,
+          "y": 225,
+          "width": 82,
+          "height": 60
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 36,
+          "rect": {
+            "x": 228,
+            "y": 214,
+            "width": 164,
+            "height": 120,
+            "pixels": 12729
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pile_flat",
+        "sourceRect": {
+          "x": 4,
+          "y": 296,
+          "width": 81,
+          "height": 51
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 37,
+          "rect": {
+            "x": 415,
+            "y": 224,
+            "width": 161,
+            "height": 102,
+            "pixels": 10780
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pile_gems",
+        "sourceRect": {
+          "x": 585,
+          "y": 4,
+          "width": 128,
+          "height": 95
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 44,
+          "rect": {
+            "x": 21,
+            "y": 365,
+            "width": 256,
+            "height": 189,
+            "pixels": 30914
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "sack_pile",
+        "sourceRect": {
+          "x": 497,
+          "y": 126,
+          "width": 113,
+          "height": 84
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 31,
+          "rect": {
+            "x": 733,
+            "y": 198,
+            "width": 225,
+            "height": 168,
+            "pixels": 24916
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "scatter_line",
+        "sourceRect": {
+          "x": 161,
+          "y": 296,
+          "width": 153,
+          "height": 44
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 63,
+          "rect": {
+            "x": 53,
+            "y": 806,
+            "width": 306,
+            "height": 87,
+            "pixels": 9513
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spill_low_gems",
+        "sourceRect": {
+          "x": 485,
+          "y": 225,
+          "width": 112,
+          "height": 56
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 52,
+          "rect": {
+            "x": 1049,
+            "y": 612,
+            "width": 224,
+            "height": 112,
+            "pixels": 13930
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spill_medium",
+        "sourceRect": {
+          "x": 4,
+          "y": 225,
+          "width": 116,
+          "height": 67
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 53,
+          "rect": {
+            "x": 834,
+            "y": 614,
+            "width": 232,
+            "height": 133,
+            "pixels": 14897
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spill_tall",
+        "sourceRect": {
+          "x": 153,
+          "y": 4,
+          "width": 173,
+          "height": 117
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 48,
+          "rect": {
+            "x": 23,
+            "y": 540,
+            "width": 345,
+            "height": 233,
+            "pixels": 36093
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "trail_coins",
+        "sourceRect": {
+          "x": 318,
+          "y": 296,
+          "width": 100,
+          "height": 40
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 62,
+          "rect": {
+            "x": 698,
+            "y": 798,
+            "width": 200,
+            "height": 79,
+            "pixels": 7739
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "trail_long",
+        "sourceRect": {
+          "x": 601,
+          "y": 225,
+          "width": 150,
+          "height": 53
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 54,
+          "rect": {
+            "x": 268,
+            "y": 627,
+            "width": 300,
+            "height": 105,
+            "pixels": 16006
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "urn_spill",
+        "sourceRect": {
+          "x": 284,
+          "y": 126,
+          "width": 209,
+          "height": 92
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_floor_treasure.png",
+          "component": 42,
+          "rect": {
+            "x": 294,
+            "y": 361,
+            "width": 417,
+            "height": 183,
+            "pixels": 42083
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "boss_chamber_gold_glow.png": {
+    "source": "tilesets/boss_chamber_gold_glow.png",
+    "sourceSha256": "42e24fc50df4374f2c57f768297a22fae2fcf1bf97c9ee5895d7401aaf810e96",
+    "runtimeUrl": "/assets/game/runtime/boss_chamber_gold_glow.png",
+    "width": 768,
+    "height": 318,
+    "runtimeSha256": "a0f0afc5f91d0102ec388160c416e4863140966427ea0021e158cde2a85d3ac2",
+    "frames": [
+      {
+        "name": "glow_band_thin",
+        "sourceRect": {
+          "x": 4,
+          "y": 264,
+          "width": 147,
+          "height": 50
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 17,
+          "rect": {
+            "x": 471,
+            "y": 858,
+            "width": 293,
+            "height": 100
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_band_wide",
+        "sourceRect": {
+          "x": 159,
+          "y": 168,
+          "width": 267,
+          "height": 86
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 6,
+          "rect": {
+            "x": 508,
+            "y": 397,
+            "width": 534,
+            "height": 171
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_blob",
+        "sourceRect": {
+          "x": 4,
+          "y": 168,
+          "width": 151,
+          "height": 92
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 1,
+          "rect": {
+            "x": 642,
+            "y": 65,
+            "width": 302,
+            "height": 183
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_cone",
+        "sourceRect": {
+          "x": 430,
+          "y": 168,
+          "width": 123,
+          "height": 84
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 12,
+          "rect": {
+            "x": 783,
+            "y": 805,
+            "width": 246,
+            "height": 167
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_left_slope",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 230,
+          "height": 160
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 4,
+          "rect": {
+            "x": 17,
+            "y": 237,
+            "width": 459,
+            "height": 319
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_mound",
+        "sourceRect": {
+          "x": 456,
+          "y": 4,
+          "width": 260,
+          "height": 136
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 0,
+          "rect": {
+            "x": 1001,
+            "y": 16,
+            "width": 520,
+            "height": 271
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_right_slope",
+        "sourceRect": {
+          "x": 238,
+          "y": 4,
+          "width": 214,
+          "height": 150
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 5,
+          "rect": {
+            "x": 1096,
+            "y": 268,
+            "width": 428,
+            "height": 299
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "glow_spark",
+        "sourceRect": {
+          "x": 557,
+          "y": 168,
+          "width": 86,
+          "height": 54
+        },
+        "origin": {
+          "file": "tilesets/boss_chamber_gold_glow.png",
+          "component": 3,
+          "rect": {
+            "x": 83,
+            "y": 115,
+            "width": 171,
+            "height": 107
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "dungeon_entrance_rock.png": {
+    "source": "tilesets/dungeon_entrance_rock.png",
+    "sourceSha256": "8e398af9fc34b0dd2169f355338468297546039d42c0267ec60d844446296b59",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_rock.png",
+    "width": 768,
+    "height": 325,
+    "runtimeSha256": "3d70a948462d149094ecd8da8110705882a7ec085ceba3834a6a633ac111c4d4",
+    "frames": [
+      {
+        "name": "boulder_cracked",
+        "sourceRect": {
+          "x": 170,
+          "y": 175,
+          "width": 123,
+          "height": 75
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 18,
+          "rect": {
+            "x": 1242,
+            "y": 520,
+            "width": 245,
+            "height": 150,
+            "pixels": 24684
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulder_moss_large",
+        "sourceRect": {
+          "x": 625,
+          "y": 4,
+          "width": 107,
+          "height": 82
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 15,
+          "rect": {
+            "x": 44,
+            "y": 510,
+            "width": 213,
+            "height": 164,
+            "pixels": 24835
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulder_moss_tall",
+        "sourceRect": {
+          "x": 55,
+          "y": 175,
+          "width": 111,
+          "height": 76
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 17,
+          "rect": {
+            "x": 305,
+            "y": 520,
+            "width": 222,
+            "height": 151,
+            "pixels": 20803
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulder_moss_wide",
+        "sourceRect": {
+          "x": 297,
+          "y": 175,
+          "width": 128,
+          "height": 74
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 16,
+          "rect": {
+            "x": 575,
+            "y": 517,
+            "width": 255,
+            "height": 148,
+            "pixels": 24517
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulder_round",
+        "sourceRect": {
+          "x": 429,
+          "y": 175,
+          "width": 121,
+          "height": 74
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 19,
+          "rect": {
+            "x": 918,
+            "y": 523,
+            "width": 241,
+            "height": 147,
+            "pixels": 25010
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulders_a",
+        "sourceRect": {
+          "x": 4,
+          "y": 257,
+          "width": 111,
+          "height": 64
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 9,
+          "rect": {
+            "x": 24,
+            "y": 359,
+            "width": 221,
+            "height": 128,
+            "pixels": 18379
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulders_b",
+        "sourceRect": {
+          "x": 119,
+          "y": 257,
+          "width": 113,
+          "height": 63
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 10,
+          "rect": {
+            "x": 284,
+            "y": 364,
+            "width": 226,
+            "height": 126,
+            "pixels": 18000
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulders_c",
+        "sourceRect": {
+          "x": 236,
+          "y": 257,
+          "width": 103,
+          "height": 62
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 11,
+          "rect": {
+            "x": 546,
+            "y": 370,
+            "width": 206,
+            "height": 123,
+            "pixels": 15435
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boulders_moss",
+        "sourceRect": {
+          "x": 343,
+          "y": 257,
+          "width": 103,
+          "height": 60
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 13,
+          "rect": {
+            "x": 1054,
+            "y": 376,
+            "width": 205,
+            "height": 120,
+            "pixels": 16213
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "moss_tuft",
+        "sourceRect": {
+          "x": 738,
+          "y": 257,
+          "width": 22,
+          "height": 22
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 25,
+          "rect": {
+            "x": 1251,
+            "y": 711,
+            "width": 43,
+            "height": 43,
+            "pixels": 1407
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pebbles",
+        "sourceRect": {
+          "x": 694,
+          "y": 257,
+          "width": 40,
+          "height": 42
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 28,
+          "rect": {
+            "x": 1064,
+            "y": 722,
+            "width": 80,
+            "height": 83,
+            "pixels": 3867
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_arch",
+        "sourceRect": {
+          "x": 440,
+          "y": 4,
+          "width": 181,
+          "height": 99
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 36,
+          "rect": {
+            "x": 584,
+            "y": 811,
+            "width": 362,
+            "height": 197,
+            "pixels": 38080
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rubble_a",
+        "sourceRect": {
+          "x": 554,
+          "y": 175,
+          "width": 105,
+          "height": 71
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 20,
+          "rect": {
+            "x": 30,
+            "y": 690,
+            "width": 209,
+            "height": 142,
+            "pixels": 16836
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rubble_b",
+        "sourceRect": {
+          "x": 450,
+          "y": 257,
+          "width": 89,
+          "height": 59
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 22,
+          "rect": {
+            "x": 288,
+            "y": 701,
+            "width": 177,
+            "height": 117,
+            "pixels": 12808
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rubble_c",
+        "sourceRect": {
+          "x": 543,
+          "y": 257,
+          "width": 100,
+          "height": 57
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 23,
+          "rect": {
+            "x": 526,
+            "y": 701,
+            "width": 200,
+            "height": 114,
+            "pixels": 13812
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_medium",
+        "sourceRect": {
+          "x": 202,
+          "y": 4,
+          "width": 89,
+          "height": 138
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 2,
+          "rect": {
+            "x": 457,
+            "y": 70,
+            "width": 177,
+            "height": 276,
+            "pixels": 24870
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_pair",
+        "sourceRect": {
+          "x": 647,
+          "y": 257,
+          "width": 43,
+          "height": 50
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 8,
+          "rect": {
+            "x": 1291,
+            "y": 240,
+            "width": 86,
+            "height": 99,
+            "pixels": 5114
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_small_a",
+        "sourceRect": {
+          "x": 295,
+          "y": 4,
+          "width": 68,
+          "height": 106
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 3,
+          "rect": {
+            "x": 657,
+            "y": 128,
+            "width": 136,
+            "height": 212,
+            "pixels": 15702
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_small_b",
+        "sourceRect": {
+          "x": 367,
+          "y": 4,
+          "width": 69,
+          "height": 106
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 4,
+          "rect": {
+            "x": 827,
+            "y": 128,
+            "width": 137,
+            "height": 212,
+            "pixels": 15568
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_tall_a",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 92,
+          "height": 167
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 0,
+          "rect": {
+            "x": 245,
+            "y": 10,
+            "width": 183,
+            "height": 333,
+            "pixels": 33554
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_tall_b",
+        "sourceRect": {
+          "x": 100,
+          "y": 4,
+          "width": 98,
+          "height": 166
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 1,
+          "rect": {
+            "x": 23,
+            "y": 11,
+            "width": 195,
+            "height": 331,
+            "pixels": 33727
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spire_tiny",
+        "sourceRect": {
+          "x": 4,
+          "y": 175,
+          "width": 47,
+          "height": 78
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_rock.png",
+          "component": 5,
+          "rect": {
+            "x": 1021,
+            "y": 187,
+            "width": 93,
+            "height": 156,
+            "pixels": 7528
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "dungeon_entrance_glow.png": {
+    "source": "tilesets/dungeon_entrance_glow.png",
+    "sourceSha256": "ea4cea92a86673bec86b63562868043b74bb74b1b953017b965de44bd73f1756",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_glow.png",
+    "width": 768,
+    "height": 413,
+    "runtimeSha256": "d6b1941a424eb9ed450869eeb05eb63472509efddbff7d1899e4d7434d3e6aee",
+    "frames": [
+      {
+        "name": "lamp_large",
+        "sourceRect": {
+          "x": 318,
+          "y": 4,
+          "width": 207,
+          "height": 208
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 0,
+          "rect": {
+            "x": 962,
+            "y": 50,
+            "width": 414,
+            "height": 415
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lamp_medium",
+        "sourceRect": {
+          "x": 4,
+          "y": 249,
+          "width": 164,
+          "height": 160
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 1,
+          "rect": {
+            "x": 499,
+            "y": 112,
+            "width": 327,
+            "height": 320
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lamp_small",
+        "sourceRect": {
+          "x": 281,
+          "y": 249,
+          "width": 117,
+          "height": 114
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 2,
+          "rect": {
+            "x": 130,
+            "y": 174,
+            "width": 233,
+            "height": 227
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_small",
+        "sourceRect": {
+          "x": 172,
+          "y": 249,
+          "width": 105,
+          "height": 118
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 5,
+          "rect": {
+            "x": 147,
+            "y": 643,
+            "width": 210,
+            "height": 235
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_tall",
+        "sourceRect": {
+          "x": 529,
+          "y": 4,
+          "width": 155,
+          "height": 185
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 4,
+          "rect": {
+            "x": 479,
+            "y": 567,
+            "width": 309,
+            "height": 370
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_wide",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 310,
+          "height": 241
+        },
+        "origin": {
+          "file": "tilesets/dungeon_entrance_glow.png",
+          "component": 3,
+          "rect": {
+            "x": 861,
+            "y": 501,
+            "width": 619,
+            "height": 481
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_water.png": {
+    "source": "tilesets/cave_garden_water.png",
+    "sourceSha256": "b777560cf0ece734946e804ba0d40dfc4904e8f0f309f5e0406909608edd78bc",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_water.png",
+    "width": 768,
+    "height": 286,
+    "runtimeSha256": "03c3ca7a08974e731464afb4aea19b4b7b96c09512add1db50c806fa58bf692b",
+    "frames": [
+      {
+        "name": "fill_calm",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 193,
+          "height": 184
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 0,
+          "rect": {
+            "x": 24,
+            "y": 21,
+            "width": 386,
+            "height": 367,
+            "pixels": 140865
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "fill_ripple",
+        "sourceRect": {
+          "x": 201,
+          "y": 4,
+          "width": 187,
+          "height": 183
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 1,
+          "rect": {
+            "x": 441,
+            "y": 22,
+            "width": 374,
+            "height": 365,
+            "pixels": 136100
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "fill_sparkle",
+        "sourceRect": {
+          "x": 392,
+          "y": 4,
+          "width": 191,
+          "height": 183
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 2,
+          "rect": {
+            "x": 847,
+            "y": 22,
+            "width": 381,
+            "height": 365,
+            "pixels": 138414
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_large",
+        "sourceRect": {
+          "x": 587,
+          "y": 4,
+          "width": 123,
+          "height": 125
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 26,
+          "rect": {
+            "x": 189,
+            "y": 972,
+            "width": 246,
+            "height": 250,
+            "pixels": 42254
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_medium",
+        "sourceRect": {
+          "x": 4,
+          "y": 192,
+          "width": 94,
+          "height": 90
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 19,
+          "rect": {
+            "x": 1048,
+            "y": 771,
+            "width": 187,
+            "height": 179,
+            "pixels": 23564
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_small",
+        "sourceRect": {
+          "x": 102,
+          "y": 192,
+          "width": 62,
+          "height": 63
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 8,
+          "rect": {
+            "x": 862,
+            "y": 422,
+            "width": 124,
+            "height": 125,
+            "pixels": 8746
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_tiny",
+        "sourceRect": {
+          "x": 284,
+          "y": 192,
+          "width": 57,
+          "height": 52
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 10,
+          "rect": {
+            "x": 902,
+            "y": 525,
+            "width": 113,
+            "height": 103,
+            "pixels": 8050
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pool_wide",
+        "sourceRect": {
+          "x": 168,
+          "y": 192,
+          "width": 112,
+          "height": 63
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_water.png",
+          "component": 13,
+          "rect": {
+            "x": 1009,
+            "y": 620,
+            "width": 223,
+            "height": 126,
+            "pixels": 17434
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_pond_edges.png": {
+    "source": "tilesets/cave_garden_pond_edges.png",
+    "sourceSha256": "94f822115652eb411e18d0e984abaa3749c721b665a8e9344bee9566bcd7ed41",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_pond_edges.png",
+    "width": 768,
+    "height": 375,
+    "runtimeSha256": "78f7a2ffce204af6b0d3e4f9327651ae984a1e4b9ab1667059d7c4f511ee39b3",
+    "frames": [
+      {
+        "name": "bank_a",
+        "sourceRect": {
+          "x": 334,
+          "y": 144,
+          "width": 178,
+          "height": 76
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 16,
+          "rect": {
+            "x": 43,
+            "y": 684,
+            "width": 355,
+            "height": 151,
+            "pixels": 40400
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bank_b",
+        "sourceRect": {
+          "x": 234,
+          "y": 227,
+          "width": 167,
+          "height": 71
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 17,
+          "rect": {
+            "x": 786,
+            "y": 689,
+            "width": 334,
+            "height": 142,
+            "pixels": 35653
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bank_c",
+        "sourceRect": {
+          "x": 4,
+          "y": 144,
+          "width": 166,
+          "height": 79
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 18,
+          "rect": {
+            "x": 1151,
+            "y": 689,
+            "width": 332,
+            "height": 157,
+            "pixels": 36507
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bank_d",
+        "sourceRect": {
+          "x": 174,
+          "y": 144,
+          "width": 156,
+          "height": 77
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 19,
+          "rect": {
+            "x": 438,
+            "y": 693,
+            "width": 312,
+            "height": 153,
+            "pixels": 33930
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bank_e",
+        "sourceRect": {
+          "x": 4,
+          "y": 302,
+          "width": 148,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 22,
+          "rect": {
+            "x": 437,
+            "y": 856,
+            "width": 296,
+            "height": 138,
+            "pixels": 29038
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bank_f",
+        "sourceRect": {
+          "x": 385,
+          "y": 302,
+          "width": 124,
+          "height": 68
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 23,
+          "rect": {
+            "x": 1024,
+            "y": 856,
+            "width": 248,
+            "height": 135,
+            "pixels": 24206
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "corner_bottom_left",
+        "sourceRect": {
+          "x": 610,
+          "y": 4,
+          "width": 103,
+          "height": 91
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 7,
+          "rect": {
+            "x": 1031,
+            "y": 254,
+            "width": 206,
+            "height": 182,
+            "pixels": 26944
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "corner_bottom_right",
+        "sourceRect": {
+          "x": 280,
+          "y": 4,
+          "width": 107,
+          "height": 94
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 6,
+          "rect": {
+            "x": 1283,
+            "y": 252,
+            "width": 214,
+            "height": 187,
+            "pixels": 26287
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "corner_top_left",
+        "sourceRect": {
+          "x": 391,
+          "y": 4,
+          "width": 105,
+          "height": 93
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 0,
+          "rect": {
+            "x": 1024,
+            "y": 35,
+            "width": 209,
+            "height": 186,
+            "pixels": 25930
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "corner_top_right",
+        "sourceRect": {
+          "x": 500,
+          "y": 4,
+          "width": 106,
+          "height": 93
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 1,
+          "rect": {
+            "x": 1283,
+            "y": 36,
+            "width": 211,
+            "height": 185,
+            "pixels": 26921
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_bottom_a",
+        "sourceRect": {
+          "x": 4,
+          "y": 227,
+          "width": 226,
+          "height": 71
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 4,
+          "rect": {
+            "x": 40,
+            "y": 226,
+            "width": 451,
+            "height": 142,
+            "pixels": 50055
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_bottom_b",
+        "sourceRect": {
+          "x": 516,
+          "y": 144,
+          "width": 225,
+          "height": 72
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 5,
+          "rect": {
+            "x": 537,
+            "y": 228,
+            "width": 449,
+            "height": 143,
+            "pixels": 52518
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_left_a",
+        "sourceRect": {
+          "x": 139,
+          "y": 4,
+          "width": 69,
+          "height": 134
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 8,
+          "rect": {
+            "x": 49,
+            "y": 389,
+            "width": 137,
+            "height": 268,
+            "pixels": 32000
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_left_b",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 65,
+          "height": 136
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 9,
+          "rect": {
+            "x": 237,
+            "y": 389,
+            "width": 130,
+            "height": 272,
+            "pixels": 30538
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_right_a",
+        "sourceRect": {
+          "x": 73,
+          "y": 4,
+          "width": 62,
+          "height": 135
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 10,
+          "rect": {
+            "x": 414,
+            "y": 392,
+            "width": 123,
+            "height": 269,
+            "pixels": 28627
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_right_b",
+        "sourceRect": {
+          "x": 212,
+          "y": 4,
+          "width": 64,
+          "height": 134
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 11,
+          "rect": {
+            "x": 587,
+            "y": 392,
+            "width": 127,
+            "height": 268,
+            "pixels": 30062
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_top_a",
+        "sourceRect": {
+          "x": 405,
+          "y": 227,
+          "width": 227,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 2,
+          "rect": {
+            "x": 43,
+            "y": 59,
+            "width": 453,
+            "height": 138,
+            "pixels": 53881
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "edge_top_b",
+        "sourceRect": {
+          "x": 156,
+          "y": 302,
+          "width": 225,
+          "height": 68
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_pond_edges.png",
+          "component": 3,
+          "rect": {
+            "x": 536,
+            "y": 62,
+            "width": 450,
+            "height": 135,
+            "pixels": 53750
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_environment_props.png": {
+    "source": "tilesets/cave_garden_environment_props.png",
+    "sourceSha256": "aaa11aae4d7d0bad2cbc4fa600617270418df68583da00e1ff88b67bd7a940f6",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_environment_props.png",
+    "width": 768,
+    "height": 425,
+    "runtimeSha256": "c2f47a33b7f8a85b6e9d045a378a6dd98b2b63f68e9cf8964ecab47b42547da2",
+    "frames": [
+      {
+        "name": "cattail_a",
+        "sourceRect": {
+          "x": 514,
+          "y": 228,
+          "width": 45,
+          "height": 68
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 0,
+          "rect": {
+            "x": 1045,
+            "y": 17,
+            "width": 90,
+            "height": 135,
+            "pixels": 5738
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "cattail_b",
+        "sourceRect": {
+          "x": 394,
+          "y": 228,
+          "width": 62,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 2,
+          "rect": {
+            "x": 900,
+            "y": 20,
+            "width": 123,
+            "height": 138,
+            "pixels": 8331
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crystal_small",
+        "sourceRect": {
+          "x": 460,
+          "y": 228,
+          "width": 50,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 50,
+          "rect": {
+            "x": 1406,
+            "y": 591,
+            "width": 99,
+            "height": 137,
+            "pixels": 8443
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crystal_teal",
+        "sourceRect": {
+          "x": 205,
+          "y": 129,
+          "width": 75,
+          "height": 87
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 45,
+          "rect": {
+            "x": 1226,
+            "y": 563,
+            "width": 150,
+            "height": 174,
+            "pixels": 17596
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "fern_a",
+        "sourceRect": {
+          "x": 660,
+          "y": 228,
+          "width": 65,
+          "height": 65
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 1,
+          "rect": {
+            "x": 381,
+            "y": 19,
+            "width": 129,
+            "height": 129,
+            "pixels": 9311
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "fern_b",
+        "sourceRect": {
+          "x": 4,
+          "y": 316,
+          "width": 59,
+          "height": 59
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 4,
+          "rect": {
+            "x": 526,
+            "y": 35,
+            "width": 117,
+            "height": 117,
+            "pixels": 8027
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_blue",
+        "sourceRect": {
+          "x": 358,
+          "y": 316,
+          "width": 47,
+          "height": 46
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 31,
+          "rect": {
+            "x": 815,
+            "y": 266,
+            "width": 93,
+            "height": 92,
+            "pixels": 5479
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_blue_small",
+        "sourceRect": {
+          "x": 509,
+          "y": 316,
+          "width": 49,
+          "height": 44
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 27,
+          "rect": {
+            "x": 1075,
+            "y": 265,
+            "width": 98,
+            "height": 88,
+            "pixels": 5757
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_pink",
+        "sourceRect": {
+          "x": 4,
+          "y": 379,
+          "width": 44,
+          "height": 42
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 32,
+          "rect": {
+            "x": 40,
+            "y": 267,
+            "width": 88,
+            "height": 84,
+            "pixels": 4466
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_purple",
+        "sourceRect": {
+          "x": 562,
+          "y": 316,
+          "width": 44,
+          "height": 44
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 29,
+          "rect": {
+            "x": 431,
+            "y": 266,
+            "width": 87,
+            "height": 87,
+            "pixels": 4697
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_white",
+        "sourceRect": {
+          "x": 460,
+          "y": 316,
+          "width": 45,
+          "height": 45
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 30,
+          "rect": {
+            "x": 557,
+            "y": 266,
+            "width": 89,
+            "height": 89,
+            "pixels": 5123
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flowers_white_small",
+        "sourceRect": {
+          "x": 192,
+          "y": 316,
+          "width": 52,
+          "height": 49
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 25,
+          "rect": {
+            "x": 1228,
+            "y": 258,
+            "width": 104,
+            "height": 97,
+            "pixels": 5919
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "grass_a",
+        "sourceRect": {
+          "x": 248,
+          "y": 316,
+          "width": 53,
+          "height": 48
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 9,
+          "rect": {
+            "x": 660,
+            "y": 57,
+            "width": 106,
+            "height": 95,
+            "pixels": 6007
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "grass_b",
+        "sourceRect": {
+          "x": 409,
+          "y": 316,
+          "width": 47,
+          "height": 45
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 10,
+          "rect": {
+            "x": 784,
+            "y": 59,
+            "width": 93,
+            "height": 90,
+            "pixels": 5014
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pad_pair",
+        "sourceRect": {
+          "x": 152,
+          "y": 379,
+          "width": 39,
+          "height": 38
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 20,
+          "rect": {
+            "x": 714,
+            "y": 168,
+            "width": 78,
+            "height": 75,
+            "pixels": 3803
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pad_wide",
+        "sourceRect": {
+          "x": 195,
+          "y": 379,
+          "width": 46,
+          "height": 36
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 22,
+          "rect": {
+            "x": 1057,
+            "y": 171,
+            "width": 91,
+            "height": 72,
+            "pixels": 5105
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pads_a",
+        "sourceRect": {
+          "x": 305,
+          "y": 316,
+          "width": 49,
+          "height": 47
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 8,
+          "rect": {
+            "x": 1264,
+            "y": 47,
+            "width": 98,
+            "height": 94,
+            "pixels": 5305
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pads_b",
+        "sourceRect": {
+          "x": 663,
+          "y": 316,
+          "width": 54,
+          "height": 42
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 11,
+          "rect": {
+            "x": 1389,
+            "y": 64,
+            "width": 107,
+            "height": 84,
+            "pixels": 5773
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lotus_pink",
+        "sourceRect": {
+          "x": 610,
+          "y": 316,
+          "width": 49,
+          "height": 43
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 13,
+          "rect": {
+            "x": 1288,
+            "y": 158,
+            "width": 98,
+            "height": 86,
+            "pixels": 5552
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lotus_white",
+        "sourceRect": {
+          "x": 106,
+          "y": 379,
+          "width": 42,
+          "height": 39
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 19,
+          "rect": {
+            "x": 1412,
+            "y": 167,
+            "width": 83,
+            "height": 77,
+            "pixels": 4372
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pebble_single",
+        "sourceRect": {
+          "x": 52,
+          "y": 379,
+          "width": 50,
+          "height": 40
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 48,
+          "rect": {
+            "x": 28,
+            "y": 590,
+            "width": 99,
+            "height": 80,
+            "pixels": 5238
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pebbles_moss",
+        "sourceRect": {
+          "x": 112,
+          "y": 316,
+          "width": 76,
+          "height": 52
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 51,
+          "rect": {
+            "x": 131,
+            "y": 622,
+            "width": 151,
+            "height": 104,
+            "pixels": 10990
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "reed",
+        "sourceRect": {
+          "x": 67,
+          "y": 316,
+          "width": 41,
+          "height": 55
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 5,
+          "rect": {
+            "x": 1160,
+            "y": 40,
+            "width": 81,
+            "height": 110,
+            "pixels": 4418
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_group",
+        "sourceRect": {
+          "x": 85,
+          "y": 129,
+          "width": 116,
+          "height": 88
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 37,
+          "rect": {
+            "x": 1261,
+            "y": 370,
+            "width": 231,
+            "height": 175,
+            "pixels": 25432
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_low",
+        "sourceRect": {
+          "x": 563,
+          "y": 228,
+          "width": 93,
+          "height": 67
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 41,
+          "rect": {
+            "x": 799,
+            "y": 402,
+            "width": 185,
+            "height": 134,
+            "pixels": 17119
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_moss_cluster",
+        "sourceRect": {
+          "x": 361,
+          "y": 129,
+          "width": 103,
+          "height": 86
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 40,
+          "rect": {
+            "x": 313,
+            "y": 384,
+            "width": 205,
+            "height": 172,
+            "pixels": 23406
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_moss_large",
+        "sourceRect": {
+          "x": 320,
+          "y": 4,
+          "width": 128,
+          "height": 101
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 36,
+          "rect": {
+            "x": 30,
+            "y": 361,
+            "width": 256,
+            "height": 202,
+            "pixels": 37069
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_moss_wide",
+        "sourceRect": {
+          "x": 134,
+          "y": 228,
+          "width": 107,
+          "height": 83
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 38,
+          "rect": {
+            "x": 557,
+            "y": 375,
+            "width": 214,
+            "height": 165,
+            "pixels": 24635
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_pair",
+        "sourceRect": {
+          "x": 627,
+          "y": 129,
+          "width": 109,
+          "height": 85
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 39,
+          "rect": {
+            "x": 1014,
+            "y": 375,
+            "width": 218,
+            "height": 170,
+            "pixels": 23414
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_small_group",
+        "sourceRect": {
+          "x": 299,
+          "y": 228,
+          "width": 91,
+          "height": 74
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 47,
+          "rect": {
+            "x": 297,
+            "y": 581,
+            "width": 181,
+            "height": 148,
+            "pixels": 16076
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "shallow_pool",
+        "sourceRect": {
+          "x": 468,
+          "y": 129,
+          "width": 155,
+          "height": 86
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 57,
+          "rect": {
+            "x": 870,
+            "y": 801,
+            "width": 310,
+            "height": 172,
+            "pixels": 38466
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalactites",
+        "sourceRect": {
+          "x": 565,
+          "y": 4,
+          "width": 128,
+          "height": 96
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 54,
+          "rect": {
+            "x": 296,
+            "y": 773,
+            "width": 256,
+            "height": 192,
+            "pixels": 26446
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_flowers",
+        "sourceRect": {
+          "x": 4,
+          "y": 129,
+          "width": 77,
+          "height": 95
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 43,
+          "rect": {
+            "x": 873,
+            "y": 559,
+            "width": 153,
+            "height": 189,
+            "pixels": 19080
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_moss_a",
+        "sourceRect": {
+          "x": 506,
+          "y": 4,
+          "width": 55,
+          "height": 96
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 44,
+          "rect": {
+            "x": 495,
+            "y": 561,
+            "width": 110,
+            "height": 192,
+            "pixels": 11916
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_moss_b",
+        "sourceRect": {
+          "x": 452,
+          "y": 4,
+          "width": 50,
+          "height": 97
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 42,
+          "rect": {
+            "x": 627,
+            "y": 552,
+            "width": 99,
+            "height": 194,
+            "pixels": 12272
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_moss_c",
+        "sourceRect": {
+          "x": 245,
+          "y": 228,
+          "width": 50,
+          "height": 79
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 49,
+          "rect": {
+            "x": 742,
+            "y": 590,
+            "width": 99,
+            "height": 158,
+            "pixels": 9149
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_white_flowers",
+        "sourceRect": {
+          "x": 284,
+          "y": 129,
+          "width": 73,
+          "height": 87
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 46,
+          "rect": {
+            "x": 1052,
+            "y": 573,
+            "width": 146,
+            "height": 174,
+            "pixels": 17769
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stream_rocks",
+        "sourceRect": {
+          "x": 159,
+          "y": 4,
+          "width": 157,
+          "height": 102
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 55,
+          "rect": {
+            "x": 544,
+            "y": 783,
+            "width": 313,
+            "height": 204,
+            "pixels": 39988
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "water_ledge",
+        "sourceRect": {
+          "x": 4,
+          "y": 228,
+          "width": 126,
+          "height": 84
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 56,
+          "rect": {
+            "x": 44,
+            "y": 797,
+            "width": 251,
+            "height": 168,
+            "pixels": 30932
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "waterfall",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 151,
+          "height": 121
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_environment_props.png",
+          "component": 53,
+          "rect": {
+            "x": 1199,
+            "y": 754,
+            "width": 301,
+            "height": 242,
+            "pixels": 62023
+          },
+          "mode": "mask",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_light_overlays_1.png": {
+    "source": "tilesets/cave_garden_light_overlays_1.png",
+    "sourceSha256": "1f29ec78929fd4c704a7e53c5495b4ef3cf6bccc48c8024028f29c657b6c1c7f",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_light_overlays_1.png",
+    "width": 768,
+    "height": 393,
+    "runtimeSha256": "3086dd4798c90a1feeff6d973946a8935a94bb356df6f22fa83be56759591689",
+    "frames": [
+      {
+        "name": "bloom_tiny_a",
+        "sourceRect": {
+          "x": 444,
+          "y": 307,
+          "width": 60,
+          "height": 63
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 12,
+          "rect": {
+            "x": 214,
+            "y": 650,
+            "width": 120,
+            "height": 126
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bloom_tiny_b",
+        "sourceRect": {
+          "x": 378,
+          "y": 307,
+          "width": 62,
+          "height": 66
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 13,
+          "rect": {
+            "x": 369,
+            "y": 649,
+            "width": 124,
+            "height": 131
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "caustic_large",
+        "sourceRect": {
+          "x": 204,
+          "y": 4,
+          "width": 290,
+          "height": 147
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 5,
+          "rect": {
+            "x": 651,
+            "y": 320,
+            "width": 580,
+            "height": 293
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "caustic_medium",
+        "sourceRect": {
+          "x": 4,
+          "y": 180,
+          "width": 210,
+          "height": 123
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 6,
+          "rect": {
+            "x": 326,
+            "y": 357,
+            "width": 420,
+            "height": 246
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "caustic_small",
+        "sourceRect": {
+          "x": 501,
+          "y": 180,
+          "width": 117,
+          "height": 90
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 7,
+          "rect": {
+            "x": 68,
+            "y": 391,
+            "width": 234,
+            "height": 180
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "caustic_wide",
+        "sourceRect": {
+          "x": 269,
+          "y": 307,
+          "width": 105,
+          "height": 66
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 8,
+          "rect": {
+            "x": 1231,
+            "y": 425,
+            "width": 210,
+            "height": 131
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crystal_burst",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 196,
+          "height": 172
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 0,
+          "rect": {
+            "x": 790,
+            "y": 15,
+            "width": 392,
+            "height": 344
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crystal_glow",
+        "sourceRect": {
+          "x": 498,
+          "y": 4,
+          "width": 110,
+          "height": 126
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 2,
+          "rect": {
+            "x": 278,
+            "y": 70,
+            "width": 220,
+            "height": 252
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mist_band",
+        "sourceRect": {
+          "x": 4,
+          "y": 307,
+          "width": 180,
+          "height": 82
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 17,
+          "rect": {
+            "x": 241,
+            "y": 819,
+            "width": 360,
+            "height": 164
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "mist_wide",
+        "sourceRect": {
+          "x": 218,
+          "y": 180,
+          "width": 279,
+          "height": 106
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 18,
+          "rect": {
+            "x": 957,
+            "y": 812,
+            "width": 557,
+            "height": 212
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spark_small",
+        "sourceRect": {
+          "x": 188,
+          "y": 307,
+          "width": 77,
+          "height": 81
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_1.png",
+          "component": 4,
+          "rect": {
+            "x": 63,
+            "y": 132,
+            "width": 154,
+            "height": 161
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_light_overlays_2.png": {
+    "source": "tilesets/cave_garden_light_overlays_2.png",
+    "sourceSha256": "77467465cbe3110397696f7b545f7edc56358e0e2ea4d4d0979aa6b03a03c4bd",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_light_overlays_2.png",
+    "width": 768,
+    "height": 206,
+    "runtimeSha256": "438704228088c39464e38d7154a1fbb2cc602ee71ac653a80c5bd5b64479534c",
+    "frames": [
+      {
+        "name": "light_shaft",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 207,
+          "height": 198
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_light_overlays_2.png",
+          "component": 11,
+          "rect": {
+            "x": 347,
+            "y": 578,
+            "width": 414,
+            "height": 396
+          },
+          "mode": "bbox",
+          "scale": 0.5
+        }
+      }
+    ]
+  }
+}

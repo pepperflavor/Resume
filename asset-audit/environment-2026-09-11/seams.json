@@ -1,0 +1,50 @@
+[
+  {
+    "file": "dungeon_entrance_ground",
+    "size": "1254x1254",
+    "interiorColumnDelta": 3.84,
+    "wrapColumnDelta": 6.51,
+    "columnSeamRatio": 1.7,
+    "interiorRowDelta": 3.88,
+    "wrapRowDelta": 7.23,
+    "rowSeamRatio": 1.87,
+    "quadrantLuma": [52.9, 53.3, 53.8, 53.9],
+    "quadrantSpread": 1
+  },
+  {
+    "file": "boss_chamber_ground",
+    "size": "1254x1254",
+    "interiorColumnDelta": 6.4,
+    "wrapColumnDelta": 11.2,
+    "columnSeamRatio": 1.75,
+    "interiorRowDelta": 6.84,
+    "wrapRowDelta": 11.41,
+    "rowSeamRatio": 1.67,
+    "quadrantLuma": [65.3, 65.6, 66.5, 63.2],
+    "quadrantSpread": 3.3
+  },
+  {
+    "file": "cave_garden_ground",
+    "size": "1254x1254",
+    "interiorColumnDelta": 6.04,
+    "wrapColumnDelta": 9.4,
+    "columnSeamRatio": 1.56,
+    "interiorRowDelta": 6.06,
+    "wrapRowDelta": 9.34,
+    "rowSeamRatio": 1.54,
+    "quadrantLuma": [52.9, 53.7, 53.8, 53.3],
+    "quadrantSpread": 0.8
+  },
+  {
+    "file": "cave_garden_water",
+    "size": "1254x1254",
+    "interiorColumnDelta": 5.43,
+    "wrapColumnDelta": 0,
+    "columnSeamRatio": 0,
+    "interiorRowDelta": 5.82,
+    "wrapRowDelta": 0.41,
+    "rowSeamRatio": 0.07,
+    "quadrantLuma": [49.7, 62.8, 64.9, 62.2],
+    "quadrantSpread": 15.1
+  }
+]

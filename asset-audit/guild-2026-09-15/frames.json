@@ -1,0 +1,1291 @@
+{
+  "generated": "2026-09-15",
+  "note": "Named frames for the guild sheets. Rects come from guild-asset-audit.json (alpha connected components) and, for the opaque exterior terrain sheet, from gutter-colour segmentation. Nothing here is hand-measured.",
+  "bureau": {
+    "opaqueBounds": {
+      "x": 27,
+      "y": 21,
+      "width": 1482,
+      "height": 951
+    },
+    "doorCentreX": 768,
+    "doorLeaf": {
+      "x": 690,
+      "y": 664,
+      "width": 157,
+      "height": 178
+    },
+    "baseLineY": 886,
+    "baseSpan": {
+      "x": 66,
+      "width": 1404
+    },
+    "lowestOpaqueY": 971
+  },
+  "sheets": [
+    {
+      "key": "guild-extprops",
+      "url": "/assets/game/maps/guild/exterior/props/guild_exterior_props.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "banner-post-blue": {
+          "x": 1090,
+          "y": 20,
+          "width": 125,
+          "height": 305
+        },
+        "banner-post-red": {
+          "x": 1246,
+          "y": 20,
+          "width": 124,
+          "height": 305
+        },
+        "banner-post-green": {
+          "x": 1398,
+          "y": 20,
+          "width": 125,
+          "height": 306
+        },
+        "signpost-single": {
+          "x": 265,
+          "y": 38,
+          "width": 182,
+          "height": 286
+        },
+        "signpost-double": {
+          "x": 20,
+          "y": 40,
+          "width": 230,
+          "height": 287
+        },
+        "signpost-lantern": {
+          "x": 456,
+          "y": 40,
+          "width": 170,
+          "height": 287
+        },
+        "guild-crest-sign": {
+          "x": 645,
+          "y": 65,
+          "width": 218,
+          "height": 262
+        },
+        "sign-aframe": {
+          "x": 886,
+          "y": 136,
+          "width": 176,
+          "height": 188
+        },
+        "notice-board": {
+          "x": 1054,
+          "y": 342,
+          "width": 322,
+          "height": 228
+        },
+        "notice-post": {
+          "x": 1396,
+          "y": 349,
+          "width": 128,
+          "height": 221
+        },
+        "planter-conifer": {
+          "x": 724,
+          "y": 374,
+          "width": 159,
+          "height": 194
+        },
+        "planter-urn": {
+          "x": 524,
+          "y": 380,
+          "width": 186,
+          "height": 190
+        },
+        "planter-box-long": {
+          "x": 39,
+          "y": 395,
+          "width": 218,
+          "height": 161
+        },
+        "planter-box-flower": {
+          "x": 280,
+          "y": 402,
+          "width": 222,
+          "height": 157
+        },
+        "planter-pot": {
+          "x": 915,
+          "y": 417,
+          "width": 107,
+          "height": 150
+        },
+        "lantern-post": {
+          "x": 1076,
+          "y": 583,
+          "width": 127,
+          "height": 219
+        },
+        "lantern-post-tall": {
+          "x": 1224,
+          "y": 584,
+          "width": 111,
+          "height": 218
+        },
+        "lantern-post-iron": {
+          "x": 1370,
+          "y": 586,
+          "width": 137,
+          "height": 219
+        },
+        "crate-sealed": {
+          "x": 25,
+          "y": 620,
+          "width": 180,
+          "height": 172
+        },
+        "crate-scrolls": {
+          "x": 223,
+          "y": 626,
+          "width": 176,
+          "height": 173
+        },
+        "scroll-tray": {
+          "x": 585,
+          "y": 650,
+          "width": 121,
+          "height": 133
+        },
+        "crate-documents": {
+          "x": 741,
+          "y": 652,
+          "width": 144,
+          "height": 138
+        },
+        "sack": {
+          "x": 913,
+          "y": 655,
+          "width": 101,
+          "height": 125
+        },
+        "crate-letters": {
+          "x": 422,
+          "y": 677,
+          "width": 139,
+          "height": 107
+        },
+        "planter-barrel": {
+          "x": 1080,
+          "y": 811,
+          "width": 98,
+          "height": 182
+        },
+        "bollard-banner": {
+          "x": 599,
+          "y": 817,
+          "width": 76,
+          "height": 174
+        },
+        "topiary-urn": {
+          "x": 1397,
+          "y": 821,
+          "width": 105,
+          "height": 174
+        },
+        "marker-post": {
+          "x": 21,
+          "y": 834,
+          "width": 92,
+          "height": 155
+        },
+        "chain-barrier-gold": {
+          "x": 702,
+          "y": 837,
+          "width": 249,
+          "height": 153
+        },
+        "chain-barrier-ivy": {
+          "x": 145,
+          "y": 840,
+          "width": 197,
+          "height": 150
+        },
+        "planter-wood": {
+          "x": 1212,
+          "y": 840,
+          "width": 150,
+          "height": 152
+        },
+        "chain-barrier": {
+          "x": 362,
+          "y": 848,
+          "width": 210,
+          "height": 141
+        },
+        "bollard": {
+          "x": 977,
+          "y": 850,
+          "width": 77,
+          "height": 140
+        }
+      }
+    },
+    {
+      "key": "guild-wall",
+      "url": "/assets/game/maps/guild/interior/terrain/guild_interior_wall_tileset.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "corner-a": {
+          "x": 1261,
+          "y": 19,
+          "width": 116,
+          "height": 253
+        },
+        "corner-b": {
+          "x": 1410,
+          "y": 19,
+          "width": 100,
+          "height": 253
+        },
+        "run-long": {
+          "x": 44,
+          "y": 33,
+          "width": 1198,
+          "height": 216
+        },
+        "corner-top-left": {
+          "x": 677,
+          "y": 276,
+          "width": 167,
+          "height": 205
+        },
+        "corner-short": {
+          "x": 863,
+          "y": 276,
+          "width": 117,
+          "height": 196
+        },
+        "corner-return": {
+          "x": 1164,
+          "y": 282,
+          "width": 116,
+          "height": 218
+        },
+        "bay-plain": {
+          "x": 28,
+          "y": 283,
+          "width": 137,
+          "height": 199
+        },
+        "bay-wide": {
+          "x": 325,
+          "y": 283,
+          "width": 155,
+          "height": 199
+        },
+        "corner-narrow": {
+          "x": 1323,
+          "y": 284,
+          "width": 84,
+          "height": 216
+        },
+        "corner-end": {
+          "x": 1444,
+          "y": 288,
+          "width": 61,
+          "height": 208
+        },
+        "pillar": {
+          "x": 512,
+          "y": 290,
+          "width": 42,
+          "height": 192
+        },
+        "bay-window": {
+          "x": 185,
+          "y": 291,
+          "width": 122,
+          "height": 183
+        },
+        "pillar-thin": {
+          "x": 596,
+          "y": 292,
+          "width": 43,
+          "height": 173
+        },
+        "bay-doorway": {
+          "x": 1003,
+          "y": 298,
+          "width": 134,
+          "height": 199
+        },
+        "column": {
+          "x": 643,
+          "y": 500,
+          "width": 67,
+          "height": 218
+        },
+        "side-left": {
+          "x": 262,
+          "y": 505,
+          "width": 75,
+          "height": 185
+        },
+        "main-door": {
+          "x": 1217,
+          "y": 506,
+          "width": 299,
+          "height": 232
+        },
+        "pillar-banner-a": {
+          "x": 534,
+          "y": 515,
+          "width": 55,
+          "height": 206
+        },
+        "pillar-banner-b": {
+          "x": 763,
+          "y": 515,
+          "width": 54,
+          "height": 206
+        },
+        "junction": {
+          "x": 363,
+          "y": 518,
+          "width": 121,
+          "height": 206
+        },
+        "side-panel": {
+          "x": 24,
+          "y": 528,
+          "width": 106,
+          "height": 197
+        },
+        "side-panel-narrow": {
+          "x": 161,
+          "y": 528,
+          "width": 78,
+          "height": 199
+        },
+        "archway": {
+          "x": 897,
+          "y": 530,
+          "width": 265,
+          "height": 183
+        },
+        "panel-framed": {
+          "x": 876,
+          "y": 730,
+          "width": 105,
+          "height": 182
+        },
+        "pedestal": {
+          "x": 738,
+          "y": 733,
+          "width": 50,
+          "height": 103
+        },
+        "balustrade": {
+          "x": 522,
+          "y": 736,
+          "width": 191,
+          "height": 106
+        },
+        "banner-red-angled": {
+          "x": 1131,
+          "y": 737,
+          "width": 76,
+          "height": 192
+        },
+        "partition": {
+          "x": 29,
+          "y": 739,
+          "width": 181,
+          "height": 102
+        },
+        "banner-red": {
+          "x": 814,
+          "y": 752,
+          "width": 51,
+          "height": 165
+        },
+        "partition-crest": {
+          "x": 244,
+          "y": 754,
+          "width": 257,
+          "height": 89
+        },
+        "display-case": {
+          "x": 999,
+          "y": 760,
+          "width": 112,
+          "height": 172
+        },
+        "stone-arch": {
+          "x": 1268,
+          "y": 771,
+          "width": 126,
+          "height": 156
+        },
+        "pillar-thin-b": {
+          "x": 1464,
+          "y": 781,
+          "width": 36,
+          "height": 146
+        },
+        "pillar-thin-c": {
+          "x": 1225,
+          "y": 782,
+          "width": 32,
+          "height": 145
+        },
+        "pillar-thin-d": {
+          "x": 1406,
+          "y": 782,
+          "width": 33,
+          "height": 145
+        },
+        "post-small": {
+          "x": 717,
+          "y": 848,
+          "width": 60,
+          "height": 79
+        },
+        "trim-long": {
+          "x": 484,
+          "y": 868,
+          "width": 203,
+          "height": 50
+        },
+        "trim-mid": {
+          "x": 314,
+          "y": 869,
+          "width": 133,
+          "height": 46
+        },
+        "trim-short": {
+          "x": 177,
+          "y": 870,
+          "width": 116,
+          "height": 47
+        },
+        "trim-short-b": {
+          "x": 30,
+          "y": 871,
+          "width": 114,
+          "height": 46
+        },
+        "block-corner": {
+          "x": 616,
+          "y": 940,
+          "width": 57,
+          "height": 54
+        },
+        "block-a": {
+          "x": 417,
+          "y": 951,
+          "width": 56,
+          "height": 43
+        },
+        "block-b": {
+          "x": 516,
+          "y": 951,
+          "width": 61,
+          "height": 43
+        },
+        "block-corner-b": {
+          "x": 323,
+          "y": 954,
+          "width": 58,
+          "height": 50
+        },
+        "trim-strip": {
+          "x": 177,
+          "y": 956,
+          "width": 116,
+          "height": 37
+        },
+        "trim-strip-b": {
+          "x": 31,
+          "y": 958,
+          "width": 113,
+          "height": 36
+        }
+      }
+    },
+    {
+      "key": "guild-central",
+      "url": "/assets/game/maps/guild/interior/props/guild_central_office_furniture.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "desk-long": {
+          "x": 47,
+          "y": 14,
+          "width": 957,
+          "height": 231
+        },
+        "desk-right": {
+          "x": 1286,
+          "y": 14,
+          "width": 195,
+          "height": 223
+        },
+        "desk-left": {
+          "x": 1048,
+          "y": 15,
+          "width": 194,
+          "height": 222
+        },
+        "counter-block": {
+          "x": 1333,
+          "y": 251,
+          "width": 145,
+          "height": 167
+        },
+        "counter-curved": {
+          "x": 498,
+          "y": 259,
+          "width": 209,
+          "height": 170
+        },
+        "armchair": {
+          "x": 753,
+          "y": 259,
+          "width": 93,
+          "height": 164
+        },
+        "chair-front": {
+          "x": 912,
+          "y": 267,
+          "width": 85,
+          "height": 155
+        },
+        "chair-side": {
+          "x": 1048,
+          "y": 273,
+          "width": 87,
+          "height": 149
+        },
+        "desk-mid": {
+          "x": 42,
+          "y": 281,
+          "width": 419,
+          "height": 158
+        },
+        "stool": {
+          "x": 1192,
+          "y": 296,
+          "width": 80,
+          "height": 107
+        },
+        "scroll-crate": {
+          "x": 1178,
+          "y": 432,
+          "width": 141,
+          "height": 151
+        },
+        "paper-stack": {
+          "x": 49,
+          "y": 452,
+          "width": 104,
+          "height": 112
+        },
+        "ledger": {
+          "x": 378,
+          "y": 452,
+          "width": 126,
+          "height": 114
+        },
+        "seal-stamp": {
+          "x": 686,
+          "y": 452,
+          "width": 98,
+          "height": 106
+        },
+        "inkwell": {
+          "x": 547,
+          "y": 455,
+          "width": 95,
+          "height": 101
+        },
+        "book-stack": {
+          "x": 1382,
+          "y": 455,
+          "width": 104,
+          "height": 109
+        },
+        "document-tray": {
+          "x": 1000,
+          "y": 460,
+          "width": 116,
+          "height": 106
+        },
+        "ledger-open": {
+          "x": 186,
+          "y": 469,
+          "width": 151,
+          "height": 88
+        },
+        "crate-parchment": {
+          "x": 827,
+          "y": 469,
+          "width": 123,
+          "height": 103
+        },
+        "filing-cabinet": {
+          "x": 519,
+          "y": 575,
+          "width": 136,
+          "height": 203
+        },
+        "filing-cabinet-tall": {
+          "x": 1364,
+          "y": 575,
+          "width": 126,
+          "height": 233
+        },
+        "shelf-open": {
+          "x": 38,
+          "y": 586,
+          "width": 217,
+          "height": 188
+        },
+        "bookshelf": {
+          "x": 296,
+          "y": 586,
+          "width": 177,
+          "height": 188
+        },
+        "crates-stacked": {
+          "x": 1116,
+          "y": 608,
+          "width": 186,
+          "height": 164
+        },
+        "side-cabinet": {
+          "x": 695,
+          "y": 610,
+          "width": 134,
+          "height": 166
+        },
+        "chest-crest": {
+          "x": 880,
+          "y": 632,
+          "width": 170,
+          "height": 129
+        },
+        "banner-small": {
+          "x": 983,
+          "y": 780,
+          "width": 82,
+          "height": 199
+        },
+        "plant-large": {
+          "x": 1110,
+          "y": 801,
+          "width": 123,
+          "height": 185
+        },
+        "scroll-stand": {
+          "x": 848,
+          "y": 802,
+          "width": 82,
+          "height": 179
+        },
+        "side-table-plant": {
+          "x": 666,
+          "y": 815,
+          "width": 116,
+          "height": 158
+        },
+        "bench": {
+          "x": 47,
+          "y": 831,
+          "width": 304,
+          "height": 135
+        },
+        "bench-crest": {
+          "x": 397,
+          "y": 846,
+          "width": 214,
+          "height": 120
+        },
+        "planter-long": {
+          "x": 1269,
+          "y": 849,
+          "width": 217,
+          "height": 117
+        }
+      }
+    },
+    {
+      "key": "guild-company",
+      "url": "/assets/game/maps/guild/interior/props/guild_company_office_furniture.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "desk-cluster-blue": {
+          "x": 35,
+          "y": 31,
+          "width": 430,
+          "height": 251
+        },
+        "desk-cluster-red": {
+          "x": 498,
+          "y": 31,
+          "width": 385,
+          "height": 251
+        },
+        "desk-medium-a": {
+          "x": 930,
+          "y": 38,
+          "width": 273,
+          "height": 234
+        },
+        "desk-medium-b": {
+          "x": 1265,
+          "y": 56,
+          "width": 225,
+          "height": 214
+        },
+        "cabinet-documents": {
+          "x": 1112,
+          "y": 280,
+          "width": 152,
+          "height": 248
+        },
+        "shelf-standing": {
+          "x": 603,
+          "y": 289,
+          "width": 209,
+          "height": 228
+        },
+        "cabinet-drawers": {
+          "x": 1324,
+          "y": 298,
+          "width": 169,
+          "height": 235
+        },
+        "bookshelf-low": {
+          "x": 859,
+          "y": 335,
+          "width": 199,
+          "height": 182
+        },
+        "armchair-blue": {
+          "x": 36,
+          "y": 344,
+          "width": 98,
+          "height": 177
+        },
+        "armchair-red": {
+          "x": 184,
+          "y": 347,
+          "width": 97,
+          "height": 174
+        },
+        "chair": {
+          "x": 339,
+          "y": 360,
+          "width": 87,
+          "height": 161
+        },
+        "stool": {
+          "x": 468,
+          "y": 384,
+          "width": 86,
+          "height": 117
+        },
+        "record-board-large": {
+          "x": 326,
+          "y": 535,
+          "width": 343,
+          "height": 241
+        },
+        "parchment-stack": {
+          "x": 716,
+          "y": 536,
+          "width": 108,
+          "height": 111
+        },
+        "scroll-bundle": {
+          "x": 875,
+          "y": 536,
+          "width": 156,
+          "height": 139
+        },
+        "book-stack": {
+          "x": 1336,
+          "y": 541,
+          "width": 125,
+          "height": 119
+        },
+        "record-board": {
+          "x": 37,
+          "y": 544,
+          "width": 255,
+          "height": 202
+        },
+        "book-open": {
+          "x": 1080,
+          "y": 553,
+          "width": 180,
+          "height": 94
+        },
+        "toolbox": {
+          "x": 1356,
+          "y": 660,
+          "width": 142,
+          "height": 129
+        },
+        "lantern": {
+          "x": 1235,
+          "y": 662,
+          "width": 59,
+          "height": 121
+        },
+        "crate-scrolls": {
+          "x": 704,
+          "y": 663,
+          "width": 138,
+          "height": 131
+        },
+        "inkwell": {
+          "x": 1018,
+          "y": 668,
+          "width": 90,
+          "height": 108
+        },
+        "box-letters": {
+          "x": 867,
+          "y": 685,
+          "width": 111,
+          "height": 99
+        },
+        "seal-stamp": {
+          "x": 1120,
+          "y": 696,
+          "width": 80,
+          "height": 88
+        },
+        "partition-red": {
+          "x": 343,
+          "y": 806,
+          "width": 259,
+          "height": 175
+        },
+        "partition-blue": {
+          "x": 32,
+          "y": 807,
+          "width": 271,
+          "height": 174
+        },
+        "side-table-banner": {
+          "x": 1356,
+          "y": 808,
+          "width": 144,
+          "height": 175
+        },
+        "side-table-plant": {
+          "x": 833,
+          "y": 814,
+          "width": 108,
+          "height": 166
+        },
+        "table-round": {
+          "x": 1172,
+          "y": 816,
+          "width": 137,
+          "height": 167
+        },
+        "table-books": {
+          "x": 991,
+          "y": 822,
+          "width": 123,
+          "height": 158
+        },
+        "planter-box": {
+          "x": 634,
+          "y": 833,
+          "width": 152,
+          "height": 146
+        }
+      }
+    },
+    {
+      "key": "guild-archive",
+      "url": "/assets/game/maps/guild/interior/props/guild_archive_props.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "shelf-tall": {
+          "x": 996,
+          "y": 23,
+          "width": 210,
+          "height": 337
+        },
+        "parchment-stack-tall": {
+          "x": 21,
+          "y": 24,
+          "width": 178,
+          "height": 282
+        },
+        "bookshelf-large": {
+          "x": 1228,
+          "y": 51,
+          "width": 288,
+          "height": 305
+        },
+        "scroll-bundle-large": {
+          "x": 571,
+          "y": 106,
+          "width": 213,
+          "height": 227
+        },
+        "scroll-barrel": {
+          "x": 809,
+          "y": 120,
+          "width": 154,
+          "height": 207
+        },
+        "parchment-stack-mid": {
+          "x": 221,
+          "y": 127,
+          "width": 126,
+          "height": 171
+        },
+        "paper-pile": {
+          "x": 372,
+          "y": 165,
+          "width": 173,
+          "height": 150
+        },
+        "record-cabinet": {
+          "x": 28,
+          "y": 314,
+          "width": 316,
+          "height": 288
+        },
+        "cabinet-documents": {
+          "x": 380,
+          "y": 365,
+          "width": 162,
+          "height": 227
+        },
+        "map-unrolled": {
+          "x": 1097,
+          "y": 366,
+          "width": 410,
+          "height": 236
+        },
+        "chest-documents": {
+          "x": 564,
+          "y": 368,
+          "width": 199,
+          "height": 221
+        },
+        "ledger-open-large": {
+          "x": 794,
+          "y": 411,
+          "width": 277,
+          "height": 186
+        },
+        "quill-stand": {
+          "x": 20,
+          "y": 612,
+          "width": 160,
+          "height": 141
+        },
+        "crate-letters": {
+          "x": 1377,
+          "y": 612,
+          "width": 141,
+          "height": 136
+        },
+        "candle-stand": {
+          "x": 685,
+          "y": 616,
+          "width": 49,
+          "height": 118
+        },
+        "paper-loose": {
+          "x": 755,
+          "y": 624,
+          "width": 149,
+          "height": 121
+        },
+        "seal-stamp": {
+          "x": 418,
+          "y": 626,
+          "width": 92,
+          "height": 112
+        },
+        "paper-tied": {
+          "x": 1098,
+          "y": 626,
+          "width": 102,
+          "height": 113
+        },
+        "seal-kit": {
+          "x": 522,
+          "y": 631,
+          "width": 124,
+          "height": 110
+        },
+        "bundle-tied": {
+          "x": 943,
+          "y": 634,
+          "width": 123,
+          "height": 115
+        },
+        "bundle-flat": {
+          "x": 1228,
+          "y": 635,
+          "width": 120,
+          "height": 99
+        },
+        "ink-blue": {
+          "x": 193,
+          "y": 645,
+          "width": 68,
+          "height": 97
+        },
+        "ink-green": {
+          "x": 335,
+          "y": 661,
+          "width": 52,
+          "height": 71
+        },
+        "ink-red": {
+          "x": 273,
+          "y": 668,
+          "width": 50,
+          "height": 67
+        },
+        "archive-desk": {
+          "x": 467,
+          "y": 713,
+          "width": 550,
+          "height": 261
+        },
+        "crates-papers": {
+          "x": 1304,
+          "y": 747,
+          "width": 206,
+          "height": 246
+        },
+        "trolley": {
+          "x": 23,
+          "y": 758,
+          "width": 251,
+          "height": 233
+        },
+        "book-stack": {
+          "x": 1040,
+          "y": 795,
+          "width": 119,
+          "height": 174
+        },
+        "crate-scrolls": {
+          "x": 1174,
+          "y": 804,
+          "width": 146,
+          "height": 178
+        },
+        "step-stool": {
+          "x": 280,
+          "y": 830,
+          "width": 162,
+          "height": 165
+        }
+      }
+    },
+    {
+      "key": "guild-signage",
+      "url": "/assets/game/maps/guild/interior/props/guild_interior_signage_props.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "plaque-large-blue": {
+          "x": 29,
+          "y": 18,
+          "width": 389,
+          "height": 161
+        },
+        "plaque-large-red": {
+          "x": 432,
+          "y": 18,
+          "width": 340,
+          "height": 160
+        },
+        "plaque-gold": {
+          "x": 788,
+          "y": 19,
+          "width": 278,
+          "height": 159
+        },
+        "plaque-red": {
+          "x": 326,
+          "y": 197,
+          "width": 231,
+          "height": 139
+        },
+        "plaque-gold-b": {
+          "x": 581,
+          "y": 197,
+          "width": 216,
+          "height": 139
+        },
+        "plaque-blue": {
+          "x": 39,
+          "y": 198,
+          "width": 261,
+          "height": 140
+        },
+        "pennant-blue": {
+          "x": 829,
+          "y": 201,
+          "width": 131,
+          "height": 256
+        },
+        "pennant-red": {
+          "x": 992,
+          "y": 201,
+          "width": 129,
+          "height": 257
+        },
+        "banner-blue": {
+          "x": 1140,
+          "y": 228,
+          "width": 112,
+          "height": 271
+        },
+        "banner-cream": {
+          "x": 1391,
+          "y": 228,
+          "width": 113,
+          "height": 271
+        },
+        "banner-red": {
+          "x": 1266,
+          "y": 229,
+          "width": 113,
+          "height": 270
+        },
+        "nameplate-gold": {
+          "x": 413,
+          "y": 357,
+          "width": 168,
+          "height": 101
+        },
+        "nameplate-red": {
+          "x": 227,
+          "y": 359,
+          "width": 161,
+          "height": 97
+        },
+        "nameplate-gold-wide": {
+          "x": 620,
+          "y": 360,
+          "width": 176,
+          "height": 101
+        },
+        "nameplate-blue": {
+          "x": 36,
+          "y": 363,
+          "width": 161,
+          "height": 94
+        },
+        "crest-blue": {
+          "x": 778,
+          "y": 490,
+          "width": 140,
+          "height": 150
+        },
+        "crest-red": {
+          "x": 932,
+          "y": 491,
+          "width": 108,
+          "height": 149
+        },
+        "crest-bronze": {
+          "x": 1052,
+          "y": 492,
+          "width": 105,
+          "height": 148
+        },
+        "parchment-frame": {
+          "x": 1181,
+          "y": 497,
+          "width": 160,
+          "height": 259
+        },
+        "header-blue": {
+          "x": 26,
+          "y": 736,
+          "width": 366,
+          "height": 219
+        },
+        "header-red": {
+          "x": 462,
+          "y": 742,
+          "width": 394,
+          "height": 215
+        }
+      }
+    },
+    {
+      "key": "guild-ext-terrain",
+      "url": "/assets/game/maps/guild/exterior/terrain/guild_exterior_terrain.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "grass-tufted": {
+          "x": 15,
+          "y": 16,
+          "width": 248,
+          "height": 256
+        },
+        "grass-plain": {
+          "x": 279,
+          "y": 19,
+          "width": 255,
+          "height": 253
+        },
+        "dirt": {
+          "x": 551,
+          "y": 17,
+          "width": 252,
+          "height": 253
+        },
+        "stone-paving": {
+          "x": 822,
+          "y": 18,
+          "width": 242,
+          "height": 254
+        },
+        "stone-paving-alt": {
+          "x": 1084,
+          "y": 17,
+          "width": 257,
+          "height": 255
+        }
+      }
+    },
+    {
+      "key": "guild-bureau",
+      "url": "/assets/game/maps/guild/exterior/buildings/guild_bureau_building.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "building": {
+          "x": 27,
+          "y": 21,
+          "width": 1482,
+          "height": 951
+        }
+      }
+    }
+  ]
+}

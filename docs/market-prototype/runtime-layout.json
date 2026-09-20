@@ -1,0 +1,192 @@
+[
+  {
+    "name": "market_tileset.red_stall",
+    "x": 165,
+    "y": 155,
+    "scale": 0.34,
+    "width": 140.42000000000002,
+    "height": 132.94,
+    "depth": 155,
+    "frame": "market_tileset.red_stall"
+  },
+  {
+    "name": "market_tileset.crate_stack",
+    "x": 288,
+    "y": 160,
+    "scale": 0.32,
+    "width": 35.52,
+    "height": 52.480000000000004,
+    "depth": 160,
+    "frame": "market_tileset.crate_stack"
+  },
+  {
+    "name": "market_tileset.blue_stall",
+    "x": 578,
+    "y": 167,
+    "scale": 0.36,
+    "width": 142.2,
+    "height": 142.2,
+    "depth": 167,
+    "frame": "market_tileset.blue_stall"
+  },
+  {
+    "name": "market_tileset.vegetable_box",
+    "x": 102,
+    "y": 178,
+    "scale": 0.3,
+    "width": 36.9,
+    "height": 28.5,
+    "depth": 178,
+    "frame": "market_tileset.vegetable_box"
+  },
+  {
+    "name": "market-npc-deer",
+    "x": 210,
+    "y": 178,
+    "scale": 0.5,
+    "width": 64,
+    "height": 64,
+    "depth": 178,
+    "frame": 0
+  },
+  {
+    "name": "market_tileset.flower_box",
+    "x": 635,
+    "y": 184,
+    "scale": 0.25,
+    "width": 30.75,
+    "height": 25.75,
+    "depth": 184,
+    "frame": "market_tileset.flower_box"
+  },
+  {
+    "name": "market_tileset.barrel",
+    "x": 331,
+    "y": 191,
+    "scale": 0.28,
+    "width": 35,
+    "height": 43.68000000000001,
+    "depth": 191,
+    "frame": "market_tileset.barrel"
+  },
+  {
+    "name": "market-npc-bear",
+    "x": 559,
+    "y": 194,
+    "scale": 0.49,
+    "width": 62.72,
+    "height": 62.72,
+    "depth": 194,
+    "frame": 0
+  },
+  {
+    "name": "market_tileset.crate_cloth",
+    "x": 677,
+    "y": 222,
+    "scale": 0.28,
+    "width": 36.120000000000005,
+    "height": 33.040000000000006,
+    "depth": 222,
+    "frame": "market_tileset.crate_cloth"
+  },
+  {
+    "name": "market-npc-cat",
+    "x": 500,
+    "y": 271,
+    "scale": 0.43,
+    "width": 55.04,
+    "height": 55.04,
+    "depth": 271,
+    "frame": 0
+  },
+  {
+    "name": "market_tileset.potion_shelf",
+    "x": 465,
+    "y": 276,
+    "scale": 0.28,
+    "width": 42.28,
+    "height": 38.36000000000001,
+    "depth": 276,
+    "frame": "market_tileset.potion_shelf"
+  },
+  {
+    "name": "market-npc-fox",
+    "x": 225,
+    "y": 289,
+    "scale": 0.45,
+    "width": 57.6,
+    "height": 57.6,
+    "depth": 289,
+    "frame": 0
+  },
+  {
+    "name": "market_tileset.flower_box",
+    "x": 57,
+    "y": 299,
+    "scale": 0.28,
+    "width": 34.440000000000005,
+    "height": 28.840000000000003,
+    "depth": 299,
+    "frame": "market_tileset.flower_box"
+  },
+  {
+    "name": "market_tileset.cart",
+    "x": 584,
+    "y": 300,
+    "scale": 0.34,
+    "width": 118.66000000000001,
+    "height": 89.42,
+    "depth": 300,
+    "frame": "market_tileset.cart"
+  },
+  {
+    "name": "market_tileset.green_stall",
+    "x": 128,
+    "y": 304,
+    "scale": 0.29,
+    "width": 105.55999999999999,
+    "height": 115.13,
+    "depth": 304,
+    "frame": "market_tileset.green_stall"
+  },
+  {
+    "name": "market_tileset.sign",
+    "x": 681,
+    "y": 306,
+    "scale": 0.28,
+    "width": 36.120000000000005,
+    "height": 62.440000000000005,
+    "depth": 306,
+    "frame": "market_tileset.sign"
+  },
+  {
+    "name": "market-npc-bird",
+    "x": 515,
+    "y": 337,
+    "scale": 0.4,
+    "width": 51.2,
+    "height": 51.2,
+    "depth": 337,
+    "frame": 0
+  },
+  {
+    "name": "market-npc-chicken",
+    "x": 234,
+    "y": 338,
+    "scale": 0.42,
+    "width": 53.76,
+    "height": 53.76,
+    "depth": 338,
+    "frame": 0
+  },
+  {
+    "name": "player",
+    "x": 640,
+    "y": 338,
+    "scale": 0.5,
+    "width": 64,
+    "height": 64,
+    "depth": 338,
+    "frame": 0
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "generated": "2026-09-20",
+  "note": "Shared warp magic circle: three RGBA layers with transparent backgrounds. Bounds are the alpha>=8 box of each file. The energy sheet is one row of four equal cells (sheet width divides by four exactly); its frames touch, so the split is by cell, not by gutter. No asset was modified.",
+  "sheets": {
+    "base": {
+      "url": "/assets/game/shared/effects/wrap/warp_magic_circle_base.png",
+      "width": 1536,
+      "height": 1024,
+      "alphaBounds": {
+        "x": 269,
+        "y": 53,
+        "width": 998,
+        "height": 918,
+        "pixels": 304450
+      }
+    },
+    "glow": {
+      "url": "/assets/game/shared/effects/wrap/warp_magic_circle_glow.png",
+      "width": 1536,
+      "height": 1024,
+      "alphaBounds": {
+        "x": 33,
+        "y": 111,
+        "width": 1474,
+        "height": 835,
+        "pixels": 952692
+      }
+    },
+    "energy": {
+      "url": "/assets/game/shared/effects/wrap/warp_magic_circle_energy.png",
+      "width": 2172,
+      "height": 724,
+      "alphaBounds": {
+        "x": 27,
+        "y": 141,
+        "width": 2123,
+        "height": 459,
+        "pixels": 544985
+      },
+      "frames": [
+        {
+          "index": 0,
+          "cell": {
+            "x": 0,
+            "y": 0,
+            "width": 543,
+            "height": 724
+          },
+          "content": {
+            "x": 27,
+            "y": 219,
+            "width": 490,
+            "height": 366,
+            "pixels": 96666
+          }
+        },
+        {
+          "index": 1,
+          "cell": {
+            "x": 543,
+            "y": 0,
+            "width": 543,
+            "height": 724
+          },
+          "content": {
+            "x": 3,
+            "y": 212,
+            "width": 540,
+            "height": 388,
+            "pixels": 149839
+          }
+        },
+        {
+          "index": 2,
+          "cell": {
+            "x": 1086,
+            "y": 0,
+            "width": 543,
+            "height": 724
+          },
+          "content": {
+            "x": 0,
+            "y": 141,
+            "width": 543,
+            "height": 456,
+            "pixels": 190250
+          }
+        },
+        {
+          "index": 3,
+          "cell": {
+            "x": 1629,
+            "y": 0,
+            "width": 543,
+            "height": 724
+          },
+          "content": {
+            "x": 0,
+            "y": 240,
+            "width": 521,
+            "height": 344,
+            "pixels": 108230
+          }
+        }
+      ],
+      "frameWidth": 543,
+      "frameHeight": 724,
+      "frameCount": 4
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "source": "/assets/game/maps/dungeon-entrance/effects/dungeon_campfire_flame.png",
+  "url": "/assets/game/maps/dungeon-entrance/effects/dungeon_campfire_flame.png",
+  "width": 2172,
+  "height": 724,
+  "format": "RGBA8888",
+  "alphaBounds": {
+    "x": 90,
+    "y": 89,
+    "width": 1997,
+    "height": 558,
+    "pixels": 426623
+  },
+  "frameWidth": 543,
+  "frameHeight": 724,
+  "frameCount": 4,
+  "frames": [
+    {
+      "index": 0,
+      "cell": {
+        "x": 0,
+        "y": 0,
+        "width": 543,
+        "height": 724
+      },
+      "content": {
+        "x": 90,
+        "y": 168,
+        "width": 366,
+        "height": 479,
+        "pixels": 103816
+      }
+    },
+    {
+      "index": 1,
+      "cell": {
+        "x": 543,
+        "y": 0,
+        "width": 543,
+        "height": 724
+      },
+      "content": {
+        "x": 96,
+        "y": 89,
+        "width": 361,
+        "height": 558,
+        "pixels": 116968
+      }
+    },
+    {
+      "index": 2,
+      "cell": {
+        "x": 1086,
+        "y": 0,
+        "width": 543,
+        "height": 724
+      },
+      "content": {
+        "x": 72,
+        "y": 242,
+        "width": 400,
+        "height": 405,
+        "pixels": 101958
+      }
+    },
+    {
+      "index": 3,
+      "cell": {
+        "x": 1629,
+        "y": 0,
+        "width": 543,
+        "height": 724
+      },
+      "content": {
+        "x": 96,
+        "y": 143,
+        "width": 362,
+        "height": 504,
+        "pixels": 103881
+      }
+    }
+  ]
+}

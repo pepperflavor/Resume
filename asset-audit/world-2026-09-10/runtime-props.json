@@ -1,0 +1,1901 @@
+{
+  "dungeon_entrance_ambient_props.png": {
+    "source": "objects/dungeon_entrance_ambient_props.png",
+    "sourceSha256": "70ab03c401e19d59b6dc6bdeebddc3f523cc1d031315fc8ff1b611323d94dfe0",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_ambient_props.png",
+    "width": 768,
+    "height": 313,
+    "runtimeSha256": "c110772b491e00cd0c626f9b6a11eaf3783b899ab2c730a0fe90e15fcd658154",
+    "frames": [
+      {
+        "name": "backpack",
+        "sourceRect": {
+          "x": 4,
+          "y": 119,
+          "width": 86,
+          "height": 84
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 8,
+          "rect": {
+            "x": 23,
+            "y": 233,
+            "width": 172,
+            "height": 167,
+            "pixels": 23893
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "backpack_small",
+        "sourceRect": {
+          "x": 462,
+          "y": 119,
+          "width": 60,
+          "height": 70
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 10,
+          "rect": {
+            "x": 217,
+            "y": 261,
+            "width": 120,
+            "height": 139,
+            "pixels": 12283
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bedroll",
+        "sourceRect": {
+          "x": 187,
+          "y": 207,
+          "width": 86,
+          "height": 59
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 12,
+          "rect": {
+            "x": 361,
+            "y": 277,
+            "width": 172,
+            "height": 118,
+            "pixels": 13574
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "bone",
+        "sourceRect": {
+          "x": 4,
+          "y": 272,
+          "width": 71,
+          "height": 37
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 28,
+          "rect": {
+            "x": 194,
+            "y": 663,
+            "width": 141,
+            "height": 73,
+            "pixels": 4064
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "boots",
+        "sourceRect": {
+          "x": 114,
+          "y": 207,
+          "width": 69,
+          "height": 60
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 14,
+          "rect": {
+            "x": 1033,
+            "y": 288,
+            "width": 138,
+            "height": 119,
+            "pixels": 11346
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "firewood",
+        "sourceRect": {
+          "x": 4,
+          "y": 207,
+          "width": 106,
+          "height": 61
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 23,
+          "rect": {
+            "x": 357,
+            "y": 499,
+            "width": 212,
+            "height": 122,
+            "pixels": 16839
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "food_bundle",
+        "sourceRect": {
+          "x": 348,
+          "y": 207,
+          "width": 93,
+          "height": 56
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 15,
+          "rect": {
+            "x": 826,
+            "y": 289,
+            "width": 185,
+            "height": 112,
+            "pixels": 14535
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lantern",
+        "sourceRect": {
+          "x": 278,
+          "y": 119,
+          "width": 38,
+          "height": 75
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 22,
+          "rect": {
+            "x": 733,
+            "y": 464,
+            "width": 76,
+            "height": 150,
+            "pixels": 7678
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "moss_rock",
+        "sourceRect": {
+          "x": 526,
+          "y": 119,
+          "width": 86,
+          "height": 70
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 25,
+          "rect": {
+            "x": 1163,
+            "y": 507,
+            "width": 171,
+            "height": 140,
+            "pixels": 16607
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "moss_rocks",
+        "sourceRect": {
+          "x": 312,
+          "y": 4,
+          "width": 122,
+          "height": 108
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 37,
+          "rect": {
+            "x": 17,
+            "y": 770,
+            "width": 243,
+            "height": 216,
+            "pixels": 35762
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rib_bones",
+        "sourceRect": {
+          "x": 520,
+          "y": 207,
+          "width": 67,
+          "height": 54
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 26,
+          "rect": {
+            "x": 360,
+            "y": 654,
+            "width": 133,
+            "height": 108,
+            "pixels": 7377
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rope",
+        "sourceRect": {
+          "x": 656,
+          "y": 207,
+          "width": 65,
+          "height": 50
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 16,
+          "rect": {
+            "x": 550,
+            "y": 294,
+            "width": 129,
+            "height": 100,
+            "pixels": 8965
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rubble",
+        "sourceRect": {
+          "x": 320,
+          "y": 119,
+          "width": 81,
+          "height": 75
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 39,
+          "rect": {
+            "x": 273,
+            "y": 836,
+            "width": 161,
+            "height": 150,
+            "pixels": 15951
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "scroll",
+        "sourceRect": {
+          "x": 445,
+          "y": 207,
+          "width": 71,
+          "height": 55
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 13,
+          "rect": {
+            "x": 1189,
+            "y": 285,
+            "width": 142,
+            "height": 110,
+            "pixels": 8546
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "shield",
+        "sourceRect": {
+          "x": 611,
+          "y": 4,
+          "width": 71,
+          "height": 91
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 20,
+          "rect": {
+            "x": 193,
+            "y": 440,
+            "width": 141,
+            "height": 181,
+            "pixels": 20091
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "skull",
+        "sourceRect": {
+          "x": 591,
+          "y": 207,
+          "width": 61,
+          "height": 53
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 27,
+          "rect": {
+            "x": 34,
+            "y": 658,
+            "width": 122,
+            "height": 105,
+            "pixels": 7790
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spider",
+        "sourceRect": {
+          "x": 667,
+          "y": 119,
+          "width": 71,
+          "height": 65
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 5,
+          "rect": {
+            "x": 564,
+            "y": 67,
+            "width": 142,
+            "height": 129,
+            "pixels": 10337
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "spider_small",
+        "sourceRect": {
+          "x": 277,
+          "y": 207,
+          "width": 67,
+          "height": 56
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 7,
+          "rect": {
+            "x": 403,
+            "y": 82,
+            "width": 134,
+            "height": 111,
+            "pixels": 9201
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 72,
+          "height": 111
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 18,
+          "rect": {
+            "x": 858,
+            "y": 425,
+            "width": 144,
+            "height": 222,
+            "pixels": 15356
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_cluster",
+        "sourceRect": {
+          "x": 438,
+          "y": 4,
+          "width": 82,
+          "height": 103
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 36,
+          "rect": {
+            "x": 453,
+            "y": 767,
+            "width": 164,
+            "height": 206,
+            "pixels": 18044
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_row",
+        "sourceRect": {
+          "x": 223,
+          "y": 4,
+          "width": 85,
+          "height": 108
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 35,
+          "rect": {
+            "x": 647,
+            "y": 762,
+            "width": 170,
+            "height": 215,
+            "pixels": 19430
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stalagmite_small",
+        "sourceRect": {
+          "x": 405,
+          "y": 119,
+          "width": 53,
+          "height": 72
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 24,
+          "rect": {
+            "x": 1037,
+            "y": 500,
+            "width": 106,
+            "height": 144,
+            "pixels": 8883
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "sword_in_rocks",
+        "sourceRect": {
+          "x": 80,
+          "y": 4,
+          "width": 82,
+          "height": 109
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 17,
+          "rect": {
+            "x": 22,
+            "y": 420,
+            "width": 163,
+            "height": 218,
+            "pixels": 15721
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "torch_stand",
+        "sourceRect": {
+          "x": 166,
+          "y": 4,
+          "width": 53,
+          "height": 109
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 19,
+          "rect": {
+            "x": 593,
+            "y": 433,
+            "width": 106,
+            "height": 217,
+            "pixels": 11602
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "water_bottle",
+        "sourceRect": {
+          "x": 616,
+          "y": 119,
+          "width": 47,
+          "height": 69
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 9,
+          "rect": {
+            "x": 703,
+            "y": 255,
+            "width": 93,
+            "height": 137,
+            "pixels": 9973
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "web_corner",
+        "sourceRect": {
+          "x": 210,
+          "y": 119,
+          "width": 64,
+          "height": 80
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 6,
+          "rect": {
+            "x": 916,
+            "y": 72,
+            "width": 127,
+            "height": 159,
+            "pixels": 5742
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "web_square",
+        "sourceRect": {
+          "x": 524,
+          "y": 4,
+          "width": 83,
+          "height": 93
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 1,
+          "rect": {
+            "x": 725,
+            "y": 21,
+            "width": 166,
+            "height": 185,
+            "pixels": 8262
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "web_wide",
+        "sourceRect": {
+          "x": 94,
+          "y": 119,
+          "width": 112,
+          "height": 80
+        },
+        "origin": {
+          "file": "objects/dungeon_entrance_ambient_props.png",
+          "component": 4,
+          "rect": {
+            "x": 1075,
+            "y": 65,
+            "width": 223,
+            "height": 160,
+            "pixels": 10718
+          },
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "dungeon_boss_treasure_props.png": {
+    "source": "objects/dungeon_boss_treasure_props.png",
+    "sourceSha256": "b742d4c5e518350a3717ffec98f0942006db2932a6cd97319f42264a572222d0",
+    "runtimeUrl": "/assets/game/runtime/dungeon_boss_treasure_props.png",
+    "width": 768,
+    "height": 340,
+    "runtimeSha256": "80786980a49119d21b55a5c92ea4c6f78addc9e80bc98d8aadd88dee283b49ca",
+    "frames": [
+      {
+        "name": "armor_torso",
+        "sourceRect": {
+          "x": 316,
+          "y": 141,
+          "width": 71,
+          "height": 71
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 25,
+          "rect": {
+            "x": 1134,
+            "y": 338,
+            "width": 142,
+            "height": 142,
+            "pixels": 13702
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "banner_cat",
+        "sourceRect": {
+          "x": 536,
+          "y": 4,
+          "width": 64,
+          "height": 101
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 59,
+          "rect": {
+            "x": 28,
+            "y": 777,
+            "width": 127,
+            "height": 201,
+            "pixels": 15184
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "beast_skull",
+        "sourceRect": {
+          "x": 4,
+          "y": 141,
+          "width": 135,
+          "height": 93
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 66,
+          "rect": {
+            "x": 1247,
+            "y": 805,
+            "width": 269,
+            "height": 185,
+            "pixels": 28329
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "chest_closed",
+        "sourceRect": {
+          "x": 237,
+          "y": 141,
+          "width": 75,
+          "height": 72
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 5,
+          "rect": {
+            "x": 1280,
+            "y": 76,
+            "width": 150,
+            "height": 143,
+            "pixels": 17329
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "chest_open",
+        "sourceRect": {
+          "x": 406,
+          "y": 4,
+          "width": 126,
+          "height": 106
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 1,
+          "rect": {
+            "x": 1007,
+            "y": 22,
+            "width": 251,
+            "height": 211,
+            "pixels": 35432
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_pile_large",
+        "sourceRect": {
+          "x": 4,
+          "y": 238,
+          "width": 96,
+          "height": 61
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 3,
+          "rect": {
+            "x": 182,
+            "y": 41,
+            "width": 192,
+            "height": 121,
+            "pixels": 12637
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_pile_small",
+        "sourceRect": {
+          "x": 401,
+          "y": 238,
+          "width": 66,
+          "height": 45
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 4,
+          "rect": {
+            "x": 28,
+            "y": 50,
+            "width": 131,
+            "height": 90,
+            "pixels": 7105
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_sacks",
+        "sourceRect": {
+          "x": 143,
+          "y": 141,
+          "width": 90,
+          "height": 88
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 2,
+          "rect": {
+            "x": 385,
+            "y": 27,
+            "width": 180,
+            "height": 176,
+            "pixels": 18609
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_single",
+        "sourceRect": {
+          "x": 135,
+          "y": 303,
+          "width": 13,
+          "height": 9
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 6,
+          "rect": {
+            "x": 156,
+            "y": 133,
+            "width": 26,
+            "height": 18,
+            "pixels": 360
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_stack",
+        "sourceRect": {
+          "x": 471,
+          "y": 238,
+          "width": 65,
+          "height": 45
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 11,
+          "rect": {
+            "x": 412,
+            "y": 223,
+            "width": 129,
+            "height": 89,
+            "pixels": 7096
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coin_tiny",
+        "sourceRect": {
+          "x": 115,
+          "y": 303,
+          "width": 16,
+          "height": 13
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 14,
+          "rect": {
+            "x": 567,
+            "y": 261,
+            "width": 32,
+            "height": 26,
+            "pixels": 682
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_pair",
+        "sourceRect": {
+          "x": 95,
+          "y": 303,
+          "width": 16,
+          "height": 13
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 7,
+          "rect": {
+            "x": 309,
+            "y": 150,
+            "width": 32,
+            "height": 25,
+            "pixels": 627
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_scattered",
+        "sourceRect": {
+          "x": 4,
+          "y": 303,
+          "width": 52,
+          "height": 33
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 15,
+          "rect": {
+            "x": 596,
+            "y": 261,
+            "width": 103,
+            "height": 66,
+            "pixels": 4362
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "coins_scattered_small",
+        "sourceRect": {
+          "x": 60,
+          "y": 303,
+          "width": 31,
+          "height": 22
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 20,
+          "rect": {
+            "x": 763,
+            "y": 283,
+            "width": 61,
+            "height": 44,
+            "pixels": 1468
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crown",
+        "sourceRect": {
+          "x": 540,
+          "y": 238,
+          "width": 47,
+          "height": 42
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 9,
+          "rect": {
+            "x": 156,
+            "y": 193,
+            "width": 93,
+            "height": 83,
+            "pixels": 5266
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "dais_cat",
+        "sourceRect": {
+          "x": 58,
+          "y": 4,
+          "width": 202,
+          "height": 132
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 46,
+          "rect": {
+            "x": 571,
+            "y": 512,
+            "width": 404,
+            "height": 264,
+            "pixels": 82797
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gauntlet",
+        "sourceRect": {
+          "x": 352,
+          "y": 238,
+          "width": 45,
+          "height": 46
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 34,
+          "rect": {
+            "x": 1396,
+            "y": 380,
+            "width": 89,
+            "height": 91,
+            "pixels": 4638
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gem_cluster",
+        "sourceRect": {
+          "x": 296,
+          "y": 238,
+          "width": 52,
+          "height": 46
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 12,
+          "rect": {
+            "x": 1232,
+            "y": 236,
+            "width": 103,
+            "height": 91,
+            "pixels": 5424
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gem_row",
+        "sourceRect": {
+          "x": 655,
+          "y": 238,
+          "width": 63,
+          "height": 37
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 13,
+          "rect": {
+            "x": 1019,
+            "y": 242,
+            "width": 126,
+            "height": 74,
+            "pixels": 5420
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "gems_and_coins",
+        "sourceRect": {
+          "x": 591,
+          "y": 238,
+          "width": 60,
+          "height": 39
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 16,
+          "rect": {
+            "x": 869,
+            "y": 261,
+            "width": 120,
+            "height": 77,
+            "pixels": 5861
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "goblet",
+        "sourceRect": {
+          "x": 161,
+          "y": 238,
+          "width": 34,
+          "height": 54
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 8,
+          "rect": {
+            "x": 43,
+            "y": 161,
+            "width": 67,
+            "height": 108,
+            "pixels": 5162
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "helmet",
+        "sourceRect": {
+          "x": 250,
+          "y": 238,
+          "width": 42,
+          "height": 48
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 32,
+          "rect": {
+            "x": 459,
+            "y": 375,
+            "width": 83,
+            "height": 96,
+            "pixels": 5435
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "helmet_plumed",
+        "sourceRect": {
+          "x": 104,
+          "y": 238,
+          "width": 53,
+          "height": 59
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 27,
+          "rect": {
+            "x": 1298,
+            "y": 343,
+            "width": 105,
+            "height": 118,
+            "pixels": 7840
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pillar_broken",
+        "sourceRect": {
+          "x": 323,
+          "y": 4,
+          "width": 79,
+          "height": 115
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 49,
+          "rect": {
+            "x": 21,
+            "y": 529,
+            "width": 157,
+            "height": 229,
+            "pixels": 21885
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pillar_coins",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 50,
+          "height": 133
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 43,
+          "rect": {
+            "x": 450,
+            "y": 495,
+            "width": 100,
+            "height": 266,
+            "pixels": 19908
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pillar_rune",
+        "sourceRect": {
+          "x": 264,
+          "y": 4,
+          "width": 55,
+          "height": 121
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 42,
+          "rect": {
+            "x": 307,
+            "y": 472,
+            "width": 110,
+            "height": 241,
+            "pixels": 18738
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rune_stone",
+        "sourceRect": {
+          "x": 199,
+          "y": 238,
+          "width": 47,
+          "height": 52
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 50,
+          "rect": {
+            "x": 1129,
+            "y": 663,
+            "width": 94,
+            "height": 103,
+            "pixels": 7827
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "shield_round",
+        "sourceRect": {
+          "x": 391,
+          "y": 141,
+          "width": 53,
+          "height": 71
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 26,
+          "rect": {
+            "x": 1019,
+            "y": 341,
+            "width": 106,
+            "height": 141,
+            "pixels": 10579
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "skeleton_bones",
+        "sourceRect": {
+          "x": 448,
+          "y": 141,
+          "width": 87,
+          "height": 66
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 28,
+          "rect": {
+            "x": 290,
+            "y": 346,
+            "width": 174,
+            "height": 132,
+            "pixels": 10966
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "skeleton_with_shield",
+        "sourceRect": {
+          "x": 596,
+          "y": 141,
+          "width": 114,
+          "height": 65
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 30,
+          "rect": {
+            "x": 566,
+            "y": 361,
+            "width": 228,
+            "height": 129,
+            "pixels": 19513
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "skeleton_with_sword",
+        "sourceRect": {
+          "x": 604,
+          "y": 4,
+          "width": 125,
+          "height": 94
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 21,
+          "rect": {
+            "x": 26,
+            "y": 288,
+            "width": 250,
+            "height": 188,
+            "pixels": 20123
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "sword_broken",
+        "sourceRect": {
+          "x": 539,
+          "y": 141,
+          "width": 53,
+          "height": 66
+        },
+        "origin": {
+          "file": "objects/dungeon_boss_treasure_props.png",
+          "component": 31,
+          "rect": {
+            "x": 896,
+            "y": 362,
+            "width": 106,
+            "height": 131,
+            "pixels": 4421
+          },
+          "scale": 0.5
+        }
+      }
+    ]
+  },
+  "cave_garden_offering_props.png": {
+    "source": "tilesets/cave_garden_offering_props.png",
+    "sourceSha256": "f2ce9b4ca27693271b5dc8e57112c2f6b31afe8d4a43c30dd08710d13b33f7a0",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_offering_props.png",
+    "width": 768,
+    "height": 370,
+    "runtimeSha256": "2933add76c53887c1a659e7e53382fcb1096e70945bba4da3b5a182bb9de859d",
+    "frames": [
+      {
+        "name": "altar_flowers",
+        "sourceRect": {
+          "x": 482,
+          "y": 4,
+          "width": 147,
+          "height": 109
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 8,
+          "rect": {
+            "x": 313,
+            "y": 60,
+            "width": 294,
+            "height": 218,
+            "pixels": 48261
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "altar_plain",
+        "sourceRect": {
+          "x": 100,
+          "y": 155,
+          "width": 121,
+          "height": 94
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 11,
+          "rect": {
+            "x": 43,
+            "y": 77,
+            "width": 241,
+            "height": 187,
+            "pixels": 33438
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "blue_flower_plant",
+        "sourceRect": {
+          "x": 289,
+          "y": 155,
+          "width": 46,
+          "height": 88
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 24,
+          "rect": {
+            "x": 1264,
+            "y": 492,
+            "width": 92,
+            "height": 176,
+            "pixels": 9977
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "cattails",
+        "sourceRect": {
+          "x": 225,
+          "y": 155,
+          "width": 60,
+          "height": 89
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 23,
+          "rect": {
+            "x": 1380,
+            "y": 491,
+            "width": 119,
+            "height": 177,
+            "pixels": 11183
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "crystal_cluster",
+        "sourceRect": {
+          "x": 252,
+          "y": 256,
+          "width": 47,
+          "height": 64
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 17,
+          "rect": {
+            "x": 840,
+            "y": 340,
+            "width": 93,
+            "height": 127,
+            "pixels": 7916
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flower_arch",
+        "sourceRect": {
+          "x": 337,
+          "y": 4,
+          "width": 141,
+          "height": 111
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 39,
+          "rect": {
+            "x": 31,
+            "y": 662,
+            "width": 282,
+            "height": 222,
+            "pixels": 34718
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flower_bush",
+        "sourceRect": {
+          "x": 4,
+          "y": 256,
+          "width": 85,
+          "height": 72
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 25,
+          "rect": {
+            "x": 36,
+            "y": 496,
+            "width": 169,
+            "height": 143,
+            "pixels": 18157
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "flower_bush_small",
+        "sourceRect": {
+          "x": 93,
+          "y": 256,
+          "width": 51,
+          "height": 71
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 29,
+          "rect": {
+            "x": 225,
+            "y": 501,
+            "width": 102,
+            "height": 142,
+            "pixels": 9733
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "fountain_basin",
+        "sourceRect": {
+          "x": 591,
+          "y": 155,
+          "width": 57,
+          "height": 74
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 45,
+          "rect": {
+            "x": 1386,
+            "y": 772,
+            "width": 113,
+            "height": 147,
+            "pixels": 11651
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "grass_tuft",
+        "sourceRect": {
+          "x": 453,
+          "y": 155,
+          "width": 57,
+          "height": 82
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 27,
+          "rect": {
+            "x": 1124,
+            "y": 496,
+            "width": 113,
+            "height": 164,
+            "pixels": 11470
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "leaves",
+        "sourceRect": {
+          "x": 54,
+          "y": 332,
+          "width": 48,
+          "height": 32
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 53,
+          "rect": {
+            "x": 1235,
+            "y": 929,
+            "width": 96,
+            "height": 64,
+            "pixels": 3186
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pad",
+        "sourceRect": {
+          "x": 636,
+          "y": 256,
+          "width": 42,
+          "height": 43
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 28,
+          "rect": {
+            "x": 360,
+            "y": 498,
+            "width": 83,
+            "height": 86,
+            "pixels": 3973
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lily_pad_wide",
+        "sourceRect": {
+          "x": 4,
+          "y": 332,
+          "width": 46,
+          "height": 34
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 30,
+          "rect": {
+            "x": 700,
+            "y": 506,
+            "width": 92,
+            "height": 68,
+            "pixels": 5007
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "lotus_flower",
+        "sourceRect": {
+          "x": 486,
+          "y": 256,
+          "width": 76,
+          "height": 49
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 34,
+          "rect": {
+            "x": 847,
+            "y": 562,
+            "width": 151,
+            "height": 98,
+            "pixels": 11043
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "moss_rock_flower",
+        "sourceRect": {
+          "x": 303,
+          "y": 256,
+          "width": 53,
+          "height": 55
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 18,
+          "rect": {
+            "x": 1401,
+            "y": 353,
+            "width": 105,
+            "height": 109,
+            "pixels": 8207
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "moss_rock_large",
+        "sourceRect": {
+          "x": 4,
+          "y": 155,
+          "width": 92,
+          "height": 97
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 42,
+          "rect": {
+            "x": 812,
+            "y": 695,
+            "width": 184,
+            "height": 194,
+            "pixels": 26288
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pedestal_narrow",
+        "sourceRect": {
+          "x": 204,
+          "y": 256,
+          "width": 44,
+          "height": 64
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 16,
+          "rect": {
+            "x": 373,
+            "y": 340,
+            "width": 88,
+            "height": 127,
+            "pixels": 9150
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pedestal_rune",
+        "sourceRect": {
+          "x": 385,
+          "y": 155,
+          "width": 64,
+          "height": 82
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 12,
+          "rect": {
+            "x": 497,
+            "y": 304,
+            "width": 128,
+            "height": 163,
+            "pixels": 15591
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pedestal_small",
+        "sourceRect": {
+          "x": 514,
+          "y": 155,
+          "width": 73,
+          "height": 74
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 13,
+          "rect": {
+            "x": 39,
+            "y": 312,
+            "width": 145,
+            "height": 148,
+            "pixels": 15886
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "pond_basin",
+        "sourceRect": {
+          "x": 157,
+          "y": 4,
+          "width": 176,
+          "height": 115
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 41,
+          "rect": {
+            "x": 1010,
+            "y": 682,
+            "width": 351,
+            "height": 229,
+            "pixels": 64959
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "reed_plant",
+        "sourceRect": {
+          "x": 339,
+          "y": 155,
+          "width": 42,
+          "height": 83
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 26,
+          "rect": {
+            "x": 1019,
+            "y": 496,
+            "width": 84,
+            "height": 166,
+            "pixels": 7173
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_flowers",
+        "sourceRect": {
+          "x": 360,
+          "y": 256,
+          "width": 72,
+          "height": 51
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 46,
+          "rect": {
+            "x": 48,
+            "y": 895,
+            "width": 144,
+            "height": 102,
+            "pixels": 10644
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rock_flowers_small",
+        "sourceRect": {
+          "x": 566,
+          "y": 256,
+          "width": 66,
+          "height": 46
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 47,
+          "rect": {
+            "x": 252,
+            "y": 904,
+            "width": 131,
+            "height": 91,
+            "pixels": 8713
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rocks",
+        "sourceRect": {
+          "x": 652,
+          "y": 155,
+          "width": 67,
+          "height": 73
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 15,
+          "rect": {
+            "x": 655,
+            "y": 330,
+            "width": 133,
+            "height": 145,
+            "pixels": 13360
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "rune_block",
+        "sourceRect": {
+          "x": 436,
+          "y": 256,
+          "width": 46,
+          "height": 50
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 19,
+          "rect": {
+            "x": 1278,
+            "y": 363,
+            "width": 91,
+            "height": 99,
+            "pixels": 6917
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stone_lotus",
+        "sourceRect": {
+          "x": 148,
+          "y": 256,
+          "width": 52,
+          "height": 69
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 14,
+          "rect": {
+            "x": 222,
+            "y": 316,
+            "width": 104,
+            "height": 138,
+            "pixels": 9869
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "stone_lotus_tall",
+        "sourceRect": {
+          "x": 633,
+          "y": 4,
+          "width": 70,
+          "height": 101
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 40,
+          "rect": {
+            "x": 652,
+            "y": 679,
+            "width": 140,
+            "height": 201,
+            "pixels": 20024
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "waterfall_rocks",
+        "sourceRect": {
+          "x": 4,
+          "y": 4,
+          "width": 149,
+          "height": 147
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 36,
+          "rect": {
+            "x": 332,
+            "y": 593,
+            "width": 298,
+            "height": 294,
+            "pixels": 59570
+          },
+          "scale": 0.5
+        }
+      },
+      {
+        "name": "white_flowers",
+        "sourceRect": {
+          "x": 682,
+          "y": 256,
+          "width": 46,
+          "height": 42
+        },
+        "origin": {
+          "file": "tilesets/cave_garden_offering_props.png",
+          "component": 49,
+          "rect": {
+            "x": 665,
+            "y": 914,
+            "width": 91,
+            "height": 83,
+            "pixels": 4838
+          },
+          "scale": 0.5
+        }
+      }
+    ]
+  }
+}

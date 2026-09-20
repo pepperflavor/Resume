@@ -1,0 +1,38 @@
+[
+  {
+    "source": "tilesets/dungeon_entrance_ground.png",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_ground.png",
+    "sourceSize": "1254x1254",
+    "runtimeSize": "426x426",
+    "scale": 0.34,
+    "brightness": 0.6,
+    "saturation": 0.85,
+    "columnSeamRatio": 0.77,
+    "rowSeamRatio": 0.96,
+    "runtimeSha256": "0ce66495ad54ff86dbc3335ef45272198e54efe4463a2cbcd601b1e0fa4640e5"
+  },
+  {
+    "source": "tilesets/boss_chamber_ground.png",
+    "runtimeUrl": "/assets/game/runtime/boss_chamber_ground.png",
+    "sourceSize": "1254x1254",
+    "runtimeSize": "426x426",
+    "scale": 0.34,
+    "brightness": 0.9,
+    "saturation": 1.05,
+    "columnSeamRatio": 0.9,
+    "rowSeamRatio": 0.82,
+    "runtimeSha256": "216ac83f368b7a21919c7f13408d1b6a8f06f7c794700a650e7bccbfe459904f"
+  },
+  {
+    "source": "tilesets/cave_garden_ground.png",
+    "runtimeUrl": "/assets/game/runtime/cave_garden_ground.png",
+    "sourceSize": "1254x1254",
+    "runtimeSize": "426x426",
+    "scale": 0.34,
+    "brightness": 0.78,
+    "saturation": 1.1,
+    "columnSeamRatio": 0.84,
+    "rowSeamRatio": 0.88,
+    "runtimeSha256": "53a270a7eb87671c23bb31cb7151ff18e65d3ef041c6fd65ea2b626069d2e18f"
+  }
+]

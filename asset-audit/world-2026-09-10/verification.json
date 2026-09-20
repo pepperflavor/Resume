@@ -1,0 +1,526 @@
+[
+  {
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_adventurer_rabbit.png",
+    "baseline": 102,
+    "clipped": [],
+    "bottomRange": [100, 101],
+    "heightRange": [82, 88],
+    "heightSpreadPercent": 6.8,
+    "rowBottomSpread": [0, 0, 0, 1],
+    "cells": [
+      {
+        "index": 0,
+        "direction": "down",
+        "left": 38,
+        "top": 18,
+        "right": 89,
+        "bottom": 101,
+        "width": 52,
+        "height": 84
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "left": 39,
+        "top": 18,
+        "right": 89,
+        "bottom": 101,
+        "width": 51,
+        "height": 84
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "left": 38,
+        "top": 18,
+        "right": 89,
+        "bottom": 101,
+        "width": 52,
+        "height": 84
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "left": 38,
+        "top": 19,
+        "right": 90,
+        "bottom": 101,
+        "width": 53,
+        "height": 83
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "left": 38,
+        "top": 19,
+        "right": 90,
+        "bottom": 101,
+        "width": 53,
+        "height": 83
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "left": 38,
+        "top": 19,
+        "right": 89,
+        "bottom": 101,
+        "width": 52,
+        "height": 83
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "left": 39,
+        "top": 20,
+        "right": 90,
+        "bottom": 101,
+        "width": 52,
+        "height": 82
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "left": 38,
+        "top": 20,
+        "right": 88,
+        "bottom": 101,
+        "width": 51,
+        "height": 82
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "left": 38,
+        "top": 20,
+        "right": 88,
+        "bottom": 101,
+        "width": 51,
+        "height": 82
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "left": 38,
+        "top": 14,
+        "right": 87,
+        "bottom": 101,
+        "width": 50,
+        "height": 88
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "left": 38,
+        "top": 14,
+        "right": 87,
+        "bottom": 101,
+        "width": 50,
+        "height": 88
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "left": 38,
+        "top": 14,
+        "right": 89,
+        "bottom": 100,
+        "width": 52,
+        "height": 87
+      }
+    ]
+  },
+  {
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_adventurer_cat.png",
+    "baseline": 102,
+    "clipped": [],
+    "bottomRange": [98, 101],
+    "heightRange": [79, 85],
+    "heightSpreadPercent": 7.1,
+    "rowBottomSpread": [1, 0, 0, 3],
+    "cells": [
+      {
+        "index": 0,
+        "direction": "down",
+        "left": 29,
+        "top": 17,
+        "right": 96,
+        "bottom": 100,
+        "width": 68,
+        "height": 84
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "left": 28,
+        "top": 17,
+        "right": 95,
+        "bottom": 101,
+        "width": 68,
+        "height": 85
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "left": 29,
+        "top": 17,
+        "right": 97,
+        "bottom": 101,
+        "width": 69,
+        "height": 85
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "left": 33,
+        "top": 18,
+        "right": 106,
+        "bottom": 101,
+        "width": 74,
+        "height": 84
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "left": 32,
+        "top": 18,
+        "right": 108,
+        "bottom": 101,
+        "width": 77,
+        "height": 84
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "left": 33,
+        "top": 18,
+        "right": 105,
+        "bottom": 101,
+        "width": 73,
+        "height": 84
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "left": 21,
+        "top": 18,
+        "right": 95,
+        "bottom": 101,
+        "width": 75,
+        "height": 84
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "left": 20,
+        "top": 18,
+        "right": 95,
+        "bottom": 101,
+        "width": 76,
+        "height": 84
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "left": 22,
+        "top": 19,
+        "right": 95,
+        "bottom": 101,
+        "width": 74,
+        "height": 83
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "left": 31,
+        "top": 20,
+        "right": 95,
+        "bottom": 98,
+        "width": 65,
+        "height": 79
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "left": 31,
+        "top": 20,
+        "right": 94,
+        "bottom": 101,
+        "width": 64,
+        "height": 82
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "left": 33,
+        "top": 20,
+        "right": 95,
+        "bottom": 101,
+        "width": 63,
+        "height": 82
+      }
+    ]
+  },
+  {
+    "runtimeUrl": "/assets/game/runtime/npc_pond_fairy.png",
+    "baseline": 102,
+    "clipped": [],
+    "bottomRange": [100, 101],
+    "heightRange": [81, 86],
+    "heightSpreadPercent": 5.8,
+    "rowBottomSpread": [0, 1, 1, 0],
+    "cells": [
+      {
+        "index": 0,
+        "direction": "down",
+        "left": 24,
+        "top": 16,
+        "right": 103,
+        "bottom": 101,
+        "width": 80,
+        "height": 86
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "left": 25,
+        "top": 16,
+        "right": 102,
+        "bottom": 101,
+        "width": 78,
+        "height": 86
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "left": 24,
+        "top": 16,
+        "right": 102,
+        "bottom": 101,
+        "width": 79,
+        "height": 86
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "left": 25,
+        "top": 18,
+        "right": 102,
+        "bottom": 101,
+        "width": 78,
+        "height": 84
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "left": 25,
+        "top": 18,
+        "right": 102,
+        "bottom": 100,
+        "width": 78,
+        "height": 83
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "left": 25,
+        "top": 18,
+        "right": 101,
+        "bottom": 101,
+        "width": 77,
+        "height": 84
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "left": 26,
+        "top": 20,
+        "right": 103,
+        "bottom": 101,
+        "width": 78,
+        "height": 82
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "left": 25,
+        "top": 20,
+        "right": 102,
+        "bottom": 100,
+        "width": 78,
+        "height": 81
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "left": 26,
+        "top": 20,
+        "right": 103,
+        "bottom": 101,
+        "width": 78,
+        "height": 82
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "left": 26,
+        "top": 18,
+        "right": 100,
+        "bottom": 101,
+        "width": 75,
+        "height": 84
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "left": 25,
+        "top": 18,
+        "right": 102,
+        "bottom": 101,
+        "width": 78,
+        "height": 84
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "left": 24,
+        "top": 18,
+        "right": 101,
+        "bottom": 101,
+        "width": 78,
+        "height": 84
+      }
+    ]
+  },
+  {
+    "runtimeUrl": "/assets/game/runtime/boss_dragon_chase.png",
+    "baseline": 176,
+    "clipped": [],
+    "bottomRange": [169, 175],
+    "heightRange": [129, 172],
+    "heightSpreadPercent": 25,
+    "rowBottomSpread": [6, 2, 0, 3],
+    "cells": [
+      {
+        "index": 0,
+        "direction": "down",
+        "left": 6,
+        "top": 21,
+        "right": 201,
+        "bottom": 175,
+        "width": 196,
+        "height": 155
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "left": 3,
+        "top": 21,
+        "right": 204,
+        "bottom": 169,
+        "width": 202,
+        "height": 149
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "left": 7,
+        "top": 21,
+        "right": 201,
+        "bottom": 175,
+        "width": 195,
+        "height": 155
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "left": 6,
+        "top": 44,
+        "right": 201,
+        "bottom": 173,
+        "width": 196,
+        "height": 130
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "left": 10,
+        "top": 43,
+        "right": 199,
+        "bottom": 175,
+        "width": 190,
+        "height": 133
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "left": 8,
+        "top": 47,
+        "right": 200,
+        "bottom": 175,
+        "width": 193,
+        "height": 129
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "left": 8,
+        "top": 42,
+        "right": 195,
+        "bottom": 175,
+        "width": 188,
+        "height": 134
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "left": 5,
+        "top": 42,
+        "right": 196,
+        "bottom": 175,
+        "width": 192,
+        "height": 134
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "left": 7,
+        "top": 43,
+        "right": 200,
+        "bottom": 175,
+        "width": 194,
+        "height": 133
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "left": 6,
+        "top": 4,
+        "right": 198,
+        "bottom": 172,
+        "width": 193,
+        "height": 169
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "left": 6,
+        "top": 4,
+        "right": 198,
+        "bottom": 175,
+        "width": 193,
+        "height": 172
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "left": 7,
+        "top": 4,
+        "right": 200,
+        "bottom": 172,
+        "width": 194,
+        "height": 169
+      }
+    ]
+  }
+]

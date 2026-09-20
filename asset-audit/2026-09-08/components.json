@@ -1,0 +1,793 @@
+[
+  {
+    "file": "boss/boss_dragon.png",
+    "width": 1536,
+    "height": 1024,
+    "components": [
+      {
+        "x": 11,
+        "y": 11,
+        "width": 395,
+        "height": 310,
+        "pixels": 69512
+      },
+      {
+        "x": 12,
+        "y": 342,
+        "width": 394,
+        "height": 319,
+        "pixels": 68522
+      },
+      {
+        "x": 781,
+        "y": 348,
+        "width": 364,
+        "height": 313,
+        "pixels": 62575
+      },
+      {
+        "x": 415,
+        "y": 16,
+        "width": 346,
+        "height": 304,
+        "pixels": 62000
+      },
+      {
+        "x": 772,
+        "y": 12,
+        "width": 371,
+        "height": 311,
+        "pixels": 61640
+      },
+      {
+        "x": 1154,
+        "y": 15,
+        "width": 370,
+        "height": 307,
+        "pixels": 61586
+      },
+      {
+        "x": 415,
+        "y": 346,
+        "width": 356,
+        "height": 304,
+        "pixels": 61460
+      },
+      {
+        "x": 1153,
+        "y": 348,
+        "width": 374,
+        "height": 309,
+        "pixels": 61255
+      },
+      {
+        "x": 1163,
+        "y": 683,
+        "width": 362,
+        "height": 289,
+        "pixels": 56822
+      },
+      {
+        "x": 11,
+        "y": 682,
+        "width": 361,
+        "height": 290,
+        "pixels": 56762
+      },
+      {
+        "x": 346,
+        "y": 688,
+        "width": 409,
+        "height": 284,
+        "pixels": 55983
+      },
+      {
+        "x": 779,
+        "y": 688,
+        "width": 408,
+        "height": 284,
+        "pixels": 54495
+      }
+    ]
+  },
+  {
+    "file": "characters/player_racoon.png",
+    "width": 1269,
+    "height": 1239,
+    "components": [
+      {
+        "x": 95,
+        "y": 74,
+        "width": 209,
+        "height": 245,
+        "pixels": 38948
+      },
+      {
+        "x": 688,
+        "y": 904,
+        "width": 198,
+        "height": 268,
+        "pixels": 37770
+      },
+      {
+        "x": 989,
+        "y": 73,
+        "width": 202,
+        "height": 246,
+        "pixels": 37531
+      },
+      {
+        "x": 393,
+        "y": 904,
+        "width": 191,
+        "height": 273,
+        "pixels": 36751
+      },
+      {
+        "x": 993,
+        "y": 904,
+        "width": 198,
+        "height": 274,
+        "pixels": 36382
+      },
+      {
+        "x": 688,
+        "y": 69,
+        "width": 202,
+        "height": 256,
+        "pixels": 36030
+      },
+      {
+        "x": 90,
+        "y": 904,
+        "width": 196,
+        "height": 268,
+        "pixels": 35712
+      },
+      {
+        "x": 393,
+        "y": 69,
+        "width": 201,
+        "height": 251,
+        "pixels": 34975
+      },
+      {
+        "x": 80,
+        "y": 361,
+        "width": 234,
+        "height": 231,
+        "pixels": 33330
+      },
+      {
+        "x": 965,
+        "y": 630,
+        "width": 236,
+        "height": 237,
+        "pixels": 33080
+      },
+      {
+        "x": 372,
+        "y": 354,
+        "width": 241,
+        "height": 239,
+        "pixels": 32705
+      },
+      {
+        "x": 74,
+        "y": 631,
+        "width": 228,
+        "height": 239,
+        "pixels": 32340
+      },
+      {
+        "x": 693,
+        "y": 355,
+        "width": 219,
+        "height": 238,
+        "pixels": 31773
+      },
+      {
+        "x": 973,
+        "y": 357,
+        "width": 231,
+        "height": 236,
+        "pixels": 31648
+      },
+      {
+        "x": 378,
+        "y": 632,
+        "width": 222,
+        "height": 238,
+        "pixels": 31417
+      },
+      {
+        "x": 674,
+        "y": 632,
+        "width": 217,
+        "height": 239,
+        "pixels": 31244
+      }
+    ]
+  },
+  {
+    "file": "items/golden_cat_item.png",
+    "width": 1536,
+    "height": 1024,
+    "components": [
+      {
+        "x": 209,
+        "y": 109,
+        "width": 701,
+        "height": 821,
+        "pixels": 428916
+      },
+      {
+        "x": 1040,
+        "y": 555,
+        "width": 254,
+        "height": 305,
+        "pixels": 58983
+      },
+      {
+        "x": 814,
+        "y": 598,
+        "width": 53,
+        "height": 58,
+        "pixels": 1131
+      },
+      {
+        "x": 1265,
+        "y": 727,
+        "width": 38,
+        "height": 42,
+        "pixels": 635
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_bear_blacksmith.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 100,
+        "y": 47,
+        "width": 274,
+        "height": 312,
+        "pixels": 61151
+      },
+      {
+        "x": 719,
+        "y": 1069,
+        "width": 268,
+        "height": 321,
+        "pixels": 59758
+      },
+      {
+        "x": 73,
+        "y": 1067,
+        "width": 255,
+        "height": 323,
+        "pixels": 59536
+      },
+      {
+        "x": 394,
+        "y": 1070,
+        "width": 265,
+        "height": 320,
+        "pixels": 59288
+      },
+      {
+        "x": 433,
+        "y": 46,
+        "width": 262,
+        "height": 316,
+        "pixels": 58937
+      },
+      {
+        "x": 740,
+        "y": 48,
+        "width": 264,
+        "height": 312,
+        "pixels": 58670
+      },
+      {
+        "x": 102,
+        "y": 383,
+        "width": 238,
+        "height": 310,
+        "pixels": 50951
+      },
+      {
+        "x": 420,
+        "y": 729,
+        "width": 239,
+        "height": 314,
+        "pixels": 50683
+      },
+      {
+        "x": 92,
+        "y": 724,
+        "width": 235,
+        "height": 323,
+        "pixels": 50660
+      },
+      {
+        "x": 427,
+        "y": 386,
+        "width": 237,
+        "height": 304,
+        "pixels": 48750
+      },
+      {
+        "x": 744,
+        "y": 726,
+        "width": 233,
+        "height": 321,
+        "pixels": 47857
+      },
+      {
+        "x": 753,
+        "y": 386,
+        "width": 237,
+        "height": 313,
+        "pixels": 47854
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_bird.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 85,
+        "y": 106,
+        "width": 251,
+        "height": 289,
+        "pixels": 43771
+      },
+      {
+        "x": 774,
+        "y": 109,
+        "width": 240,
+        "height": 287,
+        "pixels": 42654
+      },
+      {
+        "x": 82,
+        "y": 1071,
+        "width": 243,
+        "height": 288,
+        "pixels": 42434
+      },
+      {
+        "x": 427,
+        "y": 105,
+        "width": 250,
+        "height": 290,
+        "pixels": 42408
+      },
+      {
+        "x": 781,
+        "y": 1072,
+        "width": 239,
+        "height": 291,
+        "pixels": 42040
+      },
+      {
+        "x": 420,
+        "y": 1070,
+        "width": 241,
+        "height": 293,
+        "pixels": 41687
+      },
+      {
+        "x": 425,
+        "y": 757,
+        "width": 255,
+        "height": 274,
+        "pixels": 39774
+      },
+      {
+        "x": 763,
+        "y": 757,
+        "width": 253,
+        "height": 274,
+        "pixels": 39466
+      },
+      {
+        "x": 82,
+        "y": 757,
+        "width": 247,
+        "height": 267,
+        "pixels": 39003
+      },
+      {
+        "x": 763,
+        "y": 444,
+        "width": 254,
+        "height": 264,
+        "pixels": 38005
+      },
+      {
+        "x": 426,
+        "y": 444,
+        "width": 254,
+        "height": 263,
+        "pixels": 37683
+      },
+      {
+        "x": 89,
+        "y": 444,
+        "width": 249,
+        "height": 258,
+        "pixels": 36965
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_cat_alchemist.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 87,
+        "y": 37,
+        "width": 252,
+        "height": 329,
+        "pixels": 59695
+      },
+      {
+        "x": 426,
+        "y": 34,
+        "width": 259,
+        "height": 335,
+        "pixels": 59572
+      },
+      {
+        "x": 776,
+        "y": 34,
+        "width": 245,
+        "height": 332,
+        "pixels": 58627
+      },
+      {
+        "x": 81,
+        "y": 389,
+        "width": 273,
+        "height": 308,
+        "pixels": 53067
+      },
+      {
+        "x": 429,
+        "y": 1062,
+        "width": 224,
+        "height": 332,
+        "pixels": 52739
+      },
+      {
+        "x": 83,
+        "y": 1062,
+        "width": 226,
+        "height": 330,
+        "pixels": 52712
+      },
+      {
+        "x": 777,
+        "y": 1062,
+        "width": 221,
+        "height": 332,
+        "pixels": 52568
+      },
+      {
+        "x": 428,
+        "y": 389,
+        "width": 265,
+        "height": 308,
+        "pixels": 52530
+      },
+      {
+        "x": 410,
+        "y": 729,
+        "width": 262,
+        "height": 304,
+        "pixels": 52371
+      },
+      {
+        "x": 777,
+        "y": 389,
+        "width": 263,
+        "height": 310,
+        "pixels": 51674
+      },
+      {
+        "x": 70,
+        "y": 729,
+        "width": 255,
+        "height": 301,
+        "pixels": 50906
+      },
+      {
+        "x": 761,
+        "y": 730,
+        "width": 256,
+        "height": 303,
+        "pixels": 50702
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_chicken.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 97,
+        "y": 55,
+        "width": 226,
+        "height": 317,
+        "pixels": 47371
+      },
+      {
+        "x": 435,
+        "y": 53,
+        "width": 231,
+        "height": 319,
+        "pixels": 46952
+      },
+      {
+        "x": 783,
+        "y": 54,
+        "width": 217,
+        "height": 318,
+        "pixels": 46189
+      },
+      {
+        "x": 776,
+        "y": 739,
+        "width": 261,
+        "height": 295,
+        "pixels": 45939
+      },
+      {
+        "x": 428,
+        "y": 1060,
+        "width": 234,
+        "height": 315,
+        "pixels": 45915
+      },
+      {
+        "x": 416,
+        "y": 737,
+        "width": 264,
+        "height": 297,
+        "pixels": 45513
+      },
+      {
+        "x": 777,
+        "y": 1060,
+        "width": 226,
+        "height": 315,
+        "pixels": 45049
+      },
+      {
+        "x": 92,
+        "y": 1061,
+        "width": 228,
+        "height": 313,
+        "pixels": 45034
+      },
+      {
+        "x": 76,
+        "y": 737,
+        "width": 255,
+        "height": 297,
+        "pixels": 44789
+      },
+      {
+        "x": 80,
+        "y": 408,
+        "width": 256,
+        "height": 295,
+        "pixels": 44634
+      },
+      {
+        "x": 768,
+        "y": 409,
+        "width": 258,
+        "height": 295,
+        "pixels": 44312
+      },
+      {
+        "x": 430,
+        "y": 409,
+        "width": 251,
+        "height": 294,
+        "pixels": 42919
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_deer_shopkeeper.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 431,
+        "y": 1044,
+        "width": 223,
+        "height": 341,
+        "pixels": 47521
+      },
+      {
+        "x": 106,
+        "y": 1048,
+        "width": 230,
+        "height": 331,
+        "pixels": 46649
+      },
+      {
+        "x": 101,
+        "y": 44,
+        "width": 235,
+        "height": 317,
+        "pixels": 46590
+      },
+      {
+        "x": 757,
+        "y": 1047,
+        "width": 229,
+        "height": 338,
+        "pixels": 46146
+      },
+      {
+        "x": 756,
+        "y": 42,
+        "width": 228,
+        "height": 319,
+        "pixels": 45920
+      },
+      {
+        "x": 428,
+        "y": 44,
+        "width": 228,
+        "height": 317,
+        "pixels": 44937
+      },
+      {
+        "x": 97,
+        "y": 718,
+        "width": 232,
+        "height": 297,
+        "pixels": 40762
+      },
+      {
+        "x": 756,
+        "y": 719,
+        "width": 230,
+        "height": 296,
+        "pixels": 40396
+      },
+      {
+        "x": 425,
+        "y": 394,
+        "width": 234,
+        "height": 286,
+        "pixels": 39698
+      },
+      {
+        "x": 421,
+        "y": 723,
+        "width": 235,
+        "height": 292,
+        "pixels": 39697
+      },
+      {
+        "x": 764,
+        "y": 388,
+        "width": 232,
+        "height": 294,
+        "pixels": 39159
+      },
+      {
+        "x": 95,
+        "y": 388,
+        "width": 222,
+        "height": 292,
+        "pixels": 39082
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_fox_information.png",
+    "width": 1086,
+    "height": 1448,
+    "components": [
+      {
+        "x": 769,
+        "y": 1017,
+        "width": 232,
+        "height": 366,
+        "pixels": 60515
+      },
+      {
+        "x": 86,
+        "y": 1018,
+        "width": 240,
+        "height": 364,
+        "pixels": 59886
+      },
+      {
+        "x": 426,
+        "y": 1019,
+        "width": 231,
+        "height": 364,
+        "pixels": 59492
+      },
+      {
+        "x": 434,
+        "y": 47,
+        "width": 257,
+        "height": 314,
+        "pixels": 54835
+      },
+      {
+        "x": 103,
+        "y": 47,
+        "width": 257,
+        "height": 307,
+        "pixels": 53933
+      },
+      {
+        "x": 764,
+        "y": 47,
+        "width": 256,
+        "height": 314,
+        "pixels": 53931
+      },
+      {
+        "x": 85,
+        "y": 385,
+        "width": 270,
+        "height": 281,
+        "pixels": 46644
+      },
+      {
+        "x": 764,
+        "y": 383,
+        "width": 267,
+        "height": 285,
+        "pixels": 46319
+      },
+      {
+        "x": 405,
+        "y": 699,
+        "width": 276,
+        "height": 287,
+        "pixels": 46177
+      },
+      {
+        "x": 57,
+        "y": 699,
+        "width": 263,
+        "height": 288,
+        "pixels": 46038
+      },
+      {
+        "x": 763,
+        "y": 700,
+        "width": 262,
+        "height": 289,
+        "pixels": 45675
+      },
+      {
+        "x": 424,
+        "y": 385,
+        "width": 271,
+        "height": 281,
+        "pixels": 45216
+      }
+    ]
+  }
+]

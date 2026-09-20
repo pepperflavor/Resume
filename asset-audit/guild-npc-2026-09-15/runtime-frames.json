@@ -1,0 +1,592 @@
+{
+  "generated": "2026-09-15",
+  "note": "Runtime frame rects for the guild NPCs. giraffe and hippo point at the original sheets with the audited crop rects. The other three point at regenerated sheets: each audited frame was cropped, alpha below 64 zeroed to drop the baked shadow, and re-laid onto a uniform 3x4 grid with the foot centre on the cell centre-x and the foot line 3px above the cell bottom. RGB is untouched.",
+  "alphaCut": 64,
+  "npcs": {
+    "giraffe": {
+      "textureUrl": "/assets/game/npc/guild/guild_receptionist_giraffe.png",
+      "reprocessed": false,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "x": 511,
+          "y": 18,
+          "width": 142,
+          "height": 224
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "x": 704,
+          "y": 17,
+          "width": 130,
+          "height": 229
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "x": 885,
+          "y": 17,
+          "width": 132,
+          "height": 225
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "x": 523,
+          "y": 255,
+          "width": 134,
+          "height": 231
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "x": 704,
+          "y": 255,
+          "width": 138,
+          "height": 231
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "x": 890,
+          "y": 255,
+          "width": 140,
+          "height": 232
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "x": 486,
+          "y": 497,
+          "width": 152,
+          "height": 228
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "x": 699,
+          "y": 496,
+          "width": 128,
+          "height": 229
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "x": 877,
+          "y": 497,
+          "width": 146,
+          "height": 228
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "x": 514,
+          "y": 736,
+          "width": 122,
+          "height": 232
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "x": 702,
+          "y": 736,
+          "width": 124,
+          "height": 232
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "x": 894,
+          "y": 736,
+          "width": 120,
+          "height": 233
+        }
+      ]
+    },
+    "hippo": {
+      "textureUrl": "/assets/game/npc/guild/guild_icraft_hippo.png",
+      "reprocessed": false,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "x": 468,
+          "y": 27,
+          "width": 168,
+          "height": 219
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "x": 683,
+          "y": 27,
+          "width": 164,
+          "height": 225
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "x": 893,
+          "y": 27,
+          "width": 170,
+          "height": 224
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "x": 471,
+          "y": 269,
+          "width": 174,
+          "height": 227
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "x": 681,
+          "y": 269,
+          "width": 190,
+          "height": 227
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "x": 894,
+          "y": 269,
+          "width": 178,
+          "height": 227
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "x": 463,
+          "y": 513,
+          "width": 182,
+          "height": 227
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "x": 660,
+          "y": 513,
+          "width": 196,
+          "height": 227
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "x": 886,
+          "y": 513,
+          "width": 188,
+          "height": 227
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "x": 464,
+          "y": 759,
+          "width": 180,
+          "height": 221
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "x": 679,
+          "y": 759,
+          "width": 170,
+          "height": 233
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "x": 894,
+          "y": 759,
+          "width": 174,
+          "height": 234
+        }
+      ]
+    },
+    "moleDev": {
+      "textureUrl": "/assets/game/npc/guild/runtime/guild_quadminers_mole_dev_runtime.png",
+      "reprocessed": true,
+      "cell": {
+        "width": 200,
+        "height": 232
+      },
+      "footPad": 3,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "x": 0,
+          "y": 0,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "x": 200,
+          "y": 0,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "x": 400,
+          "y": 0,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "x": 0,
+          "y": 232,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "x": 200,
+          "y": 232,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "x": 400,
+          "y": 232,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "x": 0,
+          "y": 464,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "x": 200,
+          "y": 464,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "x": 400,
+          "y": 464,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "x": 0,
+          "y": 696,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "x": 200,
+          "y": 696,
+          "width": 200,
+          "height": 232
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "x": 400,
+          "y": 696,
+          "width": 200,
+          "height": 232
+        }
+      ]
+    },
+    "moleOps": {
+      "textureUrl": "/assets/game/npc/guild/runtime/guild_quadminers_mole_ops_runtime.png",
+      "reprocessed": true,
+      "cell": {
+        "width": 194,
+        "height": 234
+      },
+      "footPad": 3,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "x": 0,
+          "y": 0,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "x": 194,
+          "y": 0,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "x": 388,
+          "y": 0,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "x": 0,
+          "y": 234,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "x": 194,
+          "y": 234,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "x": 388,
+          "y": 234,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "x": 0,
+          "y": 468,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "x": 194,
+          "y": 468,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "x": 388,
+          "y": 468,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "x": 0,
+          "y": 702,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "x": 194,
+          "y": 702,
+          "width": 194,
+          "height": 234
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "x": 388,
+          "y": 702,
+          "width": 194,
+          "height": 234
+        }
+      ]
+    },
+    "owl": {
+      "textureUrl": "/assets/game/npc/guild/runtime/guild_archivist_owl_runtime.png",
+      "reprocessed": true,
+      "cell": {
+        "width": 182,
+        "height": 225
+      },
+      "footPad": 3,
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "x": 0,
+          "y": 0,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "x": 182,
+          "y": 0,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "x": 364,
+          "y": 0,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "x": 0,
+          "y": 225,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "x": 182,
+          "y": 225,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "x": 364,
+          "y": 225,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "x": 0,
+          "y": 450,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "x": 182,
+          "y": 450,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "x": 364,
+          "y": 450,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "x": 0,
+          "y": 675,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "x": 182,
+          "y": 675,
+          "width": 182,
+          "height": 225
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "x": 364,
+          "y": 675,
+          "width": 182,
+          "height": 225
+        }
+      ]
+    }
+  }
+}

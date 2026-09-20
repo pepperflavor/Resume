@@ -1,0 +1,1369 @@
+{
+  "generated": "2026-09-15",
+  "note": "Audit only. No game code reads this file; no NPC PNG was modified and no runtime sheet was produced. Frame rects are measured, not assumed: the sheets are NOT on a width/3 x height/4 grid.",
+  "alphaThreshold": 128,
+  "cropPad": 5,
+  "footPad": 3,
+  "npcs": {
+    "giraffe": {
+      "textureUrl": "/assets/game/npc/guild/guild_receptionist_giraffe.png",
+      "width": 1536,
+      "height": 1024,
+      "gridClaimed": {
+        "columns": 3,
+        "rows": 4,
+        "cellIfNaive": {
+          "width": 512,
+          "height": 256
+        }
+      },
+      "naiveGridValid": false,
+      "measuredColumnCuts": [0, 671, 862, 1536],
+      "measuredRowCuts": [0, 251, 492, 731, 1024],
+      "recommendedScale": 0.24,
+      "verdict": "PASS WITH OFFSET",
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "crop": {
+            "x": 511,
+            "y": 18,
+            "width": 142,
+            "height": 224
+          },
+          "visibleBBox": {
+            "x": 516,
+            "y": 23,
+            "width": 118,
+            "height": 216
+          },
+          "footLineY": 238,
+          "footCentreX": 582,
+          "footWidth": 69,
+          "borderAlpha": 1
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "crop": {
+            "x": 704,
+            "y": 17,
+            "width": 130,
+            "height": 229
+          },
+          "visibleBBox": {
+            "x": 711,
+            "y": 22,
+            "width": 119,
+            "height": 221
+          },
+          "footLineY": 242,
+          "footCentreX": 769,
+          "footWidth": 49,
+          "borderAlpha": 1
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "crop": {
+            "x": 885,
+            "y": 17,
+            "width": 132,
+            "height": 225
+          },
+          "visibleBBox": {
+            "x": 895,
+            "y": 22,
+            "width": 117,
+            "height": 217
+          },
+          "footLineY": 238,
+          "footCentreX": 950.5,
+          "footWidth": 50,
+          "borderAlpha": 1
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "crop": {
+            "x": 523,
+            "y": 255,
+            "width": 134,
+            "height": 231
+          },
+          "visibleBBox": {
+            "x": 528,
+            "y": 260,
+            "width": 101,
+            "height": 223
+          },
+          "footLineY": 482,
+          "footCentreX": 590,
+          "footWidth": 69,
+          "borderAlpha": 2
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "crop": {
+            "x": 704,
+            "y": 255,
+            "width": 138,
+            "height": 231
+          },
+          "visibleBBox": {
+            "x": 709,
+            "y": 260,
+            "width": 112,
+            "height": 223
+          },
+          "footLineY": 482,
+          "footCentreX": 772.5,
+          "footWidth": 84,
+          "borderAlpha": 1
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "crop": {
+            "x": 890,
+            "y": 255,
+            "width": 140,
+            "height": 232
+          },
+          "visibleBBox": {
+            "x": 895,
+            "y": 260,
+            "width": 113,
+            "height": 224
+          },
+          "footLineY": 483,
+          "footCentreX": 960,
+          "footWidth": 85,
+          "borderAlpha": 4
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "crop": {
+            "x": 486,
+            "y": 497,
+            "width": 152,
+            "height": 228
+          },
+          "visibleBBox": {
+            "x": 523,
+            "y": 502,
+            "width": 111,
+            "height": 220
+          },
+          "footLineY": 721,
+          "footCentreX": 562,
+          "footWidth": 71,
+          "borderAlpha": 4
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "crop": {
+            "x": 699,
+            "y": 496,
+            "width": 128,
+            "height": 229
+          },
+          "visibleBBox": {
+            "x": 713,
+            "y": 501,
+            "width": 109,
+            "height": 221
+          },
+          "footLineY": 721,
+          "footCentreX": 762.5,
+          "footWidth": 84,
+          "borderAlpha": 3
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "crop": {
+            "x": 877,
+            "y": 497,
+            "width": 146,
+            "height": 228
+          },
+          "visibleBBox": {
+            "x": 904,
+            "y": 502,
+            "width": 115,
+            "height": 220
+          },
+          "footLineY": 721,
+          "footCentreX": 950,
+          "footWidth": 77,
+          "borderAlpha": 3
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "crop": {
+            "x": 514,
+            "y": 736,
+            "width": 122,
+            "height": 232
+          },
+          "visibleBBox": {
+            "x": 519,
+            "y": 741,
+            "width": 111,
+            "height": 224
+          },
+          "footLineY": 964,
+          "footCentreX": 574.5,
+          "footWidth": 54,
+          "borderAlpha": 2
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "crop": {
+            "x": 702,
+            "y": 736,
+            "width": 124,
+            "height": 232
+          },
+          "visibleBBox": {
+            "x": 709,
+            "y": 741,
+            "width": 112,
+            "height": 224
+          },
+          "footLineY": 964,
+          "footCentreX": 763.5,
+          "footWidth": 48,
+          "borderAlpha": 6
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "crop": {
+            "x": 894,
+            "y": 736,
+            "width": 120,
+            "height": 233
+          },
+          "visibleBBox": {
+            "x": 899,
+            "y": 741,
+            "width": 111,
+            "height": 225
+          },
+          "footLineY": 965,
+          "footCentreX": 954,
+          "footWidth": 45,
+          "borderAlpha": 1
+        }
+      ]
+    },
+    "hippo": {
+      "textureUrl": "/assets/game/npc/guild/guild_icraft_hippo.png",
+      "width": 1536,
+      "height": 1024,
+      "gridClaimed": {
+        "columns": 3,
+        "rows": 4,
+        "cellIfNaive": {
+          "width": 512,
+          "height": 256
+        }
+      },
+      "naiveGridValid": false,
+      "measuredColumnCuts": [0, 662, 875, 1536],
+      "measuredRowCuts": [0, 261, 505, 750, 1024],
+      "recommendedScale": 0.22,
+      "verdict": "PASS WITH OFFSET",
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "crop": {
+            "x": 468,
+            "y": 27,
+            "width": 168,
+            "height": 219
+          },
+          "visibleBBox": {
+            "x": 476,
+            "y": 32,
+            "width": 156,
+            "height": 211
+          },
+          "footLineY": 242,
+          "footCentreX": 552,
+          "footWidth": 87,
+          "borderAlpha": 4
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "crop": {
+            "x": 683,
+            "y": 27,
+            "width": 164,
+            "height": 225
+          },
+          "visibleBBox": {
+            "x": 688,
+            "y": 32,
+            "width": 155,
+            "height": 217
+          },
+          "footLineY": 248,
+          "footCentreX": 765,
+          "footWidth": 67,
+          "borderAlpha": 5
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "crop": {
+            "x": 893,
+            "y": 27,
+            "width": 170,
+            "height": 224
+          },
+          "visibleBBox": {
+            "x": 902,
+            "y": 32,
+            "width": 157,
+            "height": 216
+          },
+          "footLineY": 247,
+          "footCentreX": 978,
+          "footWidth": 63,
+          "borderAlpha": 8
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "crop": {
+            "x": 471,
+            "y": 269,
+            "width": 174,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 476,
+            "y": 274,
+            "width": 161,
+            "height": 219
+          },
+          "footLineY": 492,
+          "footCentreX": 557.5,
+          "footWidth": 84,
+          "borderAlpha": 2
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "crop": {
+            "x": 681,
+            "y": 269,
+            "width": 190,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 686,
+            "y": 274,
+            "width": 165,
+            "height": 219
+          },
+          "footLineY": 492,
+          "footCentreX": 775.5,
+          "footWidth": 100,
+          "borderAlpha": 1
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "crop": {
+            "x": 894,
+            "y": 269,
+            "width": 178,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 899,
+            "y": 274,
+            "width": 162,
+            "height": 219
+          },
+          "footLineY": 492,
+          "footCentreX": 983,
+          "footWidth": 101,
+          "borderAlpha": 2
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "crop": {
+            "x": 463,
+            "y": 513,
+            "width": 182,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 475,
+            "y": 518,
+            "width": 166,
+            "height": 219
+          },
+          "footLineY": 736,
+          "footCentreX": 554,
+          "footWidth": 91,
+          "borderAlpha": 1
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "crop": {
+            "x": 660,
+            "y": 513,
+            "width": 196,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 684,
+            "y": 518,
+            "width": 168,
+            "height": 219
+          },
+          "footLineY": 736,
+          "footCentreX": 758,
+          "footWidth": 103,
+          "borderAlpha": 1
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "crop": {
+            "x": 886,
+            "y": 513,
+            "width": 188,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 901,
+            "y": 518,
+            "width": 168,
+            "height": 219
+          },
+          "footLineY": 736,
+          "footCentreX": 979.5,
+          "footWidth": 106,
+          "borderAlpha": 1
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "crop": {
+            "x": 464,
+            "y": 759,
+            "width": 180,
+            "height": 221
+          },
+          "visibleBBox": {
+            "x": 469,
+            "y": 764,
+            "width": 165,
+            "height": 213
+          },
+          "footLineY": 976,
+          "footCentreX": 553.5,
+          "footWidth": 90,
+          "borderAlpha": 3
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "crop": {
+            "x": 679,
+            "y": 759,
+            "width": 170,
+            "height": 233
+          },
+          "visibleBBox": {
+            "x": 684,
+            "y": 764,
+            "width": 160,
+            "height": 225
+          },
+          "footLineY": 988,
+          "footCentreX": 763.5,
+          "footWidth": 68,
+          "borderAlpha": 2
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "crop": {
+            "x": 894,
+            "y": 759,
+            "width": 174,
+            "height": 234
+          },
+          "visibleBBox": {
+            "x": 899,
+            "y": 764,
+            "width": 156,
+            "height": 226
+          },
+          "footLineY": 989,
+          "footCentreX": 981,
+          "footWidth": 63,
+          "borderAlpha": 1
+        }
+      ]
+    },
+    "moleDev": {
+      "textureUrl": "/assets/game/npc/guild/guild_quadminers_mole_dev.png",
+      "width": 1536,
+      "height": 1024,
+      "gridClaimed": {
+        "columns": 3,
+        "rows": 4,
+        "cellIfNaive": {
+          "width": 512,
+          "height": 256
+        }
+      },
+      "naiveGridValid": false,
+      "measuredColumnCuts": [0, 671, 877, 1536],
+      "measuredRowCuts": [0, 264, 488, 712, 1024],
+      "recommendedScale": 0.2,
+      "verdict": "REPROCESS",
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "crop": {
+            "x": 471,
+            "y": 45,
+            "width": 172,
+            "height": 213
+          },
+          "visibleBBox": {
+            "x": 480,
+            "y": 50,
+            "width": 158,
+            "height": 205
+          },
+          "footLineY": 254,
+          "footCentreX": 556.5,
+          "footWidth": 92,
+          "borderAlpha": 34
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "crop": {
+            "x": 685,
+            "y": 45,
+            "width": 166,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 690,
+            "y": 50,
+            "width": 156,
+            "height": 206
+          },
+          "footLineY": 255,
+          "footCentreX": 767.5,
+          "footWidth": 94,
+          "borderAlpha": 42
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "crop": {
+            "x": 899,
+            "y": 45,
+            "width": 160,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 904,
+            "y": 50,
+            "width": 148,
+            "height": 206
+          },
+          "footLineY": 255,
+          "footCentreX": 978.5,
+          "footWidth": 88,
+          "borderAlpha": 75
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "crop": {
+            "x": 476,
+            "y": 268,
+            "width": 168,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 481,
+            "y": 273,
+            "width": 158,
+            "height": 206
+          },
+          "footLineY": 478,
+          "footCentreX": 560,
+          "footWidth": 93,
+          "borderAlpha": 53
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "crop": {
+            "x": 682,
+            "y": 268,
+            "width": 178,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 688,
+            "y": 273,
+            "width": 168,
+            "height": 206
+          },
+          "footLineY": 478,
+          "footCentreX": 771,
+          "footWidth": 117,
+          "borderAlpha": 106
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "crop": {
+            "x": 890,
+            "y": 268,
+            "width": 186,
+            "height": 215
+          },
+          "visibleBBox": {
+            "x": 895,
+            "y": 273,
+            "width": 162,
+            "height": 207
+          },
+          "footLineY": 479,
+          "footCentreX": 983,
+          "footWidth": 111,
+          "borderAlpha": 75
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "crop": {
+            "x": 460,
+            "y": 492,
+            "width": 200,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 479,
+            "y": 497,
+            "width": 176,
+            "height": 206
+          },
+          "footLineY": 702,
+          "footCentreX": 559.5,
+          "footWidth": 92,
+          "borderAlpha": 46
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "crop": {
+            "x": 684,
+            "y": 491,
+            "width": 182,
+            "height": 215
+          },
+          "visibleBBox": {
+            "x": 689,
+            "y": 496,
+            "width": 170,
+            "height": 207
+          },
+          "footLineY": 702,
+          "footCentreX": 774.5,
+          "footWidth": 112,
+          "borderAlpha": 63
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "crop": {
+            "x": 896,
+            "y": 492,
+            "width": 180,
+            "height": 214
+          },
+          "visibleBBox": {
+            "x": 907,
+            "y": 497,
+            "width": 164,
+            "height": 206
+          },
+          "footLineY": 702,
+          "footCentreX": 985.5,
+          "footWidth": 104,
+          "borderAlpha": 70
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "crop": {
+            "x": 475,
+            "y": 716,
+            "width": 158,
+            "height": 231
+          },
+          "visibleBBox": {
+            "x": 480,
+            "y": 721,
+            "width": 146,
+            "height": 223
+          },
+          "footLineY": 943,
+          "footCentreX": 553.5,
+          "footWidth": 76,
+          "borderAlpha": 31
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "crop": {
+            "x": 676,
+            "y": 716,
+            "width": 170,
+            "height": 232
+          },
+          "visibleBBox": {
+            "x": 695,
+            "y": 721,
+            "width": 147,
+            "height": 224
+          },
+          "footLineY": 944,
+          "footCentreX": 761,
+          "footWidth": 79,
+          "borderAlpha": 78
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "crop": {
+            "x": 902,
+            "y": 716,
+            "width": 156,
+            "height": 229
+          },
+          "visibleBBox": {
+            "x": 909,
+            "y": 721,
+            "width": 144,
+            "height": 221
+          },
+          "footLineY": 941,
+          "footCentreX": 979.5,
+          "footWidth": 72,
+          "borderAlpha": 27
+        }
+      ]
+    },
+    "moleOps": {
+      "textureUrl": "/assets/game/npc/guild/guild_quadminers_mole_ops.png",
+      "width": 1536,
+      "height": 1024,
+      "gridClaimed": {
+        "columns": 3,
+        "rows": 4,
+        "cellIfNaive": {
+          "width": 512,
+          "height": 256
+        }
+      },
+      "naiveGridValid": false,
+      "measuredColumnCuts": [0, 661, 875, 1536],
+      "measuredRowCuts": [0, 258, 490, 724, 1024],
+      "recommendedScale": 0.2,
+      "verdict": "REPROCESS",
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "crop": {
+            "x": 463,
+            "y": 22,
+            "width": 182,
+            "height": 224
+          },
+          "visibleBBox": {
+            "x": 477,
+            "y": 27,
+            "width": 163,
+            "height": 216
+          },
+          "footLineY": 242,
+          "footCentreX": 553.5,
+          "footWidth": 108,
+          "borderAlpha": 55
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "crop": {
+            "x": 680,
+            "y": 22,
+            "width": 172,
+            "height": 227
+          },
+          "visibleBBox": {
+            "x": 690,
+            "y": 27,
+            "width": 157,
+            "height": 219
+          },
+          "footLineY": 245,
+          "footCentreX": 765.5,
+          "footWidth": 90,
+          "borderAlpha": 64
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "crop": {
+            "x": 892,
+            "y": 22,
+            "width": 172,
+            "height": 225
+          },
+          "visibleBBox": {
+            "x": 897,
+            "y": 27,
+            "width": 160,
+            "height": 217
+          },
+          "footLineY": 243,
+          "footCentreX": 978,
+          "footWidth": 101,
+          "borderAlpha": 45
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "crop": {
+            "x": 461,
+            "y": 265,
+            "width": 194,
+            "height": 218
+          },
+          "visibleBBox": {
+            "x": 466,
+            "y": 270,
+            "width": 176,
+            "height": 210
+          },
+          "footLineY": 479,
+          "footCentreX": 558,
+          "footWidth": 99,
+          "borderAlpha": 47
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "crop": {
+            "x": 670,
+            "y": 265,
+            "width": 192,
+            "height": 218
+          },
+          "visibleBBox": {
+            "x": 681,
+            "y": 270,
+            "width": 177,
+            "height": 210
+          },
+          "footLineY": 479,
+          "footCentreX": 766,
+          "footWidth": 115,
+          "borderAlpha": 93
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "crop": {
+            "x": 888,
+            "y": 265,
+            "width": 178,
+            "height": 218
+          },
+          "visibleBBox": {
+            "x": 893,
+            "y": 270,
+            "width": 168,
+            "height": 210
+          },
+          "footLineY": 479,
+          "footCentreX": 977,
+          "footWidth": 115,
+          "borderAlpha": 73
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "crop": {
+            "x": 459,
+            "y": 496,
+            "width": 190,
+            "height": 222
+          },
+          "visibleBBox": {
+            "x": 464,
+            "y": 501,
+            "width": 177,
+            "height": 214
+          },
+          "footLineY": 714,
+          "footCentreX": 554,
+          "footWidth": 105,
+          "borderAlpha": 99
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "crop": {
+            "x": 675,
+            "y": 496,
+            "width": 184,
+            "height": 218
+          },
+          "visibleBBox": {
+            "x": 680,
+            "y": 501,
+            "width": 173,
+            "height": 210
+          },
+          "footLineY": 710,
+          "footCentreX": 767,
+          "footWidth": 125,
+          "borderAlpha": 94
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "crop": {
+            "x": 886,
+            "y": 497,
+            "width": 182,
+            "height": 222
+          },
+          "visibleBBox": {
+            "x": 894,
+            "y": 502,
+            "width": 170,
+            "height": 214
+          },
+          "footLineY": 715,
+          "footCentreX": 977,
+          "footWidth": 99,
+          "borderAlpha": 91
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "crop": {
+            "x": 461,
+            "y": 728,
+            "width": 186,
+            "height": 233
+          },
+          "visibleBBox": {
+            "x": 466,
+            "y": 733,
+            "width": 172,
+            "height": 225
+          },
+          "footLineY": 957,
+          "footCentreX": 554,
+          "footWidth": 85,
+          "borderAlpha": 45
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "crop": {
+            "x": 673,
+            "y": 729,
+            "width": 176,
+            "height": 234
+          },
+          "visibleBBox": {
+            "x": 684,
+            "y": 734,
+            "width": 160,
+            "height": 226
+          },
+          "footLineY": 959,
+          "footCentreX": 760.5,
+          "footWidth": 78,
+          "borderAlpha": 44
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "crop": {
+            "x": 890,
+            "y": 728,
+            "width": 170,
+            "height": 233
+          },
+          "visibleBBox": {
+            "x": 897,
+            "y": 733,
+            "width": 159,
+            "height": 225
+          },
+          "footLineY": 957,
+          "footCentreX": 975,
+          "footWidth": 93,
+          "borderAlpha": 67
+        }
+      ]
+    },
+    "owl": {
+      "textureUrl": "/assets/game/npc/guild/guild_archivist_owl.png",
+      "width": 1536,
+      "height": 1024,
+      "gridClaimed": {
+        "columns": 3,
+        "rows": 4,
+        "cellIfNaive": {
+          "width": 512,
+          "height": 256
+        }
+      },
+      "naiveGridValid": false,
+      "measuredColumnCuts": [0, 658, 871, 1536],
+      "measuredRowCuts": [0, 251, 477, 707, 1024],
+      "recommendedScale": 0.21,
+      "verdict": "REPROCESS",
+      "frames": [
+        {
+          "index": 0,
+          "direction": "down",
+          "pose": "idle",
+          "crop": {
+            "x": 481,
+            "y": 31,
+            "width": 170,
+            "height": 210
+          },
+          "visibleBBox": {
+            "x": 486,
+            "y": 36,
+            "width": 150,
+            "height": 202
+          },
+          "footLineY": 237,
+          "footCentreX": 566,
+          "footWidth": 91,
+          "borderAlpha": 16
+        },
+        {
+          "index": 1,
+          "direction": "down",
+          "pose": "walk1",
+          "crop": {
+            "x": 678,
+            "y": 31,
+            "width": 172,
+            "height": 210
+          },
+          "visibleBBox": {
+            "x": 688,
+            "y": 36,
+            "width": 157,
+            "height": 202
+          },
+          "footLineY": 237,
+          "footCentreX": 763.5,
+          "footWidth": 88,
+          "borderAlpha": 19
+        },
+        {
+          "index": 2,
+          "direction": "down",
+          "pose": "walk2",
+          "crop": {
+            "x": 889,
+            "y": 31,
+            "width": 160,
+            "height": 210
+          },
+          "visibleBBox": {
+            "x": 894,
+            "y": 36,
+            "width": 151,
+            "height": 202
+          },
+          "footLineY": 237,
+          "footCentreX": 969,
+          "footWidth": 87,
+          "borderAlpha": 22
+        },
+        {
+          "index": 3,
+          "direction": "left",
+          "pose": "idle",
+          "crop": {
+            "x": 463,
+            "y": 260,
+            "width": 182,
+            "height": 207
+          },
+          "visibleBBox": {
+            "x": 468,
+            "y": 265,
+            "width": 164,
+            "height": 199
+          },
+          "footLineY": 463,
+          "footCentreX": 554,
+          "footWidth": 87,
+          "borderAlpha": 29
+        },
+        {
+          "index": 4,
+          "direction": "left",
+          "pose": "walk1",
+          "crop": {
+            "x": 671,
+            "y": 262,
+            "width": 178,
+            "height": 206
+          },
+          "visibleBBox": {
+            "x": 680,
+            "y": 267,
+            "width": 164,
+            "height": 198
+          },
+          "footLineY": 464,
+          "footCentreX": 759.5,
+          "footWidth": 106,
+          "borderAlpha": 28
+        },
+        {
+          "index": 5,
+          "direction": "left",
+          "pose": "walk2",
+          "crop": {
+            "x": 892,
+            "y": 261,
+            "width": 168,
+            "height": 206
+          },
+          "visibleBBox": {
+            "x": 900,
+            "y": 266,
+            "width": 155,
+            "height": 198
+          },
+          "footLineY": 463,
+          "footCentreX": 975.5,
+          "footWidth": 118,
+          "borderAlpha": 42
+        },
+        {
+          "index": 6,
+          "direction": "right",
+          "pose": "idle",
+          "crop": {
+            "x": 467,
+            "y": 485,
+            "width": 180,
+            "height": 211
+          },
+          "visibleBBox": {
+            "x": 472,
+            "y": 490,
+            "width": 162,
+            "height": 203
+          },
+          "footLineY": 692,
+          "footCentreX": 556.5,
+          "footWidth": 94,
+          "borderAlpha": 35
+        },
+        {
+          "index": 7,
+          "direction": "right",
+          "pose": "walk1",
+          "crop": {
+            "x": 677,
+            "y": 489,
+            "width": 176,
+            "height": 208
+          },
+          "visibleBBox": {
+            "x": 682,
+            "y": 494,
+            "width": 166,
+            "height": 200
+          },
+          "footLineY": 693,
+          "footCentreX": 764.5,
+          "footWidth": 106,
+          "borderAlpha": 57
+        },
+        {
+          "index": 8,
+          "direction": "right",
+          "pose": "walk2",
+          "crop": {
+            "x": 885,
+            "y": 488,
+            "width": 174,
+            "height": 208
+          },
+          "visibleBBox": {
+            "x": 895,
+            "y": 493,
+            "width": 160,
+            "height": 200
+          },
+          "footLineY": 692,
+          "footCentreX": 972,
+          "footWidth": 119,
+          "borderAlpha": 58
+        },
+        {
+          "index": 9,
+          "direction": "up",
+          "pose": "idle",
+          "crop": {
+            "x": 472,
+            "y": 715,
+            "width": 172,
+            "height": 217
+          },
+          "visibleBBox": {
+            "x": 477,
+            "y": 720,
+            "width": 152,
+            "height": 209
+          },
+          "footLineY": 928,
+          "footCentreX": 558,
+          "footWidth": 89,
+          "borderAlpha": 17
+        },
+        {
+          "index": 10,
+          "direction": "up",
+          "pose": "walk1",
+          "crop": {
+            "x": 683,
+            "y": 715,
+            "width": 160,
+            "height": 225
+          },
+          "visibleBBox": {
+            "x": 688,
+            "y": 720,
+            "width": 151,
+            "height": 217
+          },
+          "footLineY": 936,
+          "footCentreX": 763,
+          "footWidth": 77,
+          "borderAlpha": 57
+        },
+        {
+          "index": 11,
+          "direction": "up",
+          "pose": "walk2",
+          "crop": {
+            "x": 887,
+            "y": 715,
+            "width": 160,
+            "height": 222
+          },
+          "visibleBBox": {
+            "x": 894,
+            "y": 720,
+            "width": 148,
+            "height": 214
+          },
+          "footLineY": 933,
+          "footCentreX": 966.5,
+          "footWidth": 80,
+          "borderAlpha": 43
+        }
+      ]
+    }
+  }
+}

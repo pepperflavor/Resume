@@ -1,0 +1,637 @@
+{
+  "schemaVersion": 1,
+  "kind": "SOURCE_RECT_MANIFEST_NOT_PACKED_ATLAS",
+  "scope": "Visually reviewed isolated prototype props only; no tileWidth/tileHeight, world scale, origin or physics inferred.",
+  "frames": [
+    {
+      "name": "overworld_tileset.rock",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 228,
+        "y": 472,
+        "width": 119,
+        "height": 110
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "overworld_tileset.rock_small",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 29,
+        "y": 506,
+        "width": 70,
+        "height": 55
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 2
+    },
+    {
+      "name": "overworld_tileset.stump",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 505,
+        "y": 487,
+        "width": 103,
+        "height": 89
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 7
+    },
+    {
+      "name": "overworld_tileset.bush",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 672,
+        "y": 601,
+        "width": 91,
+        "height": 102
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 3
+    },
+    {
+      "name": "overworld_tileset.flower",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 1074,
+        "y": 498,
+        "width": 79,
+        "height": 79
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "overworld_tileset.flower_blue",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 1171,
+        "y": 498,
+        "width": 76,
+        "height": 77
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 3
+    },
+    {
+      "name": "overworld_tileset.tree_conifer",
+      "textureUrl": "/assets/game/tilesets/overworld_tileset.png",
+      "sourceRect": {
+        "x": 361,
+        "y": 592,
+        "width": 142,
+        "height": 240
+      },
+      "sourceSha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "market_tileset.red_stall",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 18,
+        "y": 8,
+        "width": 413,
+        "height": 391
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "market_tileset.blue_stall",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 442,
+        "y": 9,
+        "width": 395,
+        "height": 395
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 2
+    },
+    {
+      "name": "market_tileset.green_stall",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 854,
+        "y": 9,
+        "width": 364,
+        "height": 397
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "market_tileset.cart",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 18,
+        "y": 737,
+        "width": 349,
+        "height": 263
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "market_tileset.barrel",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 1104,
+        "y": 411,
+        "width": 125,
+        "height": 156
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 8
+    },
+    {
+      "name": "market_tileset.crate_stack",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 842,
+        "y": 542,
+        "width": 111,
+        "height": 164
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 12
+    },
+    {
+      "name": "market_tileset.crate_cloth",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 951,
+        "y": 564,
+        "width": 129,
+        "height": 118
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 11
+    },
+    {
+      "name": "market_tileset.vegetable_box",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 385,
+        "y": 504,
+        "width": 123,
+        "height": 95
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 11
+    },
+    {
+      "name": "market_tileset.potion_shelf",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 181,
+        "y": 583,
+        "width": 151,
+        "height": 137
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "market_tileset.potion_shelf_alt",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 21,
+        "y": 587,
+        "width": 149,
+        "height": 145
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "market_tileset.sign",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 512,
+        "y": 762,
+        "width": 129,
+        "height": 223
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 1
+    },
+    {
+      "name": "market_tileset.flower_box",
+      "textureUrl": "/assets/game/tilesets/market_tileset.png",
+      "sourceRect": {
+        "x": 545,
+        "y": 617,
+        "width": 123,
+        "height": 103
+      },
+      "sourceSha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "garden_pond_tileset.lily_pad",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 998,
+        "y": 40,
+        "width": 88,
+        "height": 76
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "garden_pond_tileset.lily_pad_small",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 1097,
+        "y": 43,
+        "width": 66,
+        "height": 55
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 3
+    },
+    {
+      "name": "garden_pond_tileset.lotus",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 1179,
+        "y": 39,
+        "width": 77,
+        "height": 70
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 8
+    },
+    {
+      "name": "garden_pond_tileset.reed",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 1085,
+        "y": 201,
+        "width": 98,
+        "height": 126
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "garden_pond_tileset.flower_clusters",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 235,
+        "y": 740,
+        "width": 109,
+        "height": 94
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "garden_pond_tileset.flowers_white",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 358,
+        "y": 740,
+        "width": 115,
+        "height": 94
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "garden_pond_tileset.mossy_rocks",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 740,
+        "y": 299,
+        "width": 98,
+        "height": 88
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "garden_pond_tileset.mossy_rocks_large",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 434,
+        "y": 905,
+        "width": 134,
+        "height": 100
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 7
+    },
+    {
+      "name": "garden_pond_tileset.bridge_stone",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 185,
+        "y": 435,
+        "width": 287,
+        "height": 146
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 12
+    },
+    {
+      "name": "garden_pond_tileset.bridge_wood",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 187,
+        "y": 583,
+        "width": 280,
+        "height": 148
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "garden_pond_tileset.stone_pillar",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 1025,
+        "y": 508,
+        "width": 94,
+        "height": 203
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 12
+    },
+    {
+      "name": "garden_pond_tileset.offering_spot",
+      "textureUrl": "/assets/game/tilesets/garden_pond_tileset.png",
+      "sourceRect": {
+        "x": 1215,
+        "y": 500,
+        "width": 299,
+        "height": 194
+      },
+      "sourceSha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "dungeon_tileset.arch",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 1194,
+        "y": 39,
+        "width": 171,
+        "height": 179
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 3
+    },
+    {
+      "name": "dungeon_tileset.doorway",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 870,
+        "y": 224,
+        "width": 156,
+        "height": 190
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "dungeon_tileset.stairs",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 1236,
+        "y": 238,
+        "width": 165,
+        "height": 177
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 5
+    },
+    {
+      "name": "dungeon_tileset.pillar",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 680,
+        "y": 351,
+        "width": 81,
+        "height": 163
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 3
+    },
+    {
+      "name": "dungeon_tileset.broken_pillar",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 861,
+        "y": 422,
+        "width": 108,
+        "height": 174
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 10
+    },
+    {
+      "name": "dungeon_tileset.iron_gate",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 1046,
+        "y": 224,
+        "width": 177,
+        "height": 190
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "dungeon_tileset.crate",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 25,
+        "y": 782,
+        "width": 99,
+        "height": 107
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 6
+    },
+    {
+      "name": "dungeon_tileset.chest",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 415,
+        "y": 780,
+        "width": 107,
+        "height": 104
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "dungeon_tileset.chest_open",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 428,
+        "y": 891,
+        "width": 122,
+        "height": 118
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 2
+    },
+    {
+      "name": "dungeon_tileset.empty_churu_pillar",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 1041,
+        "y": 628,
+        "width": 141,
+        "height": 319
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 7
+    },
+    {
+      "name": "dungeon_tileset.empty_churu_pillar_alt",
+      "textureUrl": "/assets/game/tilesets/dungeon_tileset.png",
+      "sourceRect": {
+        "x": 1207,
+        "y": 625,
+        "width": 140,
+        "height": 322
+      },
+      "sourceSha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": false,
+      "maxBorderAlpha": 4
+    },
+    {
+      "name": "background.legacy_roof",
+      "textureUrl": "/assets/game/tilesets/background.png",
+      "sourceRect": {
+        "x": 597,
+        "y": 151,
+        "width": 151,
+        "height": 152
+      },
+      "sourceSha256": "5dd149b5445e321ea21c8c9b6e1cf6d8c64289cc9fa5410aecceb2c4b8f2096e",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": true,
+      "maxBorderAlpha": 0
+    },
+    {
+      "name": "background.legacy_barrel",
+      "textureUrl": "/assets/game/tilesets/background.png",
+      "sourceRect": {
+        "x": 236,
+        "y": 219,
+        "width": 56,
+        "height": 73
+      },
+      "sourceSha256": "5dd149b5445e321ea21c8c9b6e1cf6d8c64289cc9fa5410aecceb2c4b8f2096e",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": true,
+      "maxBorderAlpha": 0
+    },
+    {
+      "name": "trees.legacy_stump",
+      "textureUrl": "/assets/game/tilesets/trees.png",
+      "sourceRect": {
+        "x": 129,
+        "y": 36,
+        "width": 33,
+        "height": 27
+      },
+      "sourceSha256": "b3a5312311eadc69effbb8a1c1fca4da9c7d9e48e7220e06d8fb7fb6c4d6ea08",
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "legacy": true,
+      "maxBorderAlpha": 7
+    }
+  ]
+}

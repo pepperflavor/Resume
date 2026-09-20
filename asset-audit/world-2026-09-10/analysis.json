@@ -1,0 +1,1928 @@
+[
+  {
+    "file": "npc/dungeon_entrance_adventurer_rabbit.png",
+    "sha256": "413c7db369c02188dab261d303f2e4d5243b14d4b4133212b04a6799d400d534",
+    "width": 1086,
+    "height": 1448,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 887807,
+    "partial": 684416,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 18,
+        "size": 19
+      },
+      {
+        "from": 360,
+        "to": 369,
+        "size": 10
+      },
+      {
+        "from": 707,
+        "to": 716,
+        "size": 10
+      },
+      {
+        "from": 1050,
+        "to": 1057,
+        "size": 8
+      },
+      {
+        "from": 1415,
+        "to": 1447,
+        "size": 33
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 90,
+        "size": 91
+      },
+      {
+        "from": 307,
+        "to": 437,
+        "size": 131
+      },
+      {
+        "from": 655,
+        "to": 783,
+        "size": 129
+      },
+      {
+        "from": 997,
+        "to": 1085,
+        "size": 89
+      }
+    ],
+    "components": [
+      {
+        "x": 93,
+        "y": 19,
+        "width": 206,
+        "height": 341,
+        "pixels": 52083
+      },
+      {
+        "x": 446,
+        "y": 23,
+        "width": 203,
+        "height": 337,
+        "pixels": 50127
+      },
+      {
+        "x": 789,
+        "y": 23,
+        "width": 208,
+        "height": 337,
+        "pixels": 50778
+      },
+      {
+        "x": 96,
+        "y": 370,
+        "width": 211,
+        "height": 335,
+        "pixels": 49618
+      },
+      {
+        "x": 443,
+        "y": 370,
+        "width": 212,
+        "height": 337,
+        "pixels": 49180
+      },
+      {
+        "x": 785,
+        "y": 370,
+        "width": 207,
+        "height": 335,
+        "pixels": 48962
+      },
+      {
+        "x": 97,
+        "y": 717,
+        "width": 205,
+        "height": 333,
+        "pixels": 48004
+      },
+      {
+        "x": 438,
+        "y": 717,
+        "width": 207,
+        "height": 332,
+        "pixels": 48539
+      },
+      {
+        "x": 784,
+        "y": 717,
+        "width": 204,
+        "height": 331,
+        "pixels": 48330
+      },
+      {
+        "x": 91,
+        "y": 1058,
+        "width": 200,
+        "height": 353,
+        "pixels": 50172
+      },
+      {
+        "x": 784,
+        "y": 1062,
+        "width": 212,
+        "height": 347,
+        "pixels": 49791
+      },
+      {
+        "x": 440,
+        "y": 1063,
+        "width": 200,
+        "height": 352,
+        "pixels": 48542
+      }
+    ]
+  },
+  {
+    "file": "npc/dungeon_entrance_adventurer_cat.png",
+    "sha256": "cea3aea7188a455e1abe92b94079e7b8b65ce7383ab212c0867d72462980a228",
+    "width": 1086,
+    "height": 1448,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 767393,
+    "partial": 804601,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 38,
+        "size": 39
+      },
+      {
+        "from": 361,
+        "to": 380,
+        "size": 20
+      },
+      {
+        "from": 700,
+        "to": 733,
+        "size": 34
+      },
+      {
+        "from": 1052,
+        "to": 1077,
+        "size": 26
+      },
+      {
+        "from": 1388,
+        "to": 1447,
+        "size": 60
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 29,
+        "size": 30
+      },
+      {
+        "from": 354,
+        "to": 383,
+        "size": 30
+      },
+      {
+        "from": 719,
+        "to": 747,
+        "size": 29
+      },
+      {
+        "from": 1065,
+        "to": 1085,
+        "size": 21
+      }
+    ],
+    "components": [
+      {
+        "x": 64,
+        "y": 39,
+        "width": 250,
+        "height": 316,
+        "pixels": 63071
+      },
+      {
+        "x": 778,
+        "y": 41,
+        "width": 255,
+        "height": 320,
+        "pixels": 62812
+      },
+      {
+        "x": 416,
+        "y": 43,
+        "width": 252,
+        "height": 318,
+        "pixels": 61448
+      },
+      {
+        "x": 793,
+        "y": 381,
+        "width": 272,
+        "height": 319,
+        "pixels": 55961
+      },
+      {
+        "x": 77,
+        "y": 388,
+        "width": 277,
+        "height": 312,
+        "pixels": 56733
+      },
+      {
+        "x": 432,
+        "y": 388,
+        "width": 287,
+        "height": 311,
+        "pixels": 56296
+      },
+      {
+        "x": 384,
+        "y": 734,
+        "width": 284,
+        "height": 317,
+        "pixels": 56060
+      },
+      {
+        "x": 30,
+        "y": 736,
+        "width": 280,
+        "height": 316,
+        "pixels": 56868
+      },
+      {
+        "x": 748,
+        "y": 741,
+        "width": 277,
+        "height": 311,
+        "pixels": 54860
+      },
+      {
+        "x": 72,
+        "y": 1078,
+        "width": 238,
+        "height": 297,
+        "pixels": 56330
+      },
+      {
+        "x": 429,
+        "y": 1081,
+        "width": 236,
+        "height": 304,
+        "pixels": 56383
+      },
+      {
+        "x": 792,
+        "y": 1081,
+        "width": 233,
+        "height": 307,
+        "pixels": 57091
+      }
+    ]
+  },
+  {
+    "file": "npc/npc_pond_fairy.png",
+    "sha256": "9e62d290ca0d78d7bfcd6ae07dcb0266a2edc5a2439710c1afb4b57cbca2f8d6",
+    "width": 1086,
+    "height": 1448,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 844719,
+    "partial": 727618,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 34,
+        "size": 35
+      },
+      {
+        "from": 345,
+        "to": 384,
+        "size": 40
+      },
+      {
+        "from": 688,
+        "to": 738,
+        "size": 51
+      },
+      {
+        "from": 1036,
+        "to": 1078,
+        "size": 43
+      },
+      {
+        "from": 1382,
+        "to": 1447,
+        "size": 66
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 49,
+        "size": 50
+      },
+      {
+        "from": 339,
+        "to": 403,
+        "size": 65
+      },
+      {
+        "from": 684,
+        "to": 753,
+        "size": 70
+      },
+      {
+        "from": 1044,
+        "to": 1085,
+        "size": 42
+      }
+    ],
+    "components": [
+      {
+        "x": 404,
+        "y": 35,
+        "width": 278,
+        "height": 308,
+        "pixels": 51654
+      },
+      {
+        "x": 50,
+        "y": 36,
+        "width": 289,
+        "height": 309,
+        "pixels": 53813
+      },
+      {
+        "x": 757,
+        "y": 36,
+        "width": 279,
+        "height": 309,
+        "pixels": 52645
+      },
+      {
+        "x": 405,
+        "y": 385,
+        "width": 278,
+        "height": 297,
+        "pixels": 48859
+      },
+      {
+        "x": 55,
+        "y": 386,
+        "width": 277,
+        "height": 302,
+        "pixels": 46840
+      },
+      {
+        "x": 762,
+        "y": 389,
+        "width": 270,
+        "height": 296,
+        "pixels": 48213
+      },
+      {
+        "x": 765,
+        "y": 739,
+        "width": 279,
+        "height": 297,
+        "pixels": 49600
+      },
+      {
+        "x": 407,
+        "y": 740,
+        "width": 277,
+        "height": 291,
+        "pixels": 48002
+      },
+      {
+        "x": 58,
+        "y": 742,
+        "width": 280,
+        "height": 294,
+        "pixels": 48349
+      },
+      {
+        "x": 407,
+        "y": 1079,
+        "width": 275,
+        "height": 303,
+        "pixels": 48624
+      },
+      {
+        "x": 60,
+        "y": 1081,
+        "width": 266,
+        "height": 301,
+        "pixels": 47963
+      },
+      {
+        "x": 754,
+        "y": 1081,
+        "width": 281,
+        "height": 301,
+        "pixels": 49897
+      }
+    ]
+  },
+  {
+    "file": "objects/dungeon_entrance_ambient_props.png",
+    "sha256": "70ab03c401e19d59b6dc6bdeebddc3f523cc1d031315fc8ff1b611323d94dfe0",
+    "width": 1536,
+    "height": 1024,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 839942,
+    "partial": 732922,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 15,
+        "size": 16
+      },
+      {
+        "from": 231,
+        "to": 232,
+        "size": 2
+      },
+      {
+        "from": 407,
+        "to": 419,
+        "size": 13
+      },
+      {
+        "from": 650,
+        "to": 653,
+        "size": 4
+      },
+      {
+        "from": 986,
+        "to": 1023,
+        "size": 38
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 16,
+        "size": 17
+      },
+      {
+        "from": 1521,
+        "to": 1535,
+        "size": 15
+      }
+    ],
+    "components": [
+      {
+        "x": 1329,
+        "y": 16,
+        "width": 192,
+        "height": 199,
+        "pixels": 12381
+      },
+      {
+        "x": 725,
+        "y": 21,
+        "width": 166,
+        "height": 185,
+        "pixels": 8262
+      },
+      {
+        "x": 26,
+        "y": 24,
+        "width": 170,
+        "height": 172,
+        "pixels": 17008
+      },
+      {
+        "x": 227,
+        "y": 65,
+        "width": 143,
+        "height": 131,
+        "pixels": 10986
+      },
+      {
+        "x": 1075,
+        "y": 65,
+        "width": 223,
+        "height": 160,
+        "pixels": 10718
+      },
+      {
+        "x": 564,
+        "y": 67,
+        "width": 142,
+        "height": 129,
+        "pixels": 10337
+      },
+      {
+        "x": 916,
+        "y": 72,
+        "width": 127,
+        "height": 159,
+        "pixels": 5742
+      },
+      {
+        "x": 403,
+        "y": 82,
+        "width": 134,
+        "height": 111,
+        "pixels": 9201
+      },
+      {
+        "x": 23,
+        "y": 233,
+        "width": 172,
+        "height": 167,
+        "pixels": 23893
+      },
+      {
+        "x": 703,
+        "y": 255,
+        "width": 93,
+        "height": 137,
+        "pixels": 9973
+      },
+      {
+        "x": 217,
+        "y": 261,
+        "width": 120,
+        "height": 139,
+        "pixels": 12283
+      },
+      {
+        "x": 1345,
+        "y": 261,
+        "width": 174,
+        "height": 140,
+        "pixels": 14349
+      },
+      {
+        "x": 361,
+        "y": 277,
+        "width": 172,
+        "height": 118,
+        "pixels": 13574
+      },
+      {
+        "x": 1189,
+        "y": 285,
+        "width": 142,
+        "height": 110,
+        "pixels": 8546
+      },
+      {
+        "x": 1033,
+        "y": 288,
+        "width": 138,
+        "height": 119,
+        "pixels": 11346
+      },
+      {
+        "x": 826,
+        "y": 289,
+        "width": 185,
+        "height": 112,
+        "pixels": 14535
+      },
+      {
+        "x": 550,
+        "y": 294,
+        "width": 129,
+        "height": 100,
+        "pixels": 8965
+      },
+      {
+        "x": 22,
+        "y": 420,
+        "width": 163,
+        "height": 218,
+        "pixels": 15721
+      },
+      {
+        "x": 858,
+        "y": 425,
+        "width": 144,
+        "height": 222,
+        "pixels": 15356
+      },
+      {
+        "x": 593,
+        "y": 433,
+        "width": 106,
+        "height": 217,
+        "pixels": 11602
+      },
+      {
+        "x": 193,
+        "y": 440,
+        "width": 141,
+        "height": 181,
+        "pixels": 20091
+      },
+      {
+        "x": 1353,
+        "y": 448,
+        "width": 168,
+        "height": 196,
+        "pixels": 21528
+      },
+      {
+        "x": 733,
+        "y": 464,
+        "width": 76,
+        "height": 150,
+        "pixels": 7678
+      },
+      {
+        "x": 357,
+        "y": 499,
+        "width": 212,
+        "height": 122,
+        "pixels": 16839
+      },
+      {
+        "x": 1037,
+        "y": 500,
+        "width": 106,
+        "height": 144,
+        "pixels": 8883
+      },
+      {
+        "x": 1163,
+        "y": 507,
+        "width": 171,
+        "height": 140,
+        "pixels": 16607
+      },
+      {
+        "x": 360,
+        "y": 654,
+        "width": 133,
+        "height": 108,
+        "pixels": 7377
+      },
+      {
+        "x": 34,
+        "y": 658,
+        "width": 122,
+        "height": 105,
+        "pixels": 7790
+      },
+      {
+        "x": 194,
+        "y": 663,
+        "width": 141,
+        "height": 73,
+        "pixels": 4064
+      },
+      {
+        "x": 566,
+        "y": 677,
+        "width": 49,
+        "height": 33,
+        "pixels": 1266
+      },
+      {
+        "x": 520,
+        "y": 691,
+        "width": 60,
+        "height": 62,
+        "pixels": 1792
+      },
+      {
+        "x": 633,
+        "y": 692,
+        "width": 79,
+        "height": 44,
+        "pixels": 2890
+      },
+      {
+        "x": 282,
+        "y": 717,
+        "width": 55,
+        "height": 45,
+        "pixels": 1320
+      },
+      {
+        "x": 842,
+        "y": 748,
+        "width": 260,
+        "height": 231,
+        "pixels": 35962
+      },
+      {
+        "x": 1339,
+        "y": 753,
+        "width": 177,
+        "height": 220,
+        "pixels": 22086
+      },
+      {
+        "x": 647,
+        "y": 762,
+        "width": 170,
+        "height": 215,
+        "pixels": 19430
+      },
+      {
+        "x": 453,
+        "y": 767,
+        "width": 164,
+        "height": 206,
+        "pixels": 18044
+      },
+      {
+        "x": 17,
+        "y": 770,
+        "width": 243,
+        "height": 216,
+        "pixels": 35762
+      },
+      {
+        "x": 1126,
+        "y": 782,
+        "width": 204,
+        "height": 197,
+        "pixels": 23907
+      },
+      {
+        "x": 273,
+        "y": 836,
+        "width": 161,
+        "height": 150,
+        "pixels": 15951
+      }
+    ]
+  },
+  {
+    "file": "objects/dungeon_boss_treasure_props.png",
+    "sha256": "b742d4c5e518350a3717ffec98f0942006db2932a6cd97319f42264a572222d0",
+    "width": 1536,
+    "height": 1024,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 610685,
+    "partial": 962179,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 8,
+        "size": 9
+      },
+      {
+        "from": 1004,
+        "to": 1023,
+        "size": 20
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 20,
+        "size": 21
+      },
+      {
+        "from": 1516,
+        "to": 1535,
+        "size": 20
+      }
+    ],
+    "components": [
+      {
+        "x": 539,
+        "y": 9,
+        "width": 460,
+        "height": 259,
+        "pixels": 70663
+      },
+      {
+        "x": 1007,
+        "y": 22,
+        "width": 251,
+        "height": 211,
+        "pixels": 35432
+      },
+      {
+        "x": 385,
+        "y": 27,
+        "width": 180,
+        "height": 176,
+        "pixels": 18609
+      },
+      {
+        "x": 182,
+        "y": 41,
+        "width": 192,
+        "height": 121,
+        "pixels": 12637
+      },
+      {
+        "x": 28,
+        "y": 50,
+        "width": 131,
+        "height": 90,
+        "pixels": 7105
+      },
+      {
+        "x": 1280,
+        "y": 76,
+        "width": 150,
+        "height": 143,
+        "pixels": 17329
+      },
+      {
+        "x": 156,
+        "y": 133,
+        "width": 26,
+        "height": 18,
+        "pixels": 360
+      },
+      {
+        "x": 309,
+        "y": 150,
+        "width": 32,
+        "height": 25,
+        "pixels": 627
+      },
+      {
+        "x": 43,
+        "y": 161,
+        "width": 67,
+        "height": 108,
+        "pixels": 5162
+      },
+      {
+        "x": 156,
+        "y": 193,
+        "width": 93,
+        "height": 83,
+        "pixels": 5266
+      },
+      {
+        "x": 283,
+        "y": 212,
+        "width": 113,
+        "height": 75,
+        "pixels": 5763
+      },
+      {
+        "x": 412,
+        "y": 223,
+        "width": 129,
+        "height": 89,
+        "pixels": 7096
+      },
+      {
+        "x": 1232,
+        "y": 236,
+        "width": 103,
+        "height": 91,
+        "pixels": 5424
+      },
+      {
+        "x": 1019,
+        "y": 242,
+        "width": 126,
+        "height": 74,
+        "pixels": 5420
+      },
+      {
+        "x": 567,
+        "y": 261,
+        "width": 32,
+        "height": 26,
+        "pixels": 682
+      },
+      {
+        "x": 596,
+        "y": 261,
+        "width": 103,
+        "height": 66,
+        "pixels": 4362
+      },
+      {
+        "x": 869,
+        "y": 261,
+        "width": 120,
+        "height": 77,
+        "pixels": 5861
+      },
+      {
+        "x": 1408,
+        "y": 264,
+        "width": 71,
+        "height": 43,
+        "pixels": 2020
+      },
+      {
+        "x": 1367,
+        "y": 272,
+        "width": 27,
+        "height": 20,
+        "pixels": 437
+      },
+      {
+        "x": 1169,
+        "y": 277,
+        "width": 35,
+        "height": 30,
+        "pixels": 858
+      },
+      {
+        "x": 763,
+        "y": 283,
+        "width": 61,
+        "height": 44,
+        "pixels": 1468
+      },
+      {
+        "x": 26,
+        "y": 288,
+        "width": 250,
+        "height": 188,
+        "pixels": 20123
+      },
+      {
+        "x": 1406,
+        "y": 293,
+        "width": 34,
+        "height": 31,
+        "pixels": 804
+      },
+      {
+        "x": 1475,
+        "y": 300,
+        "width": 35,
+        "height": 27,
+        "pixels": 779
+      },
+      {
+        "x": 730,
+        "y": 306,
+        "width": 37,
+        "height": 30,
+        "pixels": 891
+      },
+      {
+        "x": 1134,
+        "y": 338,
+        "width": 142,
+        "height": 142,
+        "pixels": 13702
+      },
+      {
+        "x": 1019,
+        "y": 341,
+        "width": 106,
+        "height": 141,
+        "pixels": 10579
+      },
+      {
+        "x": 1298,
+        "y": 343,
+        "width": 105,
+        "height": 118,
+        "pixels": 7840
+      },
+      {
+        "x": 290,
+        "y": 346,
+        "width": 174,
+        "height": 132,
+        "pixels": 10966
+      },
+      {
+        "x": 850,
+        "y": 354,
+        "width": 69,
+        "height": 62,
+        "pixels": 3362
+      },
+      {
+        "x": 566,
+        "y": 361,
+        "width": 228,
+        "height": 129,
+        "pixels": 19513
+      },
+      {
+        "x": 896,
+        "y": 362,
+        "width": 106,
+        "height": 131,
+        "pixels": 4421
+      },
+      {
+        "x": 459,
+        "y": 375,
+        "width": 83,
+        "height": 96,
+        "pixels": 5435
+      },
+      {
+        "x": 783,
+        "y": 380,
+        "width": 52,
+        "height": 32,
+        "pixels": 830
+      },
+      {
+        "x": 1396,
+        "y": 380,
+        "width": 89,
+        "height": 91,
+        "pixels": 4638
+      },
+      {
+        "x": 1004,
+        "y": 423,
+        "width": 26,
+        "height": 44,
+        "pixels": 722
+      },
+      {
+        "x": 827,
+        "y": 427,
+        "width": 57,
+        "height": 58,
+        "pixels": 1657
+      },
+      {
+        "x": 1485,
+        "y": 429,
+        "width": 31,
+        "height": 33,
+        "pixels": 616
+      },
+      {
+        "x": 396,
+        "y": 431,
+        "width": 50,
+        "height": 36,
+        "pixels": 964
+      },
+      {
+        "x": 1254,
+        "y": 448,
+        "width": 56,
+        "height": 54,
+        "pixels": 1497
+      },
+      {
+        "x": 1466,
+        "y": 462,
+        "width": 25,
+        "height": 20,
+        "pixels": 394
+      },
+      {
+        "x": 1322,
+        "y": 464,
+        "width": 61,
+        "height": 53,
+        "pixels": 1456
+      },
+      {
+        "x": 307,
+        "y": 472,
+        "width": 110,
+        "height": 241,
+        "pixels": 18738
+      },
+      {
+        "x": 450,
+        "y": 495,
+        "width": 100,
+        "height": 266,
+        "pixels": 19908
+      },
+      {
+        "x": 1003,
+        "y": 498,
+        "width": 99,
+        "height": 263,
+        "pixels": 19612
+      },
+      {
+        "x": 170,
+        "y": 499,
+        "width": 108,
+        "height": 209,
+        "pixels": 17340
+      },
+      {
+        "x": 571,
+        "y": 512,
+        "width": 404,
+        "height": 264,
+        "pixels": 82797
+      },
+      {
+        "x": 1386,
+        "y": 512,
+        "width": 127,
+        "height": 182,
+        "pixels": 17323
+      },
+      {
+        "x": 1129,
+        "y": 520,
+        "width": 214,
+        "height": 133,
+        "pixels": 22708
+      },
+      {
+        "x": 21,
+        "y": 529,
+        "width": 157,
+        "height": 229,
+        "pixels": 21885
+      },
+      {
+        "x": 1129,
+        "y": 663,
+        "width": 94,
+        "height": 103,
+        "pixels": 7827
+      },
+      {
+        "x": 1278,
+        "y": 679,
+        "width": 127,
+        "height": 91,
+        "pixels": 8613
+      },
+      {
+        "x": 206,
+        "y": 683,
+        "width": 121,
+        "height": 127,
+        "pixels": 8526
+      },
+      {
+        "x": 939,
+        "y": 715,
+        "width": 52,
+        "height": 46,
+        "pixels": 1375
+      },
+      {
+        "x": 400,
+        "y": 720,
+        "width": 35,
+        "height": 27,
+        "pixels": 789
+      },
+      {
+        "x": 592,
+        "y": 738,
+        "width": 32,
+        "height": 25,
+        "pixels": 598
+      },
+      {
+        "x": 901,
+        "y": 752,
+        "width": 31,
+        "height": 24,
+        "pixels": 611
+      },
+      {
+        "x": 1252,
+        "y": 763,
+        "width": 47,
+        "height": 33,
+        "pixels": 1116
+      },
+      {
+        "x": 355,
+        "y": 768,
+        "width": 58,
+        "height": 42,
+        "pixels": 1803
+      },
+      {
+        "x": 28,
+        "y": 777,
+        "width": 127,
+        "height": 201,
+        "pixels": 15184
+      },
+      {
+        "x": 523,
+        "y": 783,
+        "width": 144,
+        "height": 101,
+        "pixels": 9744
+      },
+      {
+        "x": 977,
+        "y": 791,
+        "width": 74,
+        "height": 136,
+        "pixels": 5438
+      },
+      {
+        "x": 1071,
+        "y": 793,
+        "width": 89,
+        "height": 84,
+        "pixels": 5724
+      },
+      {
+        "x": 668,
+        "y": 804,
+        "width": 158,
+        "height": 99,
+        "pixels": 10526
+      },
+      {
+        "x": 879,
+        "y": 805,
+        "width": 87,
+        "height": 93,
+        "pixels": 6479
+      },
+      {
+        "x": 1191,
+        "y": 805,
+        "width": 122,
+        "height": 72,
+        "pixels": 4573
+      },
+      {
+        "x": 1247,
+        "y": 805,
+        "width": 269,
+        "height": 185,
+        "pixels": 28329
+      },
+      {
+        "x": 403,
+        "y": 820,
+        "width": 115,
+        "height": 114,
+        "pixels": 8288
+      },
+      {
+        "x": 154,
+        "y": 826,
+        "width": 138,
+        "height": 164,
+        "pixels": 12757
+      },
+      {
+        "x": 289,
+        "y": 827,
+        "width": 145,
+        "height": 163,
+        "pixels": 13287
+      },
+      {
+        "x": 824,
+        "y": 869,
+        "width": 165,
+        "height": 135,
+        "pixels": 11945
+      },
+      {
+        "x": 1155,
+        "y": 877,
+        "width": 90,
+        "height": 82,
+        "pixels": 4842
+      },
+      {
+        "x": 499,
+        "y": 889,
+        "width": 149,
+        "height": 101,
+        "pixels": 9368
+      },
+      {
+        "x": 1026,
+        "y": 890,
+        "width": 126,
+        "height": 109,
+        "pixels": 8985
+      },
+      {
+        "x": 678,
+        "y": 903,
+        "width": 132,
+        "height": 96,
+        "pixels": 9101
+      },
+      {
+        "x": 1399,
+        "y": 978,
+        "width": 32,
+        "height": 26,
+        "pixels": 676
+      }
+    ]
+  },
+  {
+    "file": "tilesets/cave_garden_offering_props.png",
+    "sha256": "f2ce9b4ca27693271b5dc8e57112c2f6b31afe8d4a43c30dd08710d13b33f7a0",
+    "width": 1536,
+    "height": 1024,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 630775,
+    "partial": 942089,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 23,
+        "size": 24
+      },
+      {
+        "from": 475,
+        "to": 490,
+        "size": 16
+      },
+      {
+        "from": 997,
+        "to": 1023,
+        "size": 27
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 30,
+        "size": 31
+      },
+      {
+        "from": 1524,
+        "to": 1535,
+        "size": 12
+      }
+    ],
+    "components": [
+      {
+        "x": 769,
+        "y": 24,
+        "width": 52,
+        "height": 77,
+        "pixels": 2728
+      },
+      {
+        "x": 1073,
+        "y": 24,
+        "width": 51,
+        "height": 79,
+        "pixels": 2736
+      },
+      {
+        "x": 1365,
+        "y": 24,
+        "width": 52,
+        "height": 79,
+        "pixels": 2788
+      },
+      {
+        "x": 1440,
+        "y": 36,
+        "width": 19,
+        "height": 26,
+        "pixels": 302
+      },
+      {
+        "x": 1028,
+        "y": 37,
+        "width": 24,
+        "height": 24,
+        "pixels": 328
+      },
+      {
+        "x": 1148,
+        "y": 37,
+        "width": 20,
+        "height": 24,
+        "pixels": 315
+      },
+      {
+        "x": 1321,
+        "y": 37,
+        "width": 23,
+        "height": 24,
+        "pixels": 309
+      },
+      {
+        "x": 639,
+        "y": 40,
+        "width": 304,
+        "height": 265,
+        "pixels": 56055
+      },
+      {
+        "x": 313,
+        "y": 60,
+        "width": 294,
+        "height": 218,
+        "pixels": 48261
+      },
+      {
+        "x": 968,
+        "y": 73,
+        "width": 266,
+        "height": 221,
+        "pixels": 43142
+      },
+      {
+        "x": 1260,
+        "y": 73,
+        "width": 264,
+        "height": 246,
+        "pixels": 48458
+      },
+      {
+        "x": 43,
+        "y": 77,
+        "width": 241,
+        "height": 187,
+        "pixels": 33438
+      },
+      {
+        "x": 497,
+        "y": 304,
+        "width": 128,
+        "height": 163,
+        "pixels": 15591
+      },
+      {
+        "x": 39,
+        "y": 312,
+        "width": 145,
+        "height": 148,
+        "pixels": 15886
+      },
+      {
+        "x": 222,
+        "y": 316,
+        "width": 104,
+        "height": 138,
+        "pixels": 9869
+      },
+      {
+        "x": 655,
+        "y": 330,
+        "width": 133,
+        "height": 145,
+        "pixels": 13360
+      },
+      {
+        "x": 373,
+        "y": 340,
+        "width": 88,
+        "height": 127,
+        "pixels": 9150
+      },
+      {
+        "x": 840,
+        "y": 340,
+        "width": 93,
+        "height": 127,
+        "pixels": 7916
+      },
+      {
+        "x": 1401,
+        "y": 353,
+        "width": 105,
+        "height": 109,
+        "pixels": 8207
+      },
+      {
+        "x": 1278,
+        "y": 363,
+        "width": 91,
+        "height": 99,
+        "pixels": 6917
+      },
+      {
+        "x": 975,
+        "y": 365,
+        "width": 44,
+        "height": 96,
+        "pixels": 3121
+      },
+      {
+        "x": 1172,
+        "y": 386,
+        "width": 39,
+        "height": 47,
+        "pixels": 1058
+      },
+      {
+        "x": 1056,
+        "y": 398,
+        "width": 42,
+        "height": 63,
+        "pixels": 1827
+      },
+      {
+        "x": 1380,
+        "y": 491,
+        "width": 119,
+        "height": 177,
+        "pixels": 11183
+      },
+      {
+        "x": 1264,
+        "y": 492,
+        "width": 92,
+        "height": 176,
+        "pixels": 9977
+      },
+      {
+        "x": 36,
+        "y": 496,
+        "width": 169,
+        "height": 143,
+        "pixels": 18157
+      },
+      {
+        "x": 1019,
+        "y": 496,
+        "width": 84,
+        "height": 166,
+        "pixels": 7173
+      },
+      {
+        "x": 1124,
+        "y": 496,
+        "width": 113,
+        "height": 164,
+        "pixels": 11470
+      },
+      {
+        "x": 360,
+        "y": 498,
+        "width": 83,
+        "height": 86,
+        "pixels": 3973
+      },
+      {
+        "x": 225,
+        "y": 501,
+        "width": 102,
+        "height": 142,
+        "pixels": 9733
+      },
+      {
+        "x": 700,
+        "y": 506,
+        "width": 92,
+        "height": 68,
+        "pixels": 5007
+      },
+      {
+        "x": 821,
+        "y": 508,
+        "width": 91,
+        "height": 53,
+        "pixels": 3568
+      },
+      {
+        "x": 490,
+        "y": 511,
+        "width": 66,
+        "height": 60,
+        "pixels": 2596
+      },
+      {
+        "x": 589,
+        "y": 511,
+        "width": 73,
+        "height": 63,
+        "pixels": 2987
+      },
+      {
+        "x": 847,
+        "y": 562,
+        "width": 151,
+        "height": 98,
+        "pixels": 11043
+      },
+      {
+        "x": 661,
+        "y": 592,
+        "width": 82,
+        "height": 59,
+        "pixels": 3768
+      },
+      {
+        "x": 332,
+        "y": 593,
+        "width": 298,
+        "height": 294,
+        "pixels": 59570
+      },
+      {
+        "x": 575,
+        "y": 599,
+        "width": 53,
+        "height": 43,
+        "pixels": 1780
+      },
+      {
+        "x": 769,
+        "y": 606,
+        "width": 48,
+        "height": 47,
+        "pixels": 1539
+      },
+      {
+        "x": 31,
+        "y": 662,
+        "width": 282,
+        "height": 222,
+        "pixels": 34718
+      },
+      {
+        "x": 652,
+        "y": 679,
+        "width": 140,
+        "height": 201,
+        "pixels": 20024
+      },
+      {
+        "x": 1010,
+        "y": 682,
+        "width": 351,
+        "height": 229,
+        "pixels": 64959
+      },
+      {
+        "x": 812,
+        "y": 695,
+        "width": 184,
+        "height": 194,
+        "pixels": 26288
+      },
+      {
+        "x": 1378,
+        "y": 695,
+        "width": 58,
+        "height": 48,
+        "pixels": 2151
+      },
+      {
+        "x": 1449,
+        "y": 695,
+        "width": 41,
+        "height": 42,
+        "pixels": 1317
+      },
+      {
+        "x": 1386,
+        "y": 772,
+        "width": 113,
+        "height": 147,
+        "pixels": 11651
+      },
+      {
+        "x": 48,
+        "y": 895,
+        "width": 144,
+        "height": 102,
+        "pixels": 10644
+      },
+      {
+        "x": 252,
+        "y": 904,
+        "width": 131,
+        "height": 91,
+        "pixels": 8713
+      },
+      {
+        "x": 420,
+        "y": 912,
+        "width": 120,
+        "height": 79,
+        "pixels": 7157
+      },
+      {
+        "x": 665,
+        "y": 914,
+        "width": 91,
+        "height": 83,
+        "pixels": 4838
+      },
+      {
+        "x": 998,
+        "y": 917,
+        "width": 57,
+        "height": 77,
+        "pixels": 2524
+      },
+      {
+        "x": 893,
+        "y": 920,
+        "width": 67,
+        "height": 72,
+        "pixels": 2649
+      },
+      {
+        "x": 799,
+        "y": 923,
+        "width": 60,
+        "height": 68,
+        "pixels": 2328
+      },
+      {
+        "x": 1235,
+        "y": 929,
+        "width": 96,
+        "height": 64,
+        "pixels": 3186
+      },
+      {
+        "x": 572,
+        "y": 932,
+        "width": 56,
+        "height": 63,
+        "pixels": 2293
+      },
+      {
+        "x": 1109,
+        "y": 933,
+        "width": 69,
+        "height": 61,
+        "pixels": 2223
+      },
+      {
+        "x": 1372,
+        "y": 938,
+        "width": 58,
+        "height": 56,
+        "pixels": 1665
+      }
+    ]
+  },
+  {
+    "file": "boss/boss_dragon_chase.png",
+    "sha256": "0bdfef2fa6ab83513626432a4c308ad508999a0faeb3a96c6ec02dbe1d7e9362",
+    "width": 1230,
+    "height": 1278,
+    "format": "png",
+    "channels": 4,
+    "alpha": true,
+    "zero": 736425,
+    "partial": 835120,
+    "emptyRowBands": [
+      {
+        "from": 0,
+        "to": 8,
+        "size": 9
+      },
+      {
+        "from": 318,
+        "to": 331,
+        "size": 14
+      },
+      {
+        "from": 598,
+        "to": 614,
+        "size": 17
+      },
+      {
+        "from": 883,
+        "to": 902,
+        "size": 20
+      },
+      {
+        "from": 1247,
+        "to": 1277,
+        "size": 31
+      }
+    ],
+    "emptyColumnBands": [
+      {
+        "from": 0,
+        "to": 10,
+        "size": 11
+      },
+      {
+        "from": 403,
+        "to": 413,
+        "size": 11
+      },
+      {
+        "from": 817,
+        "to": 829,
+        "size": 13
+      },
+      {
+        "from": 1220,
+        "to": 1229,
+        "size": 10
+      }
+    ],
+    "components": [
+      {
+        "x": 11,
+        "y": 9,
+        "width": 387,
+        "height": 309,
+        "pixels": 56005
+      },
+      {
+        "x": 414,
+        "y": 10,
+        "width": 403,
+        "height": 294,
+        "pixels": 57079
+      },
+      {
+        "x": 831,
+        "y": 11,
+        "width": 389,
+        "height": 307,
+        "pixels": 55754
+      },
+      {
+        "x": 430,
+        "y": 332,
+        "width": 376,
+        "height": 266,
+        "pixels": 50680
+      },
+      {
+        "x": 11,
+        "y": 336,
+        "width": 392,
+        "height": 257,
+        "pixels": 53139
+      },
+      {
+        "x": 834,
+        "y": 340,
+        "width": 382,
+        "height": 258,
+        "pixels": 52061
+      },
+      {
+        "x": 16,
+        "y": 615,
+        "width": 374,
+        "height": 268,
+        "pixels": 52796
+      },
+      {
+        "x": 420,
+        "y": 616,
+        "width": 379,
+        "height": 267,
+        "pixels": 51197
+      },
+      {
+        "x": 830,
+        "y": 619,
+        "width": 386,
+        "height": 264,
+        "pixels": 53016
+      },
+      {
+        "x": 13,
+        "y": 903,
+        "width": 383,
+        "height": 337,
+        "pixels": 63418
+      },
+      {
+        "x": 421,
+        "y": 903,
+        "width": 383,
+        "height": 344,
+        "pixels": 64187
+      },
+      {
+        "x": 832,
+        "y": 903,
+        "width": 385,
+        "height": 337,
+        "pixels": 63668
+      }
+    ]
+  }
+]

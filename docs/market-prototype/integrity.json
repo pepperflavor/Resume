@@ -1,0 +1,170 @@
+{
+  "allAssetsUnchanged": true,
+  "files": [
+    {
+      "file": "public/assets/game/.DS_Store",
+      "sha256": "5fc486529929b8b9bd2c5c35d7c3ce2552317d4f9f13ae8b2f9807cc69b2ba13",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/characters/player_racoon.png",
+      "sha256": "dcbae164ef75cce4b4f4be481bdd7a8df23a2bb86074d6b12251c8e9e0f8cdc7",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/items/golden_cat_item.png",
+      "sha256": "c7a5d0be8f162762ccf5a4c8592e4fd225abe98bf9de68ae58cdfac4dcda956b",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_bear_blacksmith.png",
+      "sha256": "4949f47e3c783e6a8ffb084ffc6b0d3aa8a5182b0a84b08327f577a658dad4af",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_bird.png",
+      "sha256": "bda2302d2a3cff6ee0b5ea6e04583b1238fbdb111421a91fac193130e6783ddb",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_cat_alchemist.png",
+      "sha256": "54fa03afb8892f49956b8358aad87419bbd220e5b1782634007c02530a89818d",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_chicken.png",
+      "sha256": "03a0af42de0df36bc7d314472cc16cc7e9e8f59b18121cab50d01188cbe0c77f",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_deer_shopkeeper.png",
+      "sha256": "fa89c3b4d69c9d1c0df017dfc2f4229ec6d135d430c9816a0124778b8fcc6219",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/_original/2026-09-08/npc/npc_fox_information.png",
+      "sha256": "38fcff00a6f66f8d7f0c28ccc3afbf3844920ff7b1b8c454fb4de55fa11dd981",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/basic_sheet.png",
+      "sha256": "c63c008dea81ad50d6b974cf9b8e90633fc29cbf0058336e4dcf2dcffad9a469",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/boss/.DS_Store",
+      "sha256": "51dd34f002a679fe301e7fb9957ff9a5e99f8cd88cccd1b4d92ffbb43ebaf366",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/boss/boss_dragon.png",
+      "sha256": "85137e8bf7fc30a0e9e776fc57b81385829838c4eb92f767563bd06dfc780386",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/characters/player_racoon.png",
+      "sha256": "7cc57188b06909786a95667732867559f9af0e5dda09ca5811f3d40aa1fbf644",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/items/.DS_Store",
+      "sha256": "e289afd5f204fc8a6a822f5b2e39486bf3ca144302dc0541154f7b40df84f526",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/items/golden_cat_icon.png",
+      "sha256": "0b10f68bc88bc71dc59febb1b53d715d185c271b4bae4498a5fa6874401bb8db",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/items/golden_cat_item.png",
+      "sha256": "c7a5d0be8f162762ccf5a4c8592e4fd225abe98bf9de68ae58cdfac4dcda956b",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/items/golden_cat_world.png",
+      "sha256": "2c00831dc35c6b7c1b16e0f6bbab783ad3de229cea92165bbd4c4b4132f0fb07",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/.DS_Store",
+      "sha256": "920506941315550f7ecb03f993e766a59adf2f48bd58dc21581def59556fefc7",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_bear_blacksmith.png",
+      "sha256": "ed8b146f7b87d8123c2eb3417e0a7749a5a55e38ff7fd6dc6927b6685b8b3281",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_bird.png",
+      "sha256": "bec6582c87480e1d01de3aebdc253c70e2e38d2ba48b305ef365c71bc1b00388",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_cat_alchemist.png",
+      "sha256": "a5b8b3ad49e3016fbdd45fc5426caf2d539087d65803f32f905814f2d382478d",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_chicken.png",
+      "sha256": "b4b0f40c70bb63645f5636f4b61c57d62079d559bc549fd70b37efff3a410e03",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_deer_shopkeeper.png",
+      "sha256": "e8d40bfc1a2b6a209bd68dd8c3b2b8f12474769d1339329271cd22095f7be64b",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/npc/npc_fox_information.png",
+      "sha256": "db44c17245578143c9ff930f196a55a7f87c29cda36a7652caa3e9b19fdb945b",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/.DS_Store",
+      "sha256": "b333720a3f59979f89bb58672892d6a53718f1cf435525f3c176e192c39fd53d",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/background.png",
+      "sha256": "5dd149b5445e321ea21c8c9b6e1cf6d8c64289cc9fa5410aecceb2c4b8f2096e",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/dungeon_tileset.png",
+      "sha256": "63f7103e85e0180bf83b36a81c0518cd6ed0f1f7219c5dd07ee3290a524a4f28",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/garden_pond_tileset.png",
+      "sha256": "757e15fa3c111f84132845749a85cce01c31ea5ab6c1560d17994d9f048b8d30",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/home_tile.png",
+      "sha256": "541c0e7de0411769ebcd6b83701125007b0e695c8b73b6d626edaf0ccd0b9157",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/market_tileset.png",
+      "sha256": "b60f15585edb0ac91a9dad1ba8499e6a6d279bff7554ad68479611b0ff33eff1",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/overworld_tileset.png",
+      "sha256": "1d3e0fbd0a6e6fe32246ea255755be50de1caea35c88f07fc989c96e6f627791",
+      "unchanged": true
+    },
+    {
+      "file": "public/assets/game/tilesets/trees.png",
+      "sha256": "b3a5312311eadc69effbb8a1c1fca4da9c7d9e48e7220e06d8fb7fb6c4d6ea08",
+      "unchanged": true
+    }
+  ]
+}

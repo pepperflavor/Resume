@@ -1,0 +1,1227 @@
+{
+  "generated": "2026-09-14",
+  "method": "alpha>=128 mask, 2px dilation for joining only, bbox measured on the undilated mask; indices confirmed against rendered contact sheets",
+  "sheets": [
+    {
+      "key": "market-projshop",
+      "url": "/assets/game/maps/market/props/market_project_shop_props.png",
+      "width": 1536,
+      "height": 1024,
+      "componentCount": 34,
+      "frames": {
+        "apple-crate": {
+          "x": 582,
+          "y": 17,
+          "width": 158,
+          "height": 153
+        },
+        "apple-basket": {
+          "x": 422,
+          "y": 18,
+          "width": 137,
+          "height": 146
+        },
+        "potato-sack": {
+          "x": 1183,
+          "y": 21,
+          "width": 154,
+          "height": 148
+        },
+        "potato-crate": {
+          "x": 1361,
+          "y": 38,
+          "width": 149,
+          "height": 132
+        },
+        "apple-pile": {
+          "x": 261,
+          "y": 42,
+          "width": 127,
+          "height": 105
+        },
+        "potato-basket": {
+          "x": 1022,
+          "y": 43,
+          "width": 141,
+          "height": 121
+        },
+        "apple-single": {
+          "x": 39,
+          "y": 66,
+          "width": 68,
+          "height": 76
+        },
+        "apple-pair": {
+          "x": 141,
+          "y": 68,
+          "width": 97,
+          "height": 81
+        },
+        "potato-pile": {
+          "x": 876,
+          "y": 73,
+          "width": 111,
+          "height": 83
+        },
+        "potato-single": {
+          "x": 779,
+          "y": 84,
+          "width": 60,
+          "height": 65
+        },
+        "carrot-bundle": {
+          "x": 158,
+          "y": 189,
+          "width": 131,
+          "height": 161
+        },
+        "carrot-basket": {
+          "x": 473,
+          "y": 189,
+          "width": 171,
+          "height": 163
+        },
+        "carrot-crate": {
+          "x": 666,
+          "y": 200,
+          "width": 197,
+          "height": 158
+        },
+        "carrot-pile": {
+          "x": 304,
+          "y": 209,
+          "width": 150,
+          "height": 133
+        },
+        "produce-crate": {
+          "x": 1078,
+          "y": 209,
+          "width": 223,
+          "height": 147
+        },
+        "carrot-single": {
+          "x": 35,
+          "y": 210,
+          "width": 100,
+          "height": 129
+        },
+        "basket-empty": {
+          "x": 1330,
+          "y": 218,
+          "width": 172,
+          "height": 134
+        },
+        "carrot-crate-2": {
+          "x": 876,
+          "y": 225,
+          "width": 164,
+          "height": 127
+        },
+        "scale": {
+          "x": 683,
+          "y": 376,
+          "width": 192,
+          "height": 169
+        },
+        "chalkboard": {
+          "x": 1036,
+          "y": 377,
+          "width": 171,
+          "height": 188
+        },
+        "barrel": {
+          "x": 1243,
+          "y": 405,
+          "width": 118,
+          "height": 140
+        },
+        "sign-post": {
+          "x": 922,
+          "y": 406,
+          "width": 98,
+          "height": 141
+        },
+        "cloth-table": {
+          "x": 477,
+          "y": 410,
+          "width": 176,
+          "height": 141
+        },
+        "tray": {
+          "x": 26,
+          "y": 413,
+          "width": 203,
+          "height": 135
+        },
+        "tray-green": {
+          "x": 258,
+          "y": 413,
+          "width": 202,
+          "height": 138
+        },
+        "stump": {
+          "x": 1400,
+          "y": 428,
+          "width": 98,
+          "height": 114
+        },
+        "apple-stand": {
+          "x": 21,
+          "y": 568,
+          "width": 249,
+          "height": 211
+        },
+        "carrot-stand": {
+          "x": 556,
+          "y": 572,
+          "width": 238,
+          "height": 214
+        },
+        "produce-stand": {
+          "x": 1182,
+          "y": 574,
+          "width": 331,
+          "height": 420
+        },
+        "produce-shelf": {
+          "x": 818,
+          "y": 580,
+          "width": 340,
+          "height": 191
+        },
+        "potato-stand": {
+          "x": 287,
+          "y": 590,
+          "width": 234,
+          "height": 189
+        },
+        "carrot-bench": {
+          "x": 817,
+          "y": 793,
+          "width": 338,
+          "height": 199
+        },
+        "potato-bench": {
+          "x": 432,
+          "y": 802,
+          "width": 315,
+          "height": 190
+        },
+        "apple-bench": {
+          "x": 32,
+          "y": 804,
+          "width": 355,
+          "height": 192
+        }
+      }
+    },
+    {
+      "key": "market-storage",
+      "url": "/assets/game/shared/outdoor/props/market/outdoor_market_storage_props.png",
+      "width": 1536,
+      "height": 1024,
+      "componentCount": 49,
+      "frames": {
+        "barrel-stack": {
+          "x": 665,
+          "y": 25,
+          "width": 194,
+          "height": 178
+        },
+        "barrels-lantern": {
+          "x": 1269,
+          "y": 25,
+          "width": 229,
+          "height": 188
+        },
+        "barrel-mossy": {
+          "x": 298,
+          "y": 68,
+          "width": 102,
+          "height": 134
+        },
+        "barrel-rope": {
+          "x": 1125,
+          "y": 68,
+          "width": 105,
+          "height": 136
+        },
+        "barrel": {
+          "x": 39,
+          "y": 71,
+          "width": 100,
+          "height": 131
+        },
+        "barrel-cloth": {
+          "x": 992,
+          "y": 74,
+          "width": 105,
+          "height": 129
+        },
+        "barrel-plain": {
+          "x": 170,
+          "y": 76,
+          "width": 98,
+          "height": 125
+        },
+        "barrel-pair": {
+          "x": 439,
+          "y": 76,
+          "width": 194,
+          "height": 121
+        },
+        "barrel-open": {
+          "x": 878,
+          "y": 77,
+          "width": 94,
+          "height": 120
+        },
+        "crate-stack": {
+          "x": 733,
+          "y": 210,
+          "width": 152,
+          "height": 158
+        },
+        "crate-pair": {
+          "x": 1179,
+          "y": 213,
+          "width": 129,
+          "height": 163
+        },
+        "crate-cloth-barrel": {
+          "x": 1332,
+          "y": 232,
+          "width": 179,
+          "height": 139
+        },
+        "crate-red-cloth": {
+          "x": 906,
+          "y": 244,
+          "width": 127,
+          "height": 123
+        },
+        "crate": {
+          "x": 147,
+          "y": 245,
+          "width": 118,
+          "height": 123
+        },
+        "crate-metal": {
+          "x": 1046,
+          "y": 245,
+          "width": 115,
+          "height": 121
+        },
+        "crate-open": {
+          "x": 443,
+          "y": 249,
+          "width": 119,
+          "height": 112
+        },
+        "crate-low": {
+          "x": 583,
+          "y": 251,
+          "width": 128,
+          "height": 118
+        },
+        "crate-open-2": {
+          "x": 26,
+          "y": 258,
+          "width": 96,
+          "height": 98
+        },
+        "crate-wide": {
+          "x": 282,
+          "y": 260,
+          "width": 140,
+          "height": 101
+        },
+        "crate-lantern-sack": {
+          "x": 1247,
+          "y": 384,
+          "width": 264,
+          "height": 134
+        },
+        "sack": {
+          "x": 26,
+          "y": 392,
+          "width": 105,
+          "height": 120
+        },
+        "sack-emblem": {
+          "x": 693,
+          "y": 393,
+          "width": 119,
+          "height": 131
+        },
+        "sack-trio": {
+          "x": 480,
+          "y": 397,
+          "width": 184,
+          "height": 129
+        },
+        "sack-open": {
+          "x": 974,
+          "y": 398,
+          "width": 111,
+          "height": 122
+        },
+        "sack-pair": {
+          "x": 159,
+          "y": 399,
+          "width": 137,
+          "height": 120
+        },
+        "sack-ribbon": {
+          "x": 1112,
+          "y": 400,
+          "width": 107,
+          "height": 122
+        },
+        "sack-brown": {
+          "x": 840,
+          "y": 402,
+          "width": 106,
+          "height": 120
+        },
+        "sack-grain": {
+          "x": 319,
+          "y": 403,
+          "width": 132,
+          "height": 108
+        },
+        "baskets-cloth": {
+          "x": 1345,
+          "y": 537,
+          "width": 166,
+          "height": 138
+        },
+        "basket-stack": {
+          "x": 842,
+          "y": 540,
+          "width": 126,
+          "height": 129
+        },
+        "basket-stack-2": {
+          "x": 436,
+          "y": 541,
+          "width": 102,
+          "height": 130
+        },
+        "basket-cloth": {
+          "x": 1176,
+          "y": 541,
+          "width": 156,
+          "height": 132
+        },
+        "basket-handle": {
+          "x": 315,
+          "y": 543,
+          "width": 101,
+          "height": 120
+        },
+        "basket-tipped": {
+          "x": 562,
+          "y": 560,
+          "width": 114,
+          "height": 101
+        },
+        "basket": {
+          "x": 26,
+          "y": 566,
+          "width": 121,
+          "height": 96
+        },
+        "basket-oval": {
+          "x": 991,
+          "y": 573,
+          "width": 158,
+          "height": 97
+        },
+        "basket-handle-2": {
+          "x": 166,
+          "y": 578,
+          "width": 132,
+          "height": 81
+        },
+        "basket-rect": {
+          "x": 700,
+          "y": 579,
+          "width": 117,
+          "height": 80
+        },
+        "crates-sack": {
+          "x": 992,
+          "y": 685,
+          "width": 205,
+          "height": 156
+        },
+        "lantern-barrels": {
+          "x": 1247,
+          "y": 688,
+          "width": 264,
+          "height": 156
+        },
+        "sacks-crate": {
+          "x": 748,
+          "y": 692,
+          "width": 192,
+          "height": 149
+        },
+        "barrels-crate": {
+          "x": 238,
+          "y": 693,
+          "width": 230,
+          "height": 150
+        },
+        "storage-cluster": {
+          "x": 515,
+          "y": 694,
+          "width": 190,
+          "height": 147
+        },
+        "crates-barrel": {
+          "x": 28,
+          "y": 696,
+          "width": 161,
+          "height": 148
+        },
+        "crates-small": {
+          "x": 352,
+          "y": 840,
+          "width": 343,
+          "height": 162
+        },
+        "crate-sack-cloth": {
+          "x": 751,
+          "y": 844,
+          "width": 189,
+          "height": 158
+        },
+        "basket-crate": {
+          "x": 966,
+          "y": 850,
+          "width": 247,
+          "height": 146
+        },
+        "barrel-crate-sack": {
+          "x": 1279,
+          "y": 852,
+          "width": 217,
+          "height": 150
+        },
+        "handcart": {
+          "x": 43,
+          "y": 854,
+          "width": 248,
+          "height": 150
+        }
+      }
+    },
+    {
+      "key": "market-furniture",
+      "url": "/assets/game/shared/outdoor/props/market/outdoor_market_furniture_props.png",
+      "width": 1536,
+      "height": 1024,
+      "componentCount": 43,
+      "frames": {
+        "well": {
+          "x": 906,
+          "y": 13,
+          "width": 208,
+          "height": 254
+        },
+        "well-frame": {
+          "x": 1128,
+          "y": 52,
+          "width": 196,
+          "height": 194
+        },
+        "bench": {
+          "x": 408,
+          "y": 75,
+          "width": 263,
+          "height": 130
+        },
+        "bench-2": {
+          "x": 189,
+          "y": 79,
+          "width": 203,
+          "height": 120
+        },
+        "bench-3": {
+          "x": 691,
+          "y": 82,
+          "width": 204,
+          "height": 127
+        },
+        "well-stone": {
+          "x": 1343,
+          "y": 95,
+          "width": 165,
+          "height": 151
+        },
+        "bench-low": {
+          "x": 20,
+          "y": 110,
+          "width": 151,
+          "height": 81
+        },
+        "lantern-post": {
+          "x": 26,
+          "y": 245,
+          "width": 110,
+          "height": 218
+        },
+        "lantern-post-leafy": {
+          "x": 164,
+          "y": 245,
+          "width": 95,
+          "height": 220
+        },
+        "lamp-post": {
+          "x": 286,
+          "y": 245,
+          "width": 83,
+          "height": 214
+        },
+        "lamp-post-double": {
+          "x": 400,
+          "y": 245,
+          "width": 103,
+          "height": 214
+        },
+        "lamp-post-plain": {
+          "x": 531,
+          "y": 246,
+          "width": 105,
+          "height": 217
+        },
+        "lantern-arch": {
+          "x": 664,
+          "y": 257,
+          "width": 138,
+          "height": 210
+        },
+        "cart-cloth": {
+          "x": 1297,
+          "y": 296,
+          "width": 211,
+          "height": 171
+        },
+        "cart": {
+          "x": 844,
+          "y": 300,
+          "width": 250,
+          "height": 168
+        },
+        "cart-wood": {
+          "x": 1087,
+          "y": 302,
+          "width": 213,
+          "height": 165
+        },
+        "awning-red": {
+          "x": 16,
+          "y": 480,
+          "width": 212,
+          "height": 187
+        },
+        "canopy-cloth": {
+          "x": 474,
+          "y": 481,
+          "width": 260,
+          "height": 184
+        },
+        "canopy-green": {
+          "x": 744,
+          "y": 481,
+          "width": 284,
+          "height": 177
+        },
+        "awning-blue": {
+          "x": 240,
+          "y": 483,
+          "width": 216,
+          "height": 184
+        },
+        "cloth-stack": {
+          "x": 1356,
+          "y": 500,
+          "width": 164,
+          "height": 146
+        },
+        "cloth-folded": {
+          "x": 1052,
+          "y": 507,
+          "width": 134,
+          "height": 119
+        },
+        "cloth-rolls": {
+          "x": 1197,
+          "y": 527,
+          "width": 146,
+          "height": 110
+        },
+        "crate-cloth": {
+          "x": 1185,
+          "y": 669,
+          "width": 163,
+          "height": 140
+        },
+        "produce-box": {
+          "x": 1372,
+          "y": 676,
+          "width": 122,
+          "height": 121
+        },
+        "table-round": {
+          "x": 405,
+          "y": 685,
+          "width": 139,
+          "height": 115
+        },
+        "table-checkered": {
+          "x": 762,
+          "y": 689,
+          "width": 131,
+          "height": 112
+        },
+        "bench-plain": {
+          "x": 564,
+          "y": 690,
+          "width": 176,
+          "height": 96
+        },
+        "table-round-2": {
+          "x": 272,
+          "y": 693,
+          "width": 107,
+          "height": 107
+        },
+        "bench-cloth": {
+          "x": 918,
+          "y": 695,
+          "width": 244,
+          "height": 106
+        },
+        "stool": {
+          "x": 28,
+          "y": 698,
+          "width": 84,
+          "height": 97
+        },
+        "table-square": {
+          "x": 139,
+          "y": 699,
+          "width": 107,
+          "height": 101
+        },
+        "flag-small": {
+          "x": 1222,
+          "y": 824,
+          "width": 146,
+          "height": 150
+        },
+        "chalkboard": {
+          "x": 1372,
+          "y": 835,
+          "width": 146,
+          "height": 151
+        },
+        "bucket": {
+          "x": 19,
+          "y": 844,
+          "width": 82,
+          "height": 120
+        },
+        "crate-cloth-2": {
+          "x": 655,
+          "y": 851,
+          "width": 151,
+          "height": 119
+        },
+        "bucket-handle": {
+          "x": 119,
+          "y": 858,
+          "width": 79,
+          "height": 106
+        },
+        "flower-barrel": {
+          "x": 822,
+          "y": 858,
+          "width": 93,
+          "height": 120
+        },
+        "crate-blue": {
+          "x": 518,
+          "y": 861,
+          "width": 120,
+          "height": 103
+        },
+        "tray": {
+          "x": 218,
+          "y": 875,
+          "width": 137,
+          "height": 90
+        },
+        "flower-box": {
+          "x": 935,
+          "y": 878,
+          "width": 121,
+          "height": 97
+        },
+        "tub": {
+          "x": 369,
+          "y": 881,
+          "width": 124,
+          "height": 84
+        },
+        "rope": {
+          "x": 1075,
+          "y": 882,
+          "width": 130,
+          "height": 95
+        }
+      }
+    },
+    {
+      "key": "market-signage",
+      "url": "/assets/game/maps/market/props/outdoor_market_signage_props.png",
+      "width": 1536,
+      "height": 1024,
+      "componentCount": 40,
+      "frames": {
+        "notice-board": {
+          "x": 40,
+          "y": 22,
+          "width": 346,
+          "height": 258
+        },
+        "notice-board-green": {
+          "x": 433,
+          "y": 28,
+          "width": 305,
+          "height": 247
+        },
+        "board-arched": {
+          "x": 767,
+          "y": 44,
+          "width": 434,
+          "height": 243
+        },
+        "board-stone": {
+          "x": 1262,
+          "y": 47,
+          "width": 203,
+          "height": 217
+        },
+        "hanging-round": {
+          "x": 406,
+          "y": 286,
+          "width": 143,
+          "height": 157
+        },
+        "hanging-banner": {
+          "x": 591,
+          "y": 286,
+          "width": 134,
+          "height": 173
+        },
+        "hanging-round-2": {
+          "x": 1334,
+          "y": 289,
+          "width": 152,
+          "height": 161
+        },
+        "board-round": {
+          "x": 250,
+          "y": 295,
+          "width": 130,
+          "height": 156
+        },
+        "hanging-board": {
+          "x": 47,
+          "y": 298,
+          "width": 171,
+          "height": 148
+        },
+        "hanging-arrow": {
+          "x": 912,
+          "y": 298,
+          "width": 159,
+          "height": 128
+        },
+        "hanging-oval": {
+          "x": 1115,
+          "y": 305,
+          "width": 172,
+          "height": 129
+        },
+        "banner-cloth": {
+          "x": 757,
+          "y": 307,
+          "width": 126,
+          "height": 133
+        },
+        "direction-post": {
+          "x": 1027,
+          "y": 449,
+          "width": 131,
+          "height": 191
+        },
+        "chalkboard": {
+          "x": 450,
+          "y": 454,
+          "width": 120,
+          "height": 146
+        },
+        "direction-post-multi": {
+          "x": 1356,
+          "y": 458,
+          "width": 124,
+          "height": 175
+        },
+        "arrow-sign": {
+          "x": 1203,
+          "y": 469,
+          "width": 114,
+          "height": 155
+        },
+        "board-plain": {
+          "x": 586,
+          "y": 470,
+          "width": 75,
+          "height": 125
+        },
+        "board-plain-2": {
+          "x": 207,
+          "y": 471,
+          "width": 81,
+          "height": 122
+        },
+        "chalkboard-a": {
+          "x": 48,
+          "y": 478,
+          "width": 127,
+          "height": 126
+        },
+        "board-post": {
+          "x": 858,
+          "y": 478,
+          "width": 99,
+          "height": 131
+        },
+        "crate-board": {
+          "x": 328,
+          "y": 486,
+          "width": 96,
+          "height": 92
+        },
+        "board-tilted": {
+          "x": 693,
+          "y": 497,
+          "width": 131,
+          "height": 98
+        },
+        "banner-blue": {
+          "x": 148,
+          "y": 612,
+          "width": 99,
+          "height": 202
+        },
+        "banner-green": {
+          "x": 267,
+          "y": 612,
+          "width": 95,
+          "height": 202
+        },
+        "banner-yellow": {
+          "x": 371,
+          "y": 612,
+          "width": 107,
+          "height": 203
+        },
+        "banner-red": {
+          "x": 38,
+          "y": 614,
+          "width": 95,
+          "height": 200
+        },
+        "lantern-banner-red": {
+          "x": 524,
+          "y": 615,
+          "width": 140,
+          "height": 191
+        },
+        "lantern-banner-blue": {
+          "x": 673,
+          "y": 615,
+          "width": 139,
+          "height": 186
+        },
+        "bunting": {
+          "x": 844,
+          "y": 632,
+          "width": 382,
+          "height": 163
+        },
+        "flag-blue": {
+          "x": 1376,
+          "y": 643,
+          "width": 124,
+          "height": 171
+        },
+        "flag-red": {
+          "x": 1260,
+          "y": 644,
+          "width": 113,
+          "height": 170
+        },
+        "arch-cloth": {
+          "x": 623,
+          "y": 803,
+          "width": 266,
+          "height": 191
+        },
+        "arch-lantern": {
+          "x": 1382,
+          "y": 810,
+          "width": 118,
+          "height": 191
+        },
+        "arch-cloth-2": {
+          "x": 33,
+          "y": 827,
+          "width": 278,
+          "height": 170
+        },
+        "arch-planter": {
+          "x": 337,
+          "y": 830,
+          "width": 264,
+          "height": 170
+        },
+        "awning": {
+          "x": 1242,
+          "y": 840,
+          "width": 112,
+          "height": 138
+        },
+        "flower-sign": {
+          "x": 1168,
+          "y": 854,
+          "width": 70,
+          "height": 140
+        },
+        "barrel": {
+          "x": 912,
+          "y": 866,
+          "width": 67,
+          "height": 88
+        },
+        "flower-box-blue": {
+          "x": 991,
+          "y": 882,
+          "width": 81,
+          "height": 75
+        },
+        "flower-box-white": {
+          "x": 1084,
+          "y": 898,
+          "width": 80,
+          "height": 70
+        }
+      }
+    },
+    {
+      "key": "name-entry-ui",
+      "url": "/assets/game/ui/player_name_entry_ui2.png",
+      "width": 1536,
+      "height": 1024,
+      "componentCount": 30,
+      "frames": {
+        "panel": {
+          "x": 32,
+          "y": 32,
+          "width": 946,
+          "height": 598
+        },
+        "input-frame": {
+          "x": 997,
+          "y": 80,
+          "width": 501,
+          "height": 129
+        },
+        "input-frame-2": {
+          "x": 1000,
+          "y": 221,
+          "width": 495,
+          "height": 118
+        },
+        "input-frame-3": {
+          "x": 997,
+          "y": 349,
+          "width": 500,
+          "height": 116
+        },
+        "bar-green": {
+          "x": 1003,
+          "y": 495,
+          "width": 290,
+          "height": 105
+        },
+        "button-x": {
+          "x": 1316,
+          "y": 503,
+          "width": 83,
+          "height": 81
+        },
+        "button-x-2": {
+          "x": 1414,
+          "y": 503,
+          "width": 83,
+          "height": 81
+        },
+        "dpad": {
+          "x": 1414,
+          "y": 600,
+          "width": 82,
+          "height": 84
+        },
+        "dpad-2": {
+          "x": 1316,
+          "y": 601,
+          "width": 83,
+          "height": 83
+        },
+        "bar-green-2": {
+          "x": 1001,
+          "y": 612,
+          "width": 293,
+          "height": 105
+        },
+        "quill": {
+          "x": 521,
+          "y": 664,
+          "width": 103,
+          "height": 145
+        },
+        "lantern": {
+          "x": 653,
+          "y": 673,
+          "width": 81,
+          "height": 137
+        },
+        "signpost": {
+          "x": 36,
+          "y": 675,
+          "width": 150,
+          "height": 151
+        },
+        "books": {
+          "x": 200,
+          "y": 694,
+          "width": 163,
+          "height": 116
+        },
+        "flower": {
+          "x": 755,
+          "y": 697,
+          "width": 77,
+          "height": 101
+        },
+        "arrow-left": {
+          "x": 1316,
+          "y": 700,
+          "width": 83,
+          "height": 87
+        },
+        "arrow-right": {
+          "x": 1414,
+          "y": 700,
+          "width": 82,
+          "height": 87
+        },
+        "scroll": {
+          "x": 379,
+          "y": 704,
+          "width": 131,
+          "height": 102
+        },
+        "sparkle": {
+          "x": 846,
+          "y": 707,
+          "width": 61,
+          "height": 80
+        },
+        "paw": {
+          "x": 916,
+          "y": 716,
+          "width": 46,
+          "height": 54
+        },
+        "bar-green-3": {
+          "x": 1003,
+          "y": 728,
+          "width": 290,
+          "height": 103
+        },
+        "corner-wood": {
+          "x": 912,
+          "y": 837,
+          "width": 155,
+          "height": 136
+        },
+        "corner-flower": {
+          "x": 1334,
+          "y": 837,
+          "width": 161,
+          "height": 136
+        },
+        "divider": {
+          "x": 35,
+          "y": 847,
+          "width": 502,
+          "height": 110
+        },
+        "corner-wood-2": {
+          "x": 1099,
+          "y": 851,
+          "width": 105,
+          "height": 123
+        },
+        "wood-piece": {
+          "x": 1225,
+          "y": 851,
+          "width": 78,
+          "height": 122
+        },
+        "leaves": {
+          "x": 567,
+          "y": 887,
+          "width": 76,
+          "height": 56
+        },
+        "stones": {
+          "x": 664,
+          "y": 890,
+          "width": 86,
+          "height": 53
+        },
+        "leaf": {
+          "x": 772,
+          "y": 897,
+          "width": 60,
+          "height": 46
+        },
+        "blossom": {
+          "x": 849,
+          "y": 897,
+          "width": 46,
+          "height": 46
+        }
+      }
+    }
+  ]
+}

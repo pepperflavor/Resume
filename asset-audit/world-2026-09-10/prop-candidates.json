@@ -1,0 +1,2455 @@
+{
+  "objects/dungeon_entrance_ambient_props.png": [
+    {
+      "name": "web_square",
+      "index": 1,
+      "sourceRect": {
+        "x": 723,
+        "y": 19,
+        "width": 170,
+        "height": 189
+      },
+      "core": {
+        "x": 725,
+        "y": 21,
+        "width": 166,
+        "height": 185,
+        "pixels": 8262
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "web_wide",
+      "index": 4,
+      "sourceRect": {
+        "x": 1073,
+        "y": 63,
+        "width": 227,
+        "height": 164
+      },
+      "core": {
+        "x": 1075,
+        "y": 65,
+        "width": 223,
+        "height": 160,
+        "pixels": 10718
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 3,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "spider",
+      "index": 5,
+      "sourceRect": {
+        "x": 562,
+        "y": 65,
+        "width": 146,
+        "height": 133
+      },
+      "core": {
+        "x": 564,
+        "y": 67,
+        "width": 142,
+        "height": 129,
+        "pixels": 10337
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 16,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "web_corner",
+      "index": 6,
+      "sourceRect": {
+        "x": 914,
+        "y": 70,
+        "width": 131,
+        "height": 163
+      },
+      "core": {
+        "x": 916,
+        "y": 72,
+        "width": 127,
+        "height": 159,
+        "pixels": 5742
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 7,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "spider_small",
+      "index": 7,
+      "sourceRect": {
+        "x": 401,
+        "y": 80,
+        "width": 138,
+        "height": 115
+      },
+      "core": {
+        "x": 403,
+        "y": 82,
+        "width": 134,
+        "height": 111,
+        "pixels": 9201
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "backpack",
+      "index": 8,
+      "sourceRect": {
+        "x": 21,
+        "y": 231,
+        "width": 176,
+        "height": 171
+      },
+      "core": {
+        "x": 23,
+        "y": 233,
+        "width": 172,
+        "height": 167,
+        "pixels": 23893
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "water_bottle",
+      "index": 9,
+      "sourceRect": {
+        "x": 701,
+        "y": 253,
+        "width": 97,
+        "height": 141
+      },
+      "core": {
+        "x": 703,
+        "y": 255,
+        "width": 93,
+        "height": 137,
+        "pixels": 9973
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "backpack_small",
+      "index": 10,
+      "sourceRect": {
+        "x": 215,
+        "y": 259,
+        "width": 124,
+        "height": 143
+      },
+      "core": {
+        "x": 217,
+        "y": 261,
+        "width": 120,
+        "height": 139,
+        "pixels": 12283
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 9,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "bedroll",
+      "index": 12,
+      "sourceRect": {
+        "x": 359,
+        "y": 275,
+        "width": 176,
+        "height": 122
+      },
+      "core": {
+        "x": 361,
+        "y": 277,
+        "width": 172,
+        "height": 118,
+        "pixels": 13574
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "scroll",
+      "index": 13,
+      "sourceRect": {
+        "x": 1187,
+        "y": 283,
+        "width": 146,
+        "height": 114
+      },
+      "core": {
+        "x": 1189,
+        "y": 285,
+        "width": 142,
+        "height": 110,
+        "pixels": 8546
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 25,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "boots",
+      "index": 14,
+      "sourceRect": {
+        "x": 1031,
+        "y": 286,
+        "width": 142,
+        "height": 123
+      },
+      "core": {
+        "x": 1033,
+        "y": 288,
+        "width": 138,
+        "height": 119,
+        "pixels": 11346
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 22,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "food_bundle",
+      "index": 15,
+      "sourceRect": {
+        "x": 824,
+        "y": 287,
+        "width": 189,
+        "height": 116
+      },
+      "core": {
+        "x": 826,
+        "y": 289,
+        "width": 185,
+        "height": 112,
+        "pixels": 14535
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rope",
+      "index": 16,
+      "sourceRect": {
+        "x": 548,
+        "y": 292,
+        "width": 133,
+        "height": 104
+      },
+      "core": {
+        "x": 550,
+        "y": 294,
+        "width": 129,
+        "height": 100,
+        "pixels": 8965
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 25,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "sword_in_rocks",
+      "index": 17,
+      "sourceRect": {
+        "x": 20,
+        "y": 418,
+        "width": 167,
+        "height": 222
+      },
+      "core": {
+        "x": 22,
+        "y": 420,
+        "width": 163,
+        "height": 218,
+        "pixels": 15721
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 12,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "stalagmite",
+      "index": 18,
+      "sourceRect": {
+        "x": 856,
+        "y": 423,
+        "width": 148,
+        "height": 226
+      },
+      "core": {
+        "x": 858,
+        "y": 425,
+        "width": 144,
+        "height": 222,
+        "pixels": 15356
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "torch_stand",
+      "index": 19,
+      "sourceRect": {
+        "x": 591,
+        "y": 431,
+        "width": 110,
+        "height": 221
+      },
+      "core": {
+        "x": 593,
+        "y": 433,
+        "width": 106,
+        "height": 217,
+        "pixels": 11602
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "shield",
+      "index": 20,
+      "sourceRect": {
+        "x": 191,
+        "y": 438,
+        "width": 145,
+        "height": 185
+      },
+      "core": {
+        "x": 193,
+        "y": 440,
+        "width": 141,
+        "height": 181,
+        "pixels": 20091
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 13,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "lantern",
+      "index": 22,
+      "sourceRect": {
+        "x": 731,
+        "y": 462,
+        "width": 80,
+        "height": 154
+      },
+      "core": {
+        "x": 733,
+        "y": 464,
+        "width": 76,
+        "height": 150,
+        "pixels": 7678
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 12,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "firewood",
+      "index": 23,
+      "sourceRect": {
+        "x": 355,
+        "y": 497,
+        "width": 216,
+        "height": 126
+      },
+      "core": {
+        "x": 357,
+        "y": 499,
+        "width": 212,
+        "height": 122,
+        "pixels": 16839
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 6,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "stalagmite_small",
+      "index": 24,
+      "sourceRect": {
+        "x": 1035,
+        "y": 498,
+        "width": 110,
+        "height": 148
+      },
+      "core": {
+        "x": 1037,
+        "y": 500,
+        "width": 106,
+        "height": 144,
+        "pixels": 8883
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "moss_rock",
+      "index": 25,
+      "sourceRect": {
+        "x": 1161,
+        "y": 505,
+        "width": 175,
+        "height": 144
+      },
+      "core": {
+        "x": 1163,
+        "y": 507,
+        "width": 171,
+        "height": 140,
+        "pixels": 16607
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rib_bones",
+      "index": 26,
+      "sourceRect": {
+        "x": 358,
+        "y": 652,
+        "width": 137,
+        "height": 112
+      },
+      "core": {
+        "x": 360,
+        "y": 654,
+        "width": 133,
+        "height": 108,
+        "pixels": 7377
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "skull",
+      "index": 27,
+      "sourceRect": {
+        "x": 32,
+        "y": 656,
+        "width": 126,
+        "height": 109
+      },
+      "core": {
+        "x": 34,
+        "y": 658,
+        "width": 122,
+        "height": 105,
+        "pixels": 7790
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "bone",
+      "index": 28,
+      "sourceRect": {
+        "x": 192,
+        "y": 661,
+        "width": 145,
+        "height": 77
+      },
+      "core": {
+        "x": 194,
+        "y": 663,
+        "width": 141,
+        "height": 73,
+        "pixels": 4064
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 282,
+          "y": 717,
+          "width": 55,
+          "height": 45,
+          "pixels": 1320
+        }
+      ]
+    },
+    {
+      "name": "stalagmite_row",
+      "index": 35,
+      "sourceRect": {
+        "x": 645,
+        "y": 760,
+        "width": 174,
+        "height": 219
+      },
+      "core": {
+        "x": 647,
+        "y": 762,
+        "width": 170,
+        "height": 215,
+        "pixels": 19430
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 4,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "stalagmite_cluster",
+      "index": 36,
+      "sourceRect": {
+        "x": 451,
+        "y": 765,
+        "width": 168,
+        "height": 210
+      },
+      "core": {
+        "x": 453,
+        "y": 767,
+        "width": 164,
+        "height": 206,
+        "pixels": 18044
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "moss_rocks",
+      "index": 37,
+      "sourceRect": {
+        "x": 15,
+        "y": 768,
+        "width": 247,
+        "height": 220
+      },
+      "core": {
+        "x": 17,
+        "y": 770,
+        "width": 243,
+        "height": 216,
+        "pixels": 35762
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rubble",
+      "index": 39,
+      "sourceRect": {
+        "x": 271,
+        "y": 834,
+        "width": 165,
+        "height": 154
+      },
+      "core": {
+        "x": 273,
+        "y": 836,
+        "width": 161,
+        "height": 150,
+        "pixels": 15951
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 9,
+      "overlappingCoreBoxes": []
+    }
+  ],
+  "objects/dungeon_boss_treasure_props.png": [
+    {
+      "name": "chest_open",
+      "index": 1,
+      "sourceRect": {
+        "x": 1005,
+        "y": 20,
+        "width": 255,
+        "height": 215
+      },
+      "core": {
+        "x": 1007,
+        "y": 22,
+        "width": 251,
+        "height": 211,
+        "pixels": 35432
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "coin_sacks",
+      "index": 2,
+      "sourceRect": {
+        "x": 383,
+        "y": 25,
+        "width": 184,
+        "height": 180
+      },
+      "core": {
+        "x": 385,
+        "y": 27,
+        "width": 180,
+        "height": 176,
+        "pixels": 18609
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 252,
+      "overlappingCoreBoxes": [
+        {
+          "x": 539,
+          "y": 9,
+          "width": 460,
+          "height": 259,
+          "pixels": 70663
+        }
+      ]
+    },
+    {
+      "name": "coin_pile_large",
+      "index": 3,
+      "sourceRect": {
+        "x": 180,
+        "y": 39,
+        "width": 196,
+        "height": 125
+      },
+      "core": {
+        "x": 182,
+        "y": 41,
+        "width": 192,
+        "height": 121,
+        "pixels": 12637
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 252,
+      "overlappingCoreBoxes": [
+        {
+          "x": 156,
+          "y": 133,
+          "width": 26,
+          "height": 18,
+          "pixels": 360
+        },
+        {
+          "x": 309,
+          "y": 150,
+          "width": 32,
+          "height": 25,
+          "pixels": 627
+        }
+      ]
+    },
+    {
+      "name": "coin_pile_small",
+      "index": 4,
+      "sourceRect": {
+        "x": 26,
+        "y": 48,
+        "width": 135,
+        "height": 94
+      },
+      "core": {
+        "x": 28,
+        "y": 50,
+        "width": 131,
+        "height": 90,
+        "pixels": 7105
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 243,
+      "overlappingCoreBoxes": [
+        {
+          "x": 156,
+          "y": 133,
+          "width": 26,
+          "height": 18,
+          "pixels": 360
+        }
+      ]
+    },
+    {
+      "name": "chest_closed",
+      "index": 5,
+      "sourceRect": {
+        "x": 1278,
+        "y": 74,
+        "width": 154,
+        "height": 147
+      },
+      "core": {
+        "x": 1280,
+        "y": 76,
+        "width": 150,
+        "height": 143,
+        "pixels": 17329
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "coin_single",
+      "index": 6,
+      "sourceRect": {
+        "x": 154,
+        "y": 131,
+        "width": 30,
+        "height": 22
+      },
+      "core": {
+        "x": 156,
+        "y": 133,
+        "width": 26,
+        "height": 18,
+        "pixels": 360
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 7,
+      "overlappingCoreBoxes": [
+        {
+          "x": 182,
+          "y": 41,
+          "width": 192,
+          "height": 121,
+          "pixels": 12637
+        },
+        {
+          "x": 28,
+          "y": 50,
+          "width": 131,
+          "height": 90,
+          "pixels": 7105
+        }
+      ]
+    },
+    {
+      "name": "coins_pair",
+      "index": 7,
+      "sourceRect": {
+        "x": 307,
+        "y": 148,
+        "width": 36,
+        "height": 29
+      },
+      "core": {
+        "x": 309,
+        "y": 150,
+        "width": 32,
+        "height": 25,
+        "pixels": 627
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 13,
+      "overlappingCoreBoxes": [
+        {
+          "x": 182,
+          "y": 41,
+          "width": 192,
+          "height": 121,
+          "pixels": 12637
+        }
+      ]
+    },
+    {
+      "name": "goblet",
+      "index": 8,
+      "sourceRect": {
+        "x": 41,
+        "y": 159,
+        "width": 71,
+        "height": 112
+      },
+      "core": {
+        "x": 43,
+        "y": 161,
+        "width": 67,
+        "height": 108,
+        "pixels": 5162
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "crown",
+      "index": 9,
+      "sourceRect": {
+        "x": 154,
+        "y": 191,
+        "width": 97,
+        "height": 87
+      },
+      "core": {
+        "x": 156,
+        "y": 193,
+        "width": 93,
+        "height": 83,
+        "pixels": 5266
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "ring",
+      "index": 10,
+      "sourceRect": {
+        "x": 281,
+        "y": 210,
+        "width": 117,
+        "height": 79
+      },
+      "core": {
+        "x": 283,
+        "y": 212,
+        "width": 113,
+        "height": 75,
+        "pixels": 5763
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "coin_stack",
+      "index": 11,
+      "sourceRect": {
+        "x": 410,
+        "y": 221,
+        "width": 133,
+        "height": 93
+      },
+      "core": {
+        "x": 412,
+        "y": 223,
+        "width": 129,
+        "height": 89,
+        "pixels": 7096
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 4,
+      "overlappingCoreBoxes": [
+        {
+          "x": 539,
+          "y": 9,
+          "width": 460,
+          "height": 259,
+          "pixels": 70663
+        }
+      ]
+    },
+    {
+      "name": "gem_cluster",
+      "index": 12,
+      "sourceRect": {
+        "x": 1230,
+        "y": 234,
+        "width": 107,
+        "height": 95
+      },
+      "core": {
+        "x": 1232,
+        "y": 236,
+        "width": 103,
+        "height": 91,
+        "pixels": 5424
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "gem_row",
+      "index": 13,
+      "sourceRect": {
+        "x": 1017,
+        "y": 240,
+        "width": 130,
+        "height": 78
+      },
+      "core": {
+        "x": 1019,
+        "y": 242,
+        "width": 126,
+        "height": 74,
+        "pixels": 5420
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 14,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "coin_tiny",
+      "index": 14,
+      "sourceRect": {
+        "x": 565,
+        "y": 259,
+        "width": 36,
+        "height": 30
+      },
+      "core": {
+        "x": 567,
+        "y": 261,
+        "width": 32,
+        "height": 26,
+        "pixels": 682
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 14,
+      "overlappingCoreBoxes": [
+        {
+          "x": 539,
+          "y": 9,
+          "width": 460,
+          "height": 259,
+          "pixels": 70663
+        },
+        {
+          "x": 596,
+          "y": 261,
+          "width": 103,
+          "height": 66,
+          "pixels": 4362
+        }
+      ]
+    },
+    {
+      "name": "coins_scattered",
+      "index": 15,
+      "sourceRect": {
+        "x": 594,
+        "y": 259,
+        "width": 107,
+        "height": 70
+      },
+      "core": {
+        "x": 596,
+        "y": 261,
+        "width": 103,
+        "height": 66,
+        "pixels": 4362
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 245,
+      "overlappingCoreBoxes": [
+        {
+          "x": 539,
+          "y": 9,
+          "width": 460,
+          "height": 259,
+          "pixels": 70663
+        },
+        {
+          "x": 567,
+          "y": 261,
+          "width": 32,
+          "height": 26,
+          "pixels": 682
+        }
+      ]
+    },
+    {
+      "name": "gems_and_coins",
+      "index": 16,
+      "sourceRect": {
+        "x": 867,
+        "y": 259,
+        "width": 124,
+        "height": 81
+      },
+      "core": {
+        "x": 869,
+        "y": 261,
+        "width": 120,
+        "height": 77,
+        "pixels": 5861
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 10,
+      "overlappingCoreBoxes": [
+        {
+          "x": 539,
+          "y": 9,
+          "width": 460,
+          "height": 259,
+          "pixels": 70663
+        }
+      ]
+    },
+    {
+      "name": "coins_scattered_small",
+      "index": 20,
+      "sourceRect": {
+        "x": 761,
+        "y": 281,
+        "width": 65,
+        "height": 48
+      },
+      "core": {
+        "x": 763,
+        "y": 283,
+        "width": 61,
+        "height": 44,
+        "pixels": 1468
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 249,
+      "overlappingCoreBoxes": [
+        {
+          "x": 730,
+          "y": 306,
+          "width": 37,
+          "height": 30,
+          "pixels": 891
+        }
+      ]
+    },
+    {
+      "name": "skeleton_with_sword",
+      "index": 21,
+      "sourceRect": {
+        "x": 24,
+        "y": 286,
+        "width": 254,
+        "height": 192
+      },
+      "core": {
+        "x": 26,
+        "y": 288,
+        "width": 250,
+        "height": 188,
+        "pixels": 20123
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "armor_torso",
+      "index": 25,
+      "sourceRect": {
+        "x": 1132,
+        "y": 336,
+        "width": 146,
+        "height": 146
+      },
+      "core": {
+        "x": 1134,
+        "y": 338,
+        "width": 142,
+        "height": 142,
+        "pixels": 13702
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 251,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1254,
+          "y": 448,
+          "width": 56,
+          "height": 54,
+          "pixels": 1497
+        }
+      ]
+    },
+    {
+      "name": "shield_round",
+      "index": 26,
+      "sourceRect": {
+        "x": 1017,
+        "y": 339,
+        "width": 110,
+        "height": 145
+      },
+      "core": {
+        "x": 1019,
+        "y": 341,
+        "width": 106,
+        "height": 141,
+        "pixels": 10579
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 251,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1004,
+          "y": 423,
+          "width": 26,
+          "height": 44,
+          "pixels": 722
+        }
+      ]
+    },
+    {
+      "name": "helmet_plumed",
+      "index": 27,
+      "sourceRect": {
+        "x": 1296,
+        "y": 341,
+        "width": 109,
+        "height": 122
+      },
+      "core": {
+        "x": 1298,
+        "y": 343,
+        "width": 105,
+        "height": 118,
+        "pixels": 7840
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 249,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1396,
+          "y": 380,
+          "width": 89,
+          "height": 91,
+          "pixels": 4638
+        },
+        {
+          "x": 1254,
+          "y": 448,
+          "width": 56,
+          "height": 54,
+          "pixels": 1497
+        }
+      ]
+    },
+    {
+      "name": "skeleton_bones",
+      "index": 28,
+      "sourceRect": {
+        "x": 288,
+        "y": 344,
+        "width": 178,
+        "height": 136
+      },
+      "core": {
+        "x": 290,
+        "y": 346,
+        "width": 174,
+        "height": 132,
+        "pixels": 10966
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 459,
+          "y": 375,
+          "width": 83,
+          "height": 96,
+          "pixels": 5435
+        },
+        {
+          "x": 396,
+          "y": 431,
+          "width": 50,
+          "height": 36,
+          "pixels": 964
+        },
+        {
+          "x": 307,
+          "y": 472,
+          "width": 110,
+          "height": 241,
+          "pixels": 18738
+        }
+      ]
+    },
+    {
+      "name": "skeleton_with_shield",
+      "index": 30,
+      "sourceRect": {
+        "x": 564,
+        "y": 359,
+        "width": 232,
+        "height": 133
+      },
+      "core": {
+        "x": 566,
+        "y": 361,
+        "width": 228,
+        "height": 129,
+        "pixels": 19513
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 247,
+      "overlappingCoreBoxes": [
+        {
+          "x": 783,
+          "y": 380,
+          "width": 52,
+          "height": 32,
+          "pixels": 830
+        }
+      ]
+    },
+    {
+      "name": "sword_broken",
+      "index": 31,
+      "sourceRect": {
+        "x": 894,
+        "y": 360,
+        "width": 110,
+        "height": 135
+      },
+      "core": {
+        "x": 896,
+        "y": 362,
+        "width": 106,
+        "height": 131,
+        "pixels": 4421
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 252,
+      "overlappingCoreBoxes": [
+        {
+          "x": 850,
+          "y": 354,
+          "width": 69,
+          "height": 62,
+          "pixels": 3362
+        }
+      ]
+    },
+    {
+      "name": "helmet",
+      "index": 32,
+      "sourceRect": {
+        "x": 457,
+        "y": 373,
+        "width": 87,
+        "height": 100
+      },
+      "core": {
+        "x": 459,
+        "y": 375,
+        "width": 83,
+        "height": 96,
+        "pixels": 5435
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 290,
+          "y": 346,
+          "width": 174,
+          "height": 132,
+          "pixels": 10966
+        }
+      ]
+    },
+    {
+      "name": "gauntlet",
+      "index": 34,
+      "sourceRect": {
+        "x": 1394,
+        "y": 378,
+        "width": 93,
+        "height": 95
+      },
+      "core": {
+        "x": 1396,
+        "y": 380,
+        "width": 89,
+        "height": 91,
+        "pixels": 4638
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1298,
+          "y": 343,
+          "width": 105,
+          "height": 118,
+          "pixels": 7840
+        },
+        {
+          "x": 1485,
+          "y": 429,
+          "width": 31,
+          "height": 33,
+          "pixels": 616
+        },
+        {
+          "x": 1466,
+          "y": 462,
+          "width": 25,
+          "height": 20,
+          "pixels": 394
+        }
+      ]
+    },
+    {
+      "name": "pillar_rune",
+      "index": 42,
+      "sourceRect": {
+        "x": 305,
+        "y": 470,
+        "width": 114,
+        "height": 245
+      },
+      "core": {
+        "x": 307,
+        "y": 472,
+        "width": 110,
+        "height": 241,
+        "pixels": 18738
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 249,
+      "overlappingCoreBoxes": [
+        {
+          "x": 290,
+          "y": 346,
+          "width": 174,
+          "height": 132,
+          "pixels": 10966
+        },
+        {
+          "x": 206,
+          "y": 683,
+          "width": 121,
+          "height": 127,
+          "pixels": 8526
+        }
+      ]
+    },
+    {
+      "name": "pillar_coins",
+      "index": 43,
+      "sourceRect": {
+        "x": 448,
+        "y": 493,
+        "width": 104,
+        "height": 270
+      },
+      "core": {
+        "x": 450,
+        "y": 495,
+        "width": 100,
+        "height": 266,
+        "pixels": 19908
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 6,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pillar_coins_alt",
+      "index": 44,
+      "sourceRect": {
+        "x": 1001,
+        "y": 496,
+        "width": 103,
+        "height": 267
+      },
+      "core": {
+        "x": 1003,
+        "y": 498,
+        "width": 99,
+        "height": 263,
+        "pixels": 19612
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pillar_plain",
+      "index": 45,
+      "sourceRect": {
+        "x": 168,
+        "y": 497,
+        "width": 112,
+        "height": 213
+      },
+      "core": {
+        "x": 170,
+        "y": 499,
+        "width": 108,
+        "height": 209,
+        "pixels": 17340
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 248,
+      "overlappingCoreBoxes": [
+        {
+          "x": 21,
+          "y": 529,
+          "width": 157,
+          "height": 229,
+          "pixels": 21885
+        },
+        {
+          "x": 206,
+          "y": 683,
+          "width": 121,
+          "height": 127,
+          "pixels": 8526
+        }
+      ]
+    },
+    {
+      "name": "dais_cat",
+      "index": 46,
+      "sourceRect": {
+        "x": 569,
+        "y": 510,
+        "width": 408,
+        "height": 268
+      },
+      "core": {
+        "x": 571,
+        "y": 512,
+        "width": 404,
+        "height": 264,
+        "pixels": 82797
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 251,
+      "overlappingCoreBoxes": [
+        {
+          "x": 939,
+          "y": 715,
+          "width": 52,
+          "height": 46,
+          "pixels": 1375
+        },
+        {
+          "x": 592,
+          "y": 738,
+          "width": 32,
+          "height": 25,
+          "pixels": 598
+        },
+        {
+          "x": 901,
+          "y": 752,
+          "width": 31,
+          "height": 24,
+          "pixels": 611
+        }
+      ]
+    },
+    {
+      "name": "pillar_gems",
+      "index": 47,
+      "sourceRect": {
+        "x": 1384,
+        "y": 510,
+        "width": 131,
+        "height": 186
+      },
+      "core": {
+        "x": 1386,
+        "y": 512,
+        "width": 127,
+        "height": 182,
+        "pixels": 17323
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 14,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1278,
+          "y": 679,
+          "width": 127,
+          "height": 91,
+          "pixels": 8613
+        }
+      ]
+    },
+    {
+      "name": "rug_cat",
+      "index": 48,
+      "sourceRect": {
+        "x": 1127,
+        "y": 518,
+        "width": 218,
+        "height": 137
+      },
+      "core": {
+        "x": 1129,
+        "y": 520,
+        "width": 214,
+        "height": 133,
+        "pixels": 22708
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 13,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pillar_broken",
+      "index": 49,
+      "sourceRect": {
+        "x": 19,
+        "y": 527,
+        "width": 161,
+        "height": 233
+      },
+      "core": {
+        "x": 21,
+        "y": 529,
+        "width": 157,
+        "height": 229,
+        "pixels": 21885
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 251,
+      "overlappingCoreBoxes": [
+        {
+          "x": 170,
+          "y": 499,
+          "width": 108,
+          "height": 209,
+          "pixels": 17340
+        }
+      ]
+    },
+    {
+      "name": "rune_stone",
+      "index": 50,
+      "sourceRect": {
+        "x": 1127,
+        "y": 661,
+        "width": 98,
+        "height": 107
+      },
+      "core": {
+        "x": 1129,
+        "y": 663,
+        "width": 94,
+        "height": 103,
+        "pixels": 7827
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "cauldron_coins",
+      "index": 51,
+      "sourceRect": {
+        "x": 1276,
+        "y": 677,
+        "width": 131,
+        "height": 95
+      },
+      "core": {
+        "x": 1278,
+        "y": 679,
+        "width": 127,
+        "height": 91,
+        "pixels": 8613
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1386,
+          "y": 512,
+          "width": 127,
+          "height": 182,
+          "pixels": 17323
+        },
+        {
+          "x": 1252,
+          "y": 763,
+          "width": 47,
+          "height": 33,
+          "pixels": 1116
+        }
+      ]
+    },
+    {
+      "name": "candle_stone",
+      "index": 52,
+      "sourceRect": {
+        "x": 204,
+        "y": 681,
+        "width": 125,
+        "height": 131
+      },
+      "core": {
+        "x": 206,
+        "y": 683,
+        "width": 121,
+        "height": 127,
+        "pixels": 8526
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 252,
+      "overlappingCoreBoxes": [
+        {
+          "x": 307,
+          "y": 472,
+          "width": 110,
+          "height": 241,
+          "pixels": 18738
+        },
+        {
+          "x": 170,
+          "y": 499,
+          "width": 108,
+          "height": 209,
+          "pixels": 17340
+        }
+      ]
+    },
+    {
+      "name": "banner_cat",
+      "index": 59,
+      "sourceRect": {
+        "x": 26,
+        "y": 775,
+        "width": 131,
+        "height": 205
+      },
+      "core": {
+        "x": 28,
+        "y": 777,
+        "width": 127,
+        "height": 201,
+        "pixels": 15184
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 238,
+      "overlappingCoreBoxes": [
+        {
+          "x": 154,
+          "y": 826,
+          "width": 138,
+          "height": 164,
+          "pixels": 12757
+        }
+      ]
+    },
+    {
+      "name": "candelabra",
+      "index": 61,
+      "sourceRect": {
+        "x": 975,
+        "y": 789,
+        "width": 78,
+        "height": 140
+      },
+      "core": {
+        "x": 977,
+        "y": 791,
+        "width": 74,
+        "height": 136,
+        "pixels": 5438
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 98,
+      "overlappingCoreBoxes": [
+        {
+          "x": 824,
+          "y": 869,
+          "width": 165,
+          "height": 135,
+          "pixels": 11945
+        },
+        {
+          "x": 1026,
+          "y": 890,
+          "width": 126,
+          "height": 109,
+          "pixels": 8985
+        }
+      ]
+    },
+    {
+      "name": "books",
+      "index": 63,
+      "sourceRect": {
+        "x": 666,
+        "y": 802,
+        "width": 162,
+        "height": 103
+      },
+      "core": {
+        "x": 668,
+        "y": 804,
+        "width": 158,
+        "height": 99,
+        "pixels": 10526
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 249,
+      "overlappingCoreBoxes": [
+        {
+          "x": 523,
+          "y": 783,
+          "width": 144,
+          "height": 101,
+          "pixels": 9744
+        },
+        {
+          "x": 824,
+          "y": 869,
+          "width": 165,
+          "height": 135,
+          "pixels": 11945
+        },
+        {
+          "x": 678,
+          "y": 903,
+          "width": 132,
+          "height": 96,
+          "pixels": 9101
+        }
+      ]
+    },
+    {
+      "name": "pot_coins",
+      "index": 64,
+      "sourceRect": {
+        "x": 877,
+        "y": 803,
+        "width": 91,
+        "height": 97
+      },
+      "core": {
+        "x": 879,
+        "y": 805,
+        "width": 87,
+        "height": 93,
+        "pixels": 6479
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 247,
+      "overlappingCoreBoxes": [
+        {
+          "x": 824,
+          "y": 869,
+          "width": 165,
+          "height": 135,
+          "pixels": 11945
+        }
+      ]
+    },
+    {
+      "name": "beast_skull",
+      "index": 66,
+      "sourceRect": {
+        "x": 1245,
+        "y": 803,
+        "width": 273,
+        "height": 189
+      },
+      "core": {
+        "x": 1247,
+        "y": 805,
+        "width": 269,
+        "height": 185,
+        "pixels": 28329
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 251,
+      "overlappingCoreBoxes": [
+        {
+          "x": 1191,
+          "y": 805,
+          "width": 122,
+          "height": 72,
+          "pixels": 4573
+        },
+        {
+          "x": 1399,
+          "y": 978,
+          "width": 32,
+          "height": 26,
+          "pixels": 676
+        }
+      ]
+    },
+    {
+      "name": "pots",
+      "index": 70,
+      "sourceRect": {
+        "x": 822,
+        "y": 867,
+        "width": 169,
+        "height": 139
+      },
+      "core": {
+        "x": 824,
+        "y": 869,
+        "width": 165,
+        "height": 135,
+        "pixels": 11945
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 252,
+      "overlappingCoreBoxes": [
+        {
+          "x": 977,
+          "y": 791,
+          "width": 74,
+          "height": 136,
+          "pixels": 5438
+        },
+        {
+          "x": 668,
+          "y": 804,
+          "width": 158,
+          "height": 99,
+          "pixels": 10526
+        },
+        {
+          "x": 879,
+          "y": 805,
+          "width": 87,
+          "height": 93,
+          "pixels": 6479
+        }
+      ]
+    },
+    {
+      "name": "stone_blocks_coins",
+      "index": 73,
+      "sourceRect": {
+        "x": 1024,
+        "y": 888,
+        "width": 130,
+        "height": 113
+      },
+      "core": {
+        "x": 1026,
+        "y": 890,
+        "width": 126,
+        "height": 109,
+        "pixels": 8985
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 250,
+      "overlappingCoreBoxes": [
+        {
+          "x": 977,
+          "y": 791,
+          "width": 74,
+          "height": 136,
+          "pixels": 5438
+        }
+      ]
+    }
+  ],
+  "tilesets/cave_garden_offering_props.png": [
+    {
+      "name": "altar_flowers",
+      "index": 8,
+      "sourceRect": {
+        "x": 311,
+        "y": 58,
+        "width": 298,
+        "height": 222
+      },
+      "core": {
+        "x": 313,
+        "y": 60,
+        "width": 294,
+        "height": 218,
+        "pixels": 48261
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "altar_plain",
+      "index": 11,
+      "sourceRect": {
+        "x": 41,
+        "y": 75,
+        "width": 245,
+        "height": 191
+      },
+      "core": {
+        "x": 43,
+        "y": 77,
+        "width": 241,
+        "height": 187,
+        "pixels": 33438
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 14,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pedestal_rune",
+      "index": 12,
+      "sourceRect": {
+        "x": 495,
+        "y": 302,
+        "width": 132,
+        "height": 167
+      },
+      "core": {
+        "x": 497,
+        "y": 304,
+        "width": 128,
+        "height": 163,
+        "pixels": 15591
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 3,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pedestal_small",
+      "index": 13,
+      "sourceRect": {
+        "x": 37,
+        "y": 310,
+        "width": 149,
+        "height": 152
+      },
+      "core": {
+        "x": 39,
+        "y": 312,
+        "width": 145,
+        "height": 148,
+        "pixels": 15886
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 19,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "stone_lotus",
+      "index": 14,
+      "sourceRect": {
+        "x": 220,
+        "y": 314,
+        "width": 108,
+        "height": 142
+      },
+      "core": {
+        "x": 222,
+        "y": 316,
+        "width": 104,
+        "height": 138,
+        "pixels": 9869
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 4,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rocks",
+      "index": 15,
+      "sourceRect": {
+        "x": 653,
+        "y": 328,
+        "width": 137,
+        "height": 149
+      },
+      "core": {
+        "x": 655,
+        "y": 330,
+        "width": 133,
+        "height": 145,
+        "pixels": 13360
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pedestal_narrow",
+      "index": 16,
+      "sourceRect": {
+        "x": 371,
+        "y": 338,
+        "width": 92,
+        "height": 131
+      },
+      "core": {
+        "x": 373,
+        "y": 340,
+        "width": 88,
+        "height": 127,
+        "pixels": 9150
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 17,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "crystal_cluster",
+      "index": 17,
+      "sourceRect": {
+        "x": 838,
+        "y": 338,
+        "width": 97,
+        "height": 131
+      },
+      "core": {
+        "x": 840,
+        "y": 340,
+        "width": 93,
+        "height": 127,
+        "pixels": 7916
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "moss_rock_flower",
+      "index": 18,
+      "sourceRect": {
+        "x": 1399,
+        "y": 351,
+        "width": 109,
+        "height": 113
+      },
+      "core": {
+        "x": 1401,
+        "y": 353,
+        "width": 105,
+        "height": 109,
+        "pixels": 8207
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 16,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rune_block",
+      "index": 19,
+      "sourceRect": {
+        "x": 1276,
+        "y": 361,
+        "width": 95,
+        "height": 103
+      },
+      "core": {
+        "x": 1278,
+        "y": 363,
+        "width": 91,
+        "height": 99,
+        "pixels": 6917
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 16,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "cattails",
+      "index": 23,
+      "sourceRect": {
+        "x": 1378,
+        "y": 489,
+        "width": 123,
+        "height": 181
+      },
+      "core": {
+        "x": 1380,
+        "y": 491,
+        "width": 119,
+        "height": 177,
+        "pixels": 11183
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 20,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "blue_flower_plant",
+      "index": 24,
+      "sourceRect": {
+        "x": 1262,
+        "y": 490,
+        "width": 96,
+        "height": 180
+      },
+      "core": {
+        "x": 1264,
+        "y": 492,
+        "width": 92,
+        "height": 176,
+        "pixels": 9977
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "flower_bush",
+      "index": 25,
+      "sourceRect": {
+        "x": 34,
+        "y": 494,
+        "width": 173,
+        "height": 147
+      },
+      "core": {
+        "x": 36,
+        "y": 496,
+        "width": 169,
+        "height": 143,
+        "pixels": 18157
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 10,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "reed_plant",
+      "index": 26,
+      "sourceRect": {
+        "x": 1017,
+        "y": 494,
+        "width": 88,
+        "height": 170
+      },
+      "core": {
+        "x": 1019,
+        "y": 496,
+        "width": 84,
+        "height": 166,
+        "pixels": 7173
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 4,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "grass_tuft",
+      "index": 27,
+      "sourceRect": {
+        "x": 1122,
+        "y": 494,
+        "width": 117,
+        "height": 168
+      },
+      "core": {
+        "x": 1124,
+        "y": 496,
+        "width": 113,
+        "height": 164,
+        "pixels": 11470
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 32,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "lily_pad",
+      "index": 28,
+      "sourceRect": {
+        "x": 358,
+        "y": 496,
+        "width": 87,
+        "height": 90
+      },
+      "core": {
+        "x": 360,
+        "y": 498,
+        "width": 83,
+        "height": 86,
+        "pixels": 3973
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 15,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "flower_bush_small",
+      "index": 29,
+      "sourceRect": {
+        "x": 223,
+        "y": 499,
+        "width": 106,
+        "height": 146
+      },
+      "core": {
+        "x": 225,
+        "y": 501,
+        "width": 102,
+        "height": 142,
+        "pixels": 9733
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 7,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "lily_pad_wide",
+      "index": 30,
+      "sourceRect": {
+        "x": 698,
+        "y": 504,
+        "width": 96,
+        "height": 72
+      },
+      "core": {
+        "x": 700,
+        "y": 506,
+        "width": 92,
+        "height": 68,
+        "pixels": 5007
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 22,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "lotus_flower",
+      "index": 34,
+      "sourceRect": {
+        "x": 845,
+        "y": 560,
+        "width": 155,
+        "height": 102
+      },
+      "core": {
+        "x": 847,
+        "y": 562,
+        "width": 151,
+        "height": 98,
+        "pixels": 11043
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 185,
+      "overlappingCoreBoxes": [
+        {
+          "x": 821,
+          "y": 508,
+          "width": 91,
+          "height": 53,
+          "pixels": 3568
+        }
+      ]
+    },
+    {
+      "name": "waterfall_rocks",
+      "index": 36,
+      "sourceRect": {
+        "x": 330,
+        "y": 591,
+        "width": 302,
+        "height": 298
+      },
+      "core": {
+        "x": 332,
+        "y": 593,
+        "width": 298,
+        "height": 294,
+        "pixels": 59570
+      },
+      "status": "REVIEW_REQUIRED",
+      "borderMax": 21,
+      "overlappingCoreBoxes": [
+        {
+          "x": 575,
+          "y": 599,
+          "width": 53,
+          "height": 43,
+          "pixels": 1780
+        }
+      ]
+    },
+    {
+      "name": "flower_arch",
+      "index": 39,
+      "sourceRect": {
+        "x": 29,
+        "y": 660,
+        "width": 286,
+        "height": 226
+      },
+      "core": {
+        "x": 31,
+        "y": 662,
+        "width": 282,
+        "height": 222,
+        "pixels": 34718
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 21,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "stone_lotus_tall",
+      "index": 40,
+      "sourceRect": {
+        "x": 650,
+        "y": 677,
+        "width": 144,
+        "height": 205
+      },
+      "core": {
+        "x": 652,
+        "y": 679,
+        "width": 140,
+        "height": 201,
+        "pixels": 20024
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 12,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "pond_basin",
+      "index": 41,
+      "sourceRect": {
+        "x": 1008,
+        "y": 680,
+        "width": 355,
+        "height": 233
+      },
+      "core": {
+        "x": 1010,
+        "y": 682,
+        "width": 351,
+        "height": 229,
+        "pixels": 64959
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 5,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "moss_rock_large",
+      "index": 42,
+      "sourceRect": {
+        "x": 810,
+        "y": 693,
+        "width": 188,
+        "height": 198
+      },
+      "core": {
+        "x": 812,
+        "y": 695,
+        "width": 184,
+        "height": 194,
+        "pixels": 26288
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 19,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "fountain_basin",
+      "index": 45,
+      "sourceRect": {
+        "x": 1384,
+        "y": 770,
+        "width": 117,
+        "height": 151
+      },
+      "core": {
+        "x": 1386,
+        "y": 772,
+        "width": 113,
+        "height": 147,
+        "pixels": 11651
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 8,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rock_flowers",
+      "index": 46,
+      "sourceRect": {
+        "x": 46,
+        "y": 893,
+        "width": 148,
+        "height": 106
+      },
+      "core": {
+        "x": 48,
+        "y": 895,
+        "width": 144,
+        "height": 102,
+        "pixels": 10644
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 11,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "rock_flowers_small",
+      "index": 47,
+      "sourceRect": {
+        "x": 250,
+        "y": 902,
+        "width": 135,
+        "height": 95
+      },
+      "core": {
+        "x": 252,
+        "y": 904,
+        "width": 131,
+        "height": 91,
+        "pixels": 8713
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 5,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "white_flowers",
+      "index": 49,
+      "sourceRect": {
+        "x": 663,
+        "y": 912,
+        "width": 95,
+        "height": 87
+      },
+      "core": {
+        "x": 665,
+        "y": 914,
+        "width": 91,
+        "height": 83,
+        "pixels": 4838
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 9,
+      "overlappingCoreBoxes": []
+    },
+    {
+      "name": "leaves",
+      "index": 53,
+      "sourceRect": {
+        "x": 1233,
+        "y": 927,
+        "width": 100,
+        "height": 68
+      },
+      "core": {
+        "x": 1235,
+        "y": 929,
+        "width": 96,
+        "height": 64,
+        "pixels": 3186
+      },
+      "status": "SAFE_OBJECT_CANDIDATE",
+      "borderMax": 19,
+      "overlappingCoreBoxes": []
+    }
+  ]
+}

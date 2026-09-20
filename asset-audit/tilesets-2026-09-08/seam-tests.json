@@ -1,0 +1,873 @@
+{
+  "method": "MAE of premultiplied RGBA, range 0–255. No automatic pass threshold. Core and 6px inset are diagnostic crops only, not approved production tiles.",
+  "repetitions": [
+    {
+      "id": "overworld_tileset.grass",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 32,
+            "y": 30,
+            "width": 120,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 11.59,
+          "topBottomPremultipliedRgbaMAE": 29.91,
+          "interiorAdjacentRgbMAE": 3.34,
+          "boundaryAlphaMean": 131.12,
+          "boundaryPixelsAlphaBelow240": 478,
+          "boundaryPixelCount": 478,
+          "preview": "overworld_tileset.grass-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 38,
+            "y": 36,
+            "width": 108,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 8.11,
+          "topBottomPremultipliedRgbaMAE": 16.5,
+          "interiorAdjacentRgbMAE": 2.85,
+          "boundaryAlphaMean": 248.57,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 430,
+          "preview": "overworld_tileset.grass-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.darker_grass",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 307,
+            "y": 30,
+            "width": 131,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 12.61,
+          "topBottomPremultipliedRgbaMAE": 30.62,
+          "interiorAdjacentRgbMAE": 3.35,
+          "boundaryAlphaMean": 111.76,
+          "boundaryPixelsAlphaBelow240": 500,
+          "boundaryPixelCount": 500,
+          "preview": "overworld_tileset.darker_grass-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 313,
+            "y": 36,
+            "width": 119,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 6.11,
+          "topBottomPremultipliedRgbaMAE": 11.43,
+          "interiorAdjacentRgbMAE": 3.26,
+          "boundaryAlphaMean": 248.56,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 452,
+          "preview": "overworld_tileset.darker_grass-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.dirt_path",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 599,
+            "y": 30,
+            "width": 121,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 14.93,
+          "topBottomPremultipliedRgbaMAE": 18.57,
+          "interiorAdjacentRgbMAE": 2.5,
+          "boundaryAlphaMean": 86.19,
+          "boundaryPixelsAlphaBelow240": 480,
+          "boundaryPixelCount": 480,
+          "preview": "overworld_tileset.dirt_path-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 605,
+            "y": 36,
+            "width": 109,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 4.55,
+          "topBottomPremultipliedRgbaMAE": 3.83,
+          "interiorAdjacentRgbMAE": 2.1,
+          "boundaryAlphaMean": 249.37,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 432,
+          "preview": "overworld_tileset.dirt_path-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.dirt_corner_nw",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 1158,
+            "y": 29,
+            "width": 121,
+            "height": 120
+          },
+          "leftRightPremultipliedRgbaMAE": 21.61,
+          "topBottomPremultipliedRgbaMAE": 50.41,
+          "interiorAdjacentRgbMAE": 4.11,
+          "boundaryAlphaMean": 117.28,
+          "boundaryPixelsAlphaBelow240": 482,
+          "boundaryPixelCount": 482,
+          "preview": "overworld_tileset.dirt_corner_nw-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 1164,
+            "y": 35,
+            "width": 109,
+            "height": 108
+          },
+          "leftRightPremultipliedRgbaMAE": 19.32,
+          "topBottomPremultipliedRgbaMAE": 19.6,
+          "interiorAdjacentRgbMAE": 3.88,
+          "boundaryAlphaMean": 248.88,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 434,
+          "preview": "overworld_tileset.dirt_corner_nw-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.dirt_corner_ne",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 1017,
+            "y": 30,
+            "width": 123,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 23,
+          "topBottomPremultipliedRgbaMAE": 22.88,
+          "interiorAdjacentRgbMAE": 3.94,
+          "boundaryAlphaMean": 111.2,
+          "boundaryPixelsAlphaBelow240": 484,
+          "boundaryPixelCount": 484,
+          "preview": "overworld_tileset.dirt_corner_ne-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 1023,
+            "y": 36,
+            "width": 111,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 22.96,
+          "topBottomPremultipliedRgbaMAE": 20.3,
+          "interiorAdjacentRgbMAE": 3.69,
+          "boundaryAlphaMean": 249.42,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 436,
+          "preview": "overworld_tileset.dirt_corner_ne-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.dirt_corner_sw",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 309,
+            "y": 167,
+            "width": 126,
+            "height": 124
+          },
+          "leftRightPremultipliedRgbaMAE": 21.94,
+          "topBottomPremultipliedRgbaMAE": 27.4,
+          "interiorAdjacentRgbMAE": 4.04,
+          "boundaryAlphaMean": 124.79,
+          "boundaryPixelsAlphaBelow240": 500,
+          "boundaryPixelCount": 500,
+          "preview": "overworld_tileset.dirt_corner_sw-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 315,
+            "y": 173,
+            "width": 114,
+            "height": 112
+          },
+          "leftRightPremultipliedRgbaMAE": 18.32,
+          "topBottomPremultipliedRgbaMAE": 22.95,
+          "interiorAdjacentRgbMAE": 3.88,
+          "boundaryAlphaMean": 248.76,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 452,
+          "preview": "overworld_tileset.dirt_corner_sw-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.dirt_corner_se",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 1296,
+            "y": 30,
+            "width": 101,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 22.45,
+          "topBottomPremultipliedRgbaMAE": 28.39,
+          "interiorAdjacentRgbMAE": 4.23,
+          "boundaryAlphaMean": 132.14,
+          "boundaryPixelsAlphaBelow240": 440,
+          "boundaryPixelCount": 440,
+          "preview": "overworld_tileset.dirt_corner_se-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 1302,
+            "y": 36,
+            "width": 89,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 23.09,
+          "topBottomPremultipliedRgbaMAE": 22.81,
+          "interiorAdjacentRgbMAE": 4.09,
+          "boundaryAlphaMean": 249.69,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 392,
+          "preview": "overworld_tileset.dirt_corner_se-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.stone_path",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 596,
+            "y": 167,
+            "width": 120,
+            "height": 125
+          },
+          "leftRightPremultipliedRgbaMAE": 26.23,
+          "topBottomPremultipliedRgbaMAE": 19.1,
+          "interiorAdjacentRgbMAE": 5.15,
+          "boundaryAlphaMean": 154.17,
+          "boundaryPixelsAlphaBelow240": 490,
+          "boundaryPixelCount": 490,
+          "preview": "overworld_tileset.stone_path-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 602,
+            "y": 173,
+            "width": 108,
+            "height": 113
+          },
+          "leftRightPremultipliedRgbaMAE": 11.05,
+          "topBottomPremultipliedRgbaMAE": 13.98,
+          "interiorAdjacentRgbMAE": 5.13,
+          "boundaryAlphaMean": 248.8,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 442,
+          "preview": "overworld_tileset.stone_path-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "overworld_tileset.stone_path_variant",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 735,
+            "y": 167,
+            "width": 123,
+            "height": 124
+          },
+          "leftRightPremultipliedRgbaMAE": 11.75,
+          "topBottomPremultipliedRgbaMAE": 25.57,
+          "interiorAdjacentRgbMAE": 5.39,
+          "boundaryAlphaMean": 182.03,
+          "boundaryPixelsAlphaBelow240": 494,
+          "boundaryPixelCount": 494,
+          "preview": "overworld_tileset.stone_path_variant-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 741,
+            "y": 173,
+            "width": 111,
+            "height": 112
+          },
+          "leftRightPremultipliedRgbaMAE": 23.13,
+          "topBottomPremultipliedRgbaMAE": 19.5,
+          "interiorAdjacentRgbMAE": 5.42,
+          "boundaryAlphaMean": 249.02,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 446,
+          "preview": "overworld_tileset.stone_path_variant-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.center_water",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 162,
+            "y": 28,
+            "width": 126,
+            "height": 125
+          },
+          "leftRightPremultipliedRgbaMAE": 9.7,
+          "topBottomPremultipliedRgbaMAE": 57.72,
+          "interiorAdjacentRgbMAE": 2.61,
+          "boundaryAlphaMean": 159.92,
+          "boundaryPixelsAlphaBelow240": 499,
+          "boundaryPixelCount": 502,
+          "preview": "garden_pond_tileset.center_water-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 168,
+            "y": 34,
+            "width": 114,
+            "height": 113
+          },
+          "leftRightPremultipliedRgbaMAE": 7.89,
+          "topBottomPremultipliedRgbaMAE": 20.46,
+          "interiorAdjacentRgbMAE": 2,
+          "boundaryAlphaMean": 248.48,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 454,
+          "preview": "garden_pond_tileset.center_water-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.center_water_alt",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 21,
+            "y": 29,
+            "width": 126,
+            "height": 124
+          },
+          "leftRightPremultipliedRgbaMAE": 15.62,
+          "topBottomPremultipliedRgbaMAE": 10.16,
+          "interiorAdjacentRgbMAE": 2.62,
+          "boundaryAlphaMean": 165.15,
+          "boundaryPixelsAlphaBelow240": 500,
+          "boundaryPixelCount": 500,
+          "preview": "garden_pond_tileset.center_water_alt-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 27,
+            "y": 35,
+            "width": 114,
+            "height": 112
+          },
+          "leftRightPremultipliedRgbaMAE": 8.21,
+          "topBottomPremultipliedRgbaMAE": 15.31,
+          "interiorAdjacentRgbMAE": 2.11,
+          "boundaryAlphaMean": 248.12,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 452,
+          "preview": "garden_pond_tileset.center_water_alt-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_edge_north",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 446,
+            "y": 28,
+            "width": 117,
+            "height": 125
+          },
+          "leftRightPremultipliedRgbaMAE": 7.44,
+          "topBottomPremultipliedRgbaMAE": 33.61,
+          "interiorAdjacentRgbMAE": 4.65,
+          "boundaryAlphaMean": 151.34,
+          "boundaryPixelsAlphaBelow240": 484,
+          "boundaryPixelCount": 484,
+          "preview": "garden_pond_tileset.water_edge_north-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 452,
+            "y": 34,
+            "width": 105,
+            "height": 113
+          },
+          "leftRightPremultipliedRgbaMAE": 9.2,
+          "topBottomPremultipliedRgbaMAE": 67.72,
+          "interiorAdjacentRgbMAE": 4.6,
+          "boundaryAlphaMean": 247.72,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 436,
+          "preview": "garden_pond_tileset.water_edge_north-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_edge_east",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 304,
+            "y": 29,
+            "width": 126,
+            "height": 124
+          },
+          "leftRightPremultipliedRgbaMAE": 38.34,
+          "topBottomPremultipliedRgbaMAE": 10.33,
+          "interiorAdjacentRgbMAE": 5.2,
+          "boundaryAlphaMean": 171.52,
+          "boundaryPixelsAlphaBelow240": 500,
+          "boundaryPixelCount": 500,
+          "preview": "garden_pond_tileset.water_edge_east-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 310,
+            "y": 35,
+            "width": 114,
+            "height": 112
+          },
+          "leftRightPremultipliedRgbaMAE": 63.58,
+          "topBottomPremultipliedRgbaMAE": 21.67,
+          "interiorAdjacentRgbMAE": 5.13,
+          "boundaryAlphaMean": 247.8,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 452,
+          "preview": "garden_pond_tileset.water_edge_east-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_edge_south",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 21,
+            "y": 167,
+            "width": 126,
+            "height": 119
+          },
+          "leftRightPremultipliedRgbaMAE": 22.87,
+          "topBottomPremultipliedRgbaMAE": 26.44,
+          "interiorAdjacentRgbMAE": 4.28,
+          "boundaryAlphaMean": 154.18,
+          "boundaryPixelsAlphaBelow240": 490,
+          "boundaryPixelCount": 490,
+          "preview": "garden_pond_tileset.water_edge_south-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 27,
+            "y": 173,
+            "width": 114,
+            "height": 107
+          },
+          "leftRightPremultipliedRgbaMAE": 9.21,
+          "topBottomPremultipliedRgbaMAE": 58.97,
+          "interiorAdjacentRgbMAE": 3.86,
+          "boundaryAlphaMean": 247.21,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 442,
+          "preview": "garden_pond_tileset.water_edge_south-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_corner_nw",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 721,
+            "y": 29,
+            "width": 124,
+            "height": 121
+          },
+          "leftRightPremultipliedRgbaMAE": 46.98,
+          "topBottomPremultipliedRgbaMAE": 21.31,
+          "interiorAdjacentRgbMAE": 6.3,
+          "boundaryAlphaMean": 164.57,
+          "boundaryPixelsAlphaBelow240": 490,
+          "boundaryPixelCount": 490,
+          "preview": "garden_pond_tileset.water_corner_nw-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 727,
+            "y": 35,
+            "width": 112,
+            "height": 109
+          },
+          "leftRightPremultipliedRgbaMAE": 43.18,
+          "topBottomPremultipliedRgbaMAE": 61.79,
+          "interiorAdjacentRgbMAE": 6.53,
+          "boundaryAlphaMean": 247.99,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 442,
+          "preview": "garden_pond_tileset.water_corner_nw-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_corner_ne",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 580,
+            "y": 29,
+            "width": 123,
+            "height": 122
+          },
+          "leftRightPremultipliedRgbaMAE": 35.79,
+          "topBottomPremultipliedRgbaMAE": 37.81,
+          "interiorAdjacentRgbMAE": 6.1,
+          "boundaryAlphaMean": 160.18,
+          "boundaryPixelsAlphaBelow240": 490,
+          "boundaryPixelCount": 490,
+          "preview": "garden_pond_tileset.water_corner_ne-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 586,
+            "y": 35,
+            "width": 111,
+            "height": 110
+          },
+          "leftRightPremultipliedRgbaMAE": 45.34,
+          "topBottomPremultipliedRgbaMAE": 66.18,
+          "interiorAdjacentRgbMAE": 6.43,
+          "boundaryAlphaMean": 247.74,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 442,
+          "preview": "garden_pond_tileset.water_corner_ne-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_inner_corner",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 580,
+            "y": 165,
+            "width": 123,
+            "height": 121
+          },
+          "leftRightPremultipliedRgbaMAE": 25.57,
+          "topBottomPremultipliedRgbaMAE": 82.5,
+          "interiorAdjacentRgbMAE": 3.78,
+          "boundaryAlphaMean": 145.54,
+          "boundaryPixelsAlphaBelow240": 485,
+          "boundaryPixelCount": 488,
+          "preview": "garden_pond_tileset.water_inner_corner-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 586,
+            "y": 171,
+            "width": 111,
+            "height": 109
+          },
+          "leftRightPremultipliedRgbaMAE": 25.63,
+          "topBottomPremultipliedRgbaMAE": 34.97,
+          "interiorAdjacentRgbMAE": 3.72,
+          "boundaryAlphaMean": 247.4,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 440,
+          "preview": "garden_pond_tileset.water_inner_corner-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "garden_pond_tileset.water_outer_corner",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 445,
+            "y": 165,
+            "width": 119,
+            "height": 121
+          },
+          "leftRightPremultipliedRgbaMAE": 22.41,
+          "topBottomPremultipliedRgbaMAE": 76.04,
+          "interiorAdjacentRgbMAE": 6.4,
+          "boundaryAlphaMean": 93.64,
+          "boundaryPixelsAlphaBelow240": 480,
+          "boundaryPixelCount": 480,
+          "preview": "garden_pond_tileset.water_outer_corner-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 451,
+            "y": 171,
+            "width": 107,
+            "height": 109
+          },
+          "leftRightPremultipliedRgbaMAE": 42.52,
+          "topBottomPremultipliedRgbaMAE": 48.56,
+          "interiorAdjacentRgbMAE": 6.74,
+          "boundaryAlphaMean": 247.45,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 432,
+          "preview": "garden_pond_tileset.water_outer_corner-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "dungeon_tileset.floor",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 25,
+            "y": 20,
+            "width": 120,
+            "height": 122
+          },
+          "leftRightPremultipliedRgbaMAE": 11.3,
+          "topBottomPremultipliedRgbaMAE": 9.67,
+          "interiorAdjacentRgbMAE": 3.86,
+          "boundaryAlphaMean": 176.05,
+          "boundaryPixelsAlphaBelow240": 479,
+          "boundaryPixelCount": 484,
+          "preview": "dungeon_tileset.floor-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 31,
+            "y": 26,
+            "width": 108,
+            "height": 110
+          },
+          "leftRightPremultipliedRgbaMAE": 4,
+          "topBottomPremultipliedRgbaMAE": 6.35,
+          "interiorAdjacentRgbMAE": 3.71,
+          "boundaryAlphaMean": 250.48,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 436,
+          "preview": "dungeon_tileset.floor-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "dungeon_tileset.floor_variant",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 154,
+            "y": 20,
+            "width": 119,
+            "height": 122
+          },
+          "leftRightPremultipliedRgbaMAE": 4.75,
+          "topBottomPremultipliedRgbaMAE": 11.35,
+          "interiorAdjacentRgbMAE": 4.38,
+          "boundaryAlphaMean": 199.47,
+          "boundaryPixelsAlphaBelow240": 462,
+          "boundaryPixelCount": 482,
+          "preview": "dungeon_tileset.floor_variant-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 160,
+            "y": 26,
+            "width": 107,
+            "height": 110
+          },
+          "leftRightPremultipliedRgbaMAE": 6.37,
+          "topBottomPremultipliedRgbaMAE": 6.83,
+          "interiorAdjacentRgbMAE": 4.44,
+          "boundaryAlphaMean": 250.85,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 434,
+          "preview": "dungeon_tileset.floor_variant-inset6-3x3.png"
+        }
+      ]
+    },
+    {
+      "id": "dungeon_tileset.cracked_floor",
+      "variants": [
+        {
+          "inset": 0,
+          "sourceRect": {
+            "x": 25,
+            "y": 149,
+            "width": 120,
+            "height": 122
+          },
+          "leftRightPremultipliedRgbaMAE": 13.78,
+          "topBottomPremultipliedRgbaMAE": 19.48,
+          "interiorAdjacentRgbMAE": 4.83,
+          "boundaryAlphaMean": 153.72,
+          "boundaryPixelsAlphaBelow240": 484,
+          "boundaryPixelCount": 484,
+          "preview": "dungeon_tileset.cracked_floor-core-3x3.png"
+        },
+        {
+          "inset": 6,
+          "sourceRect": {
+            "x": 31,
+            "y": 155,
+            "width": 108,
+            "height": 110
+          },
+          "leftRightPremultipliedRgbaMAE": 8.49,
+          "topBottomPremultipliedRgbaMAE": 12.49,
+          "interiorAdjacentRgbMAE": 4.74,
+          "boundaryAlphaMean": 250.09,
+          "boundaryPixelsAlphaBelow240": 0,
+          "boundaryPixelCount": 436,
+          "preview": "dungeon_tileset.cracked_floor-inset6-3x3.png"
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "overworld_tileset.grass",
+      "b": "overworld_tileset.darker_grass",
+      "direction": "right",
+      "matchingEdgeLengths": true,
+      "edgeLengthA": 119,
+      "edgeLengthB": 119,
+      "commonSpanRgbaMAE": 20.67,
+      "preview": "overworld_tileset.grass--darker_grass.png"
+    },
+    {
+      "a": "overworld_tileset.grass",
+      "b": "overworld_tileset.dirt_corner_nw",
+      "direction": "right",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 119,
+      "edgeLengthB": 120,
+      "commonSpanRgbaMAE": 12.42,
+      "preview": "overworld_tileset.grass--dirt_corner_nw.png"
+    },
+    {
+      "a": "overworld_tileset.dirt_path",
+      "b": "overworld_tileset.dirt_corner_nw",
+      "direction": "right",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 119,
+      "edgeLengthB": 120,
+      "commonSpanRgbaMAE": 21.34,
+      "preview": "overworld_tileset.dirt_path--dirt_corner_nw.png"
+    },
+    {
+      "a": "overworld_tileset.stone_path",
+      "b": "overworld_tileset.stone_path_variant",
+      "direction": "right",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 125,
+      "edgeLengthB": 124,
+      "commonSpanRgbaMAE": 12.83,
+      "preview": "overworld_tileset.stone_path--stone_path_variant.png"
+    },
+    {
+      "a": "garden_pond_tileset.water_edge_north",
+      "b": "garden_pond_tileset.center_water",
+      "direction": "bottom",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 117,
+      "edgeLengthB": 126,
+      "commonSpanRgbaMAE": 36.42,
+      "preview": "garden_pond_tileset.water_edge_north--center_water.png"
+    },
+    {
+      "a": "garden_pond_tileset.center_water",
+      "b": "garden_pond_tileset.water_edge_east",
+      "direction": "right",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 125,
+      "edgeLengthB": 124,
+      "commonSpanRgbaMAE": 14.28,
+      "preview": "garden_pond_tileset.center_water--water_edge_east.png"
+    },
+    {
+      "a": "dungeon_tileset.floor",
+      "b": "dungeon_tileset.cracked_floor",
+      "direction": "right",
+      "matchingEdgeLengths": true,
+      "edgeLengthA": 122,
+      "edgeLengthB": 122,
+      "commonSpanRgbaMAE": 16.79,
+      "preview": "dungeon_tileset.floor--cracked_floor.png"
+    },
+    {
+      "a": "dungeon_tileset.wall_module",
+      "b": "dungeon_tileset.wall_corner",
+      "direction": "right",
+      "matchingEdgeLengths": false,
+      "edgeLengthA": 185,
+      "edgeLengthB": 204,
+      "commonSpanRgbaMAE": 16.25,
+      "preview": "dungeon_tileset.wall_module--wall_corner.png"
+    }
+  ],
+  "pond": {
+    "cell": 126,
+    "meaning": "diagnostic slot = maximum measured candidate dimension, NOT tileWidth/tileHeight; native sizes unscaled; gray slots are missing, not synthesized",
+    "layout": [
+      ["water_corner_nw", "water_edge_north", "water_corner_ne"],
+      [null, "center_water", "water_edge_east"],
+      [null, "water_edge_south", null]
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "front",
+    "rect": [0, 0, 410, 330],
+    "borderMax": 24,
+    "corePixels": 69512
+  },
+  {
+    "name": "back",
+    "rect": [0, 330, 410, 340],
+    "borderMax": 17,
+    "corePixels": 68522
+  },
+  {
+    "name": "chase",
+    "rect": [768, 0, 380, 330],
+    "borderMax": 17,
+    "corePixels": 61640
+  }
+]

@@ -1,0 +1,2848 @@
+[
+  {
+    "id": "overworld_tileset.grass",
+    "file": "overworld_tileset.png",
+    "name": "grass",
+    "componentId": 1,
+    "kind": "tile",
+    "coreRect": {
+      "x": 32,
+      "y": 30,
+      "width": 120,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 32,
+      "y": 30,
+      "width": 120,
+      "height": 119
+    },
+    "borderMaxAlpha": 215,
+    "borderPixelsAlpha128": 306,
+    "borderPixelsAlpha16": 442,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.darker_grass",
+    "file": "overworld_tileset.png",
+    "name": "darker_grass",
+    "componentId": 3,
+    "kind": "tile",
+    "coreRect": {
+      "x": 307,
+      "y": 30,
+      "width": 131,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 307,
+      "y": 30,
+      "width": 131,
+      "height": 119
+    },
+    "borderMaxAlpha": 201,
+    "borderPixelsAlpha128": 235,
+    "borderPixelsAlpha16": 462,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.dirt_path",
+    "file": "overworld_tileset.png",
+    "name": "dirt_path",
+    "componentId": 5,
+    "kind": "tile",
+    "coreRect": {
+      "x": 599,
+      "y": 30,
+      "width": 121,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 599,
+      "y": 30,
+      "width": 121,
+      "height": 119
+    },
+    "borderMaxAlpha": 186,
+    "borderPixelsAlpha128": 137,
+    "borderPixelsAlpha16": 434,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.dirt_corner_nw",
+    "file": "overworld_tileset.png",
+    "name": "dirt_corner_nw",
+    "componentId": 0,
+    "kind": "tile",
+    "coreRect": {
+      "x": 1158,
+      "y": 29,
+      "width": 121,
+      "height": 120
+    },
+    "sourceRect": {
+      "x": 1158,
+      "y": 29,
+      "width": 121,
+      "height": 120
+    },
+    "borderMaxAlpha": 235,
+    "borderPixelsAlpha128": 264,
+    "borderPixelsAlpha16": 384,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.dirt_corner_ne",
+    "file": "overworld_tileset.png",
+    "name": "dirt_corner_ne",
+    "componentId": 8,
+    "kind": "tile",
+    "coreRect": {
+      "x": 1017,
+      "y": 30,
+      "width": 123,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 1017,
+      "y": 30,
+      "width": 123,
+      "height": 119
+    },
+    "borderMaxAlpha": 212,
+    "borderPixelsAlpha128": 231,
+    "borderPixelsAlpha16": 444,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.dirt_corner_sw",
+    "file": "overworld_tileset.png",
+    "name": "dirt_corner_sw",
+    "componentId": 13,
+    "kind": "tile",
+    "coreRect": {
+      "x": 309,
+      "y": 167,
+      "width": 126,
+      "height": 124
+    },
+    "sourceRect": {
+      "x": 309,
+      "y": 167,
+      "width": 126,
+      "height": 124
+    },
+    "borderMaxAlpha": 227,
+    "borderPixelsAlpha128": 268,
+    "borderPixelsAlpha16": 468,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.dirt_corner_se",
+    "file": "overworld_tileset.png",
+    "name": "dirt_corner_se",
+    "componentId": 9,
+    "kind": "tile",
+    "coreRect": {
+      "x": 1296,
+      "y": 30,
+      "width": 101,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 1296,
+      "y": 30,
+      "width": 101,
+      "height": 119
+    },
+    "borderMaxAlpha": 226,
+    "borderPixelsAlpha128": 263,
+    "borderPixelsAlpha16": 401,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.stone_path",
+    "file": "overworld_tileset.png",
+    "name": "stone_path",
+    "componentId": 15,
+    "kind": "tile",
+    "coreRect": {
+      "x": 596,
+      "y": 167,
+      "width": 120,
+      "height": 125
+    },
+    "sourceRect": {
+      "x": 596,
+      "y": 167,
+      "width": 120,
+      "height": 125
+    },
+    "borderMaxAlpha": 234,
+    "borderPixelsAlpha128": 357,
+    "borderPixelsAlpha16": 461,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.stone_path_variant",
+    "file": "overworld_tileset.png",
+    "name": "stone_path_variant",
+    "componentId": 16,
+    "kind": "tile",
+    "coreRect": {
+      "x": 735,
+      "y": 167,
+      "width": 123,
+      "height": 124
+    },
+    "sourceRect": {
+      "x": 735,
+      "y": 167,
+      "width": 123,
+      "height": 124
+    },
+    "borderMaxAlpha": 236,
+    "borderPixelsAlpha128": 452,
+    "borderPixelsAlpha16": 471,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "overworld_tileset.cliff_edge",
+    "file": "overworld_tileset.png",
+    "name": "cliff_edge",
+    "componentId": 22,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 31,
+      "y": 309,
+      "width": 124,
+      "height": 140
+    },
+    "sourceRect": {
+      "x": 27,
+      "y": 305,
+      "width": 132,
+      "height": 148
+    },
+    "borderMaxAlpha": 11,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "CONNECTION_REVIEW_REQUIRED",
+    "note": "Cliff includes top cap and vertical face; modular connection unverified.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "overworld_tileset.cliff_corner",
+    "file": "overworld_tileset.png",
+    "name": "cliff_corner",
+    "componentId": 25,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 448,
+      "y": 309,
+      "width": 124,
+      "height": 155
+    },
+    "sourceRect": {
+      "x": 444,
+      "y": 305,
+      "width": 132,
+      "height": 163
+    },
+    "borderMaxAlpha": 8,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "CONNECTION_REVIEW_REQUIRED",
+    "note": "",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "overworld_tileset.rock",
+    "file": "overworld_tileset.png",
+    "name": "rock",
+    "componentId": 39,
+    "kind": "object",
+    "coreRect": {
+      "x": 232,
+      "y": 476,
+      "width": 111,
+      "height": 102
+    },
+    "sourceRect": {
+      "x": 228,
+      "y": 472,
+      "width": 119,
+      "height": 110
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.rock_small",
+    "file": "overworld_tileset.png",
+    "name": "rock_small",
+    "componentId": 51,
+    "kind": "object",
+    "coreRect": {
+      "x": 33,
+      "y": 510,
+      "width": 62,
+      "height": 47
+    },
+    "sourceRect": {
+      "x": 29,
+      "y": 506,
+      "width": 70,
+      "height": 55
+    },
+    "borderMaxAlpha": 2,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.stump",
+    "file": "overworld_tileset.png",
+    "name": "stump",
+    "componentId": 42,
+    "kind": "object",
+    "coreRect": {
+      "x": 509,
+      "y": 491,
+      "width": 95,
+      "height": 81
+    },
+    "sourceRect": {
+      "x": 505,
+      "y": 487,
+      "width": 103,
+      "height": 89
+    },
+    "borderMaxAlpha": 7,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.bush",
+    "file": "overworld_tileset.png",
+    "name": "bush",
+    "componentId": 61,
+    "kind": "object",
+    "coreRect": {
+      "x": 676,
+      "y": 605,
+      "width": 83,
+      "height": 94
+    },
+    "sourceRect": {
+      "x": 672,
+      "y": 601,
+      "width": 91,
+      "height": 102
+    },
+    "borderMaxAlpha": 3,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.flower",
+    "file": "overworld_tileset.png",
+    "name": "flower",
+    "componentId": 46,
+    "kind": "object",
+    "coreRect": {
+      "x": 1078,
+      "y": 502,
+      "width": 71,
+      "height": 71
+    },
+    "sourceRect": {
+      "x": 1074,
+      "y": 498,
+      "width": 79,
+      "height": 79
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.flower_blue",
+    "file": "overworld_tileset.png",
+    "name": "flower_blue",
+    "componentId": 47,
+    "kind": "object",
+    "coreRect": {
+      "x": 1175,
+      "y": 502,
+      "width": 68,
+      "height": 69
+    },
+    "sourceRect": {
+      "x": 1171,
+      "y": 498,
+      "width": 76,
+      "height": 77
+    },
+    "borderMaxAlpha": 3,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "overworld_tileset.fence",
+    "file": "overworld_tileset.png",
+    "name": "fence",
+    "componentId": 83,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 39,
+      "y": 839,
+      "width": 116,
+      "height": 76
+    },
+    "sourceRect": {
+      "x": 35,
+      "y": 835,
+      "width": 124,
+      "height": 84
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "CONNECTION_REVIEW_REQUIRED",
+    "note": "Independent fence prop; repeating rail endpoints unverified.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "overworld_tileset.signpost",
+    "file": "overworld_tileset.png",
+    "name": "signpost",
+    "componentId": 77,
+    "kind": "object",
+    "coreRect": {
+      "x": 573,
+      "y": 811,
+      "width": 84,
+      "height": 149
+    },
+    "sourceRect": {
+      "x": 569,
+      "y": 807,
+      "width": 92,
+      "height": 157
+    },
+    "borderMaxAlpha": 250,
+    "borderPixelsAlpha128": 21,
+    "borderPixelsAlpha16": 22,
+    "overlappingComponentBboxes": [75],
+    "foreignCorePixels": {
+      "75": 72
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "overworld_tileset.tree_large",
+    "file": "overworld_tileset.png",
+    "name": "tree_large",
+    "componentId": 53,
+    "kind": "object",
+    "coreRect": {
+      "x": 25,
+      "y": 578,
+      "width": 184,
+      "height": 256
+    },
+    "sourceRect": {
+      "x": 21,
+      "y": 574,
+      "width": 192,
+      "height": 264
+    },
+    "borderMaxAlpha": 250,
+    "borderPixelsAlpha128": 37,
+    "borderPixelsAlpha16": 41,
+    "overlappingComponentBboxes": [59],
+    "foreignCorePixels": {
+      "59": 156
+    },
+    "status": "HOLD",
+    "note": "HOLD: neighboring tree bbox overlaps; needs mask review.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "overworld_tileset.tree_medium",
+    "file": "overworld_tileset.png",
+    "name": "tree_medium",
+    "componentId": 55,
+    "kind": "object",
+    "coreRect": {
+      "x": 513,
+      "y": 587,
+      "width": 141,
+      "height": 168
+    },
+    "sourceRect": {
+      "x": 509,
+      "y": 583,
+      "width": 149,
+      "height": 176
+    },
+    "borderMaxAlpha": 252,
+    "borderPixelsAlpha128": 48,
+    "borderPixelsAlpha16": 52,
+    "overlappingComponentBboxes": [68],
+    "foreignCorePixels": {
+      "68": 401
+    },
+    "status": "HOLD",
+    "note": "HOLD: lower-right bush intrudes into the rectangular extent.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "overworld_tileset.tree_conifer",
+    "file": "overworld_tileset.png",
+    "name": "tree_conifer",
+    "componentId": 60,
+    "kind": "object",
+    "coreRect": {
+      "x": 365,
+      "y": 596,
+      "width": 134,
+      "height": 232
+    },
+    "sourceRect": {
+      "x": 361,
+      "y": 592,
+      "width": 142,
+      "height": 240
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.red_stall",
+    "file": "market_tileset.png",
+    "name": "red_stall",
+    "componentId": 0,
+    "kind": "object",
+    "coreRect": {
+      "x": 22,
+      "y": 12,
+      "width": 405,
+      "height": 383
+    },
+    "sourceRect": {
+      "x": 18,
+      "y": 8,
+      "width": 413,
+      "height": 391
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.blue_stall",
+    "file": "market_tileset.png",
+    "name": "blue_stall",
+    "componentId": 1,
+    "kind": "object",
+    "coreRect": {
+      "x": 446,
+      "y": 13,
+      "width": 387,
+      "height": 387
+    },
+    "sourceRect": {
+      "x": 442,
+      "y": 9,
+      "width": 395,
+      "height": 395
+    },
+    "borderMaxAlpha": 2,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.green_stall",
+    "file": "market_tileset.png",
+    "name": "green_stall",
+    "componentId": 2,
+    "kind": "object",
+    "coreRect": {
+      "x": 858,
+      "y": 13,
+      "width": 356,
+      "height": 389
+    },
+    "sourceRect": {
+      "x": 854,
+      "y": 9,
+      "width": 364,
+      "height": 397
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.tent",
+    "file": "market_tileset.png",
+    "name": "tent",
+    "componentId": 3,
+    "kind": "object",
+    "coreRect": {
+      "x": 1222,
+      "y": 26,
+      "width": 294,
+      "height": 395
+    },
+    "sourceRect": {
+      "x": 1218,
+      "y": 22,
+      "width": 302,
+      "height": 403
+    },
+    "borderMaxAlpha": 248,
+    "borderPixelsAlpha128": 27,
+    "borderPixelsAlpha16": 36,
+    "overlappingComponentBboxes": [7, 10],
+    "foreignCorePixels": {
+      "10": 48
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.cart",
+    "file": "market_tileset.png",
+    "name": "cart",
+    "componentId": 31,
+    "kind": "object",
+    "coreRect": {
+      "x": 22,
+      "y": 741,
+      "width": 341,
+      "height": 255
+    },
+    "sourceRect": {
+      "x": 18,
+      "y": 737,
+      "width": 349,
+      "height": 263
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.barrel",
+    "file": "market_tileset.png",
+    "name": "barrel",
+    "componentId": 7,
+    "kind": "object",
+    "coreRect": {
+      "x": 1108,
+      "y": 415,
+      "width": 117,
+      "height": 148
+    },
+    "sourceRect": {
+      "x": 1104,
+      "y": 411,
+      "width": 125,
+      "height": 156
+    },
+    "borderMaxAlpha": 8,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [3],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.barrel_hanging_plant_connected",
+    "file": "market_tileset.png",
+    "name": "barrel_hanging_plant_connected",
+    "componentId": 12,
+    "kind": "object",
+    "coreRect": {
+      "x": 1245,
+      "y": 426,
+      "width": 113,
+      "height": 331
+    },
+    "sourceRect": {
+      "x": 1241,
+      "y": 422,
+      "width": 121,
+      "height": 339
+    },
+    "borderMaxAlpha": 252,
+    "borderPixelsAlpha128": 236,
+    "borderPixelsAlpha16": 244,
+    "overlappingComponentBboxes": [10, 19, 20, 29],
+    "foreignCorePixels": {
+      "10": 310,
+      "19": 1795,
+      "20": 168,
+      "29": 439
+    },
+    "status": "HOLD",
+    "note": "HOLD: barrel and hanging flower basket join; not a standalone barrel.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.barrel_pair",
+    "file": "market_tileset.png",
+    "name": "barrel_pair",
+    "componentId": 10,
+    "kind": "object",
+    "coreRect": {
+      "x": 1356,
+      "y": 423,
+      "width": 153,
+      "height": 140
+    },
+    "sourceRect": {
+      "x": 1352,
+      "y": 419,
+      "width": 161,
+      "height": 148
+    },
+    "borderMaxAlpha": 245,
+    "borderPixelsAlpha128": 11,
+    "borderPixelsAlpha16": 14,
+    "overlappingComponentBboxes": [3, 12],
+    "foreignCorePixels": {
+      "3": 20
+    },
+    "status": "HOLD",
+    "note": "Two touching barrels; retain as a pair, never split automatically.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.crate_stack",
+    "file": "market_tileset.png",
+    "name": "crate_stack",
+    "componentId": 17,
+    "kind": "object",
+    "coreRect": {
+      "x": 846,
+      "y": 546,
+      "width": 103,
+      "height": 156
+    },
+    "sourceRect": {
+      "x": 842,
+      "y": 542,
+      "width": 111,
+      "height": 164
+    },
+    "borderMaxAlpha": 12,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [11],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Stacked boxes are one prop; not individual boxes.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.crate_cloth",
+    "file": "market_tileset.png",
+    "name": "crate_cloth",
+    "componentId": 18,
+    "kind": "object",
+    "coreRect": {
+      "x": 955,
+      "y": 568,
+      "width": 121,
+      "height": 110
+    },
+    "sourceRect": {
+      "x": 951,
+      "y": 564,
+      "width": 129,
+      "height": 118
+    },
+    "borderMaxAlpha": 11,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.crate_pair",
+    "file": "market_tileset.png",
+    "name": "crate_pair",
+    "componentId": 19,
+    "kind": "object",
+    "coreRect": {
+      "x": 1095,
+      "y": 571,
+      "width": 176,
+      "height": 102
+    },
+    "sourceRect": {
+      "x": 1091,
+      "y": 567,
+      "width": 184,
+      "height": 110
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [12],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: bbox overlap with hanging plant, but no foreign alpha>=128 pixel was found in this proposed rect. Conservative manual margin/shadow review remains; actual overlap is not confirmed.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.sacks",
+    "file": "market_tileset.png",
+    "name": "sacks",
+    "componentId": 11,
+    "kind": "object",
+    "coreRect": {
+      "x": 872,
+      "y": 424,
+      "width": 226,
+      "height": 130
+    },
+    "sourceRect": {
+      "x": 868,
+      "y": 420,
+      "width": 234,
+      "height": 138
+    },
+    "borderMaxAlpha": 251,
+    "borderPixelsAlpha128": 71,
+    "borderPixelsAlpha16": 73,
+    "overlappingComponentBboxes": [17],
+    "foreignCorePixels": {
+      "17": 591
+    },
+    "status": "HOLD",
+    "note": "Connected sack group; retain as group.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.sack_single",
+    "file": "market_tileset.png",
+    "name": "sack_single",
+    "componentId": 13,
+    "kind": "object",
+    "coreRect": {
+      "x": 742,
+      "y": 498,
+      "width": 95,
+      "height": 106
+    },
+    "sourceRect": {
+      "x": 738,
+      "y": 494,
+      "width": 103,
+      "height": 114
+    },
+    "borderMaxAlpha": 37,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 31,
+    "overlappingComponentBboxes": [9],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.fruit_box",
+    "file": "market_tileset.png",
+    "name": "fruit_box",
+    "componentId": 6,
+    "kind": "object",
+    "coreRect": {
+      "x": 394,
+      "y": 412,
+      "width": 116,
+      "height": 88
+    },
+    "sourceRect": {
+      "x": 390,
+      "y": 408,
+      "width": 124,
+      "height": 96
+    },
+    "borderMaxAlpha": 126,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 38,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.vegetable_box",
+    "file": "market_tileset.png",
+    "name": "vegetable_box",
+    "componentId": 14,
+    "kind": "object",
+    "coreRect": {
+      "x": 389,
+      "y": 508,
+      "width": 115,
+      "height": 87
+    },
+    "sourceRect": {
+      "x": 385,
+      "y": 504,
+      "width": 123,
+      "height": 95
+    },
+    "borderMaxAlpha": 11,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.vegetable_carrot",
+    "file": "market_tileset.png",
+    "name": "vegetable_carrot",
+    "componentId": 15,
+    "kind": "object",
+    "coreRect": {
+      "x": 518,
+      "y": 510,
+      "width": 96,
+      "height": 87
+    },
+    "sourceRect": {
+      "x": 514,
+      "y": 506,
+      "width": 104,
+      "height": 95
+    },
+    "borderMaxAlpha": 17,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 7,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.potion_shelf",
+    "file": "market_tileset.png",
+    "name": "potion_shelf",
+    "componentId": 21,
+    "kind": "object",
+    "coreRect": {
+      "x": 185,
+      "y": 587,
+      "width": 143,
+      "height": 129
+    },
+    "sourceRect": {
+      "x": 181,
+      "y": 583,
+      "width": 151,
+      "height": 137
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Shelf and potions are a single prop.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.potion_shelf_alt",
+    "file": "market_tileset.png",
+    "name": "potion_shelf_alt",
+    "componentId": 23,
+    "kind": "object",
+    "coreRect": {
+      "x": 25,
+      "y": 591,
+      "width": 141,
+      "height": 137
+    },
+    "sourceRect": {
+      "x": 21,
+      "y": 587,
+      "width": 149,
+      "height": 145
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.lantern",
+    "file": "market_tileset.png",
+    "name": "lantern",
+    "componentId": 32,
+    "kind": "object",
+    "coreRect": {
+      "x": 648,
+      "y": 744,
+      "width": 108,
+      "height": 224
+    },
+    "sourceRect": {
+      "x": 644,
+      "y": 740,
+      "width": 116,
+      "height": 232
+    },
+    "borderMaxAlpha": 19,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 16,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "Includes wooden post; lantern alone not isolated.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.sign",
+    "file": "market_tileset.png",
+    "name": "sign",
+    "componentId": 33,
+    "kind": "object",
+    "coreRect": {
+      "x": 516,
+      "y": 766,
+      "width": 121,
+      "height": 215
+    },
+    "sourceRect": {
+      "x": 512,
+      "y": 762,
+      "width": 129,
+      "height": 223
+    },
+    "borderMaxAlpha": 1,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.chalkboard",
+    "file": "market_tileset.png",
+    "name": "chalkboard",
+    "componentId": 36,
+    "kind": "object",
+    "coreRect": {
+      "x": 769,
+      "y": 821,
+      "width": 128,
+      "height": 142
+    },
+    "sourceRect": {
+      "x": 765,
+      "y": 817,
+      "width": 136,
+      "height": 150
+    },
+    "borderMaxAlpha": 14,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [29],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: bbox overlap with bunting post, but no foreign alpha>=128 pixel was found in this proposed rect. Conservative manual margin/shadow review remains; actual overlap is not confirmed.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "market_tileset.flower_box",
+    "file": "market_tileset.png",
+    "name": "flower_box",
+    "componentId": 26,
+    "kind": "object",
+    "coreRect": {
+      "x": 549,
+      "y": 621,
+      "width": 115,
+      "height": 95
+    },
+    "sourceRect": {
+      "x": 545,
+      "y": 617,
+      "width": 123,
+      "height": 103
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "market_tileset.flower_stand",
+    "file": "market_tileset.png",
+    "name": "flower_stand",
+    "componentId": 22,
+    "kind": "object",
+    "coreRect": {
+      "x": 1401,
+      "y": 589,
+      "width": 113,
+      "height": 184
+    },
+    "sourceRect": {
+      "x": 1397,
+      "y": 585,
+      "width": 121,
+      "height": 192
+    },
+    "borderMaxAlpha": 252,
+    "borderPixelsAlpha128": 98,
+    "borderPixelsAlpha16": 100,
+    "overlappingComponentBboxes": [20],
+    "foreignCorePixels": {
+      "20": 1972
+    },
+    "status": "HOLD",
+    "note": "HOLD: upper-left potted flower overlaps this bbox.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "garden_pond_tileset.center_water",
+    "file": "garden_pond_tileset.png",
+    "name": "center_water",
+    "componentId": 0,
+    "kind": "tile",
+    "coreRect": {
+      "x": 162,
+      "y": 28,
+      "width": 126,
+      "height": 125
+    },
+    "sourceRect": {
+      "x": 162,
+      "y": 28,
+      "width": 126,
+      "height": 125
+    },
+    "borderMaxAlpha": 244,
+    "borderPixelsAlpha128": 353,
+    "borderPixelsAlpha16": 474,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.center_water_alt",
+    "file": "garden_pond_tileset.png",
+    "name": "center_water_alt",
+    "componentId": 3,
+    "kind": "tile",
+    "coreRect": {
+      "x": 21,
+      "y": 29,
+      "width": 126,
+      "height": 124
+    },
+    "sourceRect": {
+      "x": 21,
+      "y": 29,
+      "width": 126,
+      "height": 124
+    },
+    "borderMaxAlpha": 239,
+    "borderPixelsAlpha128": 428,
+    "borderPixelsAlpha16": 475,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_edge_north",
+    "file": "garden_pond_tileset.png",
+    "name": "water_edge_north",
+    "componentId": 1,
+    "kind": "tile",
+    "coreRect": {
+      "x": 446,
+      "y": 28,
+      "width": 117,
+      "height": 125
+    },
+    "sourceRect": {
+      "x": 446,
+      "y": 28,
+      "width": 117,
+      "height": 125
+    },
+    "borderMaxAlpha": 233,
+    "borderPixelsAlpha128": 332,
+    "borderPixelsAlpha16": 458,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_edge_east",
+    "file": "garden_pond_tileset.png",
+    "name": "water_edge_east",
+    "componentId": 4,
+    "kind": "tile",
+    "coreRect": {
+      "x": 304,
+      "y": 29,
+      "width": 126,
+      "height": 124
+    },
+    "sourceRect": {
+      "x": 304,
+      "y": 29,
+      "width": 126,
+      "height": 124
+    },
+    "borderMaxAlpha": 228,
+    "borderPixelsAlpha128": 401,
+    "borderPixelsAlpha16": 477,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_edge_south",
+    "file": "garden_pond_tileset.png",
+    "name": "water_edge_south",
+    "componentId": 25,
+    "kind": "tile",
+    "coreRect": {
+      "x": 21,
+      "y": 167,
+      "width": 126,
+      "height": 119
+    },
+    "sourceRect": {
+      "x": 21,
+      "y": 167,
+      "width": 126,
+      "height": 119
+    },
+    "borderMaxAlpha": 230,
+    "borderPixelsAlpha128": 394,
+    "borderPixelsAlpha16": 466,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_corner_nw",
+    "file": "garden_pond_tileset.png",
+    "name": "water_corner_nw",
+    "componentId": 6,
+    "kind": "tile",
+    "coreRect": {
+      "x": 721,
+      "y": 29,
+      "width": 124,
+      "height": 121
+    },
+    "sourceRect": {
+      "x": 721,
+      "y": 29,
+      "width": 124,
+      "height": 121
+    },
+    "borderMaxAlpha": 238,
+    "borderPixelsAlpha128": 348,
+    "borderPixelsAlpha16": 466,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Land across north/west; convex water corner. Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_corner_ne",
+    "file": "garden_pond_tileset.png",
+    "name": "water_corner_ne",
+    "componentId": 5,
+    "kind": "tile",
+    "coreRect": {
+      "x": 580,
+      "y": 29,
+      "width": 123,
+      "height": 122
+    },
+    "sourceRect": {
+      "x": 580,
+      "y": 29,
+      "width": 123,
+      "height": 122
+    },
+    "borderMaxAlpha": 234,
+    "borderPixelsAlpha128": 328,
+    "borderPixelsAlpha16": 467,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Land across north/east; convex water corner. Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_inner_corner",
+    "file": "garden_pond_tileset.png",
+    "name": "water_inner_corner",
+    "componentId": 24,
+    "kind": "tile",
+    "coreRect": {
+      "x": 580,
+      "y": 165,
+      "width": 123,
+      "height": 121
+    },
+    "sourceRect": {
+      "x": 580,
+      "y": 165,
+      "width": 123,
+      "height": 121
+    },
+    "borderMaxAlpha": 241,
+    "borderPixelsAlpha128": 326,
+    "borderPixelsAlpha16": 388,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Small land protrusion at NW: concave water boundary; orientation is visual only. Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.water_outer_corner",
+    "file": "garden_pond_tileset.png",
+    "name": "water_outer_corner",
+    "componentId": 23,
+    "kind": "tile",
+    "coreRect": {
+      "x": 445,
+      "y": 165,
+      "width": 119,
+      "height": 121
+    },
+    "sourceRect": {
+      "x": 445,
+      "y": 165,
+      "width": 119,
+      "height": 121
+    },
+    "borderMaxAlpha": 225,
+    "borderPixelsAlpha128": 121,
+    "borderPixelsAlpha16": 392,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Water rounds into grass at NW. Terminology depends on water/land convention. Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "garden_pond_tileset.lily_pad",
+    "file": "garden_pond_tileset.png",
+    "name": "lily_pad",
+    "componentId": 8,
+    "kind": "object",
+    "coreRect": {
+      "x": 1002,
+      "y": 44,
+      "width": 80,
+      "height": 68
+    },
+    "sourceRect": {
+      "x": 998,
+      "y": 40,
+      "width": 88,
+      "height": 76
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.lily_pad_small",
+    "file": "garden_pond_tileset.png",
+    "name": "lily_pad_small",
+    "componentId": 9,
+    "kind": "object",
+    "coreRect": {
+      "x": 1101,
+      "y": 47,
+      "width": 58,
+      "height": 47
+    },
+    "sourceRect": {
+      "x": 1097,
+      "y": 43,
+      "width": 66,
+      "height": 55
+    },
+    "borderMaxAlpha": 3,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.lotus",
+    "file": "garden_pond_tileset.png",
+    "name": "lotus",
+    "componentId": 7,
+    "kind": "object",
+    "coreRect": {
+      "x": 1183,
+      "y": 43,
+      "width": 69,
+      "height": 62
+    },
+    "sourceRect": {
+      "x": 1179,
+      "y": 39,
+      "width": 77,
+      "height": 70
+    },
+    "borderMaxAlpha": 8,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [14],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.lotus_white",
+    "file": "garden_pond_tileset.png",
+    "name": "lotus_white",
+    "componentId": 14,
+    "kind": "object",
+    "coreRect": {
+      "x": 1251,
+      "y": 106,
+      "width": 61,
+      "height": 47
+    },
+    "sourceRect": {
+      "x": 1247,
+      "y": 102,
+      "width": 69,
+      "height": 55
+    },
+    "borderMaxAlpha": 229,
+    "borderPixelsAlpha128": 6,
+    "borderPixelsAlpha16": 10,
+    "overlappingComponentBboxes": [7, 13, 19],
+    "foreignCorePixels": {
+      "13": 8
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "garden_pond_tileset.reed",
+    "file": "garden_pond_tileset.png",
+    "name": "reed",
+    "componentId": 28,
+    "kind": "object",
+    "coreRect": {
+      "x": 1089,
+      "y": 205,
+      "width": 90,
+      "height": 118
+    },
+    "sourceRect": {
+      "x": 1085,
+      "y": 201,
+      "width": 98,
+      "height": 126
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [36],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.cattail",
+    "file": "garden_pond_tileset.png",
+    "name": "cattail",
+    "componentId": 16,
+    "kind": "object",
+    "coreRect": {
+      "x": 1409,
+      "y": 110,
+      "width": 95,
+      "height": 198
+    },
+    "sourceRect": {
+      "x": 1405,
+      "y": 106,
+      "width": 103,
+      "height": 206
+    },
+    "borderMaxAlpha": 222,
+    "borderPixelsAlpha128": 14,
+    "borderPixelsAlpha16": 18,
+    "overlappingComponentBboxes": [10, 11],
+    "foreignCorePixels": {
+      "11": 14
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "garden_pond_tileset.cattail_small",
+    "file": "garden_pond_tileset.png",
+    "name": "cattail_small",
+    "componentId": 19,
+    "kind": "object",
+    "coreRect": {
+      "x": 1308,
+      "y": 142,
+      "width": 83,
+      "height": 182
+    },
+    "sourceRect": {
+      "x": 1304,
+      "y": 138,
+      "width": 91,
+      "height": 190
+    },
+    "borderMaxAlpha": 246,
+    "borderPixelsAlpha128": 13,
+    "borderPixelsAlpha16": 14,
+    "overlappingComponentBboxes": [14, 38],
+    "foreignCorePixels": {
+      "14": 36
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "garden_pond_tileset.flower_clusters",
+    "file": "garden_pond_tileset.png",
+    "name": "flower_clusters",
+    "componentId": 62,
+    "kind": "object",
+    "coreRect": {
+      "x": 239,
+      "y": 744,
+      "width": 101,
+      "height": 86
+    },
+    "sourceRect": {
+      "x": 235,
+      "y": 740,
+      "width": 109,
+      "height": 94
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.flowers_white",
+    "file": "garden_pond_tileset.png",
+    "name": "flowers_white",
+    "componentId": 63,
+    "kind": "object",
+    "coreRect": {
+      "x": 362,
+      "y": 744,
+      "width": 107,
+      "height": 86
+    },
+    "sourceRect": {
+      "x": 358,
+      "y": 740,
+      "width": 115,
+      "height": 94
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.mossy_rocks",
+    "file": "garden_pond_tileset.png",
+    "name": "mossy_rocks",
+    "componentId": 37,
+    "kind": "object",
+    "coreRect": {
+      "x": 744,
+      "y": 303,
+      "width": 90,
+      "height": 80
+    },
+    "sourceRect": {
+      "x": 740,
+      "y": 299,
+      "width": 98,
+      "height": 88
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.mossy_rocks_large",
+    "file": "garden_pond_tileset.png",
+    "name": "mossy_rocks_large",
+    "componentId": 85,
+    "kind": "object",
+    "coreRect": {
+      "x": 438,
+      "y": 909,
+      "width": 126,
+      "height": 92
+    },
+    "sourceRect": {
+      "x": 434,
+      "y": 905,
+      "width": 134,
+      "height": 100
+    },
+    "borderMaxAlpha": 7,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.bridge_stone",
+    "file": "garden_pond_tileset.png",
+    "name": "bridge_stone",
+    "componentId": 43,
+    "kind": "object",
+    "coreRect": {
+      "x": 189,
+      "y": 439,
+      "width": 279,
+      "height": 138
+    },
+    "sourceRect": {
+      "x": 185,
+      "y": 435,
+      "width": 287,
+      "height": 146
+    },
+    "borderMaxAlpha": 12,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Whole curved span, not a repeating segment.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.bridge_stone_flat",
+    "file": "garden_pond_tileset.png",
+    "name": "bridge_stone_flat",
+    "componentId": 46,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 478,
+      "y": 453,
+      "width": 177,
+      "height": 126
+    },
+    "sourceRect": {
+      "x": 474,
+      "y": 449,
+      "width": 185,
+      "height": 134
+    },
+    "borderMaxAlpha": 10,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "CONNECTION_REVIEW_REQUIRED",
+    "note": "Connection to other spans needs testing.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "garden_pond_tileset.bridge_wood",
+    "file": "garden_pond_tileset.png",
+    "name": "bridge_wood",
+    "componentId": 52,
+    "kind": "object",
+    "coreRect": {
+      "x": 191,
+      "y": 587,
+      "width": 272,
+      "height": 140
+    },
+    "sourceRect": {
+      "x": 187,
+      "y": 583,
+      "width": 280,
+      "height": 148
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Whole curved span.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.stone_pillar",
+    "file": "garden_pond_tileset.png",
+    "name": "stone_pillar",
+    "componentId": 50,
+    "kind": "object",
+    "coreRect": {
+      "x": 1029,
+      "y": 512,
+      "width": 86,
+      "height": 195
+    },
+    "sourceRect": {
+      "x": 1025,
+      "y": 508,
+      "width": 94,
+      "height": 203
+    },
+    "borderMaxAlpha": 12,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.offering_spot",
+    "file": "garden_pond_tileset.png",
+    "name": "offering_spot",
+    "componentId": 49,
+    "kind": "object",
+    "coreRect": {
+      "x": 1219,
+      "y": 504,
+      "width": 291,
+      "height": 186
+    },
+    "sourceRect": {
+      "x": 1215,
+      "y": 500,
+      "width": 299,
+      "height": 194
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Decorative stone basin with flowers; semantic offering role only a candidate.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "garden_pond_tileset.orb_pillar",
+    "file": "garden_pond_tileset.png",
+    "name": "orb_pillar",
+    "componentId": 48,
+    "kind": "object",
+    "coreRect": {
+      "x": 900,
+      "y": 492,
+      "width": 122,
+      "height": 214
+    },
+    "sourceRect": {
+      "x": 896,
+      "y": 488,
+      "width": 130,
+      "height": 222
+    },
+    "borderMaxAlpha": 245,
+    "borderPixelsAlpha128": 21,
+    "borderPixelsAlpha16": 24,
+    "overlappingComponentBboxes": [36],
+    "foreignCorePixels": {
+      "36": 59
+    },
+    "status": "HOLD",
+    "note": "HOLD: upper bbox overlaps neighboring flower/reed composite.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "garden_pond_tileset.flower_reed_composite",
+    "file": "garden_pond_tileset.png",
+    "name": "flower_reed_composite",
+    "componentId": 36,
+    "kind": "object",
+    "coreRect": {
+      "x": 945,
+      "y": 302,
+      "width": 293,
+      "height": 198
+    },
+    "sourceRect": {
+      "x": 941,
+      "y": 298,
+      "width": 301,
+      "height": 206
+    },
+    "borderMaxAlpha": 251,
+    "borderPixelsAlpha128": 192,
+    "borderPixelsAlpha16": 205,
+    "overlappingComponentBboxes": [20, 28, 33, 48],
+    "foreignCorePixels": {
+      "20": 278,
+      "28": 993,
+      "33": 799,
+      "48": 314
+    },
+    "status": "HOLD",
+    "note": "HOLD: touches neighboring rock bbox; grouping unclear.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.floor",
+    "file": "dungeon_tileset.png",
+    "name": "floor",
+    "componentId": 3,
+    "kind": "tile",
+    "coreRect": {
+      "x": 25,
+      "y": 20,
+      "width": 120,
+      "height": 122
+    },
+    "sourceRect": {
+      "x": 25,
+      "y": 20,
+      "width": 120,
+      "height": 122
+    },
+    "borderMaxAlpha": 241,
+    "borderPixelsAlpha128": 443,
+    "borderPixelsAlpha16": 466,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop. Inset6 improves appearance but cuts masonry pattern; seam alignment still needs review.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "dungeon_tileset.floor_variant",
+    "file": "dungeon_tileset.png",
+    "name": "floor_variant",
+    "componentId": 4,
+    "kind": "tile",
+    "coreRect": {
+      "x": 154,
+      "y": 20,
+      "width": 119,
+      "height": 122
+    },
+    "sourceRect": {
+      "x": 154,
+      "y": 20,
+      "width": 119,
+      "height": 122
+    },
+    "borderMaxAlpha": 245,
+    "borderPixelsAlpha128": 454,
+    "borderPixelsAlpha16": 466,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "dungeon_tileset.cracked_floor",
+    "file": "dungeon_tileset.png",
+    "name": "cracked_floor",
+    "componentId": 9,
+    "kind": "tile",
+    "coreRect": {
+      "x": 25,
+      "y": 149,
+      "width": 120,
+      "height": 122
+    },
+    "sourceRect": {
+      "x": 25,
+      "y": 149,
+      "width": 120,
+      "height": 122
+    },
+    "borderMaxAlpha": 238,
+    "borderPixelsAlpha128": 363,
+    "borderPixelsAlpha16": 458,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "NOT_PRODUCTION_TILE",
+    "note": "Core self-repeat is diagnostic; corners require matching neighboring edges, not self-repeat. Inset6 is not a production crop.",
+    "seamStatus": "CORE_SEAM_FAILED"
+  },
+  {
+    "id": "dungeon_tileset.wall",
+    "file": "dungeon_tileset.png",
+    "name": "wall",
+    "componentId": 2,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 552,
+      "y": 19,
+      "width": 249,
+      "height": 306
+    },
+    "sourceRect": {
+      "x": 548,
+      "y": 15,
+      "width": 257,
+      "height": 314
+    },
+    "borderMaxAlpha": 253,
+    "borderPixelsAlpha128": 159,
+    "borderPixelsAlpha16": 161,
+    "overlappingComponentBboxes": [13, 14],
+    "foreignCorePixels": {
+      "13": 4231,
+      "14": 12286
+    },
+    "status": "HOLD",
+    "note": "HOLD: long wall and descending pillar are one connected region.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "dungeon_tileset.wall_module",
+    "file": "dungeon_tileset.png",
+    "name": "wall_module",
+    "componentId": 0,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 825,
+      "y": 11,
+      "width": 134,
+      "height": 185
+    },
+    "sourceRect": {
+      "x": 821,
+      "y": 7,
+      "width": 142,
+      "height": 193
+    },
+    "borderMaxAlpha": 17,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 1,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "L-shaped cap/post termination; cannot assume a straight repeating wall.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "dungeon_tileset.wall_corner",
+    "file": "dungeon_tileset.png",
+    "name": "wall_corner",
+    "componentId": 1,
+    "kind": "mixed",
+    "coreRect": {
+      "x": 980,
+      "y": 15,
+      "width": 197,
+      "height": 204
+    },
+    "sourceRect": {
+      "x": 976,
+      "y": 11,
+      "width": 205,
+      "height": 212
+    },
+    "borderMaxAlpha": 9,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "CONNECTION_REVIEW_REQUIRED",
+    "note": "Whole corner prop; adjoining elevations/perspective need matching.",
+    "seamStatus": "CONNECTION_UNVERIFIED"
+  },
+  {
+    "id": "dungeon_tileset.arch",
+    "file": "dungeon_tileset.png",
+    "name": "arch",
+    "componentId": 8,
+    "kind": "object",
+    "coreRect": {
+      "x": 1198,
+      "y": 43,
+      "width": 163,
+      "height": 171
+    },
+    "sourceRect": {
+      "x": 1194,
+      "y": 39,
+      "width": 171,
+      "height": 179
+    },
+    "borderMaxAlpha": 3,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.doorway",
+    "file": "dungeon_tileset.png",
+    "name": "doorway",
+    "componentId": 16,
+    "kind": "object",
+    "coreRect": {
+      "x": 874,
+      "y": 228,
+      "width": 148,
+      "height": 182
+    },
+    "sourceRect": {
+      "x": 870,
+      "y": 224,
+      "width": 156,
+      "height": 190
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.stairs",
+    "file": "dungeon_tileset.png",
+    "name": "stairs",
+    "componentId": 18,
+    "kind": "object",
+    "coreRect": {
+      "x": 1240,
+      "y": 242,
+      "width": 157,
+      "height": 169
+    },
+    "sourceRect": {
+      "x": 1236,
+      "y": 238,
+      "width": 165,
+      "height": 177
+    },
+    "borderMaxAlpha": 5,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.pillar",
+    "file": "dungeon_tileset.png",
+    "name": "pillar",
+    "componentId": 25,
+    "kind": "object",
+    "coreRect": {
+      "x": 684,
+      "y": 355,
+      "width": 73,
+      "height": 155
+    },
+    "sourceRect": {
+      "x": 680,
+      "y": 351,
+      "width": 81,
+      "height": 163
+    },
+    "borderMaxAlpha": 3,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [45],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.pillar_tall",
+    "file": "dungeon_tileset.png",
+    "name": "pillar_tall",
+    "componentId": 26,
+    "kind": "object",
+    "coreRect": {
+      "x": 783,
+      "y": 359,
+      "width": 70,
+      "height": 179
+    },
+    "sourceRect": {
+      "x": 779,
+      "y": 355,
+      "width": 78,
+      "height": 187
+    },
+    "borderMaxAlpha": 24,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 8,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.broken_pillar",
+    "file": "dungeon_tileset.png",
+    "name": "broken_pillar",
+    "componentId": 34,
+    "kind": "object",
+    "coreRect": {
+      "x": 865,
+      "y": 426,
+      "width": 100,
+      "height": 166
+    },
+    "sourceRect": {
+      "x": 861,
+      "y": 422,
+      "width": 108,
+      "height": 174
+    },
+    "borderMaxAlpha": 10,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.iron_gate",
+    "file": "dungeon_tileset.png",
+    "name": "iron_gate",
+    "componentId": 17,
+    "kind": "object",
+    "coreRect": {
+      "x": 1050,
+      "y": 228,
+      "width": 169,
+      "height": 182
+    },
+    "sourceRect": {
+      "x": 1046,
+      "y": 224,
+      "width": 177,
+      "height": 190
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.torch",
+    "file": "dungeon_tileset.png",
+    "name": "torch",
+    "componentId": 54,
+    "kind": "object",
+    "coreRect": {
+      "x": 24,
+      "y": 613,
+      "width": 54,
+      "height": 123
+    },
+    "sourceRect": {
+      "x": 20,
+      "y": 609,
+      "width": 62,
+      "height": 131
+    },
+    "borderMaxAlpha": 231,
+    "borderPixelsAlpha128": 8,
+    "borderPixelsAlpha16": 11,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: component bbox misses detached flame tips/glow; full effect extent not established.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.brazier",
+    "file": "dungeon_tileset.png",
+    "name": "brazier",
+    "componentId": 59,
+    "kind": "object",
+    "coreRect": {
+      "x": 237,
+      "y": 619,
+      "width": 83,
+      "height": 132
+    },
+    "sourceRect": {
+      "x": 233,
+      "y": 615,
+      "width": 91,
+      "height": 140
+    },
+    "borderMaxAlpha": 151,
+    "borderPixelsAlpha128": 3,
+    "borderPixelsAlpha16": 15,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: detached flame pixels/glow outside core.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.rubble",
+    "file": "dungeon_tileset.png",
+    "name": "rubble",
+    "componentId": 77,
+    "kind": "object",
+    "coreRect": {
+      "x": 25,
+      "y": 903,
+      "width": 133,
+      "height": 100
+    },
+    "sourceRect": {
+      "x": 21,
+      "y": 899,
+      "width": 141,
+      "height": 108
+    },
+    "borderMaxAlpha": 245,
+    "borderPixelsAlpha128": 24,
+    "borderPixelsAlpha16": 27,
+    "overlappingComponentBboxes": [69],
+    "foreignCorePixels": {
+      "69": 64
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.cobweb",
+    "file": "dungeon_tileset.png",
+    "name": "cobweb",
+    "componentId": 55,
+    "kind": "object",
+    "coreRect": {
+      "x": 601,
+      "y": 616,
+      "width": 88,
+      "height": 106
+    },
+    "sourceRect": {
+      "x": 597,
+      "y": 612,
+      "width": 96,
+      "height": 114
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "Triangular backing is part of pixels, not a clean standalone web. HOLD.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.cobweb_loose",
+    "file": "dungeon_tileset.png",
+    "name": "cobweb_loose",
+    "componentId": 58,
+    "kind": "object",
+    "coreRect": {
+      "x": 896,
+      "y": 616,
+      "width": 64,
+      "height": 91
+    },
+    "sourceRect": {
+      "x": 892,
+      "y": 612,
+      "width": 72,
+      "height": 99
+    },
+    "borderMaxAlpha": 230,
+    "borderPixelsAlpha128": 16,
+    "borderPixelsAlpha16": 27,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: thin strands below alpha128 are omitted by core bbox.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "dungeon_tileset.crate",
+    "file": "dungeon_tileset.png",
+    "name": "crate",
+    "componentId": 72,
+    "kind": "object",
+    "coreRect": {
+      "x": 29,
+      "y": 786,
+      "width": 91,
+      "height": 99
+    },
+    "sourceRect": {
+      "x": 25,
+      "y": 782,
+      "width": 99,
+      "height": 107
+    },
+    "borderMaxAlpha": 6,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.chest",
+    "file": "dungeon_tileset.png",
+    "name": "chest",
+    "componentId": 71,
+    "kind": "object",
+    "coreRect": {
+      "x": 419,
+      "y": 784,
+      "width": 99,
+      "height": 96
+    },
+    "sourceRect": {
+      "x": 415,
+      "y": 780,
+      "width": 107,
+      "height": 104
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.chest_open",
+    "file": "dungeon_tileset.png",
+    "name": "chest_open",
+    "componentId": 76,
+    "kind": "object",
+    "coreRect": {
+      "x": 432,
+      "y": 895,
+      "width": 114,
+      "height": 110
+    },
+    "sourceRect": {
+      "x": 428,
+      "y": 891,
+      "width": 122,
+      "height": 118
+    },
+    "borderMaxAlpha": 2,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [70],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.empty_churu_pillar",
+    "file": "dungeon_tileset.png",
+    "name": "empty_churu_pillar",
+    "componentId": 64,
+    "kind": "object",
+    "coreRect": {
+      "x": 1045,
+      "y": 632,
+      "width": 133,
+      "height": 311
+    },
+    "sourceRect": {
+      "x": 1041,
+      "y": 628,
+      "width": 141,
+      "height": 319
+    },
+    "borderMaxAlpha": 7,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Empty top; existing cat crest/round decoration remains.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.empty_churu_pillar_alt",
+    "file": "dungeon_tileset.png",
+    "name": "empty_churu_pillar_alt",
+    "componentId": 63,
+    "kind": "object",
+    "coreRect": {
+      "x": 1211,
+      "y": 629,
+      "width": 132,
+      "height": 314
+    },
+    "sourceRect": {
+      "x": 1207,
+      "y": 625,
+      "width": 140,
+      "height": 322
+    },
+    "borderMaxAlpha": 4,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Empty top; cat emblem remains.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "dungeon_tileset.cat_pillar_composite",
+    "file": "dungeon_tileset.png",
+    "name": "cat_pillar_composite",
+    "componentId": 53,
+    "kind": "excluded",
+    "coreRect": {
+      "x": 1384,
+      "y": 597,
+      "width": 126,
+      "height": 362
+    },
+    "sourceRect": {
+      "x": 1380,
+      "y": 593,
+      "width": 134,
+      "height": 370
+    },
+    "borderMaxAlpha": 221,
+    "borderPixelsAlpha128": 2,
+    "borderPixelsAlpha16": 9,
+    "overlappingComponentBboxes": [52, 65],
+    "foreignCorePixels": {
+      "52": 226,
+      "65": 153
+    },
+    "status": "EXCLUDED",
+    "note": "Excluded: cat atop pillar; use items/golden_cat_world.png separately.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "background.legacy_roof",
+    "file": "background.png",
+    "name": "legacy_roof",
+    "componentId": 20,
+    "kind": "object",
+    "coreRect": {
+      "x": 601,
+      "y": 155,
+      "width": 143,
+      "height": 144
+    },
+    "sourceRect": {
+      "x": 597,
+      "y": 151,
+      "width": 151,
+      "height": 152
+    },
+    "borderMaxAlpha": 0,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [19],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "Existing Hub source is a different manually defined rect. New set lacks a detached house roof equivalent.",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "background.legacy_barrel",
+    "file": "background.png",
+    "name": "legacy_barrel",
+    "componentId": 24,
+    "kind": "object",
+    "coreRect": {
+      "x": 240,
+      "y": 223,
+      "width": 48,
+      "height": 65
+    },
+    "sourceRect": {
+      "x": 236,
+      "y": 219,
+      "width": 56,
+      "height": 73
+    },
+    "borderMaxAlpha": 0,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [19, 25],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  },
+  {
+    "id": "background.legacy_potion_shelf",
+    "file": "background.png",
+    "name": "legacy_potion_shelf",
+    "componentId": 28,
+    "kind": "object",
+    "coreRect": {
+      "x": 0,
+      "y": 384,
+      "width": 192,
+      "height": 73
+    },
+    "sourceRect": {
+      "x": 0,
+      "y": 380,
+      "width": 196,
+      "height": 81
+    },
+    "borderMaxAlpha": 255,
+    "borderPixelsAlpha128": 73,
+    "borderPixelsAlpha16": 73,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "HOLD",
+    "note": "HOLD: multiple shelf props touch; not a single isolated shelf.",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "trees.legacy_tree",
+    "file": "trees.png",
+    "name": "legacy_tree",
+    "componentId": 3,
+    "kind": "object",
+    "coreRect": {
+      "x": 257,
+      "y": 0,
+      "width": 62,
+      "height": 63
+    },
+    "sourceRect": {
+      "x": 253,
+      "y": 0,
+      "width": 70,
+      "height": 67
+    },
+    "borderMaxAlpha": 255,
+    "borderPixelsAlpha128": 121,
+    "borderPixelsAlpha16": 140,
+    "overlappingComponentBboxes": [0, 2, 12],
+    "foreignCorePixels": {
+      "0": 254,
+      "2": 29,
+      "12": 21
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "trees.legacy_conifer",
+    "file": "trees.png",
+    "name": "legacy_conifer",
+    "componentId": 4,
+    "kind": "object",
+    "coreRect": {
+      "x": 352,
+      "y": 0,
+      "width": 32,
+      "height": 32
+    },
+    "sourceRect": {
+      "x": 348,
+      "y": 0,
+      "width": 40,
+      "height": 36
+    },
+    "borderMaxAlpha": 255,
+    "borderPixelsAlpha128": 55,
+    "borderPixelsAlpha16": 60,
+    "overlappingComponentBboxes": [0, 13],
+    "foreignCorePixels": {
+      "0": 32,
+      "13": 13
+    },
+    "status": "HOLD",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE"
+  },
+  {
+    "id": "trees.legacy_stump",
+    "file": "trees.png",
+    "name": "legacy_stump",
+    "componentId": 16,
+    "kind": "object",
+    "coreRect": {
+      "x": 133,
+      "y": 40,
+      "width": 25,
+      "height": 19
+    },
+    "sourceRect": {
+      "x": 129,
+      "y": 36,
+      "width": 33,
+      "height": 27
+    },
+    "borderMaxAlpha": 7,
+    "borderPixelsAlpha128": 0,
+    "borderPixelsAlpha16": 0,
+    "overlappingComponentBboxes": [],
+    "foreignCorePixels": {},
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "note": "",
+    "seamStatus": "NOT_APPLICABLE",
+    "review": "Connected foreground ownership + border-alpha check + visual review of contact sheet; safe as an isolated prototype prop, not a repeating tile."
+  }
+]

@@ -1,0 +1,1106 @@
+{
+  "results": [
+    "Hub movement, house collision, existing About dialog",
+    "Hub left-zone transition, fade-out/in, input lock, single start, explicit entry spawn",
+    "Four stationary NPCs, two ambient NPCs, named manifest props",
+    "All four greetings/choices/replies/Exit/Escape, dialogue movement lock, replay resets, canvas focus return",
+    "Stall/cart/barrel/crate and stationary NPC foot collisions",
+    "Central path is traversable from bottom to back",
+    "Actual display list sorts player behind/in front of stall by foot Y",
+    "Chicken/bird idle/random walk, bounded areas, no obstacle penetration, foot depth (9s sampling)",
+    "All four NPC front interaction ranges reachable from entry using existing foot obstacles (4px flood fill)",
+    "Actual ambient helper stops at area boundary and real stall footprint in isolated fixtures",
+    "Market→Hub return spawn and repeat round trip; one key listener, one Canvas",
+    "No console/page/network errors, no mobile horizontal overflow"
+  ],
+  "errors": [],
+  "failures": [],
+  "transitions": ["market-scene", "portfolio", "market-scene"],
+  "ambientSamples": [
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 208.40447999999992,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 538.611200000001,
+        "y": 343.3947999999999,
+        "state": "RANDOM_WALK",
+        "depth": 343.3947999999999,
+        "frame": 7,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 208.40447999999992,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 544.6131200000011,
+        "y": 343.3947999999999,
+        "state": "RANDOM_WALK",
+        "depth": 343.3947999999999,
+        "frame": 7,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 213.60287999999989,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 8,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 219.6043199999999,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 7,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 225.60407999999998,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 7,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 229.20456000000001,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 6,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 229.20456000000001,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 6,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 229.20456000000001,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 6,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 229.20456000000001,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 6,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 343.3947999999999,
+        "state": "IDLE",
+        "depth": 343.3947999999999,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 229.20456000000001,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 6,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 339.79552,
+        "state": "RANDOM_WALK",
+        "depth": 339.79552,
+        "frame": 10,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 228.00408000000002,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 4,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 333.7948,
+        "state": "RANDOM_WALK",
+        "depth": 333.7948,
+        "frame": 10,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 221.61336,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 5,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 327.40408,
+        "state": "RANDOM_WALK",
+        "depth": 327.40408,
+        "frame": 11,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.8131200000012,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 547.0097600000012,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 7,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 217.60440000000008,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 553.0162400000012,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 8,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 212.79408000000015,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 5,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 559.0241600000011,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 8,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 206.80608000000018,
+        "y": 357.2009599999998,
+        "state": "RANDOM_WALK",
+        "depth": 357.2009599999998,
+        "frame": 4,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.2009599999998,
+        "state": "IDLE",
+        "depth": 357.2009599999998,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 562.6068800000011,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 6,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 558.204320000001,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 5,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 552.1947200000008,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 4,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 546.1961600000006,
+        "y": 325.3996,
+        "state": "RANDOM_WALK",
+        "depth": 325.3996,
+        "frame": 4,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 205.60392000000016,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 0,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 3,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 204.39912000000015,
+        "y": 357.60079999999977,
+        "state": "RANDOM_WALK",
+        "depth": 357.60079999999977,
+        "frame": 4,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 3,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 198.3991200000002,
+        "y": 357.60079999999977,
+        "state": "RANDOM_WALK",
+        "depth": 357.60079999999977,
+        "frame": 5,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 325.3996,
+        "state": "IDLE",
+        "depth": 325.3996,
+        "frame": 3,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 192.39960000000028,
+        "y": 357.60079999999977,
+        "state": "RANDOM_WALK",
+        "depth": 357.60079999999977,
+        "frame": 5,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 320.2002400000001,
+        "state": "IDLE",
+        "depth": 320.2002400000001,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 186.39936000000037,
+        "y": 357.60079999999977,
+        "state": "RANDOM_WALK",
+        "depth": 357.60079999999977,
+        "frame": 4,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 320.2002400000001,
+        "state": "IDLE",
+        "depth": 320.2002400000001,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ],
+    [
+      {
+        "name": "market-npc-chicken",
+        "x": 183.20664000000042,
+        "y": 357.60079999999977,
+        "state": "IDLE",
+        "depth": 357.60079999999977,
+        "frame": 3,
+        "area": {
+          "x": 178,
+          "y": 315,
+          "width": 130,
+          "height": 43
+        }
+      },
+      {
+        "name": "market-npc-bird",
+        "x": 545.7987200000007,
+        "y": 320.2002400000001,
+        "state": "IDLE",
+        "depth": 320.2002400000001,
+        "frame": 9,
+        "area": {
+          "x": 448,
+          "y": 315,
+          "width": 145,
+          "height": 43
+        }
+      }
+    ]
+  ],
+  "commands": {
+    "npm run lint": "PASS",
+    "npm run build": "PASS",
+    "npm run format:check": "PASS"
+  }
+}

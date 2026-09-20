@@ -1,0 +1,489 @@
+[
+  {
+    "name": "tent_composite",
+    "sourceRect": {
+      "x": 1079,
+      "y": 12,
+      "width": 445,
+      "height": 462
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 252,
+    "overlappingCoreBoxes": [
+      {
+        "x": 1318,
+        "y": 437,
+        "width": 182,
+        "height": 241,
+        "pixels": 26198
+      },
+      {
+        "x": 1066,
+        "y": 456,
+        "width": 172,
+        "height": 126,
+        "pixels": 15050
+      }
+    ]
+  },
+  {
+    "name": "map_mat",
+    "sourceRect": {
+      "x": 577,
+      "y": 28,
+      "width": 502,
+      "height": 324
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 6,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "old_rug",
+    "sourceRect": {
+      "x": 22,
+      "y": 66,
+      "width": 535,
+      "height": 278
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 22,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "sack",
+    "sourceRect": {
+      "x": 327,
+      "y": 380,
+      "width": 150,
+      "height": 176
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 13,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "reinforced_crate",
+    "sourceRect": {
+      "x": 680,
+      "y": 393,
+      "width": 183,
+      "height": 153
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 11,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "potion_pair",
+    "sourceRect": {
+      "x": 78,
+      "y": 399,
+      "width": 104,
+      "height": 141
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 250,
+    "overlappingCoreBoxes": [
+      {
+        "x": 180,
+        "y": 412,
+        "width": 66,
+        "height": 106,
+        "pixels": 4932
+      },
+      {
+        "x": 21,
+        "y": 449,
+        "width": 67,
+        "height": 96,
+        "pixels": 4471
+      }
+    ]
+  },
+  {
+    "name": "potion_cyan",
+    "sourceRect": {
+      "x": 178,
+      "y": 410,
+      "width": 70,
+      "height": 110
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 251,
+    "overlappingCoreBoxes": [
+      {
+        "x": 80,
+        "y": 401,
+        "width": 100,
+        "height": 137,
+        "pixels": 8039
+      },
+      {
+        "x": 239,
+        "y": 460,
+        "width": 65,
+        "height": 102,
+        "pixels": 4713
+      }
+    ]
+  },
+  {
+    "name": "bedroll",
+    "sourceRect": {
+      "x": 890,
+      "y": 420,
+      "width": 169,
+      "height": 126
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 9,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "wooden_sign",
+    "sourceRect": {
+      "x": 1316,
+      "y": 435,
+      "width": 186,
+      "height": 245
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 252,
+    "overlappingCoreBoxes": [
+      {
+        "x": 1081,
+        "y": 14,
+        "width": 441,
+        "height": 458,
+        "pixels": 120565
+      }
+    ]
+  },
+  {
+    "name": "potion_red",
+    "sourceRect": {
+      "x": 19,
+      "y": 447,
+      "width": 71,
+      "height": 100
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 252,
+    "overlappingCoreBoxes": [
+      {
+        "x": 80,
+        "y": 401,
+        "width": 100,
+        "height": 137,
+        "pixels": 8039
+      }
+    ]
+  },
+  {
+    "name": "coins_and_pouch",
+    "sourceRect": {
+      "x": 516,
+      "y": 448,
+      "width": 131,
+      "height": 89
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 9,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "blanket",
+    "sourceRect": {
+      "x": 1064,
+      "y": 454,
+      "width": 176,
+      "height": 130
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 7,
+    "overlappingCoreBoxes": [
+      {
+        "x": 1081,
+        "y": 14,
+        "width": 441,
+        "height": 458,
+        "pixels": 120565
+      }
+    ]
+  },
+  {
+    "name": "potion_purple",
+    "sourceRect": {
+      "x": 237,
+      "y": 458,
+      "width": 69,
+      "height": 106
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 250,
+    "overlappingCoreBoxes": [
+      {
+        "x": 180,
+        "y": 412,
+        "width": 66,
+        "height": 106,
+        "pixels": 4932
+      },
+      {
+        "x": 22,
+        "y": 560,
+        "width": 273,
+        "height": 265,
+        "pixels": 49394
+      }
+    ]
+  },
+  {
+    "name": "backpack",
+    "sourceRect": {
+      "x": 20,
+      "y": 558,
+      "width": 277,
+      "height": 269
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 251,
+    "overlappingCoreBoxes": [
+      {
+        "x": 239,
+        "y": 460,
+        "width": 65,
+        "height": 102,
+        "pixels": 4713
+      },
+      {
+        "x": 296,
+        "y": 786,
+        "width": 156,
+        "height": 127,
+        "pixels": 14918
+      }
+    ]
+  },
+  {
+    "name": "rope",
+    "sourceRect": {
+      "x": 468,
+      "y": 562,
+      "width": 138,
+      "height": 109
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 11,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "crate",
+    "sourceRect": {
+      "x": 632,
+      "y": 562,
+      "width": 159,
+      "height": 165
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 8,
+    "overlappingCoreBoxes": [
+      {
+        "x": 470,
+        "y": 692,
+        "width": 163,
+        "height": 105,
+        "pixels": 11546
+      }
+    ]
+  },
+  {
+    "name": "barrel",
+    "sourceRect": {
+      "x": 817,
+      "y": 567,
+      "width": 142,
+      "height": 174
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 7,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "lantern",
+    "sourceRect": {
+      "x": 344,
+      "y": 572,
+      "width": 96,
+      "height": 191
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 13,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "food_bundle",
+    "sourceRect": {
+      "x": 978,
+      "y": 589,
+      "width": 188,
+      "height": 169
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 17,
+    "overlappingCoreBoxes": [
+      {
+        "x": 1055,
+        "y": 737,
+        "width": 252,
+        "height": 244,
+        "pixels": 43463
+      }
+    ]
+  },
+  {
+    "name": "stool",
+    "sourceRect": {
+      "x": 1188,
+      "y": 594,
+      "width": 110,
+      "height": 134
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 17,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "banner",
+    "sourceRect": {
+      "x": 1320,
+      "y": 688,
+      "width": 181,
+      "height": 303
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 9,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "firewood",
+    "sourceRect": {
+      "x": 468,
+      "y": 690,
+      "width": 167,
+      "height": 109
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 38,
+    "overlappingCoreBoxes": [
+      {
+        "x": 634,
+        "y": 564,
+        "width": 155,
+        "height": 161,
+        "pixels": 20649
+      }
+    ]
+  },
+  {
+    "name": "crate_lantern_composite",
+    "sourceRect": {
+      "x": 1053,
+      "y": 735,
+      "width": 256,
+      "height": 248
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 252,
+    "overlappingCoreBoxes": [
+      {
+        "x": 980,
+        "y": 591,
+        "width": 184,
+        "height": 165,
+        "pixels": 21880
+      }
+    ]
+  },
+  {
+    "name": "flowers",
+    "sourceRect": {
+      "x": 693,
+      "y": 742,
+      "width": 104,
+      "height": 184
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 18,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "chest",
+    "sourceRect": {
+      "x": 825,
+      "y": 765,
+      "width": 153,
+      "height": 118
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 7,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "books",
+    "sourceRect": {
+      "x": 294,
+      "y": 784,
+      "width": 160,
+      "height": 131
+    },
+    "status": "REVIEW_REQUIRED",
+    "borderMax": 8,
+    "overlappingCoreBoxes": [
+      {
+        "x": 22,
+        "y": 560,
+        "width": 273,
+        "height": 265,
+        "pixels": 49394
+      }
+    ]
+  },
+  {
+    "name": "bowl",
+    "sourceRect": {
+      "x": 483,
+      "y": 813,
+      "width": 110,
+      "height": 93
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 15,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "cup",
+    "sourceRect": {
+      "x": 613,
+      "y": 825,
+      "width": 81,
+      "height": 89
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 5,
+    "overlappingCoreBoxes": []
+  },
+  {
+    "name": "scroll",
+    "sourceRect": {
+      "x": 50,
+      "y": 843,
+      "width": 208,
+      "height": 105
+    },
+    "status": "SAFE_OBJECT_CANDIDATE",
+    "borderMax": 10,
+    "overlappingCoreBoxes": []
+  }
+]

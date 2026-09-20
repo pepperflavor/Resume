@@ -1,0 +1,322 @@
+{
+  "source": "npc/npc_adventurer_merchant.png",
+  "runtime": "public/assets/game/runtime/npc_adventurer_merchant.png",
+  "width": 384,
+  "height": 512,
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "frames": [
+    {
+      "index": 0,
+      "sourceRect": {
+        "x": 65,
+        "y": 14,
+        "width": 281,
+        "height": 332
+      },
+      "core": {
+        "x": 68,
+        "y": 17,
+        "width": 275,
+        "height": 326,
+        "pixels": 61217
+      },
+      "footY": 343,
+      "centerX": 184,
+      "scale": 0.25766871165644173,
+      "targetRect": {
+        "x": 33,
+        "y": 17,
+        "width": 72,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 1,
+      "sourceRect": {
+        "x": 422,
+        "y": 22,
+        "width": 279,
+        "height": 331
+      },
+      "core": {
+        "x": 425,
+        "y": 25,
+        "width": 273,
+        "height": 325,
+        "pixels": 57617
+      },
+      "footY": 350,
+      "centerX": 536,
+      "scale": 0.25846153846153846,
+      "targetRect": {
+        "x": 35,
+        "y": 17,
+        "width": 72,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 2,
+      "sourceRect": {
+        "x": 776,
+        "y": 22,
+        "width": 277,
+        "height": 331
+      },
+      "core": {
+        "x": 779,
+        "y": 25,
+        "width": 271,
+        "height": 325,
+        "pixels": 59189
+      },
+      "footY": 350,
+      "centerX": 892,
+      "scale": 0.25846153846153846,
+      "targetRect": {
+        "x": 34,
+        "y": 17,
+        "width": 72,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 3,
+      "sourceRect": {
+        "x": 65,
+        "y": 374,
+        "width": 296,
+        "height": 321
+      },
+      "core": {
+        "x": 68,
+        "y": 377,
+        "width": 290,
+        "height": 315,
+        "pixels": 59087
+      },
+      "footY": 692,
+      "centerX": 203,
+      "scale": 0.26666666666666666,
+      "targetRect": {
+        "x": 27,
+        "y": 17,
+        "width": 79,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 4,
+      "sourceRect": {
+        "x": 417,
+        "y": 376,
+        "width": 299,
+        "height": 320
+      },
+      "core": {
+        "x": 420,
+        "y": 379,
+        "width": 293,
+        "height": 314,
+        "pixels": 56252
+      },
+      "footY": 693,
+      "centerX": 555,
+      "scale": 0.267515923566879,
+      "targetRect": {
+        "x": 27,
+        "y": 17,
+        "width": 80,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 5,
+      "sourceRect": {
+        "x": 776,
+        "y": 378,
+        "width": 293,
+        "height": 320
+      },
+      "core": {
+        "x": 779,
+        "y": 381,
+        "width": 287,
+        "height": 314,
+        "pixels": 57880
+      },
+      "footY": 695,
+      "centerX": 911,
+      "scale": 0.267515923566879,
+      "targetRect": {
+        "x": 28,
+        "y": 17,
+        "width": 78,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 6,
+      "sourceRect": {
+        "x": 28,
+        "y": 728,
+        "width": 286,
+        "height": 312
+      },
+      "core": {
+        "x": 31,
+        "y": 731,
+        "width": 280,
+        "height": 306,
+        "pixels": 55717
+      },
+      "footY": 1037,
+      "centerX": 215,
+      "scale": 0.27450980392156865,
+      "targetRect": {
+        "x": 13,
+        "y": 17,
+        "width": 79,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 7,
+      "sourceRect": {
+        "x": 382,
+        "y": 731,
+        "width": 280,
+        "height": 317
+      },
+      "core": {
+        "x": 385,
+        "y": 734,
+        "width": 274,
+        "height": 311,
+        "pixels": 55208
+      },
+      "footY": 1045,
+      "centerX": 566,
+      "scale": 0.27009646302250806,
+      "targetRect": {
+        "x": 14,
+        "y": 17,
+        "width": 76,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 8,
+      "sourceRect": {
+        "x": 737,
+        "y": 735,
+        "width": 280,
+        "height": 314
+      },
+      "core": {
+        "x": 740,
+        "y": 738,
+        "width": 274,
+        "height": 308,
+        "pixels": 56519
+      },
+      "footY": 1046,
+      "centerX": 921,
+      "scale": 0.2727272727272727,
+      "targetRect": {
+        "x": 14,
+        "y": 17,
+        "width": 76,
+        "height": 86
+      },
+      "baseline": 102
+    },
+    {
+      "index": 9,
+      "sourceRect": {
+        "x": 67,
+        "y": 1062,
+        "width": 226,
+        "height": 353
+      },
+      "core": {
+        "x": 70,
+        "y": 1065,
+        "width": 220,
+        "height": 347,
+        "pixels": 53252
+      },
+      "footY": 1344,
+      "centerX": 180,
+      "scale": 0.3010752688172043,
+      "targetRect": {
+        "x": 30,
+        "y": 17,
+        "width": 68,
+        "height": 106
+      },
+      "baseline": 102
+    },
+    {
+      "index": 10,
+      "sourceRect": {
+        "x": 422,
+        "y": 1069,
+        "width": 230,
+        "height": 348
+      },
+      "core": {
+        "x": 425,
+        "y": 1072,
+        "width": 224,
+        "height": 342,
+        "pixels": 52002
+      },
+      "footY": 1354,
+      "centerX": 536,
+      "scale": 0.2978723404255319,
+      "targetRect": {
+        "x": 30,
+        "y": 17,
+        "width": 69,
+        "height": 104
+      },
+      "baseline": 102
+    },
+    {
+      "index": 11,
+      "sourceRect": {
+        "x": 778,
+        "y": 1069,
+        "width": 227,
+        "height": 346
+      },
+      "core": {
+        "x": 781,
+        "y": 1072,
+        "width": 221,
+        "height": 340,
+        "pixels": 51991
+      },
+      "footY": 1352,
+      "centerX": 892,
+      "scale": 0.3,
+      "targetRect": {
+        "x": 30,
+        "y": 17,
+        "width": 68,
+        "height": 104
+      },
+      "baseline": 102
+    }
+  ]
+}

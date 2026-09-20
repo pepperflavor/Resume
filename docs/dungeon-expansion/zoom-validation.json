@@ -1,0 +1,38 @@
+{
+  "zooms": {
+    "hub": 1,
+    "entrance": 1,
+    "boss": 0.85,
+    "market": 1
+  },
+  "camera": {
+    "zoom": 0.85,
+    "width": 768,
+    "height": 384,
+    "worldView": {
+      "x": 188,
+      "y": 0,
+      "width": 904,
+      "height": 452
+    },
+    "bounds": {
+      "type": 5,
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 768
+    },
+    "playerScale": 0.5,
+    "cat": {
+      "x": 640,
+      "y": 322,
+      "scale": 0.3
+    },
+    "lerp": {
+      "x": 0.15,
+      "y": 0.15
+    }
+  },
+  "errors": [],
+  "verticalIncreasePercent": 17.647058823529417
+}

@@ -1,0 +1,238 @@
+{
+  "generated": "2026-09-20",
+  "note": "Audit of the opaque Guild exterior terrain sheet for reuse as Market ground. The sheet carries no alpha, so tiles are segmented against the flat gutter colour rgb(53,54,42); each frame is then shrunk to the largest centred rect that holds no pixel within 70 (sum of channel distance) of the gutter, which also trims the part-blended rim that would otherwise show as a line wherever two tiles meet. No asset was modified.",
+  "sheets": [
+    {
+      "key": "market-terrain",
+      "url": "/assets/game/maps/guild/exterior/terrain/guild_exterior_terrain.png",
+      "width": 1536,
+      "height": 1024,
+      "frames": {
+        "dirt": {
+          "x": 561,
+          "y": 27,
+          "width": 232,
+          "height": 233
+        },
+        "dirt-stones-a": {
+          "x": 280,
+          "y": 910,
+          "width": 71,
+          "height": 82
+        },
+        "dirt-stones-b": {
+          "x": 393,
+          "y": 912,
+          "width": 68,
+          "height": 78
+        },
+        "dirt-stones-c": {
+          "x": 505,
+          "y": 908,
+          "width": 80,
+          "height": 84
+        },
+        "dirt-grass-north": {
+          "x": 574,
+          "y": 298,
+          "width": 105,
+          "height": 125
+        },
+        "grass-dirt-north": {
+          "x": 437,
+          "y": 297,
+          "width": 106,
+          "height": 126
+        },
+        "dirt-grass-wedge": {
+          "x": 708,
+          "y": 296,
+          "width": 101,
+          "height": 128
+        },
+        "dirt-grass-corner": {
+          "x": 393,
+          "y": 795,
+          "width": 71,
+          "height": 75
+        },
+        "dirt-grass-speck": {
+          "x": 504,
+          "y": 796,
+          "width": 80,
+          "height": 75
+        },
+        "grass-plain": {
+          "x": 289,
+          "y": 29,
+          "width": 234,
+          "height": 232
+        },
+        "grass-tufted": {
+          "x": 84,
+          "y": 85,
+          "width": 110,
+          "height": 118
+        },
+        "dirt-field": {
+          "x": 561,
+          "y": 45,
+          "width": 220,
+          "height": 215
+        },
+        "grass-field": {
+          "x": 291,
+          "y": 30,
+          "width": 230,
+          "height": 230
+        }
+      }
+    }
+  ],
+  "frameNotes": {
+    "dirt": {
+      "note": "Market base ground. Warm trodden dirt with sparse grass tufts.",
+      "component": {
+        "x": 551,
+        "y": 17,
+        "width": 252,
+        "height": 253
+      },
+      "rgb": [157, 132, 76],
+      "green": 0.067,
+      "dirt": 0.766
+    },
+    "dirt-stones-a": {
+      "note": "Bare dirt with small stones. Worn patch.",
+      "component": {
+        "x": 272,
+        "y": 902,
+        "width": 87,
+        "height": 98
+      },
+      "rgb": [167, 130, 86],
+      "green": 0,
+      "dirt": 0.996
+    },
+    "dirt-stones-b": {
+      "note": "Bare dirt with small stones, different scatter.",
+      "component": {
+        "x": 383,
+        "y": 902,
+        "width": 88,
+        "height": 98
+      },
+      "rgb": [166, 128, 86],
+      "green": 0,
+      "dirt": 0.998
+    },
+    "dirt-stones-c": {
+      "note": "Bare dirt, stones and a trace of grass.",
+      "component": {
+        "x": 498,
+        "y": 901,
+        "width": 94,
+        "height": 98
+      },
+      "rgb": [159, 126, 78],
+      "green": 0,
+      "dirt": 0.954
+    },
+    "dirt-grass-north": {
+      "note": "Dirt with a ragged grass band along its top edge.",
+      "component": {
+        "x": 568,
+        "y": 292,
+        "width": 117,
+        "height": 137
+      },
+      "rgb": [153, 132, 74],
+      "green": 0.151,
+      "dirt": 0.679
+    },
+    "grass-dirt-north": {
+      "note": "Grass-dominant version of the same edge.",
+      "component": {
+        "x": 432,
+        "y": 292,
+        "width": 116,
+        "height": 136
+      },
+      "rgb": [129, 129, 60],
+      "green": 0.268,
+      "dirt": 0.291
+    },
+    "dirt-grass-wedge": {
+      "note": "Grass wedge entering from one side; dirt on the other.",
+      "component": {
+        "x": 704,
+        "y": 292,
+        "width": 109,
+        "height": 136
+      },
+      "rgb": [153, 130, 73],
+      "green": 0.043,
+      "dirt": 0.777
+    },
+    "dirt-grass-corner": {
+      "note": "Diagonal grass/dirt corner.",
+      "component": {
+        "x": 383,
+        "y": 785,
+        "width": 91,
+        "height": 95
+      },
+      "rgb": [135, 131, 62],
+      "green": 0.262,
+      "dirt": 0.391
+    },
+    "dirt-grass-speck": {
+      "note": "Dirt with grass along one edge and a few stones.",
+      "component": {
+        "x": 495,
+        "y": 787,
+        "width": 98,
+        "height": 93
+      },
+      "rgb": [152, 130, 74],
+      "green": 0.087,
+      "dirt": 0.723
+    },
+    "grass-plain": {
+      "note": "Plain grass. Not used by Market; recorded for completeness.",
+      "component": {
+        "x": 278,
+        "y": 18,
+        "width": 256,
+        "height": 254
+      },
+      "rgb": [123, 147, 57],
+      "green": 0.983,
+      "dirt": 0
+    },
+    "grass-tufted": {
+      "note": "Tufted grass. Not used by Market; recorded for completeness.",
+      "component": {
+        "x": 15,
+        "y": 16,
+        "width": 248,
+        "height": 256
+      },
+      "rgb": [102, 130, 53],
+      "green": 0.984,
+      "dirt": 0
+    },
+    "dirt-field": {
+      "note": "Quietest 220x215 sub-rect of 'dirt', sized to tile without a sub-pixel seam.",
+      "rgb": [161, 133, 77],
+      "green": 0.039,
+      "dirt": 0.823
+    },
+    "grass-field": {
+      "note": "Centred 230x230 sub-rect of 'grass-plain', sized to tile without a sub-pixel seam.",
+      "rgb": [123, 147, 57],
+      "green": 0.983,
+      "dirt": 0
+    }
+  }
+}

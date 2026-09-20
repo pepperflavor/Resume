@@ -1,0 +1,20 @@
+{
+  "passes": [
+    "Hub warning -> safe camp; normalized stationary merchant; collision; miss; initial dialogue keyboard",
+    "Gate decline/confirm, fade, 1280x768 world with unchanged 768x384 canvas, south spawn, fixed caption, watch survival",
+    "Camera follows actual walk, center statue pickup/HUD, safe return to camp, post-cat merchant branch/mouse, Hub preserves ownership",
+    "WATCHING movement -> CHASE, measured speed 167.0 px/s, contact/Game Over/retry resets quest/HUD",
+    "Reset camp dialogue/statue/boss and free exit without cat",
+    "Hub/Market/Fox regression; one Canvas; no console/page/network errors"
+  ],
+  "errors": [],
+  "merchant": {
+    "frame": 0,
+    "w": 128,
+    "h": 128,
+    "scale": 0.5,
+    "playing": false,
+    "frames": 13
+  },
+  "measuredChaseSpeed": 167.0327999999988
+}

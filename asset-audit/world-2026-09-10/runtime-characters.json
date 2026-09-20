@@ -1,0 +1,874 @@
+[
+  {
+    "source": "npc/dungeon_entrance_adventurer_rabbit.png",
+    "sourceSha256": "413c7db369c02188dab261d303f2e4d5243b14d4b4133212b04a6799d400d534",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_adventurer_rabbit.png",
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "width": 384,
+    "height": 512,
+    "baseline": 102,
+    "scale": 0.24561403508771928,
+    "runtimeSha256": "e861641bd99cc813cd523cece7cf81ae90ae60d93759b8681cfe4bdfbacb1ec0",
+    "frames": [
+      {
+        "index": 0,
+        "direction": "down",
+        "column": 0,
+        "sourceRect": {
+          "x": 91,
+          "y": 19,
+          "width": 216,
+          "height": 341
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 18,
+          "width": 53,
+          "height": 84
+        }
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "column": 1,
+        "sourceRect": {
+          "x": 438,
+          "y": 19,
+          "width": 217,
+          "height": 341
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 18,
+          "width": 53,
+          "height": 84
+        }
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "column": 2,
+        "sourceRect": {
+          "x": 784,
+          "y": 19,
+          "width": 213,
+          "height": 341
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 18,
+          "width": 52,
+          "height": 84
+        }
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "column": 0,
+        "sourceRect": {
+          "x": 91,
+          "y": 370,
+          "width": 216,
+          "height": 337
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 19,
+          "width": 53,
+          "height": 83
+        }
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "column": 1,
+        "sourceRect": {
+          "x": 438,
+          "y": 370,
+          "width": 217,
+          "height": 337
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 19,
+          "width": 53,
+          "height": 83
+        }
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "column": 2,
+        "sourceRect": {
+          "x": 784,
+          "y": 370,
+          "width": 213,
+          "height": 337
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 19,
+          "width": 52,
+          "height": 83
+        }
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "column": 0,
+        "sourceRect": {
+          "x": 91,
+          "y": 717,
+          "width": 216,
+          "height": 333
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 20,
+          "width": 53,
+          "height": 82
+        }
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "column": 1,
+        "sourceRect": {
+          "x": 438,
+          "y": 717,
+          "width": 217,
+          "height": 333
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 20,
+          "width": 53,
+          "height": 82
+        }
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "column": 2,
+        "sourceRect": {
+          "x": 784,
+          "y": 717,
+          "width": 213,
+          "height": 333
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 20,
+          "width": 52,
+          "height": 82
+        }
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "column": 0,
+        "sourceRect": {
+          "x": 91,
+          "y": 1058,
+          "width": 216,
+          "height": 357
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 14,
+          "width": 53,
+          "height": 88
+        }
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "column": 1,
+        "sourceRect": {
+          "x": 438,
+          "y": 1058,
+          "width": 217,
+          "height": 357
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 14,
+          "width": 53,
+          "height": 88
+        }
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "column": 2,
+        "sourceRect": {
+          "x": 784,
+          "y": 1058,
+          "width": 213,
+          "height": 357
+        },
+        "targetRect": {
+          "x": 38,
+          "y": 14,
+          "width": 52,
+          "height": 88
+        }
+      }
+    ]
+  },
+  {
+    "source": "npc/dungeon_entrance_adventurer_cat.png",
+    "sourceSha256": "cea3aea7188a455e1abe92b94079e7b8b65ce7383ab212c0867d72462980a228",
+    "runtimeUrl": "/assets/game/runtime/dungeon_entrance_adventurer_cat.png",
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "width": 384,
+    "height": 512,
+    "baseline": 102,
+    "scale": 0.2647754137115839,
+    "runtimeSha256": "a33cc7cbc00640d7550aa68498ca32e18498ea1a102f4d0fb6817317f0169890",
+    "frames": [
+      {
+        "index": 0,
+        "direction": "down",
+        "column": 0,
+        "sourceRect": {
+          "x": 30,
+          "y": 39,
+          "width": 324,
+          "height": 322
+        },
+        "targetRect": {
+          "x": 21,
+          "y": 17,
+          "width": 86,
+          "height": 85
+        }
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "column": 1,
+        "sourceRect": {
+          "x": 384,
+          "y": 39,
+          "width": 335,
+          "height": 322
+        },
+        "targetRect": {
+          "x": 20,
+          "y": 17,
+          "width": 89,
+          "height": 85
+        }
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "column": 2,
+        "sourceRect": {
+          "x": 748,
+          "y": 39,
+          "width": 317,
+          "height": 322
+        },
+        "targetRect": {
+          "x": 22,
+          "y": 17,
+          "width": 84,
+          "height": 85
+        }
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "column": 0,
+        "sourceRect": {
+          "x": 30,
+          "y": 381,
+          "width": 324,
+          "height": 319
+        },
+        "targetRect": {
+          "x": 21,
+          "y": 18,
+          "width": 86,
+          "height": 84
+        }
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "column": 1,
+        "sourceRect": {
+          "x": 384,
+          "y": 381,
+          "width": 335,
+          "height": 319
+        },
+        "targetRect": {
+          "x": 20,
+          "y": 18,
+          "width": 89,
+          "height": 84
+        }
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "column": 2,
+        "sourceRect": {
+          "x": 748,
+          "y": 381,
+          "width": 317,
+          "height": 319
+        },
+        "targetRect": {
+          "x": 22,
+          "y": 18,
+          "width": 84,
+          "height": 84
+        }
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "column": 0,
+        "sourceRect": {
+          "x": 30,
+          "y": 734,
+          "width": 324,
+          "height": 318
+        },
+        "targetRect": {
+          "x": 21,
+          "y": 18,
+          "width": 86,
+          "height": 84
+        }
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "column": 1,
+        "sourceRect": {
+          "x": 384,
+          "y": 734,
+          "width": 335,
+          "height": 318
+        },
+        "targetRect": {
+          "x": 20,
+          "y": 18,
+          "width": 89,
+          "height": 84
+        }
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "column": 2,
+        "sourceRect": {
+          "x": 748,
+          "y": 734,
+          "width": 317,
+          "height": 318
+        },
+        "targetRect": {
+          "x": 22,
+          "y": 18,
+          "width": 84,
+          "height": 84
+        }
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "column": 0,
+        "sourceRect": {
+          "x": 30,
+          "y": 1078,
+          "width": 324,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 21,
+          "y": 20,
+          "width": 86,
+          "height": 82
+        }
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "column": 1,
+        "sourceRect": {
+          "x": 384,
+          "y": 1078,
+          "width": 335,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 20,
+          "y": 20,
+          "width": 89,
+          "height": 82
+        }
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "column": 2,
+        "sourceRect": {
+          "x": 748,
+          "y": 1078,
+          "width": 317,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 22,
+          "y": 20,
+          "width": 84,
+          "height": 82
+        }
+      }
+    ]
+  },
+  {
+    "source": "npc/npc_pond_fairy.png",
+    "sourceSha256": "9e62d290ca0d78d7bfcd6ae07dcb0266a2edc5a2439710c1afb4b57cbca2f8d6",
+    "runtimeUrl": "/assets/game/runtime/npc_pond_fairy.png",
+    "frameWidth": 128,
+    "frameHeight": 128,
+    "width": 384,
+    "height": 512,
+    "baseline": 102,
+    "scale": 0.27699917559769166,
+    "runtimeSha256": "746a5eaf54499aab6e51a5aed41981e69bb2129a36e969ed09bf2c715e229e8b",
+    "frames": [
+      {
+        "index": 0,
+        "direction": "down",
+        "column": 0,
+        "sourceRect": {
+          "x": 50,
+          "y": 35,
+          "width": 289,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 16,
+          "width": 80,
+          "height": 86
+        }
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "column": 1,
+        "sourceRect": {
+          "x": 404,
+          "y": 35,
+          "width": 280,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 25,
+          "y": 16,
+          "width": 78,
+          "height": 86
+        }
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "column": 2,
+        "sourceRect": {
+          "x": 754,
+          "y": 35,
+          "width": 290,
+          "height": 310
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 16,
+          "width": 80,
+          "height": 86
+        }
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "column": 0,
+        "sourceRect": {
+          "x": 50,
+          "y": 385,
+          "width": 289,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 18,
+          "width": 80,
+          "height": 84
+        }
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "column": 1,
+        "sourceRect": {
+          "x": 404,
+          "y": 385,
+          "width": 280,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 25,
+          "y": 18,
+          "width": 78,
+          "height": 84
+        }
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "column": 2,
+        "sourceRect": {
+          "x": 754,
+          "y": 385,
+          "width": 290,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 18,
+          "width": 80,
+          "height": 84
+        }
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "column": 0,
+        "sourceRect": {
+          "x": 50,
+          "y": 739,
+          "width": 289,
+          "height": 297
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 20,
+          "width": 80,
+          "height": 82
+        }
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "column": 1,
+        "sourceRect": {
+          "x": 404,
+          "y": 739,
+          "width": 280,
+          "height": 297
+        },
+        "targetRect": {
+          "x": 25,
+          "y": 20,
+          "width": 78,
+          "height": 82
+        }
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "column": 2,
+        "sourceRect": {
+          "x": 754,
+          "y": 739,
+          "width": 290,
+          "height": 297
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 20,
+          "width": 80,
+          "height": 82
+        }
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "column": 0,
+        "sourceRect": {
+          "x": 50,
+          "y": 1079,
+          "width": 289,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 18,
+          "width": 80,
+          "height": 84
+        }
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "column": 1,
+        "sourceRect": {
+          "x": 404,
+          "y": 1079,
+          "width": 280,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 25,
+          "y": 18,
+          "width": 78,
+          "height": 84
+        }
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "column": 2,
+        "sourceRect": {
+          "x": 754,
+          "y": 1079,
+          "width": 290,
+          "height": 303
+        },
+        "targetRect": {
+          "x": 24,
+          "y": 18,
+          "width": 80,
+          "height": 84
+        }
+      }
+    ]
+  },
+  {
+    "source": "boss/boss_dragon_chase.png",
+    "sourceSha256": "0bdfef2fa6ab83513626432a4c308ad508999a0faeb3a96c6ec02dbe1d7e9362",
+    "runtimeUrl": "/assets/game/runtime/boss_dragon_chase.png",
+    "frameWidth": 208,
+    "frameHeight": 184,
+    "width": 624,
+    "height": 736,
+    "baseline": 176,
+    "scale": 0.5,
+    "runtimeSha256": "53615e6f7fda3f78995c4ccdeb21b1372313110feb3d53630be3cf1f8cedaf7e",
+    "frames": [
+      {
+        "index": 0,
+        "direction": "down",
+        "column": 0,
+        "sourceRect": {
+          "x": 11,
+          "y": 9,
+          "width": 392,
+          "height": 309
+        },
+        "targetRect": {
+          "x": 6,
+          "y": 21,
+          "width": 196,
+          "height": 155
+        }
+      },
+      {
+        "index": 1,
+        "direction": "down",
+        "column": 1,
+        "sourceRect": {
+          "x": 414,
+          "y": 9,
+          "width": 403,
+          "height": 309
+        },
+        "targetRect": {
+          "x": 3,
+          "y": 21,
+          "width": 202,
+          "height": 155
+        }
+      },
+      {
+        "index": 2,
+        "direction": "down",
+        "column": 2,
+        "sourceRect": {
+          "x": 830,
+          "y": 9,
+          "width": 390,
+          "height": 309
+        },
+        "targetRect": {
+          "x": 7,
+          "y": 21,
+          "width": 195,
+          "height": 155
+        }
+      },
+      {
+        "index": 3,
+        "direction": "left",
+        "column": 0,
+        "sourceRect": {
+          "x": 11,
+          "y": 332,
+          "width": 392,
+          "height": 266
+        },
+        "targetRect": {
+          "x": 6,
+          "y": 43,
+          "width": 196,
+          "height": 133
+        }
+      },
+      {
+        "index": 4,
+        "direction": "left",
+        "column": 1,
+        "sourceRect": {
+          "x": 414,
+          "y": 332,
+          "width": 403,
+          "height": 266
+        },
+        "targetRect": {
+          "x": 3,
+          "y": 43,
+          "width": 202,
+          "height": 133
+        }
+      },
+      {
+        "index": 5,
+        "direction": "left",
+        "column": 2,
+        "sourceRect": {
+          "x": 830,
+          "y": 332,
+          "width": 390,
+          "height": 266
+        },
+        "targetRect": {
+          "x": 7,
+          "y": 43,
+          "width": 195,
+          "height": 133
+        }
+      },
+      {
+        "index": 6,
+        "direction": "right",
+        "column": 0,
+        "sourceRect": {
+          "x": 11,
+          "y": 615,
+          "width": 392,
+          "height": 268
+        },
+        "targetRect": {
+          "x": 6,
+          "y": 42,
+          "width": 196,
+          "height": 134
+        }
+      },
+      {
+        "index": 7,
+        "direction": "right",
+        "column": 1,
+        "sourceRect": {
+          "x": 414,
+          "y": 615,
+          "width": 403,
+          "height": 268
+        },
+        "targetRect": {
+          "x": 3,
+          "y": 42,
+          "width": 202,
+          "height": 134
+        }
+      },
+      {
+        "index": 8,
+        "direction": "right",
+        "column": 2,
+        "sourceRect": {
+          "x": 830,
+          "y": 615,
+          "width": 390,
+          "height": 268
+        },
+        "targetRect": {
+          "x": 7,
+          "y": 42,
+          "width": 195,
+          "height": 134
+        }
+      },
+      {
+        "index": 9,
+        "direction": "up",
+        "column": 0,
+        "sourceRect": {
+          "x": 11,
+          "y": 903,
+          "width": 392,
+          "height": 344
+        },
+        "targetRect": {
+          "x": 6,
+          "y": 4,
+          "width": 196,
+          "height": 172
+        }
+      },
+      {
+        "index": 10,
+        "direction": "up",
+        "column": 1,
+        "sourceRect": {
+          "x": 414,
+          "y": 903,
+          "width": 403,
+          "height": 344
+        },
+        "targetRect": {
+          "x": 3,
+          "y": 4,
+          "width": 202,
+          "height": 172
+        }
+      },
+      {
+        "index": 11,
+        "direction": "up",
+        "column": 2,
+        "sourceRect": {
+          "x": 830,
+          "y": 903,
+          "width": 390,
+          "height": 344
+        },
+        "targetRect": {
+          "x": 7,
+          "y": 4,
+          "width": 195,
+          "height": 172
+        }
+      }
+    ]
+  }
+]
