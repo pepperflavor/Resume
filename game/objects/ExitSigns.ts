@@ -82,10 +82,24 @@ export class ExitSigns {
         entry.sign.y,
       );
       const isActive = active === entry.sign;
-      entry.hint.setText(isActive ? SIGN_ACTIVE_HINT : SIGN_IDLE_HINT);
-      // A quiet sign says nothing until it is the one an E would land on.
+      // A sign carrying its own label keeps it, and adds the Press E line only
+      // once an E would actually land on it.
+      const own = entry.sign.hint;
+      entry.hint.setText(
+        own
+          ? isActive
+            ? `${own}\n${SIGN_ACTIVE_HINT}`
+            : own
+          : isActive
+            ? SIGN_ACTIVE_HINT
+            : SIGN_IDLE_HINT,
+      );
+      // A quiet sign says nothing until it is the one an E would land on; a
+      // persistent one says its piece for as long as the scene is running.
       entry.hint.setVisible(
-        isActive || (!entry.sign.quiet && distance < SIGN_IDLE_RANGE),
+        entry.sign.persistentHint ||
+          isActive ||
+          (!entry.sign.quiet && distance < SIGN_IDLE_RANGE),
       );
     }
   }

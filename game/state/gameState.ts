@@ -5,10 +5,19 @@
 export type KkokkoQuestState =
   'NOT_STARTED' | 'ACCEPTED' | 'CHICKEN_FOUND' | 'COMPLETED';
 
+/**
+ * The golden cat, from pedestal to pond. One value answers all three questions
+ * that used to be asked of three different places: is the chamber robbed, is
+ * the player carrying the statue, and has it been given to the pond.
+ *
+ * It only ever moves forward, and only a reset sends it back.
+ */
+export type GoldenCatQuestState = 'NOT_TAKEN' | 'CARRIED' | 'OFFERED';
+
 export interface GameState {
   version: number;
   playerName: string;
-  quests: { findKkokko: KkokkoQuestState };
+  quests: { findKkokko: KkokkoQuestState; goldenCat: GoldenCatQuestState };
   settings: { bgmEnabled: boolean };
 }
 
@@ -22,11 +31,26 @@ const QUEST_STATES: readonly KkokkoQuestState[] = [
   'COMPLETED',
 ];
 
+const GOLDEN_CAT_STATES: readonly GoldenCatQuestState[] = [
+  'NOT_TAKEN',
+  'CARRIED',
+  'OFFERED',
+];
+
+/**
+ * Saves written before the statue had a delivery step recorded only that it
+ * had been taken — which is precisely what CARRIED means now, so an old save
+ * resumes mid-quest with the statue still in hand rather than losing it.
+ */
+const LEGACY_GOLDEN_CAT: Readonly<Record<string, GoldenCatQuestState>> = {
+  TAKEN: 'CARRIED',
+};
+
 export function defaultState(): GameState {
   return {
     version: SAVE_VERSION,
     playerName: '',
-    quests: { findKkokko: 'NOT_STARTED' },
+    quests: { findKkokko: 'NOT_STARTED', goldenCat: 'NOT_TAKEN' },
     settings: { bgmEnabled: true },
   };
 }
@@ -51,6 +75,14 @@ function parse(raw: string | null): GameState {
       QUEST_STATES.includes(quest as KkokkoQuestState)
     )
       state.quests.findKkokko = quest as KkokkoQuestState;
+    const cat = quests?.goldenCat;
+    if (typeof cat === 'string') {
+      const known = LEGACY_GOLDEN_CAT[cat] ?? cat;
+      // Anything else — a hand-edited save, a state from a future version —
+      // falls through to the NOT_TAKEN the default already holds.
+      if (GOLDEN_CAT_STATES.includes(known as GoldenCatQuestState))
+        state.quests.goldenCat = known as GoldenCatQuestState;
+    }
     const settings = record.settings as Record<string, unknown> | undefined;
     if (typeof settings?.bgmEnabled === 'boolean')
       state.settings.bgmEnabled = settings.bgmEnabled;
@@ -116,6 +148,54 @@ export function setKkokkoQuest(next: KkokkoQuestState) {
   const current = getGameState();
   if (current.quests.findKkokko === next) return;
   commit({ ...current, quests: { ...current.quests, findKkokko: next } });
+}
+
+export function getGoldenCatQuest() {
+  return getGameState().quests.goldenCat;
+}
+
+function setGoldenCatQuest(next: GoldenCatQuestState) {
+  const current = getGameState();
+  if (current.quests.goldenCat === next) return;
+  commit({ ...current, quests: { ...current.quests, goldenCat: next } });
+}
+
+/**
+ * The questions the rest of the game actually asks. They are derived here and
+ * nowhere else: a second boolean kept alongside this one is how the HUD and
+ * the save came apart in the first place.
+ */
+
+/** Carrying the statue right now. */
+export function hasGoldenCat() {
+  return getGoldenCatQuest() === 'CARRIED';
+}
+
+/** Given to the pond; the altar keeps it from here on. */
+export function hasOfferedGoldenCat() {
+  return getGoldenCatQuest() === 'OFFERED';
+}
+
+/** The pedestal is empty, whoever holds the statue now. */
+export function isDragonBossCleared() {
+  return getGoldenCatQuest() !== 'NOT_TAKEN';
+}
+
+/** Only a chamber that has not been robbed opens. */
+export function canEnterDragonBoss() {
+  return getGoldenCatQuest() === 'NOT_TAKEN';
+}
+
+/** Lifted off its pedestal. Taking it twice is not a thing that happens. */
+export function takeGoldenCat() {
+  if (getGoldenCatQuest() !== 'NOT_TAKEN') return;
+  setGoldenCatQuest('CARRIED');
+}
+
+/** Placed on the pond altar. One way: an offering is not taken back. */
+export function offerGoldenCat() {
+  if (getGoldenCatQuest() !== 'CARRIED') return;
+  setGoldenCatQuest('OFFERED');
 }
 
 export function setBgmEnabled(enabled: boolean) {

@@ -1,5 +1,6 @@
 import { WORLD } from '@/game/config/world';
 import type { CollisionRect } from '@/game/types';
+import { SFX } from '@/game/state/audio';
 
 /**
  * The garden floor covers the whole world. It used to stop 44px short on every
@@ -479,3 +480,36 @@ export const GARDEN_ALTAR_FOOTPRINT = {
   width: 70,
   height: 24,
 } as const satisfies Omit<CollisionRect, 'x' | 'y'>;
+
+/**
+ * The drip. Ambience rather than a cue: nothing in the grotto depends on it,
+ * so it is quiet, irregular, and never lands the moment the player walks in.
+ *
+ * Three files rather than one, weighted, because a cave that repeats the same
+ * drop on a timer reads as a tap left running.
+ */
+export const GARDEN_AMBIENCE = {
+  /**
+   * Shares of their own total, so they need not add up to anything — though
+   * these do add to 100, which makes them readable as percentages.
+   *
+   * Pond outweighs rock 60/40 because the water is what the grotto is about,
+   * and within each family the lower number is the better take and so the one
+   * heard most often.
+   */
+  drops: [
+    { url: SFX.pondDrop1, weight: 25 },
+    { url: SFX.pondDrop2, weight: 20 },
+    { url: SFX.pondDrop3, weight: 15 },
+    { url: SFX.rockDrop1, weight: 18 },
+    { url: SFX.rockDrop2, weight: 12 },
+    { url: SFX.rockDrop3, weight: 10 },
+  ],
+  /** Redrawn after every drop, including the first. Never a metronome. */
+  gap: { min: 8000, max: 18000 },
+  /**
+   * Far under the music. A cave heard behind the theme, not a sound effect the
+   * player starts listening for.
+   */
+  volume: 0.11,
+} as const;

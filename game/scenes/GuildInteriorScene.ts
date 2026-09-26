@@ -28,6 +28,7 @@ import { Player } from '@/game/objects/Player';
 import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { CollisionRect, GameCallbacks } from '@/game/types';
+import { setSceneBgm } from '@/game/state/audio';
 
 const PRESS_HINT = 'Press E';
 /**
@@ -79,6 +80,7 @@ export class GuildInteriorScene extends Phaser.Scene {
   }
 
   create() {
+    setSceneBgm('guildInterior');
     for (const op of guildInteriorScenery()) {
       const texture = this.textures.get(op.texture);
       if (!texture.has(op.frameName))

@@ -33,6 +33,8 @@ import { ZoneSpeech } from '@/game/objects/ZoneSpeech';
 import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks } from '@/game/types';
+import { setSceneBgm } from '@/game/state/audio';
+import { canEnterDragonBoss, hasGoldenCat } from '@/game/state/gameState';
 export class DungeonEntranceScene extends Phaser.Scene {
   private player!: Player;
   private merchant!: Npc;
@@ -72,6 +74,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
       this.load.image(MERCHANT_ATLAS.key, MERCHANT_ATLAS.url);
   }
   create() {
+    setSceneBgm('dungeonEntrance');
     // The cave is exactly the viewport, and the perimeter rock is drawn past
     // its edges on purpose: bounds keep anything outside off the screen.
     this.cameras.main.setBounds(0, 0, WORLD.width, WORLD.height);
@@ -149,6 +152,12 @@ export class DungeonEntranceScene extends Phaser.Scene {
         this.prompt.setVisible(false);
         this.rugSpeech.hide();
         this.exitSigns.hide();
+        // The circle still answers an E once the statue is gone — it says why
+        // the way is shut. Going quiet instead would read as a broken warp.
+        if (!canEnterDragonBoss()) {
+          this.callbacks.onInteract('bossChamberSealed');
+          return;
+        }
         this.warp.use();
         return;
       }
@@ -174,9 +183,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
       this.rugSpeech.hide();
       if (target === 'merchant')
         this.callbacks.onInteract(
-          this.callbacks.hasGoldenCat()
-            ? 'merchantWithCat'
-            : 'adventurerMerchant',
+          hasGoldenCat() ? 'merchantWithCat' : 'adventurerMerchant',
         );
       else this.callbacks.onInteract(target.dialogue);
     });

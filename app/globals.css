@@ -414,6 +414,11 @@ dialog::backdrop {
   font-size: 12px;
   color: var(--muted);
 }
+/* The same muted note, standing above the shelf rather than below it, so it
+   needs the shelf's own breathing room under it instead of the choice row's. */
+.shop-intro {
+  margin-bottom: 20px;
+}
 
 /* Guild record panel. Wider than a dialogue because records carry headings,
    grouped sections and badges. Header and footer are pinned; only the body

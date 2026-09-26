@@ -41,6 +41,18 @@ export interface ExitSign {
    * carries enough going on that a second idle bubble per sign is clutter.
    */
   quiet?: boolean;
+  /**
+   * One label in place of the shared 길 안내 / Press E pair, for a sign whose
+   * whole job is to be read rather than to say where a road goes. It gains the
+   * Press E line only once an E would land on it.
+   */
+  hint?: string;
+  /**
+   * The label stands whatever the distance, for as long as the scene runs.
+   * For a sign that states the rule of the room it is standing in: a player
+   * who never walks over to it has still been told it is there.
+   */
+  persistentHint?: boolean;
 }
 
 /** Close enough to press E. */
@@ -206,6 +218,9 @@ export const EXIT_SIGNS: readonly ExitSign[] = [
     quiet: true,
   },
   // --- Boss Chamber ------------------------------------------------------
+  // The rune slab by the chamber door. It no longer names a passage — the way
+  // home is the warp circle beside it — so it carries the sleep hint instead,
+  // standing where the player arrives and can read it before moving.
   {
     id: 'boss-entrance',
     scene: 'dungeonBoss',
@@ -214,12 +229,21 @@ export const EXIT_SIGNS: readonly ExitSign[] = [
     source: 'runtime',
     sheet: 'bossTreasure',
     frame: 'pillar_rune',
-    x: 1150,
-    y: 330,
+    // A few steps south-west of where the player lands (800, 620) and well
+    // clear of the return circle at (900, 650). The rule of the room is
+    // written here, so it has to be the first thing seen — but off the line
+    // north to the statue, so it never stands in the way of the walk it is
+    // explaining.
+    x: 734,
+    y: 676,
     scale: 0.55,
-    hintY: 262,
+    hintY: 608,
     dialogue: 'signBossEntrance',
     collision: { width: 14, height: 8 },
+    // The room's one rule is written here, so this never waits to be walked
+    // up to: it is readable from the door and from the far wall alike.
+    hint: 'Read Me!',
+    persistentHint: true,
   },
   // --- Cave Garden -------------------------------------------------------
   {

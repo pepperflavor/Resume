@@ -7,10 +7,6 @@ export interface GameCallbacks {
   onOpenProjectShop: () => void;
   /** Opens a guild desk's record menu; the panel owns the menu -> record flow. */
   onOpenGuildRecord: (menu: GuildMenuId) => void;
-  hasGoldenCat: () => boolean;
-  setGoldenCat: (value: boolean) => void;
-  hasOfferedGoldenCat: () => boolean;
-  offerGoldenCat: () => void;
   onGameOver: (retry: () => void) => void;
   onReady: () => void;
   isOverlayOpen: () => boolean;

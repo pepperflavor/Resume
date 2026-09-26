@@ -22,6 +22,7 @@ import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import { insideZone } from '@/game/systems/collision';
 import type { GameCallbacks } from '@/game/types';
+import { setSceneBgm } from '@/game/state/audio';
 
 const PRESS_HINT = 'Press E';
 /** Where the door's idle label shows: the forecourt and the road below it. */
@@ -62,6 +63,7 @@ export class AdventurerGuildScene extends Phaser.Scene {
   }
 
   create() {
+    setSceneBgm('guild');
     const obstacles = createGuildMap(this);
     // Both way-marks stand in the tree line, which already blocks that ground,
     // so they add no collision of their own.

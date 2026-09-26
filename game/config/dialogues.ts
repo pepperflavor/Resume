@@ -59,10 +59,12 @@ export const DIALOGUES = {
     greeting: '모험가들이 행운을 빌러가는 연못이 있다고 한다.',
     exit: '확인',
   },
+  // The slab by the chamber door. It states what the snoring does and stops
+  // there: that silence is the danger is for the player to work out.
   signBossEntrance: {
-    speaker: '룬이 새겨진 기둥',
+    speaker: '룬이 새겨진 석판',
     role: 'Dungeon',
-    greeting: '동쪽 통로로 나가면 던전 입구로 돌아간다.',
+    greeting: '드래곤의 코고는 소리는\n발걸음 소리를 지워줄 거예요.',
     exit: '확인',
   },
   signGardenEntrance: {
@@ -179,6 +181,13 @@ export const DIALOGUES = {
       '던전 안에서는 소리가 재생될 예정입니다.\n입장 전에 볼륨을 조절해주세요.',
     choice: '던전에 들어간다',
   },
+  bossChamberSealed: {
+    speaker: '던전',
+    role: 'Dungeon',
+    greeting:
+      '황금 고양이상을 훔친 걸 들키면\n정말 큰일 날 것 같다.\n\n지금은 다시 들어가지 않는 게 좋겠다.',
+    exit: '확인',
+  },
   dungeonGuide: {
     speaker: '오래된 안내판',
     role: 'Dungeon',
@@ -188,7 +197,8 @@ export const DIALOGUES = {
   goldenCat: {
     speaker: '황금 고양이상',
     role: 'Dungeon',
-    greeting: '황금 고양이상이 있다.',
+    greeting:
+      '귀엽고 반짝거려!\n누군가 애타게 찾고 있다고\n들었던 것 같은데...',
     choice: '가져간다',
     exit: '그냥 둔다',
   },

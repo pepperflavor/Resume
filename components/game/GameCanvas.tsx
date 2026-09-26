@@ -10,16 +10,12 @@ import { ProjectShopPanel } from '@/components/game/ProjectShopPanel';
 import { SettingsPanel } from '@/components/game/SettingsPanel';
 import { InfoPanel } from '@/components/portfolio/InfoPanel';
 import type { GuildMenuId } from '@/game/config/guildRecords';
-import { startBgm } from '@/game/state/bgm';
+import { startBgm, stopAllAudio } from '@/game/state/audio';
 import { useGameState } from '@/game/state/useGameState';
 
 export function GameCanvas() {
   const host = useRef<HTMLDivElement>(null);
   const overlayOpen = useRef(false);
-  const goldenCat = useRef(false);
-  // The offering survives a game over: only the carried statue is lost.
-  const goldenCatOffered = useRef(false);
-  const [hasGoldenCat, setHasGoldenCat] = useState(false);
   const [retry, setRetry] = useState<(() => void) | null>(null);
   const [shopOpen, setShopOpen] = useState(false);
   const [guildRecord, setGuildRecord] = useState<GuildMenuId | null>(null);
@@ -27,6 +23,9 @@ export function GameCanvas() {
   const gameRef = useRef<Game | undefined>(undefined);
   const state = useGameState();
   const hasName = state.playerName.length > 0;
+  // Read from the save rather than kept beside it, so a reload shows what the
+  // player actually has instead of an empty HUD over a half-finished quest.
+  const carryingGoldenCat = state.quests.goldenCat === 'CARRIED';
 
   function syncGameplayInput() {
     // Phaser retains events until POST_STEP. An ownership change must discard
@@ -86,17 +85,6 @@ export function GameCanvas() {
               setGuildRecord(menu);
             }
           },
-          hasGoldenCat: () => goldenCat.current,
-          setGoldenCat: (value) => {
-            goldenCat.current = value;
-            setHasGoldenCat(value);
-          },
-          hasOfferedGoldenCat: () => goldenCatOffered.current,
-          offerGoldenCat: () => {
-            goldenCatOffered.current = true;
-            goldenCat.current = false;
-            setHasGoldenCat(false);
-          },
           onGameOver: (action) => {
             overlayOpen.current = true;
             syncGameplayInput();
@@ -116,6 +104,9 @@ export function GameCanvas() {
       });
     return () => {
       cancelled = true;
+      // The world going away takes its sound with it: a reset or a route
+      // change must not leave a track singing over an empty frame.
+      stopAllAudio();
       game?.destroy(true);
       if (gameRef.current === game) gameRef.current = undefined;
     };
@@ -135,7 +126,7 @@ export function GameCanvas() {
     <>
       <div className="game-frame">
         <GameHud
-          hasGoldenCat={hasGoldenCat}
+          hasGoldenCat={carryingGoldenCat}
           hasKkokko={state.quests.findKkokko === 'CHICKEN_FOUND'}
           bgmEnabled={state.settings.bgmEnabled}
           onOpenSettings={() => {

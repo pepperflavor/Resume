@@ -138,10 +138,10 @@ export const SCENE_SPAWNS: Record<
     },
   },
   dungeonBoss: {
-    // 64px east of the return warp at (1000,344): a step off the circle, so
-    // arriving never puts Press E straight back on screen.
-    default: { x: 1064, y: 352 },
-    from: { dungeonEntrance: { x: 1064, y: 352 } },
+    // South of the dragon on the entry floor, a step off the return warp at
+    // (900,650) and well clear of both the coil and the statue's reach.
+    default: { x: 800, y: 620 },
+    from: { dungeonEntrance: { x: 800, y: 620 } },
   },
   caveGarden: {
     default: { x: 384, y: 276 },
