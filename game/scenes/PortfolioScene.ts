@@ -25,6 +25,7 @@ import { getKkokkoQuest, setKkokkoQuest } from '@/game/state/gameState';
 import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks, PortfolioEntry } from '@/game/types';
+import { setSceneBgm } from '@/game/state/audio';
 
 const HOME_NPC_KINDS = [...new Set(HOME_NPCS.map((npc) => npc.kind))];
 
@@ -80,6 +81,7 @@ export class PortfolioScene extends Phaser.Scene {
   }
 
   create() {
+    setSceneBgm('home');
     const obstacles = createHomeMap(this);
     // Way-marks are built before the player so their posts can join the
     // obstacle list the player is constructed with.

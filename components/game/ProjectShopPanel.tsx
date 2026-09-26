@@ -161,6 +161,14 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
       <p className="eyebrow">MARKET / PROJECTS</p>
       <h2 id="shop-title">여우의 프로젝트 가게</h2>
 
+      {/* Says where a card actually leads, before the player picks one. Only
+          over the shelf: the quest views have no produce to buy. */}
+      {view === 'stock' && (
+        <p className="shop-note shop-intro">
+          야채를 구매하면 Notion으로 이동합니다.
+        </p>
+      )}
+
       {view === 'stock' && (
         <ul className="shop-stock">
           {stock.map((item, index) => (

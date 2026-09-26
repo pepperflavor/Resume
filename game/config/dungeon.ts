@@ -1,39 +1,8 @@
 import { SCENE_KEYS } from '@/game/config/scenes';
 import type { WarpPointConfig } from '@/game/objects/WarpPoint';
-export const BOSS_TIMING = {
-  back: 700,
-  chant: 3000,
-  watch: 2000,
-  speed: 167.2,
-  movementThreshold: 0.5,
-  catchRadius: 23,
-} as const;
-// Independently bounded top-row poses. Bottom-row chase rectangles overlap neighbors.
-export const BOSS_FRAMES = {
-  front: { x: 0, y: 0, width: 410, height: 330 },
-  back: { x: 0, y: 330, width: 410, height: 340 },
-  chase: { x: 768, y: 0, width: 380, height: 330 },
-} as const;
-export const BOSS_STILL_SCALE = 0.3;
-// The chase sheet is normalized to uniform cells, so it needs its own scale to
-// match the on-screen size of the still poses above.
-export const BOSS_CHASE = {
-  key: 'boss-dragon-chase',
-  url: '/assets/game/runtime/boss_dragon_chase.png',
-  frameWidth: 208,
-  frameHeight: 184,
-  scale: 0.6,
-  frameRate: 6,
-  // Below this per-frame distance the chase is stalled against a pillar.
-  movingThreshold: 0.4,
-} as const;
-export const BOSS_CHASE_FRAMES = {
-  down: [0, 1, 2, 1],
-  left: [3, 4, 5, 4],
-  right: [6, 7, 8, 7],
-  up: [9, 10, 11, 10],
-} as const;
-export const BOSS_FOOT = { halfWidth: 18, height: 12 } as const;
+// The chase that used to live here — its timings, its four-way sheet and its
+// foot box — went with the red-light/green-light game it served. What the
+// chamber holds now is a dragon that never moves; see `config/bossDragon.ts`.
 const BOSS_ANCHOR = { x: 640, y: 116 } as const;
 const ROOM_SOUTH = { x: 640, y: 700 } as const;
 // Taking the statue has to happen within sight of the boss, so it sits three
@@ -69,16 +38,16 @@ export const DUNGEON_PROPS: readonly DungeonPropConfig[] = [
   { name: 'arch', x: 1228, y: 428, scale: 0.4, collision: 'floor', flat: true },
   {
     name: 'pillar',
-    x: 320,
-    y: 260,
+    x: 250,
+    y: 640,
     scale: 0.4,
     collision: 'structure',
     footprint: { width: 24, height: 12 },
   },
   {
     name: 'pillar',
-    x: 960,
-    y: 260,
+    x: 1040,
+    y: 640,
     scale: 0.4,
     collision: 'structure',
     footprint: { width: 24, height: 12 },
@@ -501,11 +470,10 @@ export const BOSS_GLOWS: readonly BossGlowConfig[] = [
  */
 export const BOSS_WARP = {
   id: 'boss-chamber-entrance-warp',
-  // On the open stone north-east of the hoard. The old exit sat at (1196,392),
-  // which is inside the treasure mound against the east wall: a circle there is
-  // buried under gold and half behind the wall trim.
-  x: 1000,
-  y: 344,
+  // On the open floor south-east of the dragon, on the entry side of the room.
+  // It sat at (1000,344) before the dragon took the middle of the chamber.
+  x: 900,
+  y: 650,
   /** The chamber camera runs at 0.8 zoom, so the circle is drawn wider. */
   width: 88,
   glowAlpha: 0.55,

@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import { GARDEN } from '@/game/config/garden';
+import { GARDEN, GARDEN_AMBIENCE } from '@/game/config/garden';
 import { GOLDEN_CAT_TEXTURES } from '@/game/config/assets';
 import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
 import { WORLD } from '@/game/config/world';
@@ -21,6 +21,13 @@ import { Player } from '@/game/objects/Player';
 import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks } from '@/game/types';
+import { preloadSfx, setSceneBgm } from '@/game/state/audio';
+import { CaveGardenAmbience } from '@/game/systems/CaveGardenAmbience';
+import {
+  hasGoldenCat,
+  hasOfferedGoldenCat,
+  offerGoldenCat,
+} from '@/game/state/gameState';
 
 export class CaveGardenScene extends Phaser.Scene {
   private player!: Player;
@@ -32,6 +39,8 @@ export class CaveGardenScene extends Phaser.Scene {
   private miss!: InteractionMissBubble;
   private prompt!: Phaser.GameObjects.Text;
   private exitSigns!: ExitSigns;
+  /** The grotto's dripping, which belongs to this scene and leaves with it. */
+  private ambience!: CaveGardenAmbience;
   private entry: SceneEntry = {};
   constructor(private readonly callbacks: GameCallbacks) {
     super(SCENE_KEYS.caveGarden);
@@ -43,6 +52,7 @@ export class CaveGardenScene extends Phaser.Scene {
     loadPlayerAssets(this);
     loadNpcAssets(this, ['pondFairy']);
     loadGoldenCatAssets(this);
+    preloadSfx(GARDEN_AMBIENCE.drops.map((drop) => drop.url));
     loadRuntimeAtlas(this, 'gardenOffering');
     loadRuntimeAtlas(this, 'gardenWater');
     loadRuntimeAtlas(this, 'gardenPondEdge');
@@ -52,6 +62,7 @@ export class CaveGardenScene extends Phaser.Scene {
     loadRuntimeGround(this, 'caveGarden');
   }
   create() {
+    setSceneBgm('caveGarden');
     // The grotto is exactly the viewport, and the perimeter planting is drawn
     // past its edges on purpose: bounds keep anything outside off the screen.
     this.cameras.main.setBounds(0, 0, WORLD.width, WORLD.height);
@@ -77,6 +88,9 @@ export class CaveGardenScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () =>
       this.tweens.killTweensOf(this.fairy.sprite),
     );
+    this.ambience = new CaveGardenAmbience(this);
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.ambience.stop());
+    this.ambience.start();
     obstacles.push({
       x: GARDEN.fairy.x - 10,
       y: GARDEN.fairy.y - 10,
@@ -93,7 +107,7 @@ export class CaveGardenScene extends Phaser.Scene {
       .setOrigin(0.5, 1)
       .setDepth(GARDEN.altar.y + 1)
       .setName('golden-cat-offering')
-      .setVisible(this.callbacks.hasOfferedGoldenCat());
+      .setVisible(hasOfferedGoldenCat());
     this.player = new Player(
       this,
       obstacles,
@@ -136,27 +150,23 @@ export class CaveGardenScene extends Phaser.Scene {
         this.callbacks.onInteract(this.fairyDialogue());
         return;
       }
-      if (this.callbacks.hasGoldenCat())
+      if (hasGoldenCat())
         this.callbacks.onInteract('offeringAltarWithCat', () => {
           if (!this.scene.isActive()) return;
-          this.callbacks.offerGoldenCat();
+          offerGoldenCat();
           this.offering.setVisible(true);
         });
       else
         this.callbacks.onInteract(
-          this.callbacks.hasOfferedGoldenCat()
-            ? 'offeringAltarDone'
-            : 'offeringAltar',
+          hasOfferedGoldenCat() ? 'offeringAltarDone' : 'offeringAltar',
         );
     });
     this.travel.enter(true);
     this.callbacks.onReady();
   }
   private fairyDialogue(): DialogueId {
-    if (this.callbacks.hasOfferedGoldenCat()) return 'pondFairyOffered';
-    return this.callbacks.hasGoldenCat()
-      ? 'pondFairyFound'
-      : 'pondFairyWaiting';
+    if (hasOfferedGoldenCat()) return 'pondFairyOffered';
+    return hasGoldenCat() ? 'pondFairyFound' : 'pondFairyWaiting';
   }
   /** The marker only wins an E when it beats the fairy and the altar. */
   private nearestSign() {

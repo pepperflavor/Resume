@@ -33,6 +33,7 @@ import { insideZone } from '@/game/systems/collision';
 import { SceneControls } from '@/game/systems/SceneControls';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { CollisionRect, GameCallbacks } from '@/game/types';
+import { setSceneBgm } from '@/game/state/audio';
 
 const PRESS_HINT = 'Press E';
 
@@ -176,6 +177,7 @@ export class MarketScene extends Phaser.Scene {
   }
 
   create() {
+    setSceneBgm('market');
     this.obstacles = createMarketMap(this);
     // Built before the NPCs and the player so its posts join the obstacle list.
     this.exitSigns = new ExitSigns(this, 'market');

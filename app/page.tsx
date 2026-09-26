@@ -36,12 +36,11 @@ export default function Home() {
           </div>
           <GameCanvas />
           <p className="controls">
-            게임 화면 클릭 또는 Tab으로 포커스 · 방향키 이동 · E 상호작용 ·
-            대화창에서 방향키 선택 / E 확정 / Esc 종료 · Tab으로 게임 벗어나기
+            게임 화면 클릭으로 포커스 · 방향키 이동 · E 상호작용 · 대화창에서
+            방향키 선택 / E 확정
           </p>
           <p className="mobile-note">
-            모바일에서는 아래 메뉴와 본문으로 정보를 확인해 주세요. 터치 이동은
-            추후 추가됩니다.
+            모바일은 아직 지원하지 않아요. 웹으로 확인해주세요.
           </p>
         </section>
         <div className="portfolio-sections">
