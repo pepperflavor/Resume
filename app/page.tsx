@@ -26,7 +26,6 @@ export default function Home() {
             <br />
             개발 이야기.
           </h1>
-          <p>Node.js · TypeScript · NestJS</p>
           <a href="#about">스크롤로 포트폴리오 보기 ↓</a>
         </section>
         <section className="game-section" aria-labelledby="game-title">
