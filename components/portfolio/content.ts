@@ -6,22 +6,17 @@ export const sections = [
   },
   {
     id: 'experience',
-    title: 'Experience',
-    text: '업무 경험과 문제 해결 과정.',
+    title: 'Resume',
+    text: 'PDF형식의 이력서를 찾으시나요? 사슴씨에게 물어보세요.',
   },
   {
     id: 'projects',
     title: 'Projects',
-    text: '주요 프로젝트의 설계, 기여 내용과 결과.',
-  },
-  {
-    id: 'skills',
-    title: 'Skills',
-    text: 'Node.js / TypeScript / NestJS',
+    text: '여우씨를 도와준다면 그동안 진행했던 프로젝트들을 확인할 수 있습니다.',
   },
   {
     id: 'contact',
     title: 'Contact',
-    text: '개발과 협업에 관한 연락.',
+    text: 'Email: j8747j@gmail.com / Phone: 010-7322-3568',
   },
 ] as const;
