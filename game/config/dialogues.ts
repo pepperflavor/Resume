@@ -89,7 +89,8 @@ export const DIALOGUES = {
     role: 'Skills',
     greeting: '기술은 장비와 비슷하지.\n잘 다듬어 놓아야 필요할 때 쓸 수 있어.',
     choice: '기술에 대해 묻는다',
-    reply: '튼튼한 장비처럼, 기술도 꾸준히 다듬는 게 중요하지.',
+    reply:
+      '좀 더 자세한 얘기를 듣고 싶다면, 옆에 사슴씨에게 가보라고. Resume를 맡아두고 있거든',
   },
   fox: {
     speaker: '여우 안내인',
@@ -178,7 +179,7 @@ export const DIALOGUES = {
     speaker: '던전',
     role: 'Dungeon',
     greeting:
-      '던전 안에서는 소리가 재생될 예정입니다.\n입장 전에 볼륨을 조절해주세요.',
+      '준비가 되기 전에는 입장하지 않는 것을 권합니다.\n입장 전에 소리 볼륨을 조절해주세요.',
     choice: '던전에 들어간다',
   },
   bossChamberSealed: {
@@ -235,7 +236,7 @@ export const DIALOGUES = {
   adventurerCat: {
     speaker: '고양이 모험가',
     role: 'Dungeon',
-    greeting: '난 장비를 좀 더 손보고 들어갈 생각이야.',
+    greeting: '난 장비를 좀 더 손보고 모험을 떠날 생각이야.',
   },
   pondFairyWaiting: {
     speaker: '연못의 요정',
