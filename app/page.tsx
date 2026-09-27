@@ -20,7 +20,7 @@ export default function Home() {
       </header>
       <main>
         <section className="intro" aria-labelledby="intro-title">
-          <p className="eyebrow">BACKEND DEVELOPER</p>
+          <p className="eyebrow">WEB DEVELOPER</p>
           <h1 id="intro-title">
             작은 공간에서 시작하는
             <br />
