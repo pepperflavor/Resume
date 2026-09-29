@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import type { Game } from 'phaser';
 import type { PortfolioEntry } from '@/game/types';
 import { GameHud } from '@/components/game/GameHud';
@@ -8,9 +8,12 @@ import { GuildRecordPanel } from '@/components/game/GuildRecordPanel';
 import { NameEntryPanel } from '@/components/game/NameEntryPanel';
 import { ProjectShopPanel } from '@/components/game/ProjectShopPanel';
 import { SettingsPanel } from '@/components/game/SettingsPanel';
-import { MobileControls } from '@/components/game/MobileControls';
+import { InstallGuidePanel } from '@/components/game/InstallGuidePanel';
+import { MobileControlsLayer } from '@/components/game/MobileControlsLayer';
+import { MobileStartPanel } from '@/components/game/MobileStartPanel';
 import { OrientationGuard } from '@/components/game/OrientationGuard';
 import {
+  isStandaloneApp,
   matchesTouchEnvironment,
   useTouchEnvironment,
 } from '@/components/game/useTouchEnvironment';
@@ -25,13 +28,28 @@ import { useGameState } from '@/game/state/useGameState';
 
 export function GameCanvas() {
   const host = useRef<HTMLDivElement>(null);
+  // The controls' home while no panel is open. A state node rather than a ref,
+  // because the layer has to re-render once the frame exists.
+  const [frame, setFrame] = useState<HTMLDivElement | null>(null);
   const overlayOpen = useRef(false);
   const [retry, setRetry] = useState<(() => void) | null>(null);
   const [shopOpen, setShopOpen] = useState(false);
   const [guildRecord, setGuildRecord] = useState<GuildMenuId | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [installGuideOpen, setInstallGuideOpen] = useState(false);
+  // A phone is offered the home-screen guide once, before the name prompt;
+  // answering either way sends them on. Settings can re-open it later.
+  const [introAnswered, setIntroAnswered] = useState(false);
   const gameRef = useRef<Game | undefined>(undefined);
   const { isTouch, isPortrait } = useTouchEnvironment();
+  // Whether this is a home-screen launch. It cannot change while the page is
+  // open, so there is nothing to subscribe to — the server snapshot is simply
+  // false, which keeps the markup it renders free of the browser's opinion.
+  const standalone = useSyncExternalStore(
+    () => () => {},
+    isStandaloneApp,
+    () => false,
+  );
   // A phone held upright plays nothing at all: the notice is up, so the input
   // layer is shut off behind it rather than merely hidden.
   const orientationBlocked = isTouch && isPortrait;
@@ -179,22 +197,25 @@ export function GameCanvas() {
     releaseOverlay();
   }
 
-  // The controls belong to a running world only: never on desktop, never
-  // behind a panel, and never while the phone is upright.
+  const panelOpen = Boolean(
+    entry || shopOpen || guildRecord || settingsOpen || retry,
+  );
+  // The controls belong to a running world: never on desktop, never while the
+  // phone is upright. They stay up behind a panel, because the thumbs are
+  // still the only pointer the player has — they just drive the panel instead.
   const showMobileControls =
-    isTouch &&
-    !isPortrait &&
-    hasName &&
-    status === 'ready' &&
-    !entry &&
-    !shopOpen &&
-    !guildRecord &&
-    !settingsOpen &&
-    !retry;
+    isTouch && !isPortrait && hasName && status === 'ready';
+  // The start screen and the name prompt own the screen outright; the controls
+  // would have nothing to drive and the guide's own buttons are being read.
+  const startFlowOpen = !hasName || installGuideOpen;
+  // A phone that has not answered the address-bar question yet, unless it is
+  // already running without an address bar to answer about.
+  const showMobileIntro =
+    isTouch && !isPortrait && !hasName && !introAnswered && !standalone;
 
   return (
     <>
-      <div className="game-frame">
+      <div className="game-frame" ref={setFrame}>
         <GameHud
           hasGoldenCat={carryingGoldenCat}
           hasKkokko={state.quests.findKkokko === 'CHICKEN_FOUND'}
@@ -210,7 +231,6 @@ export function GameCanvas() {
           className="game-host"
           onPointerDown={() => startBgm()}
         />
-        {showMobileControls && <MobileControls />}
         {orientationBlocked && <OrientationGuard />}
         {hasName && status !== 'ready' && (
           <p className="game-status" role="status">
@@ -225,7 +245,25 @@ export function GameCanvas() {
           </p>
         )}
       </div>
-      {!hasName && <NameEntryPanel onStart={() => startBgm()} />}
+      {showMobileIntro && (
+        <MobileStartPanel
+          onShowGuide={() => setInstallGuideOpen(true)}
+          onSkip={() => setIntroAnswered(true)}
+        />
+      )}
+      {!hasName && !showMobileIntro && !installGuideOpen && (
+        <NameEntryPanel onStart={() => startBgm()} />
+      )}
+      {installGuideOpen && (
+        <InstallGuidePanel
+          standalone={standalone}
+          playLabel={hasName ? '돌아가기' : '지금 이대로 플레이'}
+          onClose={() => {
+            setInstallGuideOpen(false);
+            setIntroAnswered(true);
+          }}
+        />
+      )}
       {entry && (
         <InfoPanel
           key={entry.id}
@@ -253,6 +291,15 @@ export function GameCanvas() {
       )}
       {settingsOpen && (
         <SettingsPanel
+          onShowInstallGuide={
+            isTouch
+              ? () => {
+                  setSettingsOpen(false);
+                  setInstallGuideOpen(true);
+                  releaseOverlay();
+                }
+              : undefined
+          }
           onClose={() => {
             setSettingsOpen(false);
             releaseOverlay();
@@ -264,6 +311,15 @@ export function GameCanvas() {
             setGuildRecord(null);
             overlayOpen.current = false;
           }}
+        />
+      )}
+      {/* Rendered after every panel on purpose: effects run in render order, so
+          the layer only goes looking for the open dialog once that dialog's own
+          effect has opened it. */}
+      {showMobileControls && !startFlowOpen && (
+        <MobileControlsLayer
+          mode={panelOpen ? 'dialogue' : 'gameplay'}
+          frame={frame}
         />
       )}
       {retry && (

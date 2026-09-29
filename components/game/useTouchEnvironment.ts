@@ -63,3 +63,18 @@ export function useTouchEnvironment(): TouchEnvironment {
 
   return environment;
 }
+
+/**
+ * Whether the page is running as an installed web app rather than in a browser
+ * tab. Someone already past the address bar needs no advice about it.
+ *
+ * `display-mode` covers the manifest route; `navigator.standalone` is the
+ * older iOS flag, which is still what Safari sets for a home-screen launch.
+ */
+export function isStandaloneApp() {
+  if (typeof window === 'undefined') return false;
+  return (
+    window.matchMedia('(display-mode: standalone)').matches ||
+    (navigator as Navigator & { standalone?: boolean }).standalone === true
+  );
+}

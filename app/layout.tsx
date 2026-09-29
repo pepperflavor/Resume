@@ -2,8 +2,24 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 export const metadata: Metadata = {
   title: 'Developer Portfolio',
-  icons: { icon: '/assets/game/items/golden_cat_icon.png' },
+  icons: {
+    icon: '/assets/game/items/golden_cat_icon.png',
+    apple: '/assets/game/items/golden_cat_icon.png',
+  },
   description: 'Node.js · TypeScript · NestJS 백엔드 개발자 포트폴리오',
+  // A home-screen launch opens without Safari's chrome. `black-translucent`
+  // puts the game under the status bar, which is why the controls are laid out
+  // against `env(safe-area-inset-*)` rather than the window edges.
+  appleWebApp: {
+    capable: true,
+    title: 'Portfolio',
+    statusBarStyle: 'black-translucent',
+  },
+  // Next emits the standardised `mobile-web-app-capable` for `capable`, which
+  // only WebKit 17.4 and later reads. The deprecated spelling is what every
+  // iPhone before that looks for, and a home-screen launch is the whole point
+  // of the guide the game offers, so both go out.
+  other: { 'apple-mobile-web-app-capable': 'yes' },
 };
 /**
  * `viewportFit: 'cover'` lets the landscape game reach under a notch, which is
@@ -15,6 +31,9 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
+  // Matches the manifest, so an installed launch has no pale strip of browser
+  // chrome above a dark world.
+  themeColor: '#10151d',
 };
 
 /**
