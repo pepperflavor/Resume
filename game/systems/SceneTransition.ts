@@ -7,6 +7,7 @@ import {
   type SceneId,
 } from '@/game/config/scenes';
 import { insideZone } from '@/game/systems/collision';
+import { resetHeldInput } from '@/game/input/InputManager';
 
 export class SceneTransition {
   locked = false;
@@ -22,7 +23,9 @@ export class SceneTransition {
     this.player.stop();
     const camera = this.scene.cameras.main;
     const complete = () => {
-      this.scene.input.keyboard?.resetKeys();
+      // Arriving drops every held key and thumb, so a direction that carried
+      // the player through the door cannot keep carrying them on the far side.
+      resetHeldInput(this.scene);
       this.locked = false;
     };
     camera.once(Phaser.Cameras.Scene2D.Events.FADE_IN_COMPLETE, complete);
@@ -49,7 +52,7 @@ export class SceneTransition {
     if (this.locked) return;
     this.locked = true;
     this.player.stop();
-    this.scene.input.keyboard?.resetKeys();
+    resetHeldInput(this.scene);
     const camera = this.scene.cameras.main;
     const complete = () => this.scene.scene.start(target, entry);
     camera.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, complete);

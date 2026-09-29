@@ -3,6 +3,7 @@ import {
   GUILD_DOOR,
   GUILD_NOTICE_BOARD,
   GUILD_ROAD,
+  GUILD_WORLD,
   GUILD_YARD,
 } from '@/game/config/guild';
 import {
@@ -18,7 +19,8 @@ import { ExitSigns } from '@/game/objects/ExitSigns';
 import { HintBubble } from '@/game/objects/HintBubble';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { Player } from '@/game/objects/Player';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import { insideZone } from '@/game/systems/collision';
 import type { GameCallbacks } from '@/game/types';
@@ -36,7 +38,7 @@ const DOOR_ZONE = {
 export class AdventurerGuildScene extends Phaser.Scene {
   private player!: Player;
   private miss!: InteractionMissBubble;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private doorHint!: HintBubble;
   private boardHint!: HintBubble;
@@ -70,6 +72,9 @@ export class AdventurerGuildScene extends Phaser.Scene {
     this.exitSigns = new ExitSigns(this, 'guild');
     obstacles.push(...this.exitSigns.collision());
     this.player = new Player(this, obstacles, spawnPoint('guild', this.entry));
+    // The forecourt is exactly the desktop viewport; on a device viewport the
+    // same call zooms in and trails the player instead.
+    configureSceneCamera(this, this.player, GUILD_WORLD);
     if (this.entry.from === 'guildInterior') this.player.face('down');
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.doorHint = new HintBubble(this, GUILD_DOOR.x, GUILD_DOOR.y - 84);
@@ -84,30 +89,37 @@ export class AdventurerGuildScene extends Phaser.Scene {
     this.boardHint.setText(PRESS_HINT);
     this.boardHint.setVisible(false);
     this.travel = new SceneTransition(this, this.player, 'guild');
-    this.controls = new SceneControls(this, () => {
-      if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
-      const picked = this.pick();
-      if (picked.kind === 'none') {
-        this.miss.show();
-        return;
-      }
-      this.miss.hide();
-      this.doorHint.setVisible(false);
-      this.boardHint.setVisible(false);
-      this.player.stop();
-      this.controls.reset();
-      if (picked.kind === 'sign') {
-        this.callbacks.onInteract(picked.sign.dialogue);
-        return;
-      }
-      if (picked.kind === 'board') {
-        this.callbacks.onInteract('guildNoticeBoard');
-        return;
-      }
-      // The bureau door is not an edge zone: it needs an explicit E, then the
-      // ordinary fade carries the player inside.
-      this.travel.start(SCENE_KEYS.guildInterior, { from: 'guild' });
-    });
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
+        const picked = this.pick();
+        if (picked.kind === 'none') {
+          this.miss.show();
+          return;
+        }
+        this.miss.hide();
+        this.doorHint.setVisible(false);
+        this.boardHint.setVisible(false);
+        this.player.stop();
+        this.controls.reset();
+        if (picked.kind === 'sign') {
+          this.callbacks.onInteract(picked.sign.dialogue);
+          return;
+        }
+        if (picked.kind === 'board') {
+          this.callbacks.onInteract('guildNoticeBoard');
+          return;
+        }
+        // The bureau door is not an edge zone: it needs an explicit E, then the
+        // ordinary fade carries the player inside.
+        this.travel.start(SCENE_KEYS.guildInterior, { from: 'guild' });
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -162,11 +174,7 @@ export class AdventurerGuildScene extends Phaser.Scene {
 
   update(_time: number, delta: number) {
     if (!this.controls) return;
-    if (
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused
-    ) {
+    if (!this.controls.active) {
       this.controls.reset();
       this.player.stop();
       this.doorHint.setVisible(false);

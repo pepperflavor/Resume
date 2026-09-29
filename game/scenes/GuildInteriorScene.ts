@@ -25,7 +25,8 @@ import { HintBubble } from '@/game/objects/HintBubble';
 import { WarpCircle, loadWarpAssets } from '@/game/objects/WarpCircle';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { Player } from '@/game/objects/Player';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { CollisionRect, GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
@@ -51,7 +52,7 @@ interface InteriorTarget {
 export class GuildInteriorScene extends Phaser.Scene {
   private player!: Player;
   private miss!: InteractionMissBubble;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private targets: InteriorTarget[] = [];
   private entry: SceneEntry = {};
@@ -144,16 +145,8 @@ export class GuildInteriorScene extends Phaser.Scene {
     );
     this.player.face('up');
 
-    // Same camera contract as Market: bounds plus follow, zoom untouched.
-    const camera = this.cameras.main;
-    camera.setBounds(
-      0,
-      0,
-      GUILD_INTERIOR_WORLD.width,
-      GUILD_INTERIOR_WORLD.height,
-    );
-    camera.setRoundPixels(true);
-    camera.startFollow(this.player.body, true, 0.15, 0.15);
+    // Same camera contract as Market: bounds plus follow.
+    configureSceneCamera(this, this.player, GUILD_INTERIOR_WORLD);
 
     new WarpCircle(this, {
       x: GUILD_WARP.x,
@@ -164,30 +157,37 @@ export class GuildInteriorScene extends Phaser.Scene {
     });
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.travel = new SceneTransition(this, this.player, 'guildInterior');
-    this.controls = new SceneControls(this, () => {
-      if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
-      const target = this.nearestTarget();
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      this.miss.hide();
-      this.player.stop();
-      this.controls.reset();
-      const { interaction, floorAccess } = target.target;
-      // The warp routes to its floor once one exists; until then it opens the
-      // locked line, so enabling it later is a config change, not a code one.
-      if (floorAccess) {
-        const access = GUILD_FLOOR_ACCESS[floorAccess];
-        if (access.enabled && access.targetScene) {
-          this.travel.start(access.targetScene, { from: 'guildInterior' });
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
+        const target = this.nearestTarget();
+        if (!target) {
+          this.miss.show();
           return;
         }
-      }
-      if (interaction.type === 'record')
-        this.callbacks.onOpenGuildRecord(interaction.menu);
-      else this.callbacks.onInteract(interaction.dialogue);
-    });
+        this.miss.hide();
+        this.player.stop();
+        this.controls.reset();
+        const { interaction, floorAccess } = target.target;
+        // The warp routes to its floor once one exists; until then it opens the
+        // locked line, so enabling it later is a config change, not a code one.
+        if (floorAccess) {
+          const access = GUILD_FLOOR_ACCESS[floorAccess];
+          if (access.enabled && access.targetScene) {
+            this.travel.start(access.targetScene, { from: 'guildInterior' });
+            return;
+          }
+        }
+        if (interaction.type === 'record')
+          this.callbacks.onOpenGuildRecord(interaction.menu);
+        else this.callbacks.onInteract(interaction.dialogue);
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -263,10 +263,7 @@ export class GuildInteriorScene extends Phaser.Scene {
 
   update(_time: number, delta: number) {
     if (!this.controls) return;
-    const locked =
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused;
+    const locked = !this.controls.active;
     if (locked) {
       this.controls.reset();
       this.player.stop();

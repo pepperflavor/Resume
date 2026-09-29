@@ -8,8 +8,18 @@ import { GuildRecordPanel } from '@/components/game/GuildRecordPanel';
 import { NameEntryPanel } from '@/components/game/NameEntryPanel';
 import { ProjectShopPanel } from '@/components/game/ProjectShopPanel';
 import { SettingsPanel } from '@/components/game/SettingsPanel';
+import { MobileControls } from '@/components/game/MobileControls';
+import { OrientationGuard } from '@/components/game/OrientationGuard';
+import {
+  matchesTouchEnvironment,
+  useTouchEnvironment,
+} from '@/components/game/useTouchEnvironment';
 import { InfoPanel } from '@/components/portfolio/InfoPanel';
 import type { GuildMenuId } from '@/game/config/guildRecords';
+import {
+  resetAllHeldInput,
+  setGameplayInputEnabled,
+} from '@/game/input/InputManager';
 import { startBgm, stopAllAudio } from '@/game/state/audio';
 import { useGameState } from '@/game/state/useGameState';
 
@@ -21,26 +31,34 @@ export function GameCanvas() {
   const [guildRecord, setGuildRecord] = useState<GuildMenuId | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const gameRef = useRef<Game | undefined>(undefined);
+  const { isTouch, isPortrait } = useTouchEnvironment();
+  // A phone held upright plays nothing at all: the notice is up, so the input
+  // layer is shut off behind it rather than merely hidden.
+  const orientationBlocked = isTouch && isPortrait;
+  const orientationBlockedRef = useRef(false);
   const state = useGameState();
   const hasName = state.playerName.length > 0;
   // Read from the save rather than kept beside it, so a reload shows what the
   // player actually has instead of an empty HUD over a half-finished quest.
   const carryingGoldenCat = state.quests.goldenCat === 'CARRIED';
 
+  /**
+   * The one place input ownership changes hands.
+   *
+   * Every route into it — a panel opening or closing, a rotation, the world
+   * being torn down — ends with every held key and thumb dropped, so nothing
+   * pressed a moment ago acts a moment later.
+   *
+   * Only the rotate notice switches gameplay input *off*. A panel leaves it on
+   * and takes ownership instead: the scenes already read `isOverlayOpen`, and
+   * Phaser's own keyboard plugin is disabled so the panel gets the keys.
+   */
   function syncGameplayInput() {
-    // Phaser retains events until POST_STEP. An ownership change must discard
-    // the old queue so opening E cannot replay after the modal closes.
-    const keyboardManager = gameRef.current?.input.keyboard;
-    // queue exists in Phaser 3.90 runtime but is omitted from its public typings.
-    if (keyboardManager && 'queue' in keyboardManager)
-      keyboardManager.queue = [];
-    for (const scene of gameRef.current?.scene.getScenes(true) ?? []) {
-      const keyboard = scene.input.keyboard;
-      if (keyboard) {
-        keyboard.resetKeys();
-        keyboard.enabled = !overlayOpen.current;
-      }
-    }
+    setGameplayInputEnabled(!orientationBlockedRef.current);
+    resetAllHeldInput(gameRef.current);
+    for (const scene of gameRef.current?.scene.getScenes(true) ?? [])
+      if (scene.input.keyboard)
+        scene.input.keyboard.enabled = !overlayOpen.current;
   }
   const [entry, setEntry] = useState<{
     id: PortfolioEntry;
@@ -63,39 +81,46 @@ export function GameCanvas() {
         // Set here rather than in the effect body: a rebuild after a reset has
         // to show the loader again, and the textures are gone with the old game.
         setStatus('loading');
-        game = createGame(host.current, {
-          onInteract: (next, confirm) => {
-            if (!cancelled && !overlayOpen.current) {
+        game = createGame(
+          host.current,
+          {
+            onInteract: (next, confirm) => {
+              if (!cancelled && !overlayOpen.current) {
+                overlayOpen.current = true;
+                syncGameplayInput();
+                setEntry({ id: next, confirm });
+              }
+            },
+            onOpenProjectShop: () => {
+              if (!cancelled && !overlayOpen.current) {
+                overlayOpen.current = true;
+                syncGameplayInput();
+                setShopOpen(true);
+              }
+            },
+            onOpenGuildRecord: (menu) => {
+              if (!cancelled && !overlayOpen.current) {
+                overlayOpen.current = true;
+                syncGameplayInput();
+                setGuildRecord(menu);
+              }
+            },
+            onGameOver: (action) => {
               overlayOpen.current = true;
               syncGameplayInput();
-              setEntry({ id: next, confirm });
-            }
+              setEntry(null);
+              setRetry(() => action);
+            },
+            isOverlayOpen: () => overlayOpen.current,
+            onReady: () => {
+              if (!cancelled) setStatus('ready');
+            },
           },
-          onOpenProjectShop: () => {
-            if (!cancelled && !overlayOpen.current) {
-              overlayOpen.current = true;
-              syncGameplayInput();
-              setShopOpen(true);
-            }
-          },
-          onOpenGuildRecord: (menu) => {
-            if (!cancelled && !overlayOpen.current) {
-              overlayOpen.current = true;
-              syncGameplayInput();
-              setGuildRecord(menu);
-            }
-          },
-          onGameOver: (action) => {
-            overlayOpen.current = true;
-            syncGameplayInput();
-            setEntry(null);
-            setRetry(() => action);
-          },
-          isOverlayOpen: () => overlayOpen.current,
-          onReady: () => {
-            if (!cancelled) setStatus('ready');
-          },
-        });
+          // Read live rather than from the hook's state: a reload straight into
+          // a saved game builds the world in this very commit, before the
+          // hook's effect has had a chance to say the device is a phone.
+          { deviceViewport: matchesTouchEnvironment() },
+        );
         gameRef.current = game;
       })
       .catch((error: unknown) => {
@@ -112,6 +137,38 @@ export function GameCanvas() {
     };
   }, [hasName]);
 
+  // Rotating, or the address bar sliding away, changes the parent box without
+  // Phaser always noticing in time. A refresh re-measures and re-centres the
+  // letterboxed canvas; FIT does the rest.
+  useEffect(() => {
+    const refresh = () => {
+      gameRef.current?.scale.refresh();
+    };
+    let frame = 0;
+    const schedule = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(refresh);
+    };
+    window.addEventListener('resize', schedule);
+    window.addEventListener('orientationchange', schedule);
+    window.visualViewport?.addEventListener('resize', schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('resize', schedule);
+      window.removeEventListener('orientationchange', schedule);
+      window.visualViewport?.removeEventListener('resize', schedule);
+    };
+  }, []);
+
+  // Every rotation re-measures the canvas and clears whatever the thumb was
+  // doing, so repeated portrait/landscape flips cannot leave the player stuck
+  // walking into a wall.
+  useEffect(() => {
+    orientationBlockedRef.current = orientationBlocked;
+    syncGameplayInput();
+    gameRef.current?.scale.refresh();
+  }, [orientationBlocked]);
+
   function releaseOverlay() {
     overlayOpen.current = false;
     syncGameplayInput();
@@ -121,6 +178,19 @@ export function GameCanvas() {
     setEntry(null);
     releaseOverlay();
   }
+
+  // The controls belong to a running world only: never on desktop, never
+  // behind a panel, and never while the phone is upright.
+  const showMobileControls =
+    isTouch &&
+    !isPortrait &&
+    hasName &&
+    status === 'ready' &&
+    !entry &&
+    !shopOpen &&
+    !guildRecord &&
+    !settingsOpen &&
+    !retry;
 
   return (
     <>
@@ -140,6 +210,8 @@ export function GameCanvas() {
           className="game-host"
           onPointerDown={() => startBgm()}
         />
+        {showMobileControls && <MobileControls />}
+        {orientationBlocked && <OrientationGuard />}
         {hasName && status !== 'ready' && (
           <p className="game-status" role="status">
             {status === 'loading'

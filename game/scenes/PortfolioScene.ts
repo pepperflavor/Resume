@@ -22,7 +22,9 @@ import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { Npc } from '@/game/objects/Npc';
 import { Player } from '@/game/objects/Player';
 import { getKkokkoQuest, setKkokkoQuest } from '@/game/state/gameState';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
+import { WORLD } from '@/game/config/world';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks, PortfolioEntry } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
@@ -48,7 +50,7 @@ interface HomeTarget {
 export class PortfolioScene extends Phaser.Scene {
   private player!: Player;
   private miss!: InteractionMissBubble;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private prompt!: Phaser.GameObjects.Text;
   private signHint!: HintBubble;
@@ -114,6 +116,9 @@ export class PortfolioScene extends Phaser.Scene {
       this.targets.push({ ...target });
 
     this.player = new Player(this, obstacles, spawnPoint('home', this.entry));
+    // The yard is exactly the desktop viewport; on a device viewport the same
+    // call zooms in and trails the player instead.
+    configureSceneCamera(this, this.player, WORLD);
     this.prompt = this.add
       .text(0, 0, 'Press E', {
         fontFamily: 'monospace',
@@ -133,39 +138,46 @@ export class PortfolioScene extends Phaser.Scene {
     this.signHint.setText(HOME_SIGN.idleHint);
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.travel = new SceneTransition(this, this.player, 'home');
-    this.controls = new SceneControls(this, () => {
-      if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
-      const picked = this.pick();
-      if (picked.sign) {
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
+        const picked = this.pick();
+        if (picked.sign) {
+          this.miss.hide();
+          this.player.stop();
+          this.controls.reset();
+          this.prompt.setVisible(false);
+          this.callbacks.onInteract(picked.sign.sign.dialogue);
+          return;
+        }
+        const target = picked.target;
+        if (!target) {
+          this.miss.show();
+          return;
+        }
+        // Hold the animal still so it cannot wander off mid-conversation.
+        target.ambient?.beginInteraction();
         this.miss.hide();
         this.player.stop();
         this.controls.reset();
         this.prompt.setVisible(false);
-        this.callbacks.onInteract(picked.sign.sign.dialogue);
-        return;
-      }
-      const target = picked.target;
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      // Hold the animal still so it cannot wander off mid-conversation.
-      target.ambient?.beginInteraction();
-      this.miss.hide();
-      this.player.stop();
-      this.controls.reset();
-      this.prompt.setVisible(false);
-      // With the quest accepted the chicken offers to be carried back instead
-      // of just clucking. Picking that choice fires this confirm callback.
-      if (target.id === 'chicken' && getKkokkoQuest() === 'ACCEPTED') {
-        this.callbacks.onInteract('kkokkoTake', () => {
-          setKkokkoQuest('CHICKEN_FOUND');
-          this.removeTarget('chicken');
-        });
-        return;
-      }
-      this.callbacks.onInteract(target.entry);
-    });
+        // With the quest accepted the chicken offers to be carried back instead
+        // of just clucking. Picking that choice fires this confirm callback.
+        if (target.id === 'chicken' && getKkokkoQuest() === 'ACCEPTED') {
+          this.callbacks.onInteract('kkokkoTake', () => {
+            setKkokkoQuest('CHICKEN_FOUND');
+            this.removeTarget('chicken');
+          });
+          return;
+        }
+        this.callbacks.onInteract(target.entry);
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -212,10 +224,7 @@ export class PortfolioScene extends Phaser.Scene {
 
   update(_time: number, delta: number) {
     if (!this.controls) return;
-    const locked =
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused;
+    const locked = !this.controls.active;
     for (const npc of this.ambient) npc.update(delta, locked);
     if (locked) {
       this.controls.reset();

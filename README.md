@@ -23,7 +23,8 @@ http://localhost:3000 에서 확인합니다. `npm run build` 후 `npm start`로
 - 집 문 근처에서 E를 누르면 기존 About React 정보 패널 표시, 대화창은 방향키 선택·E 확정·Esc 종료
 - 게임 화면 클릭 또는 Tab으로 포커스 후 조작, Tab으로 게임 밖 이동
 - About / Experience / Projects / Skills / Contact HTML placeholder와 메뉴
-- 모바일 화면에 맞춘 Canvas 크기 조정 (터치 이동은 미구현)
+- 
+git checkout -b feature/mobile-game-test 화면에 맞춘 Canvas 크기 조정 (터치 이동은 미구현)
 
 `app/`은 웹 페이지, `components/portfolio/`는 웹 콘텐츠와 패널, `components/game/`은 React와 게임의 연결을 담당합니다. `game/` 내부는 설정, Scene, 오브젝트, 타입으로 나눕니다. Phaser는 브라우저에서만 import하며 unmount 시 destroy합니다. 게임 → React 전달은 타입 지정 콜백을 사용합니다. 향후 터치 입력은 `MovementInput` 형태로 연결할 수 있습니다.
 

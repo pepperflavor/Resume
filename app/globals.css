@@ -10,6 +10,9 @@
 }
 body {
   margin: 0;
+  /* A letterboxed canvas or a control parked near the rim must never widen the
+     document; the page only ever scrolls downwards. */
+  overflow-x: hidden;
   background: var(--background);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
@@ -115,10 +118,19 @@ p {
   width: 100%;
   aspect-ratio: 2;
   overflow: hidden;
+  /* Scoped to the play area, not the document: double-tap zoom, the long-press
+     callout and text selection go, while a drag still scrolls the page so a
+     phone can leave a full-height game behind. */
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .game-host canvas {
   display: block;
   max-width: 100%;
+  max-height: 100%;
   image-rendering: pixelated;
 }
 .game-status {
@@ -129,12 +141,8 @@ p {
   padding: 24px;
   pointer-events: none;
 }
-.controls,
-.mobile-note {
+.controls {
   font-size: 12px;
-}
-.mobile-note {
-  display: none;
 }
 .portfolio-section {
   scroll-margin-top: 24px;
@@ -182,9 +190,6 @@ dialog::backdrop {
 @media (max-width: 600px) {
   .intro {
     padding-top: 36px;
-  }
-  .mobile-note {
-    display: block;
   }
   .portfolio-section {
     grid-template-columns: 28px 1fr;
@@ -542,4 +547,199 @@ dialog::backdrop {
   margin: 0;
   /* The address itself must stay readable even where mailto:/tel: do nothing. */
   user-select: text;
+}
+
+/* --- mobile game mode ------------------------------------------------- */
+
+/* Mobile game mode gets the game and nothing else. The page it is embedded in
+   is a desktop reading experience — a header, a hero, scrolling prose — and
+   none of that survives being squeezed beside a world that wants the whole
+   screen. The portfolio's content is still all there; on a phone it is read by
+   walking up to the people who tell it.
+
+   Every rule here is keyed off the attribute the layout's inline script sets,
+   never off a media query of its own, so the stylesheet and the game agree on
+   the mode by construction rather than by two rules that happen to match.
+   Written as plain descendant selectors rather than CSS nesting, because the
+   iOS versions this most needs to work on predate relaxed nesting. */
+[data-game-mode='mobile'],
+[data-game-mode='mobile'] body {
+  height: 100%;
+  /* The game owns the screen, so there is nothing below it to scroll to and
+     nothing above it to bounce into. */
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+[data-game-mode='mobile'] .skip-link,
+[data-game-mode='mobile'] .site-header,
+[data-game-mode='mobile'] .intro,
+[data-game-mode='mobile'] .game-heading,
+[data-game-mode='mobile'] .controls,
+[data-game-mode='mobile'] .portfolio-sections,
+[data-game-mode='mobile'] footer {
+  display: none;
+}
+[data-game-mode='mobile'] main,
+[data-game-mode='mobile'] .game-section {
+  width: 100%;
+  margin: 0;
+}
+/* Fixed to the viewport rather than sized in `dvh`: the small and large
+   viewports differ by the height of an address bar that slides in and out on
+   its own, and a canvas that resized with it would shudder the whole time.
+   One stable box; the controls inside it keep clear of the bars through the
+   safe-area insets. */
+[data-game-mode='mobile'] .game-frame {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+  border: 0;
+}
+[data-game-mode='mobile'] .game-host {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+/* The canvas is the screen now; the camera decides what part of the world that
+   screen shows. */
+[data-game-mode='mobile'] .game-host canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Left thumb walks, right thumb talks. The layer itself is inert so the two
+   controls are the only things that take a touch. */
+.mobile-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.mobile-stick,
+.mobile-interact {
+  pointer-events: auto;
+  /* No scrolling, no zooming, no browser gesture: a drag here is gameplay. */
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+/* `max()` against the inset, not the inset alone: a phone with no notch still
+   needs the control off the very edge to be comfortable to reach. */
+.mobile-stick {
+  position: absolute;
+  left: max(18px, env(safe-area-inset-left, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  width: 120px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #8fa3b8;
+  border-radius: 50%;
+  background: #0d141d;
+  opacity: 0.4;
+  transition: opacity 120ms ease-out;
+}
+.mobile-stick[data-active='true'] {
+  opacity: 0.62;
+}
+.mobile-stick-thumb {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #d8e4ef;
+  border-radius: 50%;
+  background: #a5e3bc;
+  /* `translate` rather than a transform, so the thumb offset stays independent
+     of anything else that might want the transform property. */
+  translate: 0 0;
+}
+.mobile-interact {
+  position: absolute;
+  right: max(18px, env(safe-area-inset-right, 0px));
+  bottom: max(22px, env(safe-area-inset-bottom, 0px));
+  width: 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  font-family: monospace;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #10151d;
+  background: #a5e3bc;
+  border: 3px solid #17212e;
+  border-radius: 50%;
+  opacity: 0.55;
+  transition:
+    opacity 120ms ease-out,
+    scale 80ms ease-out;
+}
+.mobile-interact[data-pressed='true'] {
+  opacity: 0.85;
+  scale: 0.94;
+}
+
+/* Over the world only. The portfolio below still reads and scrolls upright. */
+.orientation-guard {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  background: #0a0f16e8;
+  /* Left on purpose: it takes the taps that would otherwise reach the world. */
+  touch-action: none;
+}
+.orientation-icon {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1;
+}
+.orientation-title {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text);
+}
+.orientation-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Panels on a landscape phone: a 390px-tall viewport is shorter than a
+   dialogue with a question and three answers, so the box scrolls inside
+   itself rather than off the screen, and every choice gets a thumb-sized
+   target. */
+@media (orientation: landscape) {
+  [data-game-mode='mobile'] dialog {
+    padding: 18px 20px;
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  [data-game-mode='mobile'] .dialogue-choices button,
+  [data-game-mode='mobile'] .dialogue-choices a {
+    padding: 12px 20px;
+  }
+  [data-game-mode='mobile'] .record-panel {
+    max-height: calc(100dvh - 24px);
+    padding: 16px 20px;
+  }
+  [data-game-mode='mobile'] .name-entry {
+    width: min(430px, calc(100% - 32px));
+  }
+  /* Clear of a notch, and big enough to hit with a thumb. */
+  [data-game-mode='mobile'] .game-hud {
+    top: max(10px, env(safe-area-inset-top, 0px));
+    right: max(10px, env(safe-area-inset-right, 0px));
+  }
+  [data-game-mode='mobile'] .hud-button {
+    width: 40px;
+    height: 40px;
+  }
 }
