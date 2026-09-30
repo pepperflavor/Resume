@@ -38,9 +38,6 @@ export default function Home() {
             게임 화면 클릭으로 포커스 · 방향키 이동 · E 상호작용 · 대화창에서
             방향키 선택 / E 확정
           </p>
-          <p className="mobile-note">
-            모바일은 아직 지원하지 않아요. 웹으로 확인해주세요.
-          </p>
         </section>
         <div className="portfolio-sections">
           {sections.map(({ id, title, text }, index) => (

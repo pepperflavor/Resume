@@ -10,6 +10,9 @@
 }
 body {
   margin: 0;
+  /* A letterboxed canvas or a control parked near the rim must never widen the
+     document; the page only ever scrolls downwards. */
+  overflow-x: hidden;
   background: var(--background);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
@@ -115,10 +118,19 @@ p {
   width: 100%;
   aspect-ratio: 2;
   overflow: hidden;
+  /* Scoped to the play area, not the document: double-tap zoom, the long-press
+     callout and text selection go, while a drag still scrolls the page so a
+     phone can leave a full-height game behind. */
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .game-host canvas {
   display: block;
   max-width: 100%;
+  max-height: 100%;
   image-rendering: pixelated;
 }
 .game-status {
@@ -129,12 +141,8 @@ p {
   padding: 24px;
   pointer-events: none;
 }
-.controls,
-.mobile-note {
+.controls {
   font-size: 12px;
-}
-.mobile-note {
-  display: none;
 }
 .portfolio-section {
   scroll-margin-top: 24px;
@@ -182,9 +190,6 @@ dialog::backdrop {
 @media (max-width: 600px) {
   .intro {
     padding-top: 36px;
-  }
-  .mobile-note {
-    display: block;
   }
   .portfolio-section {
     grid-template-columns: 28px 1fr;
@@ -345,9 +350,12 @@ dialog::backdrop {
 .shop-stock li {
   display: block;
 }
-/* The whole card is one choice: keyboard-selectable and clickable. */
+/* The whole card is one choice: keyboard-selectable and clickable. A button,
+   not a link — picking produce asks before it leaves the game. */
 .shop-card {
   display: flex;
+  width: 100%;
+  text-align: left;
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
@@ -542,4 +550,418 @@ dialog::backdrop {
   margin: 0;
   /* The address itself must stay readable even where mailto:/tel: do nothing. */
   user-select: text;
+}
+
+/* --- mobile game mode ------------------------------------------------- */
+
+/* Mobile game mode gets the game and nothing else. The page it is embedded in
+   is a desktop reading experience — a header, a hero, scrolling prose — and
+   none of that survives being squeezed beside a world that wants the whole
+   screen. The portfolio's content is still all there; on a phone it is read by
+   walking up to the people who tell it.
+
+   Every rule here is keyed off the attribute the layout's inline script sets,
+   never off a media query of its own, so the stylesheet and the game agree on
+   the mode by construction rather than by two rules that happen to match.
+   Written as plain descendant selectors rather than CSS nesting, because the
+   iOS versions this most needs to work on predate relaxed nesting. */
+/* The control metrics live on the document element rather than on the controls
+   themselves, because the panels need them too: a dialogue that reached into
+   the bottom corners would bury the joystick and the E button under itself.
+
+   Sized against the short edge of the screen, which in landscape is its height,
+   so the controls keep the same share of a small iPhone, a large one and a
+   tablet without a single device ever being named. `vmin` rather than `dvh`:
+   the dynamic units shrink and grow with Safari's address bar, and a control
+   that resized while you held it would be worse than one that sits slightly
+   high. The clamps stop a tiny screen giving unusable targets and a tablet
+   giving comically large ones. */
+[data-game-mode='mobile'] {
+  --stick-ring: clamp(64px, 19vmin, 92px);
+  --interact-size: clamp(52px, 14.5vmin, 70px);
+  /* Touch targets are this much bigger than the art, all round, so the visible
+     UI can shrink without the thumb having to be accurate. */
+  --touch-pad: 13px;
+  /* How much of each side a panel must leave alone: the larger control, its
+     touch padding, and the margin it sits in. */
+  --control-gutter: calc(var(--stick-ring) + var(--touch-pad) * 2 + 8px);
+}
+[data-game-mode='mobile'],
+[data-game-mode='mobile'] body {
+  height: 100%;
+  /* The game owns the screen, so there is nothing below it to scroll to and
+     nothing above it to bounce into. */
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+[data-game-mode='mobile'] .skip-link,
+[data-game-mode='mobile'] .site-header,
+[data-game-mode='mobile'] .intro,
+[data-game-mode='mobile'] .game-heading,
+[data-game-mode='mobile'] .controls,
+[data-game-mode='mobile'] .portfolio-sections,
+[data-game-mode='mobile'] footer {
+  display: none;
+}
+[data-game-mode='mobile'] main,
+[data-game-mode='mobile'] .game-section {
+  width: 100%;
+  margin: 0;
+}
+/* Fixed to the viewport rather than sized in `dvh`: the small and large
+   viewports differ by the height of an address bar that slides in and out on
+   its own, and a canvas that resized with it would shudder the whole time.
+   One stable box; the controls inside it keep clear of the bars through the
+   safe-area insets. */
+[data-game-mode='mobile'] .game-frame {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+  border: 0;
+}
+[data-game-mode='mobile'] .game-host {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+/* The canvas is the screen now; the camera decides what part of the world that
+   screen shows. */
+[data-game-mode='mobile'] .game-host canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Left thumb walks, right thumb talks. The layer itself is inert so the two
+   controls are the only things that take a touch. */
+.mobile-controls {
+  /* Fixed, not absolute: the layer is moved into the open dialog's top layer
+     while a panel is up, and only a fixed box stays pinned to the screen there
+     — and escapes the dialog's own scrolling. Over the frame it lands in the
+     same place, because the frame is itself fixed to the viewport. */
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+.mobile-stick,
+.mobile-interact {
+  pointer-events: auto;
+  /* No scrolling, no zooming, no browser gesture: a drag here is gameplay. */
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  padding: 0;
+  background: none;
+  border: 0;
+}
+/* `max()` against the inset, not the inset alone: a phone with no notch still
+   needs the control off the very edge to be comfortable to reach. The padding
+   is subtracted back out so the *art* keeps that margin, not the hit box. */
+.mobile-stick {
+  left: calc(max(18px, env(safe-area-inset-left, 0px)) - var(--touch-pad));
+  bottom: calc(max(18px, env(safe-area-inset-bottom, 0px)) - var(--touch-pad));
+  width: calc(var(--stick-ring) + var(--touch-pad) * 2);
+  height: calc(var(--stick-ring) + var(--touch-pad) * 2);
+}
+.mobile-stick-ring {
+  display: grid;
+  place-items: center;
+  width: var(--stick-ring);
+  height: var(--stick-ring);
+  border: 2px solid #8fa3b8;
+  border-radius: 50%;
+  background: #0d141d;
+  opacity: 0.4;
+  transition: opacity 120ms ease-out;
+}
+.mobile-stick[data-active='true'] .mobile-stick-ring {
+  opacity: 0.62;
+}
+/* 40% of the ring, so the travel the joystick measures — (100% - 40%) / 2 —
+   lands the thumb exactly on the rim at full tilt. */
+.mobile-stick-thumb {
+  width: 40%;
+  height: 40%;
+  border: 2px solid #d8e4ef;
+  border-radius: 50%;
+  background: #a5e3bc;
+  /* `translate` rather than a transform, so the thumb offset stays independent
+     of anything else that might want the transform property. */
+  translate: 0 0;
+}
+.mobile-interact {
+  right: calc(max(18px, env(safe-area-inset-right, 0px)) - var(--touch-pad));
+  bottom: calc(max(22px, env(safe-area-inset-bottom, 0px)) - var(--touch-pad));
+  width: calc(var(--interact-size) + var(--touch-pad) * 2);
+  height: calc(var(--interact-size) + var(--touch-pad) * 2);
+}
+.mobile-interact-glyph {
+  display: grid;
+  place-items: center;
+  width: var(--interact-size);
+  height: var(--interact-size);
+  font-family: monospace;
+  font-size: calc(var(--interact-size) * 0.4);
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  color: #10151d;
+  background: #a5e3bc;
+  border: 3px solid #17212e;
+  border-radius: 50%;
+  opacity: 0.55;
+  transition:
+    opacity 120ms ease-out,
+    scale 80ms ease-out;
+}
+.mobile-interact[data-pressed='true'] .mobile-interact-glyph {
+  opacity: 0.85;
+  scale: 0.94;
+}
+
+/* Over the world only. The portfolio below still reads and scrolls upright. */
+.orientation-guard {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  background: #0a0f16e8;
+  /* Left on purpose: it takes the taps that would otherwise reach the world. */
+  touch-action: none;
+}
+.orientation-icon {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1;
+}
+.orientation-title {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text);
+}
+.orientation-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Panels on a landscape phone.
+ *
+ * A 375px-tall screen has to hold a heading, several lines of description and a
+ * row of answers, and the desktop panel was drawn for none of that: at desktop
+ * type it fills the screen, swallows the corners the controls live in, and
+ * pushes the answers off the bottom. So on a phone the type shrinks, the box
+ * stops short of both control gutters, and — the part that matters most — only
+ * the *description* scrolls. The heading stays put and the answers stay on
+ * screen, which is what makes a long entry readable rather than a scroll hunt.
+ *
+ * Every size is a clamp against the screen's short edge; no device is named.
+ */
+@media (orientation: landscape) {
+  [data-game-mode='mobile'] dialog {
+    /* Clear of both thumbs, and clear of a notch on either side. */
+    width: min(
+      560px,
+      calc(
+        100% - var(--control-gutter) * 2 - env(safe-area-inset-left, 0px) -
+          env(safe-area-inset-right, 0px)
+      )
+    );
+    max-width: none;
+    max-height: calc(100dvh - 16px);
+    padding: clamp(10px, 3.2vmin, 18px) clamp(12px, 3.6vmin, 22px);
+    /* The dialog itself never scrolls; one region inside it does. */
+    overflow: hidden;
+  }
+  [data-game-mode='mobile'] dialog .eyebrow {
+    font-size: clamp(9px, 2.6vmin, 11px);
+  }
+  [data-game-mode='mobile'] dialog h2 {
+    font-size: clamp(14px, 4vmin, 18px);
+    margin-bottom: 6px;
+  }
+  [data-game-mode='mobile'] dialog .dialogue-text,
+  [data-game-mode='mobile'] dialog .shop-note {
+    font-size: clamp(12px, 3.3vmin, 15px);
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  /* Small text, ordinary spacing, thumb-sized target: the three are set apart
+     so shrinking the first does not shrink the last. */
+  [data-game-mode='mobile'] .dialogue-choices {
+    gap: 8px;
+  }
+  [data-game-mode='mobile'] .dialogue-choices button,
+  [data-game-mode='mobile'] .dialogue-choices a,
+  /* A panel with nothing to choose renders its lone 나가기 button directly. */
+  [data-game-mode='mobile'] dialog > button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 4px clamp(12px, 3.4vmin, 18px);
+    font-size: clamp(12px, 3.2vmin, 14px);
+  }
+
+  /* Header, scrolling body, answers — in that order, for the panels whose
+     markup is a plain sequence of children. The ones that already lay
+     themselves out (`record-panel`, `install-panel`) keep their own grid. */
+  [data-game-mode='mobile']
+    dialog:not(.record-panel):not(.install-panel):not(.name-entry):not(
+      .mobile-start
+    ) {
+    display: flex;
+    flex-direction: column;
+  }
+  [data-game-mode='mobile'] dialog > .dialogue-text,
+  [data-game-mode='mobile'] dialog > .shop-stock,
+  [data-game-mode='mobile'] dialog > .contact-list {
+    /* `min-height: 0` is what lets a flex child actually shrink and scroll. */
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #6c7b90 #10151d;
+  }
+  [data-game-mode='mobile'] dialog > .dialogue-choices,
+  [data-game-mode='mobile'] dialog > button {
+    flex: none;
+    align-self: flex-start;
+  }
+
+  [data-game-mode='mobile'] .record-panel {
+    max-height: calc(100dvh - 16px);
+    gap: 10px;
+    padding: clamp(10px, 3.2vmin, 18px) clamp(12px, 3.6vmin, 22px);
+  }
+  [data-game-mode='mobile'] .record-section h3,
+  [data-game-mode='mobile'] .record-bullets,
+  [data-game-mode='mobile'] .record-meta {
+    font-size: clamp(11px, 3vmin, 13px);
+  }
+  [data-game-mode='mobile'] .record-foot {
+    padding-top: 10px;
+    gap: 8px;
+  }
+  [data-game-mode='mobile'] .shop-stock {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  [data-game-mode='mobile'] .shop-card {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+  [data-game-mode='mobile'] .shop-name {
+    font-size: clamp(12px, 3.2vmin, 14px);
+    margin-bottom: 2px;
+  }
+  [data-game-mode='mobile'] .shop-stack {
+    font-size: clamp(10px, 2.8vmin, 11px);
+  }
+
+  [data-game-mode='mobile'] .name-entry {
+    width: min(430px, calc(100% - 32px));
+  }
+  /* Clear of a notch, and big enough to hit with a thumb. */
+  [data-game-mode='mobile'] .game-hud {
+    top: max(10px, env(safe-area-inset-top, 0px));
+    right: max(10px, env(safe-area-inset-right, 0px));
+  }
+  [data-game-mode='mobile'] .hud-button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --- mobile start screen and the home-screen guide --------------------- */
+
+.mobile-start {
+  width: min(460px, calc(100% - 32px));
+  padding: 20px 22px;
+}
+.mobile-start h2 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+/* A landscape phone is barely 390px tall, so the card pins its heading and its
+   buttons and scrolls only the steps between them. */
+.install-panel {
+  width: min(520px, calc(100% - 32px));
+  max-height: min(calc(100dvh - 24px), 560px);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 16px 20px;
+  /* Cleared of a notch when the guide is read in an installed, full-bleed app. */
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.install-head h2 {
+  margin: 0;
+  font-size: 17px;
+}
+.install-body {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #6c7b90 #10151d;
+}
+.install-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.install-steps li {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 10px;
+}
+.install-step-no {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #10151d;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.install-step-body h3 {
+  margin: 3px 0 4px;
+  font-size: 14px;
+}
+.install-step-body p {
+  margin: 0;
+  font-size: 13px;
+}
+/* Screenshots are optional and of unknown size; the panel sets the ceiling on
+   both axes so a tall portrait capture cannot turn one step into a screenful
+   of scrolling, and scales to fit inside it rather than distorting. */
+.install-shot {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(320px, 100%);
+  max-height: 38vh;
+  object-fit: contain;
+  margin-top: 8px;
+  border: 1px solid #2a3543;
+  border-radius: 6px;
+}
+.install-foot {
+  border-top: 1px solid #2a3543;
+  padding-top: 12px;
+  margin: 0;
 }

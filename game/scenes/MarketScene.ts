@@ -30,7 +30,8 @@ import { createMarketMap } from '@/game/objects/MarketMap';
 import { ExitSigns } from '@/game/objects/ExitSigns';
 import { getKkokkoQuest, getPlayerName } from '@/game/state/gameState';
 import { insideZone } from '@/game/systems/collision';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { CollisionRect, GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
@@ -76,7 +77,7 @@ const targetY = (target: MarketTarget) => target.npc?.sprite.y ?? target.y;
 export class MarketScene extends Phaser.Scene {
   private player!: Player;
   private miss!: InteractionMissBubble;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private ambient: AmbientNpc[] = [];
   private targets: MarketTarget[] = [];
@@ -196,52 +197,55 @@ export class MarketScene extends Phaser.Scene {
     );
 
     // The world is larger than the viewport, so the camera trails the player
-    // instead of showing the whole scene at once. No zoom change: sprites stay
-    // exactly the size they are in Home and the Guild.
-    const camera = this.cameras.main;
-    camera.setBounds(0, 0, MARKET_WORLD.width, MARKET_WORLD.height);
-    camera.setRoundPixels(true);
-    camera.startFollow(this.player.body, true, 0.15, 0.15);
+    // instead of showing the whole scene at once.
+    configureSceneCamera(this, this.player, MARKET_WORLD);
 
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.travel = new SceneTransition(this, this.player, 'market');
-    this.controls = new SceneControls(this, () => {
-      if (
-        this.cinematic ||
-        this.travel.locked ||
-        this.callbacks.isOverlayOpen()
-      )
-        return;
-      const sign = this.nearestSign();
-      if (sign) {
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (
+          this.cinematic ||
+          this.travel.locked ||
+          this.callbacks.isOverlayOpen()
+        )
+          return;
+        const sign = this.nearestSign();
+        if (sign) {
+          this.miss.hide();
+          this.player.stop();
+          this.controls.reset();
+          this.hideZonedHints();
+          this.callbacks.onInteract(sign.sign.dialogue);
+          return;
+        }
+        const target = this.nearestTarget();
+        if (!target) {
+          this.miss.show();
+          return;
+        }
+        target.ambient?.beginInteraction();
         this.miss.hide();
         this.player.stop();
         this.controls.reset();
-        this.hideZonedHints();
-        this.callbacks.onInteract(sign.sign.dialogue);
-        return;
-      }
-      const target = this.nearestTarget();
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      target.ambient?.beginInteraction();
-      this.miss.hide();
-      this.player.stop();
-      this.controls.reset();
-      if (target.interaction.type === 'projectShop') {
-        this.callbacks.onOpenProjectShop();
-        return;
-      }
-      if (target.interaction.confirm === 'approachWell') {
-        this.callbacks.onInteract(target.interaction.dialogue, () =>
-          this.beginApproach(target),
-        );
-        return;
-      }
-      this.callbacks.onInteract(target.interaction.dialogue);
-    });
+        if (target.interaction.type === 'projectShop') {
+          this.callbacks.onOpenProjectShop();
+          return;
+        }
+        if (target.interaction.confirm === 'approachWell') {
+          this.callbacks.onInteract(target.interaction.dialogue, () =>
+            this.beginApproach(target),
+          );
+          return;
+        }
+        this.callbacks.onInteract(target.interaction.dialogue);
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -414,10 +418,7 @@ export class MarketScene extends Phaser.Scene {
       return;
     }
 
-    const locked =
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused;
+    const locked = !this.controls.active;
     for (const npc of this.ambient) npc.update(delta, locked);
     if (locked) {
       this.controls.reset();

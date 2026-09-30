@@ -46,7 +46,8 @@ import { ExitSigns } from '@/game/objects/ExitSigns';
 import { loadWarpAssets } from '@/game/objects/WarpCircle';
 import { WarpPoint } from '@/game/objects/WarpPoint';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import { DragonSnoreCycle } from '@/game/systems/DragonSnoreCycle';
 import {
@@ -63,7 +64,7 @@ export class DungeonBossScene extends Phaser.Scene {
   private player!: Player;
   private dragon!: SleepingDragon;
   private travel!: SceneTransition;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private miss!: InteractionMissBubble;
   private statue!: Phaser.GameObjects.Image;
   private prompt!: Phaser.GameObjects.Text;
@@ -75,6 +76,8 @@ export class DungeonBossScene extends Phaser.Scene {
   /** The sleep cycle, clocked by the snore audio rather than by a timer. */
   private cycle!: DragonSnoreCycle;
   private wake: HTMLAudioElement | null = null;
+  /** Whichever sting the encounter ended on, so leaving can silence it. */
+  private sting: HTMLAudioElement | null = null;
   private lastPosition = new Phaser.Math.Vector2();
   private entry: SceneEntry = {};
   constructor(private readonly callbacks: GameCallbacks) {
@@ -96,12 +99,18 @@ export class DungeonBossScene extends Phaser.Scene {
     loadDragonAssets(this);
     // Fetched with the art, not on the first snore: the cycle is only honest
     // if the sound starts when the dragon does.
-    preloadSfx([...DRAGON_SNORE_SFX, SFX.dragonWake]);
+    preloadSfx([
+      ...DRAGON_SNORE_SFX,
+      SFX.dragonWake,
+      SFX.goldenCatSuccess,
+      SFX.goldenCatFailure,
+    ]);
   }
   create() {
     this.state = 'intro';
     this.failure = undefined;
     this.wake = null;
+    this.sting = null;
     setSceneBgm('dungeonBoss');
     this.add
       .rectangle(
@@ -182,12 +191,9 @@ export class DungeonBossScene extends Phaser.Scene {
       spawnPoint('dungeonBoss', this.entry),
       DUNGEON,
     );
-    this.cameras.main
-      .setBounds(0, 0, DUNGEON.width, DUNGEON.height)
-      // Boss Chamber is 1280x768 in a 768x384 viewport; a slightly wider camera
-      // keeps the boss, the player and the statue readable in one frame.
-      .setZoom(0.8)
-      .startFollow(this.player.body, true, 0.15, 0.15);
+    // Boss Chamber is 1280x768 in a 768x384 desktop viewport; a slightly wider
+    // camera keeps the boss, the player and the statue readable in one frame.
+    configureSceneCamera(this, this.player, DUNGEON, { desktopZoom: 0.8 });
     this.dragon = new SleepingDragon(this);
     this.lastPosition.set(this.player.body.x, this.player.body.y);
     this.miss = new InteractionMissBubble(this, this.player.body);
@@ -204,44 +210,55 @@ export class DungeonBossScene extends Phaser.Scene {
       .setVisible(false);
     this.travel = new SceneTransition(this, this.player, 'dungeonBoss');
     this.warp = new WarpPoint(this, BOSS_WARP, this.travel);
-    this.controls = new SceneControls(this, () => {
-      if (this.settled || this.travel.locked || this.callbacks.isOverlayOpen())
-        return;
-      const body = this.player.body;
-      if (this.warp.near(body.x, body.y)) {
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (
+          this.settled ||
+          this.travel.locked ||
+          this.callbacks.isOverlayOpen()
+        )
+          return;
+        const body = this.player.body;
+        if (this.warp.near(body.x, body.y)) {
+          this.player.stop();
+          this.controls.reset();
+          this.miss.hide();
+          this.prompt.setVisible(false);
+          this.exitSigns.hide();
+          this.warp.use();
+          return;
+        }
+        const sign = this.nearestSign();
+        if (sign) {
+          this.miss.hide();
+          this.player.stop();
+          this.controls.reset();
+          this.prompt.setVisible(false);
+          this.callbacks.onInteract(sign.sign.dialogue);
+          return;
+        }
+        const target = this.target();
+        if (!target) {
+          this.miss.show();
+          return;
+        }
+        this.miss.hide();
         this.player.stop();
         this.controls.reset();
-        this.miss.hide();
         this.prompt.setVisible(false);
-        this.exitSigns.hide();
-        this.warp.use();
-        return;
-      }
-      const sign = this.nearestSign();
-      if (sign) {
-        this.miss.hide();
-        this.player.stop();
-        this.controls.reset();
-        this.prompt.setVisible(false);
-        this.callbacks.onInteract(sign.sign.dialogue);
-        return;
-      }
-      const target = this.target();
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      this.miss.hide();
-      this.player.stop();
-      this.controls.reset();
-      this.prompt.setVisible(false);
-      // Picking 가져간다 closes the panel and calls this; 그냥 둔다 and Esc
-      // close it and call nothing, so the room simply carries on.
-      this.callbacks.onInteract('goldenCat', () => {
-        if (!this.scene.isActive()) return;
-        this.succeed();
-      });
-    });
+        // Picking 가져간다 closes the panel and calls this; 그냥 둔다 and Esc
+        // close it and call nothing, so the room simply carries on.
+        this.callbacks.onInteract('goldenCat', () => {
+          if (!this.scene.isActive()) return;
+          this.succeed();
+        });
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.cycle = new DragonSnoreCycle(this, (phase) => {
       if (this.settled) return;
       this.state = phase;
@@ -253,6 +270,8 @@ export class DungeonBossScene extends Phaser.Scene {
       this.cycle.stop();
       stopSfx(this.wake);
       this.wake = null;
+      stopSfx(this.sting);
+      this.sting = null;
     });
     // Started on the first frame the player is actually in control, not here:
     // the entry fade would otherwise eat the front of the first snore.
@@ -277,12 +296,7 @@ export class DungeonBossScene extends Phaser.Scene {
 
   /** Every beat where the player has stopped being in control of the room. */
   private get playerInputLocked() {
-    return (
-      this.settled ||
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused
-    );
+    return this.settled || !this.controls.active;
   }
 
   /**
@@ -354,6 +368,11 @@ export class DungeonBossScene extends Phaser.Scene {
    * of a story that has to be read one beat at a time.
    */
   private showSuccess() {
+    // On the frame the first panel appears, and only here: `succeed` is the
+    // encounter's one-way door, so this runs once per success with no flag of
+    // its own. The sting is 3.8s against 4.1s of panels, which is the way round
+    // it should be — the music finishes under the picture, not over the door.
+    this.sting = playSfx(SFX.goldenCatSuccess, DRAGON_AUDIO.goldenCatSting);
     const { view, centre } = this.pinCamera();
     this.add
       .rectangle(
@@ -477,6 +496,11 @@ export class DungeonBossScene extends Phaser.Scene {
 
   /** The escape illustration, fitted inside the viewport without distortion. */
   private showEscape() {
+    // With the illustration, not with the mistake: the wake roar has had its
+    // beat and this is the toon starting. One call, one play — the delayed
+    // call that reaches here fires once per attempt, so a retry stings again
+    // without anything remembering the last one.
+    this.sting = playSfx(SFX.goldenCatFailure, DRAGON_AUDIO.goldenCatSting);
     rampBgm(DRAGON_DETECTION.fade.level, DRAGON_DETECTION.fade.ms);
     const { view, centre } = this.pinCamera();
     this.add

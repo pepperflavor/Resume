@@ -30,7 +30,8 @@ import { Npc } from '@/game/objects/Npc';
 import { Player } from '@/game/objects/Player';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { ZoneSpeech } from '@/game/objects/ZoneSpeech';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
@@ -38,7 +39,7 @@ import { canEnterDragonBoss, hasGoldenCat } from '@/game/state/gameState';
 export class DungeonEntranceScene extends Phaser.Scene {
   private player!: Player;
   private merchant!: Npc;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private miss!: InteractionMissBubble;
   private prompt!: Phaser.GameObjects.Text;
@@ -75,9 +76,6 @@ export class DungeonEntranceScene extends Phaser.Scene {
   }
   create() {
     setSceneBgm('dungeonEntrance');
-    // The cave is exactly the viewport, and the perimeter rock is drawn past
-    // its edges on purpose: bounds keep anything outside off the screen.
-    this.cameras.main.setBounds(0, 0, WORLD.width, WORLD.height);
     const obstacles = createMerchantCamp(this),
       m = ENTRANCE.merchant;
     // One torch stands before each of the three passages; their posts block.
@@ -119,6 +117,9 @@ export class DungeonEntranceScene extends Phaser.Scene {
       obstacles,
       spawnPoint('dungeonEntrance', this.entry),
     );
+    // The cave is exactly the desktop viewport, and the perimeter rock is drawn
+    // past its edges on purpose: bounds keep anything outside off the screen.
+    configureSceneCamera(this, this.player, WORLD);
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.rugSpeech = new ZoneSpeech(
       this,
@@ -140,53 +141,60 @@ export class DungeonEntranceScene extends Phaser.Scene {
       .setVisible(false);
     this.travel = new SceneTransition(this, this.player, 'dungeonEntrance');
     this.warp = new WarpPoint(this, ENTRANCE_WARP, this.travel);
-    this.controls = new SceneControls(this, () => {
-      if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
-      // The circle beats everything it can reach: it is the only thing here
-      // the player steps onto rather than walks up to.
-      const body = this.player.body;
-      if (this.warp.near(body.x, body.y)) {
-        this.player.stop();
-        this.controls.reset();
-        this.miss.hide();
-        this.prompt.setVisible(false);
-        this.rugSpeech.hide();
-        this.exitSigns.hide();
-        // The circle still answers an E once the statue is gone — it says why
-        // the way is shut. Going quiet instead would read as a broken warp.
-        if (!canEnterDragonBoss()) {
-          this.callbacks.onInteract('bossChamberSealed');
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
+        // The circle beats everything it can reach: it is the only thing here
+        // the player steps onto rather than walks up to.
+        const body = this.player.body;
+        if (this.warp.near(body.x, body.y)) {
+          this.player.stop();
+          this.controls.reset();
+          this.miss.hide();
+          this.prompt.setVisible(false);
+          this.rugSpeech.hide();
+          this.exitSigns.hide();
+          // The circle still answers an E once the statue is gone — it says why
+          // the way is shut. Going quiet instead would read as a broken warp.
+          if (!canEnterDragonBoss()) {
+            this.callbacks.onInteract('bossChamberSealed');
+            return;
+          }
+          this.warp.use();
           return;
         }
-        this.warp.use();
-        return;
-      }
-      const sign = this.nearestSign();
-      if (sign) {
+        const sign = this.nearestSign();
+        if (sign) {
+          this.player.stop();
+          this.controls.reset();
+          this.miss.hide();
+          this.prompt.setVisible(false);
+          this.rugSpeech.hide();
+          this.callbacks.onInteract(sign.sign.dialogue);
+          return;
+        }
+        const target = this.target();
+        if (!target) {
+          this.miss.show();
+          return;
+        }
         this.player.stop();
         this.controls.reset();
         this.miss.hide();
         this.prompt.setVisible(false);
         this.rugSpeech.hide();
-        this.callbacks.onInteract(sign.sign.dialogue);
-        return;
-      }
-      const target = this.target();
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      this.player.stop();
-      this.controls.reset();
-      this.miss.hide();
-      this.prompt.setVisible(false);
-      this.rugSpeech.hide();
-      if (target === 'merchant')
-        this.callbacks.onInteract(
-          hasGoldenCat() ? 'merchantWithCat' : 'adventurerMerchant',
-        );
-      else this.callbacks.onInteract(target.dialogue);
-    });
+        if (target === 'merchant')
+          this.callbacks.onInteract(
+            hasGoldenCat() ? 'merchantWithCat' : 'adventurerMerchant',
+          );
+        else this.callbacks.onInteract(target.dialogue);
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(true);
     this.callbacks.onReady();
   }
@@ -231,10 +239,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
   }
   update(_time: number, delta: number) {
     if (!this.controls) return;
-    const locked =
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused;
+    const locked = !this.controls.active;
     for (const spider of this.spiders) spider.update(delta, locked);
     this.rugSpeech.update(
       this.player.body.x,

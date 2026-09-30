@@ -25,9 +25,9 @@ const PRODUCE_FRAME = {
   special: 'produce-crate',
 } as const;
 
-type View = 'stock' | 'questOffer' | 'questDone';
+type View = 'stock' | 'confirmBuy' | 'questOffer' | 'questDone';
 
-type ActId = 'askQuest' | 'acceptQuest' | 'finishQuest';
+type ActId = 'askQuest' | 'acceptQuest' | 'finishQuest' | 'cancelBuy';
 
 // Pure data on purpose: keeping closures out of this list means rendering it
 // never touches a ref, and the whole panel stays one readable sequence.
@@ -53,6 +53,14 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
   );
   const [selected, setSelected] = useState(0);
   const [completed, setCompleted] = useState(quest === 'COMPLETED');
+  /**
+   * The card waiting on a yes.
+   *
+   * Picking produce used to *be* the trip to Notion — every card was a link, so
+   * one stray thumb on a scrolling shelf took the player out of the game. A
+   * card now only chooses; leaving is a second, deliberate answer.
+   */
+  const [pending, setPending] = useState<ProjectItem | null>(null);
 
   function close() {
     ref.current?.close();
@@ -81,17 +89,30 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
   const actions: Action[] =
     view === 'stock'
       ? stockActions
-      : view === 'questOffer'
+      : view === 'confirmBuy' && pending
         ? [
-            { kind: 'act', label: '찾아줄게', act: 'acceptQuest' },
-            { kind: 'close', label: '나가기' },
+            // The only route out of the game, and it is a real anchor so the
+            // browser keeps its own _blank and noopener handling.
+            { kind: 'link', label: '네', href: pending.href },
+            { kind: 'act', label: '아니오', act: 'cancelBuy' },
           ]
-        : [
-            { kind: 'act', label: '천만에', act: 'finishQuest' },
-            { kind: 'close', label: '나가기' },
-          ];
+        : view === 'questOffer'
+          ? [
+              { kind: 'act', label: '찾아줄게', act: 'acceptQuest' },
+              { kind: 'close', label: '나가기' },
+            ]
+          : [
+              { kind: 'act', label: '천만에', act: 'finishQuest' },
+              { kind: 'close', label: '나가기' },
+            ];
 
   function run(act: ActId) {
+    if (act === 'cancelBuy') {
+      setPending(null);
+      setSelected(0);
+      setView('stock');
+      return;
+    }
     if (act === 'askQuest') {
       setSelected(0);
       setView('questOffer');
@@ -108,13 +129,19 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
     setView('stock');
   }
 
+  function pick(item: ProjectItem) {
+    setPending(item);
+    setSelected(0);
+    setView('confirmBuy');
+  }
+
   function activate(index: number) {
     const action = actions[index];
     if (!action) return close();
-    // Cards and reward links are real anchors; clicking them keeps the browser's
-    // own _blank + noopener handling rather than calling window.open by hand.
-    if (action.kind === 'card' || action.kind === 'link')
-      return choiceNodes.current[index]?.click();
+    if (action.kind === 'card') return pick(action.item);
+    // The yes button is a real anchor; clicking it keeps the browser's own
+    // _blank + noopener handling rather than calling window.open by hand.
+    if (action.kind === 'link') return choiceNodes.current[index]?.click();
     if (action.kind === 'act') return run(action.act);
     close();
   }
@@ -165,7 +192,7 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
           over the shelf: the quest views have no produce to buy. */}
       {view === 'stock' && (
         <p className="shop-note shop-intro">
-          야채를 구매하면 Notion으로 이동합니다.
+          야채를 고르면 확인 후 Notion 페이지로 이동합니다.
         </p>
       )}
 
@@ -173,15 +200,14 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
         <ul className="shop-stock">
           {stock.map((item, index) => (
             <li key={item.id}>
-              <a
+              <button
                 ref={(node) => {
                   choiceNodes.current[index] = node;
                 }}
+                type="button"
                 className="shop-card"
                 data-special={item.special ? 'true' : undefined}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => pick(item)}
                 data-selected={selected === index}
                 aria-current={selected === index ? 'true' : undefined}
                 onFocus={() => setSelected(index)}
@@ -208,10 +234,16 @@ export function ProjectShopPanel({ onClose }: { onClose: () => void }) {
                   </span>
                   <span className="shop-stack">{item.stack.join(' · ')}</span>
                 </span>
-              </a>
+              </button>
             </li>
           ))}
         </ul>
+      )}
+
+      {view === 'confirmBuy' && pending && (
+        <p className="dialogue-text">
+          {`${pending.name}\n구매할까요?\n\nNotion 페이지가 새 탭에서 열립니다.`}
+        </p>
       )}
 
       {view === 'questOffer' && (

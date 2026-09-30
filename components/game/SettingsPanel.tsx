@@ -6,9 +6,12 @@ import { resetProgress } from '@/game/state/gameState';
 export function SettingsPanel({
   onClose,
   onReset,
+  onShowInstallGuide,
 }: {
   onClose: () => void;
   onReset: () => void;
+  /** Mobile only: re-opens the home-screen guide the start screen offered. */
+  onShowInstallGuide?: () => void;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const [confirming, setConfirming] = useState(false);
@@ -66,6 +69,11 @@ export function SettingsPanel({
             진행 상황을 지우고 이름 입력부터 다시 시작할 수 있어요.
           </p>
           <div className="dialogue-choices">
+            {onShowInstallGuide && (
+              <button type="button" onClick={onShowInstallGuide}>
+                앱처럼 크게 보기
+              </button>
+            )}
             <button type="button" onClick={() => setConfirming(true)} autoFocus>
               처음부터 다시 시작
             </button>

@@ -18,7 +18,8 @@ import {
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { Npc } from '@/game/objects/Npc';
 import { Player } from '@/game/objects/Player';
-import { SceneControls } from '@/game/systems/SceneControls';
+import { InputManager } from '@/game/input/InputManager';
+import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks } from '@/game/types';
 import { preloadSfx, setSceneBgm } from '@/game/state/audio';
@@ -34,7 +35,7 @@ export class CaveGardenScene extends Phaser.Scene {
   private fairy!: Npc;
   private altar!: Phaser.GameObjects.Image;
   private offering!: Phaser.GameObjects.Image;
-  private controls!: SceneControls;
+  private controls!: InputManager;
   private travel!: SceneTransition;
   private miss!: InteractionMissBubble;
   private prompt!: Phaser.GameObjects.Text;
@@ -63,9 +64,6 @@ export class CaveGardenScene extends Phaser.Scene {
   }
   create() {
     setSceneBgm('caveGarden');
-    // The grotto is exactly the viewport, and the perimeter planting is drawn
-    // past its edges on purpose: bounds keep anything outside off the screen.
-    this.cameras.main.setBounds(0, 0, WORLD.width, WORLD.height);
     const { obstacles, altar } = createCaveGardenMap(this);
     // The rune marker before the south passage; its base blocks.
     this.exitSigns = new ExitSigns(this, 'caveGarden');
@@ -113,6 +111,9 @@ export class CaveGardenScene extends Phaser.Scene {
       obstacles,
       spawnPoint('caveGarden', this.entry),
     );
+    // The grotto is exactly the desktop viewport, and the perimeter planting is
+    // drawn past its edges on purpose: bounds keep anything outside off screen.
+    configureSceneCamera(this, this.player, WORLD);
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.prompt = this.add
       .text(0, 0, 'Press E', {
@@ -126,41 +127,48 @@ export class CaveGardenScene extends Phaser.Scene {
       .setDepth(1000)
       .setVisible(false);
     this.travel = new SceneTransition(this, this.player, 'caveGarden');
-    this.controls = new SceneControls(this, () => {
-      if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
-      const sign = this.nearestSign();
-      if (sign) {
+    this.controls = new InputManager(
+      this,
+      () => {
+        if (this.travel.locked || this.callbacks.isOverlayOpen()) return;
+        const sign = this.nearestSign();
+        if (sign) {
+          this.miss.hide();
+          this.player.stop();
+          this.controls.reset();
+          this.prompt.setVisible(false);
+          this.callbacks.onInteract(sign.sign.dialogue);
+          return;
+        }
+        const target = this.target();
+        if (!target) {
+          this.miss.show();
+          return;
+        }
         this.miss.hide();
         this.player.stop();
         this.controls.reset();
         this.prompt.setVisible(false);
-        this.callbacks.onInteract(sign.sign.dialogue);
-        return;
-      }
-      const target = this.target();
-      if (!target) {
-        this.miss.show();
-        return;
-      }
-      this.miss.hide();
-      this.player.stop();
-      this.controls.reset();
-      this.prompt.setVisible(false);
-      if (target === 'fairy') {
-        this.callbacks.onInteract(this.fairyDialogue());
-        return;
-      }
-      if (hasGoldenCat())
-        this.callbacks.onInteract('offeringAltarWithCat', () => {
-          if (!this.scene.isActive()) return;
-          offerGoldenCat();
-          this.offering.setVisible(true);
-        });
-      else
-        this.callbacks.onInteract(
-          hasOfferedGoldenCat() ? 'offeringAltarDone' : 'offeringAltar',
-        );
-    });
+        if (target === 'fairy') {
+          this.callbacks.onInteract(this.fairyDialogue());
+          return;
+        }
+        if (hasGoldenCat())
+          this.callbacks.onInteract('offeringAltarWithCat', () => {
+            if (!this.scene.isActive()) return;
+            offerGoldenCat();
+            this.offering.setVisible(true);
+          });
+        else
+          this.callbacks.onInteract(
+            hasOfferedGoldenCat() ? 'offeringAltarDone' : 'offeringAltar',
+          );
+      },
+      {
+        isOverlayOpen: () => this.callbacks.isOverlayOpen(),
+        isTravelLocked: () => this.travel.locked,
+      },
+    );
     this.travel.enter(true);
     this.callbacks.onReady();
   }
@@ -202,11 +210,7 @@ export class CaveGardenScene extends Phaser.Scene {
   }
   update(_time: number, delta: number) {
     if (!this.controls) return;
-    if (
-      this.travel.locked ||
-      this.callbacks.isOverlayOpen() ||
-      !this.controls.focused
-    ) {
+    if (!this.controls.active) {
       this.player.stop();
       this.controls.reset();
       this.prompt.setVisible(false);
