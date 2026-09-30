@@ -8,11 +8,18 @@ import {
 import { touchInput } from '@/game/input/TouchInputManager';
 
 /**
- * How far the thumb must leave the centre before a direction registers, as a
- * fraction of the ring's travel. Matches the gameplay deadzone in
- * `TouchInputManager`, so the stick feels the same in both modes.
+ * How far the thumb must leave the centre before a *menu* moves, as a fraction
+ * of the ring's travel, and how far back it must come before the same push can
+ * count again.
+ *
+ * Deliberately further out, and deliberately not symmetrical, than the 0.35 the
+ * gameplay stick uses in `TouchInputManager` — which this file does not touch,
+ * so walking feels exactly as it did. Steering a character wants to answer the
+ * smallest lean; picking one of three lines does not, and the gap between the
+ * two numbers is what stops a resting thumb's wobble from walking the list.
  */
-const DEADZONE = 0.35;
+const NAV_ENTER = 0.55;
+const NAV_RELEASE = 0.35;
 
 /**
  * What the controls are driving right now.
@@ -91,16 +98,24 @@ export function MobileControls({ mode }: { mode: ControlMode }) {
     // One axis at a time, so a diagonal push cannot move a menu twice.
     const dominant = Math.abs(nx) > Math.abs(ny) ? 'x' : 'y';
     const value = dominant === 'x' ? nx : ny;
-    if (Math.abs(value) < DEADZONE) return nav.set(null);
-    nav.set(
+    const wanted =
       dominant === 'x'
         ? value < 0
           ? 'left'
           : 'right'
         : value < 0
           ? 'up'
-          : 'down',
-    );
+          : 'down';
+    // Already holding this way: keep holding until the thumb comes most of the
+    // way back, rather than letting it flicker on the threshold.
+    if (nav.direction === wanted) {
+      if (Math.abs(value) < NAV_RELEASE) nav.set(null);
+      return;
+    }
+    // Anything new — including the first push — has to clear the full entry
+    // threshold, so a lean on the way back to centre starts nothing.
+    if (Math.abs(value) < NAV_ENTER) return nav.set(null);
+    nav.set(wanted);
   }
 
   function releaseStick() {

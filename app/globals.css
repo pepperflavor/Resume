@@ -350,9 +350,12 @@ dialog::backdrop {
 .shop-stock li {
   display: block;
 }
-/* The whole card is one choice: keyboard-selectable and clickable. */
+/* The whole card is one choice: keyboard-selectable and clickable. A button,
+   not a link — picking produce asks before it leaves the game. */
 .shop-card {
   display: flex;
+  width: 100%;
+  text-align: left;
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
@@ -562,6 +565,27 @@ dialog::backdrop {
    the mode by construction rather than by two rules that happen to match.
    Written as plain descendant selectors rather than CSS nesting, because the
    iOS versions this most needs to work on predate relaxed nesting. */
+/* The control metrics live on the document element rather than on the controls
+   themselves, because the panels need them too: a dialogue that reached into
+   the bottom corners would bury the joystick and the E button under itself.
+
+   Sized against the short edge of the screen, which in landscape is its height,
+   so the controls keep the same share of a small iPhone, a large one and a
+   tablet without a single device ever being named. `vmin` rather than `dvh`:
+   the dynamic units shrink and grow with Safari's address bar, and a control
+   that resized while you held it would be worse than one that sits slightly
+   high. The clamps stop a tiny screen giving unusable targets and a tablet
+   giving comically large ones. */
+[data-game-mode='mobile'] {
+  --stick-ring: clamp(64px, 19vmin, 92px);
+  --interact-size: clamp(52px, 14.5vmin, 70px);
+  /* Touch targets are this much bigger than the art, all round, so the visible
+     UI can shrink without the thumb having to be accurate. */
+  --touch-pad: 13px;
+  /* How much of each side a panel must leave alone: the larger control, its
+     touch padding, and the margin it sits in. */
+  --control-gutter: calc(var(--stick-ring) + var(--touch-pad) * 2 + 8px);
+}
 [data-game-mode='mobile'],
 [data-game-mode='mobile'] body {
   height: 100%;
@@ -618,18 +642,6 @@ dialog::backdrop {
   inset: 0;
   z-index: 6;
   pointer-events: none;
-  /* Sized against the short edge of the screen, which in landscape is its
-     height, so the controls keep the same share of a small iPhone, a large one
-     and a tablet without a single device ever being named. `vmin` rather than
-     `dvh`: the dynamic units shrink and grow with Safari's address bar, and a
-     control that resized while you held it would be worse than one that sits
-     slightly high. The clamps stop a tiny screen giving unusable targets and a
-     tablet giving comically large ones. */
-  --stick-ring: clamp(64px, 19vmin, 92px);
-  --interact-size: clamp(52px, 14.5vmin, 70px);
-  /* Touch targets are this much bigger than the art, all round, so the visible
-     UI can shrink without the thumb having to be accurate. */
-  --touch-pad: 13px;
 }
 .mobile-stick,
 .mobile-interact {
@@ -741,25 +753,120 @@ dialog::backdrop {
   line-height: 1.6;
 }
 
-/* Panels on a landscape phone: a 390px-tall viewport is shorter than a
-   dialogue with a question and three answers, so the box scrolls inside
-   itself rather than off the screen, and every choice gets a thumb-sized
-   target. */
+/* Panels on a landscape phone.
+ *
+ * A 375px-tall screen has to hold a heading, several lines of description and a
+ * row of answers, and the desktop panel was drawn for none of that: at desktop
+ * type it fills the screen, swallows the corners the controls live in, and
+ * pushes the answers off the bottom. So on a phone the type shrinks, the box
+ * stops short of both control gutters, and — the part that matters most — only
+ * the *description* scrolls. The heading stays put and the answers stay on
+ * screen, which is what makes a long entry readable rather than a scroll hunt.
+ *
+ * Every size is a clamp against the screen's short edge; no device is named.
+ */
 @media (orientation: landscape) {
   [data-game-mode='mobile'] dialog {
-    padding: 18px 20px;
-    max-height: calc(100dvh - 24px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
+    /* Clear of both thumbs, and clear of a notch on either side. */
+    width: min(
+      560px,
+      calc(
+        100% - var(--control-gutter) * 2 - env(safe-area-inset-left, 0px) -
+          env(safe-area-inset-right, 0px)
+      )
+    );
+    max-width: none;
+    max-height: calc(100dvh - 16px);
+    padding: clamp(10px, 3.2vmin, 18px) clamp(12px, 3.6vmin, 22px);
+    /* The dialog itself never scrolls; one region inside it does. */
+    overflow: hidden;
+  }
+  [data-game-mode='mobile'] dialog .eyebrow {
+    font-size: clamp(9px, 2.6vmin, 11px);
+  }
+  [data-game-mode='mobile'] dialog h2 {
+    font-size: clamp(14px, 4vmin, 18px);
+    margin-bottom: 6px;
+  }
+  [data-game-mode='mobile'] dialog .dialogue-text,
+  [data-game-mode='mobile'] dialog .shop-note {
+    font-size: clamp(12px, 3.3vmin, 15px);
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  /* Small text, ordinary spacing, thumb-sized target: the three are set apart
+     so shrinking the first does not shrink the last. */
+  [data-game-mode='mobile'] .dialogue-choices {
+    gap: 8px;
   }
   [data-game-mode='mobile'] .dialogue-choices button,
-  [data-game-mode='mobile'] .dialogue-choices a {
-    padding: 12px 20px;
+  [data-game-mode='mobile'] .dialogue-choices a,
+  /* A panel with nothing to choose renders its lone 나가기 button directly. */
+  [data-game-mode='mobile'] dialog > button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 4px clamp(12px, 3.4vmin, 18px);
+    font-size: clamp(12px, 3.2vmin, 14px);
   }
+
+  /* Header, scrolling body, answers — in that order, for the panels whose
+     markup is a plain sequence of children. The ones that already lay
+     themselves out (`record-panel`, `install-panel`) keep their own grid. */
+  [data-game-mode='mobile']
+    dialog:not(.record-panel):not(.install-panel):not(.name-entry):not(
+      .mobile-start
+    ) {
+    display: flex;
+    flex-direction: column;
+  }
+  [data-game-mode='mobile'] dialog > .dialogue-text,
+  [data-game-mode='mobile'] dialog > .shop-stock,
+  [data-game-mode='mobile'] dialog > .contact-list {
+    /* `min-height: 0` is what lets a flex child actually shrink and scroll. */
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #6c7b90 #10151d;
+  }
+  [data-game-mode='mobile'] dialog > .dialogue-choices,
+  [data-game-mode='mobile'] dialog > button {
+    flex: none;
+    align-self: flex-start;
+  }
+
   [data-game-mode='mobile'] .record-panel {
-    max-height: calc(100dvh - 24px);
-    padding: 16px 20px;
+    max-height: calc(100dvh - 16px);
+    gap: 10px;
+    padding: clamp(10px, 3.2vmin, 18px) clamp(12px, 3.6vmin, 22px);
   }
+  [data-game-mode='mobile'] .record-section h3,
+  [data-game-mode='mobile'] .record-bullets,
+  [data-game-mode='mobile'] .record-meta {
+    font-size: clamp(11px, 3vmin, 13px);
+  }
+  [data-game-mode='mobile'] .record-foot {
+    padding-top: 10px;
+    gap: 8px;
+  }
+  [data-game-mode='mobile'] .shop-stock {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  [data-game-mode='mobile'] .shop-card {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+  [data-game-mode='mobile'] .shop-name {
+    font-size: clamp(12px, 3.2vmin, 14px);
+    margin-bottom: 2px;
+  }
+  [data-game-mode='mobile'] .shop-stack {
+    font-size: clamp(10px, 2.8vmin, 11px);
+  }
+
   [data-game-mode='mobile'] .name-entry {
     width: min(430px, calc(100% - 32px));
   }

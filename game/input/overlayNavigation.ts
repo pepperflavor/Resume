@@ -32,40 +32,47 @@ const KEYS: Record<NavDirection | 'confirm', string> = {
   confirm: 'e',
 };
 
-function send(
-  type: 'keydown' | 'keyup',
-  action: NavDirection | 'confirm',
-  repeat: boolean,
-) {
+function send(type: 'keydown' | 'keyup', action: NavDirection | 'confirm') {
   window.dispatchEvent(
     new KeyboardEvent(type, {
       code: CODES[action],
       key: KEYS[action],
-      repeat,
+      // Never flagged as a repeat, even when it is one.
+      //
+      // The panels ignore `event.repeat` on purpose: a held arrow key moves the
+      // selection once and stops, which is right for a key you can tap again in
+      // an instant. A thumb cannot tap a stick like that, so a stick that is
+      // plainly being held has to keep moving — and the only honest way to say
+      // that through this channel is to send each one as a fresh press. The
+      // pacing that makes it feel deliberate lives in `OverlayNavRepeater`.
+      repeat: false,
       bubbles: true,
       cancelable: true,
     }),
   );
 }
 
-/** A press. `repeat` marks the auto-repeats so panels can ignore them, exactly
- *  as they ignore a held arrow key. */
-export function pressOverlayKey(
-  action: NavDirection | 'confirm',
-  repeat = false,
-) {
-  send('keydown', action, repeat);
+/** A press, as far as any panel listening for one is concerned. */
+export function pressOverlayKey(action: NavDirection | 'confirm') {
+  send('keydown', action);
 }
 
 /** The matching release. Confirm needs it: the panels disarm confirm until the
  *  E that opened them comes back up, and a tap has to complete that cycle. */
 export function releaseOverlayKey(action: NavDirection | 'confirm') {
-  send('keyup', action, false);
+  send('keyup', action);
 }
 
-/** Held-direction repeat, tuned to feel like a held arrow key. */
-const REPEAT_DELAY = 420;
-const REPEAT_INTERVAL = 150;
+/**
+ * Held-direction repeat.
+ *
+ * Slower than a keyboard's, on purpose: a thumb on a stick has none of a key's
+ * crisp release, so a keyboard's pace reads as the list running away. Long
+ * enough that a push-and-let-go is always exactly one step, and the repeat only
+ * arrives for someone who is plainly holding on.
+ */
+const REPEAT_DELAY = 600;
+const REPEAT_INTERVAL = 260;
 
 /**
  * Turns a thumbstick — which reports an angle continuously — into the discrete
@@ -79,6 +86,11 @@ export class OverlayNavRepeater {
   private held: NavDirection | null = null;
   private timer: ReturnType<typeof setTimeout> | undefined;
 
+  /** What the panel currently thinks is pressed, for the caller's hysteresis. */
+  get direction() {
+    return this.held;
+  }
+
   /** The stick's current direction, or null for centred. Edge-triggered. */
   set(next: NavDirection | null) {
     if (next === this.held) return;
@@ -88,7 +100,7 @@ export class OverlayNavRepeater {
     pressOverlayKey(next);
     const repeat = () => {
       if (this.held !== next) return;
-      pressOverlayKey(next, true);
+      pressOverlayKey(next);
       this.timer = setTimeout(repeat, REPEAT_INTERVAL);
     };
     this.timer = setTimeout(repeat, REPEAT_DELAY);
