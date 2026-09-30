@@ -2,12 +2,16 @@
 import { useEffect, useRef } from 'react';
 
 /**
- * The one screen a phone sees before the name prompt.
+ * The one screen a phone in a browser tab sees before the name prompt.
  *
  * Safari's address bar eats a strip of a landscape game and there is nothing
  * the page can do about it, so this offers the way out rather than pretending
  * the problem is not there. Neither answer blocks the game: one opens the
- * guide, the other goes straight on.
+ * guide, the other goes straight on, and both count as answered so the offer
+ * is never made twice.
+ *
+ * Desktop never renders it — there is no address bar in the way — and neither
+ * does an installed app, which is already past the problem.
  */
 export function MobileStartPanel({
   onShowGuide,
@@ -33,16 +37,16 @@ export function MobileStartPanel({
       }}
     >
       <p className="eyebrow">PORTFOLIO WORLD</p>
-      <h2 id="mobile-start-title">주소창이 화면을 가려서 불편하다면?</h2>
+      <h2 id="mobile-start-title">전체화면으로 플레이 하는건 어떠세요?</h2>
       <p className="dialogue-text">
         홈 화면에 추가하면 주소창 없이 전체 화면으로 즐길 수 있어요.
       </p>
       <div className="dialogue-choices">
         <button type="button" onClick={onShowGuide} autoFocus>
-          앱처럼 크게 보는 방법
+          방법 알려주세요
         </button>
         <button type="button" onClick={onSkip}>
-          그냥 지금 화면에서 볼래요
+          괜찮아요 이대로 볼게요
         </button>
       </div>
     </dialog>

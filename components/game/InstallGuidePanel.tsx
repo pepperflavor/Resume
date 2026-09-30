@@ -44,15 +44,18 @@ function StepImage({ src, alt }: { src: string; alt: string }) {
 /**
  * How to get the game out of a Safari tab and onto the home screen. Offered,
  * never forced: every path through it ends at the game.
+ *
+ * Only ever reached from a phone in a browser tab — the start screen's offer
+ * or the Settings entry, both of which exist only there. Desktop has no address
+ * bar to escape and an installed app has already escaped it, so neither one
+ * can open this.
  */
 export function InstallGuidePanel({
   onClose,
   playLabel = '지금 이대로 플레이',
-  standalone = false,
 }: {
   onClose: () => void;
   playLabel?: string;
-  standalone?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
@@ -79,25 +82,18 @@ export function InstallGuidePanel({
         <h2 id="install-title">앱처럼 크게 보기</h2>
       </div>
       <div className="install-body">
-        {standalone ? (
-          <p className="dialogue-text">
-            지금 앱 모드로 실행 중이에요. 주소창 없이 전체 화면으로 즐기고
-            있습니다.
-          </p>
-        ) : (
-          <ol className="install-steps">
-            {STEPS.map((step, index) => (
-              <li key={step.title}>
-                <span className="install-step-no">{index + 1}</span>
-                <div className="install-step-body">
-                  <h3>{step.title}</h3>
-                  <p>{step.text}</p>
-                  <StepImage src={step.image} alt="" />
-                </div>
-              </li>
-            ))}
-          </ol>
-        )}
+        <ol className="install-steps">
+          {STEPS.map((step, index) => (
+            <li key={step.title}>
+              <span className="install-step-no">{index + 1}</span>
+              <div className="install-step-body">
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+                <StepImage src={step.image} alt="" />
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
       <div className="dialogue-choices install-foot">
         <button type="button" onClick={close} autoFocus>

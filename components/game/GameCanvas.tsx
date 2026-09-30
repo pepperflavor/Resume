@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Game } from 'phaser';
 import type { PortfolioEntry } from '@/game/types';
 import { GameHud } from '@/components/game/GameHud';
@@ -13,10 +13,9 @@ import { MobileControlsLayer } from '@/components/game/MobileControlsLayer';
 import { MobileStartPanel } from '@/components/game/MobileStartPanel';
 import { OrientationGuard } from '@/components/game/OrientationGuard';
 import {
-  isStandaloneApp,
-  matchesTouchEnvironment,
-  useTouchEnvironment,
-} from '@/components/game/useTouchEnvironment';
+  isMobileGameMode,
+  useClientEnvironment,
+} from '@/components/game/clientMode';
 import { InfoPanel } from '@/components/portfolio/InfoPanel';
 import type { GuildMenuId } from '@/game/config/guildRecords';
 import {
@@ -25,6 +24,10 @@ import {
 } from '@/game/input/InputManager';
 import { startBgm, stopAllAudio } from '@/game/state/audio';
 import { useGameState } from '@/game/state/useGameState';
+
+/** The run-up to play, and then play. One step is showing at any moment. */
+type StartStep =
+  'fullscreen-choice' | 'install-guide' | 'name-entry' | 'gameplay';
 
 export function GameCanvas() {
   const host = useRef<HTMLDivElement>(null);
@@ -36,20 +39,13 @@ export function GameCanvas() {
   const [shopOpen, setShopOpen] = useState(false);
   const [guildRecord, setGuildRecord] = useState<GuildMenuId | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [installGuideOpen, setInstallGuideOpen] = useState(false);
-  // A phone is offered the home-screen guide once, before the name prompt;
-  // answering either way sends them on. Settings can re-open it later.
-  const [introAnswered, setIntroAnswered] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(false);
+  // Whether the full-screen offer has been answered. Either answer counts, and
+  // the guide counts as an answer too, so the offer is never asked twice.
+  const [fullscreenAnswered, setFullscreenAnswered] = useState(false);
   const gameRef = useRef<Game | undefined>(undefined);
-  const { isTouch, isPortrait } = useTouchEnvironment();
-  // Whether this is a home-screen launch. It cannot change while the page is
-  // open, so there is nothing to subscribe to — the server snapshot is simply
-  // false, which keeps the markup it renders free of the browser's opinion.
-  const standalone = useSyncExternalStore(
-    () => () => {},
-    isStandaloneApp,
-    () => false,
-  );
+  const { mode: clientMode, isPortrait } = useClientEnvironment();
+  const isTouch = clientMode !== 'desktop';
   // A phone held upright plays nothing at all: the notice is up, so the input
   // layer is shut off behind it rather than merely hidden.
   const orientationBlocked = isTouch && isPortrait;
@@ -137,7 +133,7 @@ export function GameCanvas() {
           // Read live rather than from the hook's state: a reload straight into
           // a saved game builds the world in this very commit, before the
           // hook's effect has had a chance to say the device is a phone.
-          { deviceViewport: matchesTouchEnvironment() },
+          { deviceViewport: isMobileGameMode() },
         );
         gameRef.current = game;
       })
@@ -200,18 +196,42 @@ export function GameCanvas() {
   const panelOpen = Boolean(
     entry || shopOpen || guildRecord || settingsOpen || retry,
   );
-  // The controls belong to a running world: never on desktop, never while the
-  // phone is upright. They stay up behind a panel, because the thumbs are
-  // still the only pointer the player has — they just drive the panel instead.
+
+  /**
+   * Where the visitor stands in the run-up to play, in one expression.
+   *
+   * The client mode decides only where the flow *begins*; from there it is the
+   * player's own answers that move it along. Desktop and an installed app both
+   * begin at the name prompt, because neither has an address bar to complain
+   * about — only a phone in a browser tab is offered the full-screen route.
+   */
+  const startStep: StartStep = guideOpen
+    ? 'install-guide'
+    : hasName
+      ? 'gameplay'
+      : clientMode === 'mobile-browser' && !fullscreenAnswered
+        ? 'fullscreen-choice'
+        : 'name-entry';
+
+  // Portrait shows the rotate notice and nothing else: the flow waits for the
+  // phone to be turned rather than stacking a dialogue on top of the notice.
+  const visibleStartPanel = orientationBlocked ? null : startStep;
+  // The controls belong to a running world, and only once it is on screen:
+  // never on desktop, never while the phone is upright, and never behind the
+  // start flow or the guide, which have their own buttons to be read.
   const showMobileControls =
-    isTouch && !isPortrait && hasName && status === 'ready';
-  // The start screen and the name prompt own the screen outright; the controls
-  // would have nothing to drive and the guide's own buttons are being read.
-  const startFlowOpen = !hasName || installGuideOpen;
-  // A phone that has not answered the address-bar question yet, unless it is
-  // already running without an address bar to answer about.
-  const showMobileIntro =
-    isTouch && !isPortrait && !hasName && !introAnswered && !standalone;
+    isTouch && !isPortrait && startStep === 'gameplay' && status === 'ready';
+
+  /** The one condition for every piece of full-screen advice in the app. */
+  const showFullscreenGuide = clientMode === 'mobile-browser';
+
+  function closeGuide() {
+    setGuideOpen(false);
+    setFullscreenAnswered(true);
+    // Opened from Settings mid-game, the guide held gameplay input; opened
+    // before the world exists, there is nothing to hand back.
+    if (hasName) releaseOverlay();
+  }
 
   return (
     <>
@@ -245,24 +265,20 @@ export function GameCanvas() {
           </p>
         )}
       </div>
-      {showMobileIntro && (
+      {visibleStartPanel === 'fullscreen-choice' && (
         <MobileStartPanel
-          onShowGuide={() => setInstallGuideOpen(true)}
-          onSkip={() => setIntroAnswered(true)}
+          onShowGuide={() => setGuideOpen(true)}
+          onSkip={() => setFullscreenAnswered(true)}
         />
       )}
-      {!hasName && !showMobileIntro && !installGuideOpen && (
-        <NameEntryPanel onStart={() => startBgm()} />
-      )}
-      {installGuideOpen && (
+      {visibleStartPanel === 'install-guide' && (
         <InstallGuidePanel
-          standalone={standalone}
           playLabel={hasName ? '돌아가기' : '지금 이대로 플레이'}
-          onClose={() => {
-            setInstallGuideOpen(false);
-            setIntroAnswered(true);
-          }}
+          onClose={closeGuide}
         />
+      )}
+      {visibleStartPanel === 'name-entry' && (
+        <NameEntryPanel onStart={() => startBgm()} />
       )}
       {entry && (
         <InfoPanel
@@ -292,11 +308,12 @@ export function GameCanvas() {
       {settingsOpen && (
         <SettingsPanel
           onShowInstallGuide={
-            isTouch
+            showFullscreenGuide
               ? () => {
+                  // Keeps ownership: the guide is an overlay too, so gameplay
+                  // stays put until `closeGuide` hands it back.
                   setSettingsOpen(false);
-                  setInstallGuideOpen(true);
-                  releaseOverlay();
+                  setGuideOpen(true);
                 }
               : undefined
           }
@@ -316,7 +333,7 @@ export function GameCanvas() {
       {/* Rendered after every panel on purpose: effects run in render order, so
           the layer only goes looking for the open dialog once that dialog's own
           effect has opened it. */}
-      {showMobileControls && !startFlowOpen && (
+      {showMobileControls && (
         <MobileControlsLayer
           mode={panelOpen ? 'dialogue' : 'gameplay'}
           frame={frame}
