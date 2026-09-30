@@ -76,6 +76,8 @@ export class DungeonBossScene extends Phaser.Scene {
   /** The sleep cycle, clocked by the snore audio rather than by a timer. */
   private cycle!: DragonSnoreCycle;
   private wake: HTMLAudioElement | null = null;
+  /** Whichever sting the encounter ended on, so leaving can silence it. */
+  private sting: HTMLAudioElement | null = null;
   private lastPosition = new Phaser.Math.Vector2();
   private entry: SceneEntry = {};
   constructor(private readonly callbacks: GameCallbacks) {
@@ -97,12 +99,18 @@ export class DungeonBossScene extends Phaser.Scene {
     loadDragonAssets(this);
     // Fetched with the art, not on the first snore: the cycle is only honest
     // if the sound starts when the dragon does.
-    preloadSfx([...DRAGON_SNORE_SFX, SFX.dragonWake]);
+    preloadSfx([
+      ...DRAGON_SNORE_SFX,
+      SFX.dragonWake,
+      SFX.goldenCatSuccess,
+      SFX.goldenCatFailure,
+    ]);
   }
   create() {
     this.state = 'intro';
     this.failure = undefined;
     this.wake = null;
+    this.sting = null;
     setSceneBgm('dungeonBoss');
     this.add
       .rectangle(
@@ -262,6 +270,8 @@ export class DungeonBossScene extends Phaser.Scene {
       this.cycle.stop();
       stopSfx(this.wake);
       this.wake = null;
+      stopSfx(this.sting);
+      this.sting = null;
     });
     // Started on the first frame the player is actually in control, not here:
     // the entry fade would otherwise eat the front of the first snore.
@@ -358,6 +368,11 @@ export class DungeonBossScene extends Phaser.Scene {
    * of a story that has to be read one beat at a time.
    */
   private showSuccess() {
+    // On the frame the first panel appears, and only here: `succeed` is the
+    // encounter's one-way door, so this runs once per success with no flag of
+    // its own. The sting is 3.8s against 4.1s of panels, which is the way round
+    // it should be — the music finishes under the picture, not over the door.
+    this.sting = playSfx(SFX.goldenCatSuccess, DRAGON_AUDIO.goldenCatSting);
     const { view, centre } = this.pinCamera();
     this.add
       .rectangle(
@@ -481,6 +496,11 @@ export class DungeonBossScene extends Phaser.Scene {
 
   /** The escape illustration, fitted inside the viewport without distortion. */
   private showEscape() {
+    // With the illustration, not with the mistake: the wake roar has had its
+    // beat and this is the toon starting. One call, one play — the delayed
+    // call that reaches here fires once per attempt, so a retry stings again
+    // without anything remembering the last one.
+    this.sting = playSfx(SFX.goldenCatFailure, DRAGON_AUDIO.goldenCatSting);
     rampBgm(DRAGON_DETECTION.fade.level, DRAGON_DETECTION.fade.ms);
     const { view, centre } = this.pinCamera();
     this.add

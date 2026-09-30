@@ -133,6 +133,13 @@ export const DRAGON_AUDIO = {
    * snore itself, never a change in the music, as the signal.
    */
   snoreDuck: 0.8,
+  /**
+   * The sting that closes the encounter, either way. Level with the wake, which
+   * is the room's other one-shot, and comfortably over the chamber's music: the
+   * two stings run at roughly three and six times the track's own loudness at
+   * this volume, so neither needs the music pulled down to be heard.
+   */
+  goldenCatSting: 0.85,
 } as const;
 
 /**

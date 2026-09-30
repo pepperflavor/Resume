@@ -1,4 +1,8 @@
-import { getGameState, subscribeGameState } from '@/game/state/gameState';
+import {
+  getGameState,
+  isDragonBossCleared,
+  subscribeGameState,
+} from '@/game/state/gameState';
 import type { SceneId } from '@/game/config/scenes';
 
 /**
@@ -18,15 +22,27 @@ import type { SceneId } from '@/game/config/scenes';
 export const BGM_TRACKS = {
   main: { url: '/assets/game/audio/bgm/bgm_main.wav', volume: 0.4 },
   guildHall: { url: '/assets/game/audio/bgm/bgm_guild_hall.wav', volume: 0.4 },
-  // The file is named `entrace`, and that is the name on disk.
   dungeonEntrance: {
-    url: '/assets/game/audio/bgm/bgm_dungeon_entrace.wav',
+    url: '/assets/game/audio/bgm/bgm_dungeon_entrance.wav',
     volume: 0.4,
   },
   caveGarden: {
     url: '/assets/game/audio/bgm/bgm_cave_garden.wav',
     // A touch under the rest: the grotto's own dripping has to sit on top of
     // it without either one being pushed forward.
+    volume: 0.36,
+  },
+  /**
+   * The same grotto once the golden cat is off its pedestal — the room the
+   * quest was for, brightened, with its own take of the cave's theme.
+   *
+   * Deliberately its own entry rather than pointing `caveGarden` elsewhere, and
+   * deliberately at the same 0.36: the drips were mixed against that number, so
+   * reusing it means the brighter music arrives without the ambience having to
+   * be touched at all.
+   */
+  caveGardenRestored: {
+    url: '/assets/game/audio/bgm/bgm_cave_garden_restored.wav',
     volume: 0.36,
   },
   bossChamber: {
@@ -39,10 +55,11 @@ export const BGM_TRACKS = {
 export type BgmTrack = keyof typeof BGM_TRACKS;
 
 /**
- * Which track each scene plays — the one place that answers the question. The
- * three outdoor hub scenes share a track, and because a track is only ever
- * restarted when it actually changes, walking Home → Market → Guild never
- * interrupts the music; everywhere indoors or underground has its own.
+ * Which track each scene plays by default — see `sceneBgm` for the one room
+ * that answers to the save as well. The three outdoor hub scenes share a track,
+ * and because a track is only ever restarted when it actually changes, walking
+ * Home → Market → Guild never interrupts the music; everywhere indoors or
+ * underground has its own.
  */
 export const SCENE_BGM: Record<SceneId, BgmTrack | null> = {
   home: 'main',
@@ -69,6 +86,9 @@ export const SFX = {
   rockDrop1: '/assets/game/audio/sfx/cave_garden/effect_water_drop_rock_1.wav',
   rockDrop2: '/assets/game/audio/sfx/cave_garden/effect_water_drop_rock_2.wav',
   rockDrop3: '/assets/game/audio/sfx/cave_garden/effect_water_drop_rock_3.wav',
+  // The two stings the boss chamber ends on, one per outcome.
+  goldenCatSuccess: '/assets/game/audio/sfx/golden_cat_success_sting.wav',
+  goldenCatFailure: '/assets/game/audio/sfx/golden_cat_failure_sting.wav',
 } as const;
 
 // ---------------------------------------------------------------- BGM channel
@@ -143,8 +163,23 @@ export function setBgmTrack(track: BgmTrack | null) {
   apply();
 }
 
+/**
+ * The track a scene plays right now.
+ *
+ * Only the grotto reads further than the table: once the statue has been lifted
+ * off its pedestal the room is a different place, and it says so. The state is
+ * the save's own — the same value the sealed door and the HUD read — so there
+ * is no second flag to keep in step, and because it can only change in the boss
+ * chamber, choosing at `create` is enough. Nothing has to watch it.
+ */
+export function sceneBgm(scene: SceneId): BgmTrack | null {
+  if (scene === 'caveGarden' && isDragonBossCleared())
+    return 'caveGardenRestored';
+  return SCENE_BGM[scene];
+}
+
 export function setSceneBgm(scene: SceneId) {
-  setBgmTrack(SCENE_BGM[scene]);
+  setBgmTrack(sceneBgm(scene));
 }
 
 function stopRamp() {
