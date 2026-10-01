@@ -54,6 +54,19 @@ export const WELL_INTEREST_ZONE = {
   height: 210,
 } as const;
 
+/**
+ * The same idea for the notice board: the walkway in front of it. The board
+ * stands at the south edge of the square, so this is the strip the player
+ * actually crosses between the fox's stall and the gossip cart — not the whole
+ * southern half of the plaza.
+ */
+export const NOTICE_BOARD_INTEREST_ZONE = {
+  x: 448,
+  y: 408,
+  width: 128,
+  height: 68,
+} as const;
+
 export const MARKET_TEXTURE = {
   key: 'market-props',
   url: '/assets/game/tilesets/market_tileset.png',
@@ -492,6 +505,22 @@ export const MARKET_OBJECTS: readonly MarketObject[] = [
       dialogue: 'marketWell',
       confirm: 'approachWell',
     },
+  },
+  {
+    // The notice board already standing at the south of the square, between
+    // the fox's stall and the gossip cart. Only the E is new here: the sprite,
+    // its place and its footprint are the scenery entry's, untouched.
+    id: 'noticeBoard',
+    x: 512,
+    y: 414,
+    // The board draws 97x72 up from its base, so the bubble clears its roof.
+    hintY: 330,
+    hint: '무언가 붙어 있다',
+    // Wider than an NPC's reach because the board is: 46 would leave either end
+    // of it unreadable from directly in front.
+    range: 54,
+    zone: NOTICE_BOARD_INTEREST_ZONE,
+    interaction: { type: 'dialogue', dialogue: 'marketNoticeBoard' },
   },
 ];
 

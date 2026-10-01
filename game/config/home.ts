@@ -47,21 +47,52 @@ export const HOME_GATE = {
   foot: { west: 482, east: 530 },
 } as const;
 
-// Drawn from the cottage's two backdrop-free blocks stacked; 216 source rows
-// tall at this scale. Collision is the whole silhouette, so the roof is never
-// walked through.
+/**
+ * The cottage, anchored where it meets the ground rather than by its top-left
+ * corner.
+ *
+ * `x` is the middle of the front door and `y` is the doorstep, which is what
+ * the origin below resolves to. Everything else about the house — what blocks,
+ * where About opens, what it is drawn in front of — is measured from that one
+ * point, so the scale can change without a second set of numbers going stale.
+ * At 0.135 the 1203x1025 silhouette draws 162 x 138: a little over two and a
+ * half times the player's height, and a third of the yard's width.
+ */
 export const HOME_HOUSE = {
-  x: 298,
-  y: 42,
-  width: 67,
-  height: 104,
-  scale: 0.48,
+  x: 372,
+  y: 154,
+  scale: 0.135,
+  /** 0.498 is the door's share of the sprite width; 1 is the doorstep. */
+  originX: 0.498,
+  originY: 1,
+  /**
+   * Where the walls meet the ground, 23 source rows above the doorstep. The
+   * depth the house sorts on, and the bottom of what it blocks — *not* the
+   * sprite's own bottom, which would let the roof decide who stands in front.
+   */
+  groundY: 151,
 } as const;
 
-/** Door step in front of the cottage; the About panel opens from here. */
-export const ABOUT_POINT = { x: 331, y: 156 } as const;
-// Reaches the whole strip in front of the porch, including its west corner, but
-// still stops 4px short of the road so the door cannot be used through the fence.
+/**
+ * What the house blocks. Written out rather than derived from the sprite,
+ * because the two are deliberately not the same rectangle: it starts at the
+ * yard's north walking edge (everything above is already fenced off) and runs
+ * the full silhouette width. The eaves overhang the walls by about 12px a side
+ * and are blocked with them — a gap that narrow is less than the player's own
+ * foot box, so leaving it open would only create a corner to get stuck in.
+ */
+export const HOME_HOUSE_COLLISION = {
+  x: 291,
+  y: 72,
+  width: 163,
+  height: 79,
+} as const;
+
+/** Doorstep, directly below the door. The About panel opens from here. */
+export const ABOUT_POINT = { x: 372, y: 163 } as const;
+// Reaches the whole strip of yard in front of the door without reaching round
+// the sides: the walls stop the player 89px away east and west, so a plain
+// radius is unambiguous here and needs no facing check.
 export const HOUSE_RANGE = 40;
 
 // Sits beside the gate but clear of it: the corridor the player walks through
@@ -178,12 +209,7 @@ export const HOME_COLLISION: readonly CollisionRect[] = [
     height: 8,
   },
   // Cottage.
-  {
-    x: HOME_HOUSE.x,
-    y: HOME_HOUSE.y,
-    width: HOME_HOUSE.width,
-    height: HOME_HOUSE.height,
-  },
+  { ...HOME_HOUSE_COLLISION },
   // Notice board post.
   { x: 564, y: 160, width: 16, height: 6 },
   // Thicket closing the road's east end.

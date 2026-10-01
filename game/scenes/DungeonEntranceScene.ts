@@ -66,6 +66,10 @@ export class DungeonEntranceScene extends Phaser.Scene {
     ]);
     loadAuditedAtlas(this, 'dungeon_tileset');
     loadRuntimeAtlas(this, 'entranceAmbient');
+    // One frame of it — the rune slab beside the boss board. The slab is the
+    // chamber's own stone, and reading the rule on the chamber's own stone is
+    // the point, so it is not re-cut from a cave sheet.
+    loadRuntimeAtlas(this, 'bossTreasure');
     loadRuntimeAtlas(this, 'entranceRock');
     loadRuntimeAtlas(this, 'entranceGlow');
     loadRuntimeGround(this, 'entrance');

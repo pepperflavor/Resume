@@ -259,20 +259,41 @@ dialog::backdrop {
   background-size: 300% 400%;
   background-position: 0 0;
 }
+/* The art is the button. No plate behind it and no frame around it — the
+   icons carry their own shape, and a box drawn under them only read as a
+   second, emptier button. */
 .hud-button {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
+  padding: 0;
   line-height: 0;
-  background: #17212ecc;
-  color: var(--text);
-  border: 1px solid #536174;
+  background: none;
+  border: 0;
   cursor: pointer;
 }
-.hud-button:hover,
+.hud-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  /* Enough to hold an edge over the Market's bright noon ground, and not
+     enough to read as a shadow of its own. */
+  filter: drop-shadow(0 1px 2px #05090daa);
+  transition: filter 120ms ease-out;
+}
+.hud-button:hover .hud-icon {
+  filter: drop-shadow(0 1px 2px #05090daa) brightness(1.18);
+}
+.hud-button:active .hud-icon {
+  scale: 0.92;
+}
+/* The border used to be the focus ring. Losing it must not lose the ring. */
 .hud-button:focus-visible {
-  border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* --- name entry ------------------------------------------------------- */
@@ -876,8 +897,8 @@ dialog::backdrop {
     right: max(10px, env(safe-area-inset-right, 0px));
   }
   [data-game-mode='mobile'] .hud-button {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }
 

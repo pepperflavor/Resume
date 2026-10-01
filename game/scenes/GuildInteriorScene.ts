@@ -43,6 +43,13 @@ const IDLE_FRAME = 0;
 const SIGN_TEXT_DEPTH = FRONT_DEPTH + 1;
 /** Free panel on each side of the lettering, as a fraction of the panel. */
 const SIGN_TEXT_MARGIN = 0.06;
+/**
+ * The range a plaque's lettering may be set in. It starts at the top and steps
+ * down a point at a time until it fits, so each board is drawn at the size it
+ * is finally shown at rather than being set once and squashed.
+ */
+const SIGN_TEXT_MAX_SIZE = 13;
+const SIGN_TEXT_MIN_SIZE = 7;
 
 interface InteriorTarget {
   target: GuildTarget;
@@ -104,26 +111,39 @@ export class GuildInteriorScene extends Phaser.Scene {
     }
     // Lettering goes inside the board's own cream panel, with no box of its
     // own, so it reads as engraved rather than as a label floating in front.
+    //
+    // It used to be set at 10px and then shrunk with `setScale` to fit. That is
+    // what made it look broken: a Text is drawn to its own little canvas first,
+    // and `pixelArt` samples that canvas nearest-neighbour, so scaling it down
+    // drops whole rows out of strokes already only a pixel wide. Here the size
+    // comes down a point at a time and the glyphs are redrawn at the size they
+    // end up, which is the one thing that keeps them whole.
     for (const sign of GUILD_INTERIOR_SIGNS.filter((board) => board.label)) {
       const panel = signPanel(sign);
       const label = this.add
-        .text(panel.x, panel.y, sign.label, {
+        .text(0, 0, sign.label, {
           fontFamily: 'monospace',
-          fontSize: '10px',
+          fontSize: `${SIGN_TEXT_MAX_SIZE}px`,
           color: '#4a3a24',
         })
         .setOrigin(0.5)
         .setDepth(SIGN_TEXT_DEPTH);
-      // Shrink to the panel rather than trusting one font size to fit both,
-      // and keep a margin so the longer name never kisses the board's border.
+      // `setResolution` is deliberately not used: in this Phaser build it
+      // doubles what is drawn while `width` keeps reporting the single-size
+      // figure, so the fit below would measure one thing and show another.
       const room = 1 - SIGN_TEXT_MARGIN * 2;
-      label.setScale(
-        Math.min(
-          1,
-          (panel.width * room) / label.width,
-          (panel.height * room) / label.height,
-        ),
-      );
+      for (
+        let size = SIGN_TEXT_MAX_SIZE;
+        size > SIGN_TEXT_MIN_SIZE &&
+        (label.width > panel.width * room ||
+          label.height > panel.height * room);
+        size -= 1
+      )
+        label.setFontSize(size);
+      // Whole pixels. The panel's own centre falls on a fraction — it is a
+      // percentage of a scaled frame — and half a pixel is the difference
+      // between a letter and a smear.
+      label.setPosition(Math.round(panel.x), Math.round(panel.y));
     }
 
     const obstacles: CollisionRect[] = [

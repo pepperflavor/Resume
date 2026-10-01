@@ -81,14 +81,34 @@ export class SleepingDragon {
       .setName('dragon-snore')
       .setVisible(false);
 
+    // This line is a rule, not decoration: while it shows, footsteps are
+    // covered. It was 15px in the one room the camera pulls back from
+    // (`desktopZoom: 0.8`), which drew it at an effective 12 — the smallest
+    // type in the game, telling the player the most important thing in it.
+    //
+    // 20px with a stroke that stayed at 4 rather than growing with it: at 15px
+    // the outline was over a quarter of the em and closed up the Korean
+    // glyphs' interiors, which is the other half of why it read as a smudge.
+    //
+    // 20 and not more because the line is 109px wide at that size, and the
+    // narrowest phone viewport this runs on is 667 at zoom 1: at 23px the
+    // trailing tilde fell off the right edge whenever the player stood west of
+    // the dragon, which is a cue clipped at exactly the moment it is read.
     this.line = scene.add
-      .text(DRAGON_SNORE_TEXT.x, DRAGON_SNORE_TEXT.y, DRAGON_SNORE_TEXT.text, {
-        fontFamily: 'monospace',
-        fontSize: '15px',
-        color: '#cfe4ff',
-        stroke: '#0b1018',
-        strokeThickness: 4,
-      })
+      .text(
+        // Whole pixels. Both coordinates come out of a 0.46 scale and land on
+        // fractions, and half a pixel under a stroke is a blurred edge.
+        Math.round(DRAGON_SNORE_TEXT.x),
+        Math.round(DRAGON_SNORE_TEXT.y),
+        DRAGON_SNORE_TEXT.text,
+        {
+          fontFamily: 'monospace',
+          fontSize: '20px',
+          color: '#cfe4ff',
+          stroke: '#0b1018',
+          strokeThickness: 4,
+        },
+      )
       .setOrigin(0.5)
       .setDepth(DRAGON_SNORE_TEXT.depth)
       .setName('dragon-snore-text')

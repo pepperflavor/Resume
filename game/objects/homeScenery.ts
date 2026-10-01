@@ -178,32 +178,20 @@ export function homeScenery(): HomeDrawOp[] {
     );
 
   // --- cottage ----------------------------------------------------------
-  // Two backdrop-free blocks stacked into one silhouette.
-  const houseDepth = HOME_HOUSE.y + HOME_HOUSE.height;
-  const { upper, lower, key: houseKey } = HOME_HOUSE_TEXTURE;
+  // One sprite, anchored on its doorstep. It sorts on where the walls meet the
+  // ground, not on the bottom of its own image: the roof is half the picture
+  // and has no business deciding who is standing in front of the house.
   add(
-    houseKey,
-    'cottage-upper',
-    upper,
+    HOME_HOUSE_TEXTURE.key,
+    'cottage',
+    HOME_HOUSE_TEXTURE.frame,
     HOME_HOUSE.x,
     HOME_HOUSE.y,
     HOME_HOUSE.scale,
     HOME_HOUSE.scale,
-    0,
-    0,
-    houseDepth,
-  );
-  add(
-    houseKey,
-    'cottage-lower',
-    lower,
-    HOME_HOUSE.x + (lower.x - upper.x) * HOME_HOUSE.scale,
-    HOME_HOUSE.y + upper.height * HOME_HOUSE.scale,
-    HOME_HOUSE.scale,
-    HOME_HOUSE.scale,
-    0,
-    0,
-    houseDepth,
+    HOME_HOUSE.originX,
+    HOME_HOUSE.originY,
+    HOME_HOUSE.groundY,
   );
 
   // --- yard dressing ----------------------------------------------------

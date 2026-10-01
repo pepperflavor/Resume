@@ -217,31 +217,37 @@ export const EXIT_SIGNS: readonly ExitSign[] = [
     collision: { width: 12, height: 6 },
     quiet: true,
   },
-  // --- Boss Chamber ------------------------------------------------------
-  // The rune slab by the chamber door. It no longer names a passage — the way
-  // home is the warp circle beside it — so it carries the sleep hint instead,
-  // standing where the player arrives and can read it before moving.
+  // The rune slab that states the chamber's one rule. It used to stand inside
+  // the chamber, which asked the player to walk past a sleeping dragon to be
+  // told how to walk past a sleeping dragon — a tutorial that could be lost
+  // before it was read. It stands on this side of the warp now, beside the
+  // board that already says what waits beyond.
   {
-    id: 'boss-entrance',
-    scene: 'dungeonBoss',
-    to: 'dungeonEntrance',
-    direction: 'right',
+    id: 'boss-rune',
+    scene: 'dungeonEntrance',
+    to: 'dungeonBoss',
+    direction: 'left',
     source: 'runtime',
     sheet: 'bossTreasure',
     frame: 'pillar_rune',
-    // A few steps south-west of where the player lands (800, 620) and well
-    // clear of the return circle at (900, 650). The rule of the room is
-    // written here, so it has to be the first thing seen — but off the line
-    // north to the statue, so it never stands in the way of the walk it is
-    // explaining.
-    x: 734,
-    y: 676,
+    // The gap just north of the boss board at (200, 268): clear of the crate
+    // west of it, the merchant east of it and the head of his mat, which
+    // starts at y 214, below.
+    //
+    // 122px from the circle at (96, 230) is the number that matters. An E
+    // inside the circle's reach of 36 warps — it "beats everything it can
+    // reach" by design — so a slab explaining the room beyond would have
+    // taken the player there mid-sentence had it stood any nearer. The
+    // bubbles clear each other too: this one sits at y 148, the board's at 210.
+    x: 216,
+    y: 206,
     scale: 0.55,
-    hintY: 608,
+    hintY: 148,
     dialogue: 'signBossEntrance',
     collision: { width: 14, height: 8 },
-    // The room's one rule is written here, so this never waits to be walked
-    // up to: it is readable from the door and from the far wall alike.
+    // The rule of the room it guards, offered rather than waited with: this is
+    // the one board in the cave the player is meant to notice on their way
+    // past, so it says its piece from across the camp.
     hint: 'Read Me!',
     persistentHint: true,
   },

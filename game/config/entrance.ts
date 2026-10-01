@@ -132,13 +132,49 @@ export const ENTRANCE_AMBIENT_PROPS: readonly AmbientPropConfig[] = [
   { name: 'water_bottle', x: 216, y: 320, scale: 0.32 },
   { name: 'food_bundle', x: 522, y: 256, scale: 0.34 },
   { name: 'scroll', x: 236, y: 232, scale: 0.32, flat: true },
-  // Braziers. Light only: the wooden boards beside each path carry the
-  // directions now, so no torch here is ever something to press E on.
-  { name: 'torch_stand', x: 330, y: 138, scale: 0.4 },
-  { name: 'torch_stand', x: 180, y: 164, scale: 0.4 },
-  { name: 'torch_stand', x: 444, y: 112, scale: 0.4 },
-  { name: 'torch_stand', x: 660, y: 190, scale: 0.4 },
-  { name: 'lantern', x: 500, y: 176, scale: 0.34 },
+  // Braziers and the standing lamp. Light only: the wooden boards beside each
+  // path carry the directions now, so none of them is something to press E on.
+  //
+  // They do stand in the way, though. A torch draws 44x88 and the lamp 27x52 —
+  // taller than the player on his own feet — and walking through one read as a
+  // bug rather than as scenery. Each blocks on its base alone: the post is what
+  // occupies the floor, and a box drawn around the flame would stop the player
+  // a body's width short of a stand he could walk right up to.
+  {
+    name: 'torch_stand',
+    x: 330,
+    y: 138,
+    scale: 0.4,
+    footprint: { width: 20, height: 10 },
+  },
+  {
+    name: 'torch_stand',
+    x: 180,
+    y: 164,
+    scale: 0.4,
+    footprint: { width: 20, height: 10 },
+  },
+  {
+    name: 'torch_stand',
+    x: 444,
+    y: 112,
+    scale: 0.4,
+    footprint: { width: 20, height: 10 },
+  },
+  {
+    name: 'torch_stand',
+    x: 660,
+    y: 190,
+    scale: 0.4,
+    footprint: { width: 20, height: 10 },
+  },
+  {
+    name: 'lantern',
+    x: 500,
+    y: 176,
+    scale: 0.34,
+    footprint: { width: 14, height: 8 },
+  },
   { name: 'rib_bones', x: 600, y: 324, scale: 0.34, flat: true },
   { name: 'skull', x: 88, y: 322, scale: 0.34, flat: true },
   { name: 'bone', x: 132, y: 328, scale: 0.32, flat: true },
