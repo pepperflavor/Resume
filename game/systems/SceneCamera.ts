@@ -8,11 +8,16 @@ const FOLLOW_LERP = 0.15;
  * How much of the screen the player may cross before the camera starts moving,
  * as a fraction of the visible world. Device viewport only.
  *
- * A quarter of the view keeps the camera still for the small corrections that
- * make up most of walking, and only slides when the player actually heads
- * somewhere — which is both calmer to look at and less work for the phone.
+ * Small on purpose. A deadzone's job is to ignore the dithering of a thumb on
+ * a stick, and 8% of a 667px view is 53px — wider than any correction and
+ * narrower than a walk. It used to be 25%, which is 167px: after a change of
+ * direction the player had to cross all of it before the camera moved at all,
+ * measured at **64 frames, 1.07 seconds** of a frozen screen followed by the
+ * camera catching up. That pause, not the follow itself, was the lurch. At 8%
+ * the same reversal costs about a third of a second, which reads as the
+ * camera settling rather than as the camera stopping.
  */
-const DEVICE_DEADZONE = 0.25;
+const DEVICE_DEADZONE = 0.08;
 
 /**
  * Slack, in world pixels, before a map counts as bigger than the screen.
@@ -60,22 +65,46 @@ export function configureSceneCamera(
 ) {
   const camera = scene.cameras.main;
   /**
-   * Whole-pixel snapping is right for the desktop frame and wrong for a phone.
+   * Never. `Camera.roundPixels` rounds `scrollX`/`scrollY` to whole numbers
+   * every frame, and the player walks at 160px/s — 2.667px per frame at 60fps,
+   * a figure no integer scroll can keep up with evenly. Measured on desktop
+   * with it on, the camera advanced **2, 3, 3, 2, 3, 3, 2…** and nothing else:
+   * two distinct deltas, a per-frame jerk deviation of 0.853. With it off the
+   * same walk gave 2.35, 2.40, 2.44, 2.47… — jerk deviation 0.013, sixty times
+   * steadier.
    *
-   * Every object is drawn at `round((world - scroll) * zoom)`. The follow lerp
-   * moves `scroll` by an uneven fraction each frame, so a player walking at a
-   * constant 160px/s makes the rounded scene advance 2, 2, 3, 2, 3, 3, 2… — the
-   * stutter, measured as a jerk deviation of 0.74 against 0.21 with rounding
-   * off. Desktop never shows it: the canvas is the world's own 768x384 grid at
-   * zoom 1, so the snap lands where the art already wanted to be. A phone
-   * viewport has neither, and the canvas is then scaled up again by the device
-   * pixel ratio, which magnifies each snap instead of hiding it.
+   * This was previously left on for desktop on the grounds that the canvas is
+   * the world's own 768x384 grid, so the snap costs nothing. It isn't: the
+   * frame is then scaled to the page by `Scale.FIT`, around 2.4x, which turns
+   * each 1px scroll step into a 2.4px jolt on screen roughly twenty times a
+   * second. That was the judder on long walks.
+   *
+   * Sprites still land on whole device pixels — the renderer samples
+   * nearest-neighbour under `pixelArt` — they simply no longer do it all on
+   * the same frame, which is what makes the motion read as continuous.
    */
-  camera.setRoundPixels(!deviceViewport);
+  camera.setRoundPixels(false);
 
   let wantsFollow = false;
+  /**
+   * The viewport the current settings were computed for.
+   *
+   * Phaser's scale manager re-emits RESIZE on its own 500ms poll even when
+   * nothing has changed — measured on desktop at five events in 2.4s, every
+   * one reporting the same 768x384 canvas in the same 942x471 parent. Each one
+   * reran `apply`, and `startFollow` *snaps* the scroll to its target, so the
+   * camera jumped forward by its whole lerp lag (17px, measured) and then had
+   * to ease back in. Twice a second, during any long walk. That was the judder.
+   *
+   * So the work is done only when the viewport it depends on actually moved. A
+   * real resize or rotation still changes this key and still re-applies.
+   */
+  let applied: string | null = null;
   const apply = () => {
     const zoom = deviceViewport ? containZoom(camera, world) : desktopZoom;
+    const key = `${camera.width}x${camera.height}@${zoom}`;
+    if (key === applied) return;
+    applied = key;
     camera.setZoom(zoom);
     const view = { width: camera.width / zoom, height: camera.height / zoom };
 

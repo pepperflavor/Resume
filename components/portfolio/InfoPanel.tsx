@@ -122,7 +122,11 @@ export function InfoPanel({
         // Offered at the two points where leaving means something: before the
         // question, and once there is nothing left to read. In between it would
         // let the player step out between a note and the thought it provokes.
-        ...(page === 0 || lastPage
+        //
+        // `soleChoice` drops it entirely, for the one dialogue whose single
+        // answer is itself the way on. Esc still backs out of that one — a
+        // panel with no way out at all is a trap, not a flourish.
+        ...((page === 0 || lastPage) && !('soleChoice' in branching)
           ? [{ kind: 'close' as const, label: closeLabel }]
           : []),
       ]

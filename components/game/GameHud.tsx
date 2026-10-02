@@ -1,5 +1,6 @@
 'use client';
 import { setBgmEnabled } from '@/game/state/gameState';
+import type { ItemInfo } from '@/game/config/items';
 
 const ICONS = {
   sound: '/assets/game/ui/icons/icon-sound.png',
@@ -22,33 +23,34 @@ function HudIcon({ src }: { src: string }) {
  * Market scrolls under the player.
  */
 export function GameHud({
-  hasGoldenCat,
-  hasKkokko,
+  items,
   bgmEnabled,
   onOpenSettings,
+  onOpenItem,
 }: {
-  hasGoldenCat: boolean;
-  hasKkokko: boolean;
+  items: readonly ItemInfo[];
   bgmEnabled: boolean;
   onOpenSettings: () => void;
+  onOpenItem: (item: ItemInfo) => void;
 }) {
   return (
     <div className="game-hud">
       <div className="quest-items">
-        {hasKkokko && (
-          <span
-            className="quest-item quest-item-kkokko"
-            role="img"
-            aria-label="꼬꼬 동행 중"
-          />
-        )}
-        {hasGoldenCat && (
-          <span
-            className="quest-item quest-item-cat"
-            role="img"
-            aria-label="황금 고양이상 보유"
-          />
-        )}
+        {/* The art is unchanged; what is new is that it answers. A button
+            rather than a role="img" span, so the keyboard reaches it and the
+            label says what pressing it does instead of what it is. */}
+        {items.map((item) => (
+          <button
+            key={item.id}
+            type="button"
+            className="quest-item-button"
+            aria-label={`${item.name} 정보 보기`}
+            title={item.name}
+            onClick={() => onOpenItem(item)}
+          >
+            <span className={`quest-item ${item.spriteClass}`} />
+          </button>
+        ))}
       </div>
       <button
         type="button"

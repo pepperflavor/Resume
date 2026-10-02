@@ -524,17 +524,30 @@ export const MARKET_OBJECTS: readonly MarketObject[] = [
   },
 ];
 
-/** Kkokko only stands here once the quest is finished, beside the fox's stall. */
+/**
+ * Kkokko once the quest is finished: pecking about in front of the fox's
+ * stall, where she can be seen.
+ *
+ * She used to wander y 350..394, which is *behind* the produce stands. Depth
+ * is the y coordinate here, and the three stands sit at y 424..428 and are
+ * drawn upward from there, so anything above them is both sorted behind them
+ * and physically covered by them — she was there the whole time, under an
+ * apple stand.
+ *
+ * The patch below is the open floor south of the stands: clear of their
+ * footprints, which stop at y 426; east of the fox at (218, 398) by more than
+ * one E's reach, so she can never take his; north of the square's walkable
+ * limit at y 508; and far from every other target in the scene.
+ */
 export const MARKET_KKOKKO: MarketNpc = {
   id: 'kkokko',
   kind: 'chicken',
-  x: 330,
-  y: 378,
+  x: 350,
+  y: 472,
   scale: 0.42,
   hint: '꼬꼬!',
   interaction: { type: 'dialogue', dialogue: 'kkokkoHome' },
-  // Kept above the produce stands so she never walks into one.
-  wanderArea: { x: 286, y: 350, width: 112, height: 44 },
+  wanderArea: { x: 286, y: 458, width: 120, height: 34 },
 };
 
 export const MARKET_NPC_KINDS = [

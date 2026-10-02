@@ -5,7 +5,9 @@ import type { PortfolioEntry } from '@/game/types';
 import { GameHud } from '@/components/game/GameHud';
 import { GameOverPanel } from '@/components/game/GameOverPanel';
 import { GuildRecordPanel } from '@/components/game/GuildRecordPanel';
+import { ItemDetailPanel } from '@/components/game/ItemDetailPanel';
 import { NameEntryPanel } from '@/components/game/NameEntryPanel';
+import { QuestCompletePanel } from '@/components/game/QuestCompletePanel';
 import { ProjectShopPanel } from '@/components/game/ProjectShopPanel';
 import { SettingsPanel } from '@/components/game/SettingsPanel';
 import { InstallGuidePanel } from '@/components/game/InstallGuidePanel';
@@ -17,6 +19,7 @@ import {
   useClientEnvironment,
 } from '@/components/game/clientMode';
 import { InfoPanel } from '@/components/portfolio/InfoPanel';
+import { carriedItems, type ItemInfo } from '@/game/config/items';
 import type { GuildMenuId } from '@/game/config/guildRecords';
 import {
   resetAllHeldInput,
@@ -40,6 +43,11 @@ export function GameCanvas() {
   const [guildRecord, setGuildRecord] = useState<GuildMenuId | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
+  // The thing whose card is open, and whether the ending is showing. Neither
+  // is saved: the bag comes out of the quest state and the ending can be
+  // reopened from the fairy as often as the player likes.
+  const [item, setItem] = useState<ItemInfo | null>(null);
+  const [questComplete, setQuestComplete] = useState(false);
   // Whether the full-screen offer has been answered. Either answer counts, and
   // the guide counts as an answer too, so the offer is never asked twice.
   const [fullscreenAnswered, setFullscreenAnswered] = useState(false);
@@ -54,7 +62,7 @@ export function GameCanvas() {
   const hasName = state.playerName.length > 0;
   // Read from the save rather than kept beside it, so a reload shows what the
   // player actually has instead of an empty HUD over a half-finished quest.
-  const carryingGoldenCat = state.quests.goldenCat === 'CARRIED';
+  const items = carriedItems(state);
 
   /**
    * The one place input ownership changes hands.
@@ -183,6 +191,11 @@ export function GameCanvas() {
     gameRef.current?.scale.refresh();
   }, [orientationBlocked]);
 
+  /** Takes input ownership for a panel opened from React rather than a scene. */
+  function takeOverlay() {
+    overlayOpen.current = true;
+    syncGameplayInput();
+  }
   function releaseOverlay() {
     overlayOpen.current = false;
     syncGameplayInput();
@@ -193,9 +206,27 @@ export function GameCanvas() {
     releaseOverlay();
   }
 
-  const panelOpen = Boolean(
-    entry || shopOpen || guildRecord || settingsOpen || retry,
-  );
+  /**
+   * Which panel owns the screen. The touch controls move into whichever dialog
+   * is open, so they need to know when that stops being the same dialog — not
+   * merely when some panel is open.
+   */
+  const openPanel = retry
+    ? 'game-over'
+    : questComplete
+      ? 'quest-complete'
+      : item
+        ? `item:${item.id}`
+        : settingsOpen
+          ? 'settings'
+          : guildRecord
+            ? `guild:${guildRecord}`
+            : shopOpen
+              ? 'shop'
+              : entry
+                ? `entry:${entry.id}`
+                : null;
+  const panelOpen = openPanel !== null;
 
   /**
    * Where the visitor stands in the run-up to play, in one expression.
@@ -237,13 +268,15 @@ export function GameCanvas() {
     <>
       <div className="game-frame" ref={setFrame}>
         <GameHud
-          hasGoldenCat={carryingGoldenCat}
-          hasKkokko={state.quests.findKkokko === 'CHICKEN_FOUND'}
+          items={items}
           bgmEnabled={state.settings.bgmEnabled}
           onOpenSettings={() => {
-            overlayOpen.current = true;
-            syncGameplayInput();
+            takeOverlay();
             setSettingsOpen(true);
+          }}
+          onOpenItem={(next) => {
+            takeOverlay();
+            setItem(next);
           }}
         />
         <div
@@ -285,7 +318,35 @@ export function GameCanvas() {
           key={entry.id}
           entry={entry.id}
           onClose={closePanel}
-          onConfirm={entry.confirm}
+          // The fairy's single answer closes her dialogue and opens the
+          // ending. Derived here rather than handed over by the scene: the
+          // panel is React's, and the scene has no business knowing it exists.
+          onConfirm={
+            entry.id === 'pondFairyOffered'
+              ? () => {
+                  takeOverlay();
+                  setQuestComplete(true);
+                }
+              : entry.confirm
+          }
+        />
+      )}
+      {item && (
+        <ItemDetailPanel
+          item={item}
+          playerName={state.playerName}
+          onClose={() => {
+            setItem(null);
+            releaseOverlay();
+          }}
+        />
+      )}
+      {questComplete && (
+        <QuestCompletePanel
+          onClose={() => {
+            setQuestComplete(false);
+            releaseOverlay();
+          }}
         />
       )}
       {shopOpen && (
@@ -326,6 +387,8 @@ export function GameCanvas() {
             setEntry(null);
             setShopOpen(false);
             setGuildRecord(null);
+            setItem(null);
+            setQuestComplete(false);
             overlayOpen.current = false;
           }}
         />
@@ -336,6 +399,7 @@ export function GameCanvas() {
       {showMobileControls && (
         <MobileControlsLayer
           mode={panelOpen ? 'dialogue' : 'gameplay'}
+          panelKey={openPanel}
           frame={frame}
         />
       )}

@@ -266,18 +266,18 @@ export const DIALOGUES = {
   // than behind a one-time flag: someone who wants the Resume a second time
   // needs this more than someone seeing it for the first time, and the fairy is
   // where they already know to come back to.
+  // The ending. Three lines and one answer: everything the player is sent away
+  // with now lives in the quest panel this hands over to, which can hold the
+  // three places and the restart line without becoming a wall of dialogue.
   pondFairyOffered: {
     speaker: '연못의 요정',
     role: 'Garden',
     greeting:
-      '다시 이 연못으로 돌아와 줬구나.\n덕분에 이 정원이 예전 빛을 되찾았어.',
-    choice: '특별한 정보를 듣는다',
-    reply:
-      '약속한 대로 특별한 정보를 알려줄게.\n이 세계를 만든 사람의 기록이\n저 너머에 남아 있어.\n\n여기까지 걸어와 줘서 고마워.\n\nResume는 시장의 사슴에게,\n프로젝트는 시장의 여우에게,\n경력 기록은 길드 관리국에서\n다시 확인할 수 있어.\n\n처음부터 다시 걷고 싶다면\n설정에서 “처음부터 다시 시작”을 골라줘.',
-    link: {
-      label: 'GitHub 보기',
-      href: 'https://github.com/pepperflavor',
-    },
+      '저 아이가 돌아오다니,\n네 덕분이야. 정말 고마워.\n\n약속대로 특별한 정보를 알려줄게.',
+    choice: '네가 기뻐해서 나도 기뻐.',
+    // No way out beside it: the one answer *is* the way on, and a 나가기 here
+    // would be a button for skipping the ending the player just earned.
+    soleChoice: true,
   },
   offeringAltar: {
     speaker: '연못의 제단',

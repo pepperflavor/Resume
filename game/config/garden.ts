@@ -36,12 +36,42 @@ export const GARDEN_CLEARANCE = 8;
 export const GARDEN = {
   pond: { x: 470, y: 230, scale: 1.4 },
   altar: { x: 470, y: 300, scale: 0.8 },
-  // The offered statue stands on the altar's top face.
-  altarTop: { x: 470, y: 242 },
+  /**
+   * Where the offered statue's feet go: the middle of the dais's top face.
+   *
+   * The altar is a round stone drum seen in three-quarter view, so its top is
+   * an ellipse rather than a line, and the frame it is cut from runs y 0..93
+   * with that ellipse at y 11..52. The old 242 put the statue at y 21 of the
+   * frame — the ellipse's *back* rim, which is why it read as set back rather
+   * than standing on the altar. 253 is the ellipse's own centre, plus the
+   * 1.5px of transparent floor the statue's art carries under its feet at
+   * this scale. x stays 470: the dais silhouette is centred on its frame.
+   */
+  altarTop: { x: 470, y: 253 },
   fairy: { x: 620, y: 220, scale: 0.5 },
   // Visual drift only: the fairy's logical position and footprint stay put.
   fairyFloat: { amplitude: 5, duration: 750 },
   interactionRange: 44,
+} as const;
+
+/**
+ * The badge over the fairy while the player is carrying the statue she is
+ * waiting for. Deliberately not the "..." bubble every other interactable
+ * uses: that one means "there is someone here to talk to", and this one means
+ * "this is the one you are looking for".
+ *
+ * 22px against the fairy's own ~45px of drawn height — read at a glance from
+ * across the grotto, and still clear of her head at `offsetY`.
+ */
+export const QUEST_ALERT = {
+  key: 'ui-quest-alert',
+  url: '/assets/game/ui/icons/generated/icon-quest-alert.png',
+  size: 22,
+  offsetX: 0,
+  /** Bottom edge, so the badge hangs above her rather than over her face. */
+  offsetY: -34,
+  bob: 4,
+  bobDuration: 900,
 } as const;
 
 export interface GardenPropConfig {

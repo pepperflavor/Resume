@@ -22,9 +22,19 @@ import {
  */
 export function MobileControlsLayer({
   mode,
+  panelKey,
   frame,
 }: {
   mode: ControlMode;
+  /**
+   * Which panel is open, or null. Only its identity matters: one panel
+   * closing as another opens leaves `mode` on 'dialogue' throughout, and
+   * without this the controls would stay appended to the dialog that just
+   * left the document — present, invisible and untouchable. The fairy's
+   * ending does exactly that, handing over from her dialogue to the quest
+   * panel in a single commit.
+   */
+  panelKey: string | null;
   /** Where the controls live while no panel is open. */
   frame: HTMLElement | null;
 }) {
@@ -46,7 +56,7 @@ export function MobileControlsLayer({
         : frame;
     host?.append(container);
     return () => container.remove();
-  }, [mode, frame, container]);
+  }, [mode, panelKey, frame, container]);
 
   if (!container) return null;
   // Keyed on the mode so a change remounts rather than mutates: the thumb, the

@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import { GARDEN, GARDEN_AMBIENCE } from '@/game/config/garden';
+import { GARDEN, GARDEN_AMBIENCE, QUEST_ALERT } from '@/game/config/garden';
 import { GOLDEN_CAT_TEXTURES } from '@/game/config/assets';
 import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
 import { WORLD } from '@/game/config/world';
@@ -35,6 +35,7 @@ export class CaveGardenScene extends Phaser.Scene {
   private fairy!: Npc;
   private altar!: Phaser.GameObjects.Image;
   private offering!: Phaser.GameObjects.Image;
+  private questAlert!: Phaser.GameObjects.Image;
   private controls!: InputManager;
   private travel!: SceneTransition;
   private miss!: InteractionMissBubble;
@@ -60,6 +61,8 @@ export class CaveGardenScene extends Phaser.Scene {
     loadRuntimeAtlas(this, 'gardenEnvironment');
     loadRuntimeAtlas(this, 'gardenLight');
     loadRuntimeAtlas(this, 'gardenLightShaft');
+    if (!this.textures.exists(QUEST_ALERT.key))
+      this.load.image(QUEST_ALERT.key, QUEST_ALERT.url);
     loadRuntimeGround(this, 'caveGarden');
   }
   create() {
@@ -85,6 +88,32 @@ export class CaveGardenScene extends Phaser.Scene {
     });
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () =>
       this.tweens.killTweensOf(this.fairy.sprite),
+    );
+    this.questAlert = this.add
+      .image(
+        GARDEN.fairy.x + QUEST_ALERT.offsetX,
+        GARDEN.fairy.y + QUEST_ALERT.offsetY,
+        QUEST_ALERT.key,
+      )
+      .setOrigin(0.5, 1)
+      .setDisplaySize(QUEST_ALERT.size, QUEST_ALERT.size)
+      // Above the fairy and above her own bubble, so the badge is never the
+      // thing that ends up behind something.
+      .setDepth(GARDEN.fairy.y + 60)
+      .setName('fairy-quest-alert')
+      .setVisible(hasGoldenCat());
+    // A slow bob, the same idea as the fairy's own float and deliberately not
+    // a flash: this says "there is something here", not "look at me".
+    this.tweens.add({
+      targets: this.questAlert,
+      y: GARDEN.fairy.y + QUEST_ALERT.offsetY - QUEST_ALERT.bob,
+      duration: QUEST_ALERT.bobDuration,
+      ease: 'Sine.easeInOut',
+      yoyo: true,
+      repeat: -1,
+    });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () =>
+      this.tweens.killTweensOf(this.questAlert),
     );
     this.ambience = new CaveGardenAmbience(this);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.ambience.stop());
@@ -158,6 +187,8 @@ export class CaveGardenScene extends Phaser.Scene {
             if (!this.scene.isActive()) return;
             offerGoldenCat();
             this.offering.setVisible(true);
+            // The statue is on the altar: there is nothing left to bring her.
+            this.questAlert.setVisible(false);
           });
         else
           this.callbacks.onInteract(
