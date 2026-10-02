@@ -167,8 +167,10 @@ export class DungeonBossScene extends Phaser.Scene {
         glow.scale,
         glow.alpha,
       ).setDepth(glow.depth);
-    // The rune pillar by the east passage. Its base blocks the player only:
-    // the chase is free to run over it, as it is over every other body.
+    // Empty as of the rune slab's move to the Dungeon Entrance: the room's one
+    // rule has to be readable before the walk it describes, not after it. The
+    // list stays because it is what the scene's E dispatch reads, and a room
+    // with nothing to read is a case it already handles.
     this.exitSigns = new ExitSigns(this, 'dungeonBoss');
     // The dragon is deliberately absent from this list. Its body is not a wall
     // to be stopped by, it is a thing that wakes: the player walks into it and

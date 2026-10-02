@@ -62,17 +62,20 @@ export const HOME_GROUND = {
   source: { x: 0, y: 0, width: 1254, height: 627 },
 } as const;
 
-// The cottage is the one Home prop with no replacement art in this batch, so it
-// still comes from the legacy tileset. That sheet is opaque on a checkerboard
-// backdrop, so only rectangles holding no backdrop pixel may be drawn. These
-// two are the maximal backdrop-free blocks of the house (verified pixel by
-// pixel); the sheet's rows 203..212 are backdrop and are simply dropped, which
-// closes the gap between the porch roof and the deck.
+/**
+ * The cottage, drawn whole. It used to be two backdrop-free blocks cut from the
+ * legacy tileset and stacked; this is one painted sprite and needs no surgery.
+ *
+ * `frame` is the silhouette, measured off the file's alpha channel rather than
+ * guessed: the 1254x1254 canvas carries 26px of transparent margin on the left,
+ * 25 on the right, 112 above and 117 below. Cropping to it means the drawn
+ * width really is the width, so an origin of 1 on the y axis lands on the
+ * doorstep and the placement maths in `home.ts` stays readable.
+ */
 export const HOME_HOUSE_TEXTURE = {
-  key: 'home',
-  url: '/assets/game/tilesets/home_tile.png',
-  upper: { x: 34, y: 33, width: 140, height: 170 },
-  lower: { x: 41, y: 213, width: 126, height: 46 },
+  key: 'home-house',
+  url: '/assets/game/maps/home/props/player_home_house.png',
+  frame: { x: 26, y: 112, width: 1203, height: 1025 },
 } as const;
 
 // Flowers come from the audited overworld tileset: the new outdoor props sheets

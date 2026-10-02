@@ -1,7 +1,7 @@
 import * as Phaser from 'phaser';
 import { SCENE_SPAWNS, type SpawnPoint } from '@/game/config/scenes';
 import { footBlocked } from '@/game/systems/collision';
-import { WORLD } from '@/game/config/world';
+import { playerBounds, WORLD, type WorldSize } from '@/game/config/world';
 import {
   CHARACTER_ORIGIN,
   PLAYER_SCALE,
@@ -21,10 +21,8 @@ export class Player {
     scene: Phaser.Scene,
     private readonly obstacles: readonly CollisionRect[],
     spawn: SpawnPoint = SCENE_SPAWNS.home.default,
-    private readonly worldSize: {
-      readonly width: number;
-      readonly height: number;
-    } = WORLD,
+    /** Exposed so the scene's exits can ask where this world actually ends. */
+    readonly worldSize: WorldSize = WORLD,
   ) {
     createPlayerAnimations(scene);
     this.body = scene.add
@@ -59,16 +57,17 @@ export class Player {
     const distance = (WORLD.speed * Math.min(delta, 50)) / 1000;
     const previousX = this.body.x;
     const previousY = this.body.y;
+    const limit = playerBounds(this.worldSize);
     const x = Phaser.Math.Clamp(
       previousX + direction.x * distance,
-      WORLD.padding + 24,
-      this.worldSize.width - WORLD.padding - 24,
+      limit.minX,
+      limit.maxX,
     );
     if (this.canMove(x, previousY)) this.body.x = x;
     const y = Phaser.Math.Clamp(
       previousY + direction.y * distance,
-      WORLD.padding + 32,
-      this.worldSize.height - WORLD.padding,
+      limit.minY,
+      limit.maxY,
     );
     if (this.canMove(this.body.x, y)) this.body.y = y;
 

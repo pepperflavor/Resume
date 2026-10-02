@@ -54,6 +54,19 @@ export const WELL_INTEREST_ZONE = {
   height: 210,
 } as const;
 
+/**
+ * The same idea for the notice board: the walkway in front of it. The board
+ * stands at the south edge of the square, so this is the strip the player
+ * actually crosses between the fox's stall and the gossip cart — not the whole
+ * southern half of the plaza.
+ */
+export const NOTICE_BOARD_INTEREST_ZONE = {
+  x: 448,
+  y: 408,
+  width: 128,
+  height: 68,
+} as const;
+
 export const MARKET_TEXTURE = {
   key: 'market-props',
   url: '/assets/game/tilesets/market_tileset.png',
@@ -493,19 +506,48 @@ export const MARKET_OBJECTS: readonly MarketObject[] = [
       confirm: 'approachWell',
     },
   },
+  {
+    // The notice board already standing at the south of the square, between
+    // the fox's stall and the gossip cart. Only the E is new here: the sprite,
+    // its place and its footprint are the scenery entry's, untouched.
+    id: 'noticeBoard',
+    x: 512,
+    y: 414,
+    // The board draws 97x72 up from its base, so the bubble clears its roof.
+    hintY: 330,
+    hint: '무언가 붙어 있다',
+    // Wider than an NPC's reach because the board is: 46 would leave either end
+    // of it unreadable from directly in front.
+    range: 54,
+    zone: NOTICE_BOARD_INTEREST_ZONE,
+    interaction: { type: 'dialogue', dialogue: 'marketNoticeBoard' },
+  },
 ];
 
-/** Kkokko only stands here once the quest is finished, beside the fox's stall. */
+/**
+ * Kkokko once the quest is finished: pecking about in front of the fox's
+ * stall, where she can be seen.
+ *
+ * She used to wander y 350..394, which is *behind* the produce stands. Depth
+ * is the y coordinate here, and the three stands sit at y 424..428 and are
+ * drawn upward from there, so anything above them is both sorted behind them
+ * and physically covered by them — she was there the whole time, under an
+ * apple stand.
+ *
+ * The patch below is the open floor south of the stands: clear of their
+ * footprints, which stop at y 426; east of the fox at (218, 398) by more than
+ * one E's reach, so she can never take his; north of the square's walkable
+ * limit at y 508; and far from every other target in the scene.
+ */
 export const MARKET_KKOKKO: MarketNpc = {
   id: 'kkokko',
   kind: 'chicken',
-  x: 330,
-  y: 378,
+  x: 350,
+  y: 472,
   scale: 0.42,
   hint: '꼬꼬!',
   interaction: { type: 'dialogue', dialogue: 'kkokkoHome' },
-  // Kept above the produce stands so she never walks into one.
-  wanderArea: { x: 286, y: 350, width: 112, height: 44 },
+  wanderArea: { x: 286, y: 458, width: 120, height: 34 },
 };
 
 export const MARKET_NPC_KINDS = [

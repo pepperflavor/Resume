@@ -259,20 +259,41 @@ dialog::backdrop {
   background-size: 300% 400%;
   background-position: 0 0;
 }
+/* The art is the button. No plate behind it and no frame around it — the
+   icons carry their own shape, and a box drawn under them only read as a
+   second, emptier button. */
 .hud-button {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
+  padding: 0;
   line-height: 0;
-  background: #17212ecc;
-  color: var(--text);
-  border: 1px solid #536174;
+  background: none;
+  border: 0;
   cursor: pointer;
 }
-.hud-button:hover,
+.hud-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  /* Enough to hold an edge over the Market's bright noon ground, and not
+     enough to read as a shadow of its own. */
+  filter: drop-shadow(0 1px 2px #05090daa);
+  transition: filter 120ms ease-out;
+}
+.hud-button:hover .hud-icon {
+  filter: drop-shadow(0 1px 2px #05090daa) brightness(1.18);
+}
+.hud-button:active .hud-icon {
+  scale: 0.92;
+}
+/* The border used to be the focus ring. Losing it must not lose the ring. */
 .hud-button:focus-visible {
-  border-color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 /* --- name entry ------------------------------------------------------- */
@@ -876,8 +897,8 @@ dialog::backdrop {
     right: max(10px, env(safe-area-inset-right, 0px));
   }
   [data-game-mode='mobile'] .hud-button {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -964,4 +985,349 @@ dialog::backdrop {
   border-top: 1px solid #2a3543;
   padding-top: 12px;
   margin: 0;
+}
+
+/* --- carried items: HUD button + detail card -------------------------- */
+/* The sprite is the button. Same art, same place as before it answered —
+   only a hit area around it, and the three weak signals that it is pressable. */
+.quest-item-button {
+  display: block;
+  padding: 2px;
+  background: none;
+  border: 0;
+  line-height: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: filter 120ms ease-out;
+}
+.quest-item-button:hover {
+  filter: brightness(1.15);
+}
+.quest-item-button:active {
+  scale: 0.94;
+}
+.quest-item-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+/* The container is not interactive; its buttons are. */
+.quest-items {
+  pointer-events: none;
+}
+
+/* Both painted panels work the same way: the art is the background of a box
+   locked to the art's own aspect ratio, and every piece of content sits in a
+   region placed as a percentage of that box. Nothing is burnt into the image,
+   nothing is in normal flow, and so nothing can push anything else off its
+   plate. `cqw` carries the type along when the box resizes. */
+.item-detail,
+.quest-complete {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+.item-detail-inner,
+.quest-complete-inner {
+  position: relative;
+  container-type: inline-size;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+/* One plate. Its contents are centred in it, both ways. */
+.panel-region {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel-region > * {
+  margin: 0;
+  /* The base stylesheet colours every `p`, which beats inheriting from the
+     region. These take the plate's colour instead. */
+  color: inherit;
+  text-align: center;
+  white-space: pre-line;
+  /* A line box taller than the glyphs is what made centred Korean read as
+     sitting low; at 1 the ink is what gets centred. */
+  line-height: 1.12;
+}
+
+/* The one control each panel has. `data-selected` is the stick's answer and
+   hover/focus are the mouse's, so all three light the same way. */
+.panel-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  color: #f6ead2;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition:
+    filter 140ms ease-out,
+    scale 140ms ease-out;
+}
+.panel-action-icon {
+  flex: none;
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: contain;
+}
+.panel-action:hover,
+.panel-action:active,
+.panel-action:focus-visible,
+.panel-action[data-selected] {
+  /* Warm, not neon: the plate brightens and picks up a gold rim it already
+     has in the art, rather than gaining a glow of its own. */
+  filter: brightness(1.16) drop-shadow(0 0 3px #ffd98a66);
+  scale: 1.02;
+  outline: none;
+}
+.panel-action:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+/* --- item detail ------------------------------------------------------ */
+/* Plate rectangles measured off `item_detail_panel.png` (1024x1536):
+   title inner y 149..279 / x 205..823, art frame inner y 341..626 /
+   x 350..675, name plate inner y 660..778 / x 225..796, description
+   y 790..1135, button plate teal y 1154..1259 / x 317..717. */
+.item-detail {
+  width: min(360px, calc(100vw - 32px));
+}
+.item-detail-inner {
+  aspect-ratio: 1024 / 1536;
+}
+.item-detail-title-region {
+  inset: 9.7% 20% 81.8% 20%;
+  font-size: 6.6cqw;
+  color: #5b4228;
+  letter-spacing: 0.06em;
+}
+.item-detail-image-region {
+  inset: 22.2% 34.2% 59.2% 34.2%;
+}
+.item-detail-sprite {
+  display: block;
+  /* Never shrunk to the slot. Kkokko's box is deliberately larger than the
+     frame — half of it is the empty cell her walk cycle needs — and letting
+     flex squeeze it would squash the bird instead of cropping the air. */
+  flex: none;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+.item-detail-name-region {
+  inset: 43% 22% 49.3% 22%;
+  font-size: 7.4cqw;
+  font-weight: 700;
+  color: #4a3122;
+}
+.item-detail-description-region {
+  inset: 51.6% 21.5% 26.3% 21.5%;
+  font-size: 3.5cqw;
+  line-height: 1.55;
+  color: #6b553c;
+}
+.item-detail-action-region {
+  inset: 75.1% 31% 18% 31%;
+  font-size: 5cqw;
+}
+/* A short landscape phone drives the panel from its height instead, so the
+   exit plate can never end up below the fold. The width is computed from the
+   height rather than left to `aspect-ratio`: a block box inside a
+   shrink-wrapping dialog resolves `width: auto` from its container first,
+   which makes the ratio a no-op. */
+@media (max-height: 560px) {
+  .item-detail {
+    width: auto;
+  }
+  .item-detail-inner {
+    --panel-h: min(95svh, 470px);
+    height: var(--panel-h);
+    width: calc(var(--panel-h) * 1024 / 1536);
+  }
+  /* Narrower panel, so the copy is set relatively larger to stay readable. */
+  .item-detail-title-region,
+  .item-detail-name-region {
+    font-size: 7.6cqw;
+  }
+  .item-detail-description-region {
+    font-size: 4.5cqw;
+    line-height: 1.45;
+  }
+}
+
+/* --- quest complete --------------------------------------------------- */
+/* Plate rectangles off `quest_complete_panel.png` (1536x1024): banner
+   x 29.2%..70.7% / y ~36%..44%, teal body x 23.8%..76.2% / y 46.8%..77.4%,
+   button plate x 37.5%..62.4% / y ~80%..89%. */
+.quest-complete {
+  width: min(720px, calc(100vw - 24px));
+}
+.quest-complete-inner {
+  aspect-ratio: 1536 / 1024;
+}
+.quest-complete-title-region {
+  inset: 36.5% 30% 55.5% 30%;
+  font-size: 2.9cqw;
+  letter-spacing: 0.1em;
+  color: #5b4228;
+}
+/* The body is the only thing that scrolls, and it is clipped to the teal
+   plate, so a long ending can never reach the decorative rule under it. */
+.quest-complete-scroll {
+  position: absolute;
+  inset: 48% 26% 23.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1cqw;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  text-align: left;
+  color: #dcecf4;
+  scrollbar-width: thin;
+  scrollbar-color: #7fb6c8aa transparent;
+}
+.quest-complete-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.quest-complete-scroll::-webkit-scrollbar-thumb {
+  background: #7fb6c8aa;
+  border-radius: 2px;
+}
+.quest-complete-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.quest-complete-scroll:focus-visible {
+  outline: none;
+}
+.quest-complete-scroll p,
+.quest-complete-scroll li {
+  color: inherit;
+}
+.quest-complete-lead {
+  margin: 0;
+  text-align: center;
+  font-size: 1.95cqw;
+  color: #f0e4c8;
+}
+.quest-complete-guide {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7cqw;
+}
+/* One grid, so every line of guide text starts at the same x whatever its
+   icon happens to be shaped like. */
+.quest-complete-guide li,
+.quest-complete-restart {
+  display: grid;
+  grid-template-columns: 3.2cqw 1fr;
+  align-items: center;
+  column-gap: 1.4cqw;
+  margin: 0;
+  font-size: 1.8cqw;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+/* Its own group, set apart from the three places above it. */
+.quest-complete-restart {
+  margin-top: 1.4cqw;
+  color: #b9d4e2;
+  font-size: 1.55cqw;
+}
+.quest-complete-icon {
+  width: 3.2cqw;
+  height: 3.2cqw;
+  object-fit: contain;
+}
+/* The scroll hint. It sits over the empty right-hand third of the teal body —
+   the copy is left-aligned and none of it reaches this far — and it is a
+   sibling of the scrolling region rather than a child, so it stays put while
+   the text moves under it.
+
+   Sized from the panel, so it shrinks with it on a phone: 13.5% of a 480px
+   desktop panel is 65px tall, and the ratio is the cropped art's own
+   (120x172), never squashed. */
+.quest-scroll-hint {
+  position: absolute;
+  right: 27%;
+  top: 52%;
+  height: 13.5%;
+  aspect-ratio: 120 / 172;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 200ms ease-out;
+  animation: scroll-hint-bob 1100ms ease-in-out infinite;
+}
+/* Nothing left below: the hint has said its piece. */
+.quest-scroll-hint[data-spent] {
+  opacity: 0;
+}
+@keyframes scroll-hint-bob {
+  50% {
+    translate: 0 3px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quest-scroll-hint {
+    animation: none;
+  }
+}
+.quest-complete-action-region {
+  inset: 80% 37.5% 11% 37.5%;
+  font-size: 2.1cqw;
+}
+@media (max-height: 560px) {
+  .quest-complete {
+    width: auto;
+  }
+  .quest-complete-inner {
+    --panel-h: min(96svh, 440px);
+    height: var(--panel-h);
+    width: calc(var(--panel-h) * 1536 / 1024);
+  }
+}
+
+/* The art arrives over a dimmed world rather than on top of it, and both the
+   backdrop and the panel ease in. Nothing bounces or spins. */
+.quest-complete::backdrop,
+.item-detail::backdrop {
+  animation: overlay-dim 360ms ease-out both;
+}
+.quest-complete-inner,
+.item-detail-inner {
+  animation: panel-rise 420ms cubic-bezier(0.22, 0.68, 0.36, 1) both;
+}
+@keyframes overlay-dim {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes panel-rise {
+  from {
+    opacity: 0;
+    scale: 0.94;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .quest-complete::backdrop,
+  .item-detail::backdrop,
+  .quest-complete-inner,
+  .item-detail-inner {
+    animation-duration: 1ms;
+  }
 }

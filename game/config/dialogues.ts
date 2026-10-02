@@ -92,17 +92,9 @@ export const DIALOGUES = {
     reply:
       '좀 더 자세한 얘기를 듣고 싶다면, 옆에 사슴씨에게 가보라고. Resume를 맡아두고 있거든',
   },
-  fox: {
-    speaker: '여우 안내인',
-    role: 'Projects / information',
-    greeting: '이 마을 밖에서 만들어진 것들이 궁금한가?',
-    choice: '프로젝트에 대해 묻는다',
-    reply: '프로젝트마다 풀어야 했던 문제와 선택의 흔적이 남아 있지.',
-    link: {
-      label: 'Projects 보기',
-      href: 'https://periwinkle-amaranthus-fc5.notion.site/884f7688701741fb93e48c0446b72430',
-    },
-  },
+  // The fox has no dialogue entry: she opens the project shop instead, which
+  // needs a shelf rather than a single question. See `MARKET_NPCS` in
+  // `config/market.ts` and `ProjectShopPanel`.
   cat: {
     speaker: '고양이 연금술사',
     role: 'Gossip',
@@ -157,6 +149,23 @@ export const DIALOGUES = {
   // Two panels, not one: picking 가까이 가본다 closes this one and hands the
   // scene a confirm callback, which walks the player up to the well before
   // `marketWellClose` opens. Same shape as the Kkokko pickup.
+  // The board the well's rumour starts on. Three pages rather than two: the
+  // player reads the note, and then remembers something — a hint only lands if
+  // it is tied back to a place they have already walked past.
+  marketNoticeBoard: {
+    speaker: '시장 게시판',
+    role: 'Market',
+    greeting: '게시판에 메모가 붙어있다.\n읽을까?',
+    choice: '네',
+    decline: '아니오',
+    reply:
+      '- 괴담 -\n\n어느 날부터 우물에서\n이상한 소리가 이따금 들려오기 시작했다.\n\n위험해 보이니\n가까이 가지 말 것!',
+    afterthought: {
+      choice: '계속 읽기',
+      text: '그러고 보니\n우물 근처를 지날 때\n어렴풋하게 이상한 소리가\n들리기도 했던 것 같다...',
+    },
+    exit: '나가기',
+  },
   marketWell: {
     speaker: '우물',
     role: 'Market',
@@ -252,17 +261,23 @@ export const DIALOGUES = {
     choice: '어떻게 하면 되는지 묻는다',
     reply: '연못 앞 제단에 올려줘.\n다시 이곳으로 돌아오길 오래 기다렸어.',
   },
+  // The last beat of the game, and so the one place that says where everything
+  // the player came for can be found again. Deliberately on the `reply` rather
+  // than behind a one-time flag: someone who wants the Resume a second time
+  // needs this more than someone seeing it for the first time, and the fairy is
+  // where they already know to come back to.
+  // The ending. Three lines and one answer: everything the player is sent away
+  // with now lives in the quest panel this hands over to, which can hold the
+  // three places and the restart line without becoming a wall of dialogue.
   pondFairyOffered: {
     speaker: '연못의 요정',
     role: 'Garden',
-    greeting: '다시 이 연못으로 돌아와 줬구나.',
-    choice: '특별한 정보를 듣는다',
-    reply:
-      '약속한 대로 특별한 정보를 알려줄게.\n이 세계를 만든 사람의 기록이\n저 너머에 남아 있어.',
-    link: {
-      label: 'GitHub 보기',
-      href: 'https://github.com/pepperflavor',
-    },
+    greeting:
+      '저 아이가 돌아오다니,\n네 덕분이야. 정말 고마워.\n\n약속대로 특별한 정보를 알려줄게.',
+    choice: '네가 기뻐해서 나도 기뻐.',
+    // No way out beside it: the one answer *is* the way on, and a 나가기 here
+    // would be a button for skipping the ending the player just earned.
+    soleChoice: true,
   },
   offeringAltar: {
     speaker: '연못의 제단',
@@ -287,7 +302,11 @@ export const DIALOGUES = {
   guildFloorLocked: {
     speaker: '길드 관리국',
     role: 'Guild',
-    greeting: '아직 2층은 열리지 않았다.',
+    greeting:
+      '마법진이 희미하게 빛나고 있지만,\n아직 위층으로 향하는 길은 열리지 않았다.',
+    choice: '왜 아직 열리지 않았는지 살펴본다',
+    reply:
+      '길드 관리국 2층은\n모험가가 거쳐 온 길드와 회사의 기록을\n보관하는 곳이다.\n\n더 많은 길드를 경험하고 기록이 쌓이면\n이 마법진도 다시 빛을 되찾을 것이다.',
     exit: '나가기',
   },
   // The receptionist and the company desks open the guild panel instead: they
