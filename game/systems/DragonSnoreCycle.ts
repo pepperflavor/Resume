@@ -1,14 +1,26 @@
 import type * as Phaser from 'phaser';
 import {
   BOSS_SILENT_DURATION_MS,
-  BOSS_SILENT_GRACE_MS,
   BOSS_SNORE_FALLBACK,
   DRAGON_AUDIO,
   DRAGON_SNORE_SFX,
+  SNORE_GRACE_MS,
 } from '@/game/config/bossDragon';
 import { playSfx, rampBgm, stopSfx } from '@/game/state/audio';
 
+/** What the *sound* is doing. Two values, because there are two sounds. */
 export type SnorePhase = 'snoring' | 'silent';
+
+/**
+ * What the *rules* are doing, which is a third thing.
+ *
+ * GRACE is the window just after a snore ends, while a footstep that was
+ * already under way is still forgiven. The phase is 'silent' throughout it —
+ * the room really has gone quiet, and the dragon is drawn as not snoring — so
+ * the two are reported separately rather than one being bent to mean the
+ * other.
+ */
+export type SnoreStage = 'snoring' | 'grace' | 'silent';
 
 /**
  * The dragon's sleep, clocked by its own snoring.
@@ -113,8 +125,17 @@ export class DragonSnoreCycle {
     rampBgm(1, 220);
     this.phase = 'silent';
     this.silent = BOSS_SILENT_DURATION_MS;
-    this.grace = BOSS_SILENT_GRACE_MS;
+    this.grace = SNORE_GRACE_MS;
     this.onPhase('silent');
+  }
+
+  /**
+   * SNORING -> GRACE -> SILENT, which is the thing the scene actually judges a
+   * footstep against. Only the last of the three is losing ground.
+   */
+  get stage(): SnoreStage {
+    if (this.phase === 'snoring') return 'snoring';
+    return this.grace > 0 ? 'grace' : 'silent';
   }
 
   /** Only called while the player is actually in control of the room. */

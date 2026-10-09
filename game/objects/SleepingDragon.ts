@@ -4,7 +4,6 @@ import {
   DRAGON_PLACEMENT,
   DRAGON_SNORE,
   DRAGON_SNORE_SHEET,
-  DRAGON_SNORE_TEXT,
   DRAGON_SUCCESS,
   DRAGON_TEXTURES,
 } from '@/game/config/bossDragon';
@@ -35,8 +34,11 @@ export function loadDragonAssets(scene: Phaser.Scene) {
 
 /**
  * The dragon as the player sees it: one body that swaps between asleep and
- * woken without moving, the snore plume over its muzzle, and the line that
- * floats beside its head while it breathes out.
+ * woken without moving, and the snore plume over its muzzle.
+ *
+ * The "드르렁~ 쿨~" line used to be here too, anchored beside this head. It is
+ * `SnoreCaption` now and rides over the player instead — see
+ * `objects/BossChamberNotices.ts` for why.
  *
  * It owns no rules. The scene decides when it is snoring, silent or awake and
  * says so; this only draws that.
@@ -45,7 +47,6 @@ export class SleepingDragon {
   private readonly sleeping: Phaser.GameObjects.Image;
   private readonly alert: Phaser.GameObjects.Image;
   private readonly snore: Phaser.GameObjects.Sprite;
-  private readonly line: Phaser.GameObjects.Text;
   private breath?: Phaser.Tweens.Tween;
 
   constructor(scene: Phaser.Scene) {
@@ -81,39 +82,6 @@ export class SleepingDragon {
       .setName('dragon-snore')
       .setVisible(false);
 
-    // This line is a rule, not decoration: while it shows, footsteps are
-    // covered. It was 15px in the one room the camera pulls back from
-    // (`desktopZoom: 0.8`), which drew it at an effective 12 — the smallest
-    // type in the game, telling the player the most important thing in it.
-    //
-    // 20px with a stroke that stayed at 4 rather than growing with it: at 15px
-    // the outline was over a quarter of the em and closed up the Korean
-    // glyphs' interiors, which is the other half of why it read as a smudge.
-    //
-    // 20 and not more because the line is 109px wide at that size, and the
-    // narrowest phone viewport this runs on is 667 at zoom 1: at 23px the
-    // trailing tilde fell off the right edge whenever the player stood west of
-    // the dragon, which is a cue clipped at exactly the moment it is read.
-    this.line = scene.add
-      .text(
-        // Whole pixels. Both coordinates come out of a 0.46 scale and land on
-        // fractions, and half a pixel under a stroke is a blurred edge.
-        Math.round(DRAGON_SNORE_TEXT.x),
-        Math.round(DRAGON_SNORE_TEXT.y),
-        DRAGON_SNORE_TEXT.text,
-        {
-          fontFamily: 'monospace',
-          fontSize: '20px',
-          color: '#cfe4ff',
-          stroke: '#0b1018',
-          strokeThickness: 4,
-        },
-      )
-      .setOrigin(0.5)
-      .setDepth(DRAGON_SNORE_TEXT.depth)
-      .setName('dragon-snore-text')
-      .setVisible(false);
-
     // Breathing is a tween on the drawn body only; the collision rectangles
     // the scene hands the player are fixed and never follow this.
     this.breath = scene.tweens.add({
@@ -134,10 +102,9 @@ export class SleepingDragon {
     this.breath = undefined;
   }
 
-  /** Snoring: the plume runs and the line shows. Silent: both go quiet. */
+  /** Snoring: the plume runs. Silent: it stops. */
   setSnoring(snoring: boolean) {
     this.snore.setVisible(snoring);
-    this.line.setVisible(snoring);
     if (snoring) this.snore.play(SNORE_ANIMATION, true);
     else this.snore.anims.stop();
   }

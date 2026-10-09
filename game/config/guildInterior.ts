@@ -1,9 +1,15 @@
+import * as Phaser from 'phaser';
 import { WORLD } from '@/game/config/world';
 import type { CollisionRect } from '@/game/types';
 import { GUILD_SHEET_KEYS, guildFrame } from '@/game/config/guildAssets';
 import type { GuildNpcKind } from '@/game/config/guildAssets';
 import type { DialogueId } from '@/game/config/dialogues';
 import type { GuildMenuId } from '@/game/config/guildRecords';
+import { questMarkerBesideHead } from '@/game/objects/QuestMarker';
+import {
+  hasTalkedToEveryGuildNpc,
+  isDragonBossCleared,
+} from '@/game/state/gameState';
 
 /**
  * The bureau's hall. Larger than the viewport, so the camera follows the player
@@ -275,6 +281,22 @@ export interface GuildTarget {
   hint: string;
   /** Where the bubble floats, in world space. */
   bubble: { x: number; y: number };
+  /**
+   * Where this target's "!" hangs, for the desks that can carry one. Off the
+   * NPC's right shoulder, under their bubble — the two mean different things
+   * and must not read as one stack.
+   */
+  marker?: { x: number; y: number };
+  /**
+   * The NPC's own feet, where their `anchor` is somewhere else.
+   *
+   * The receptionist's anchor sits out in front of her desk, which is right
+   * for a player walking up to the counter and wrong for one who has come
+   * round the back of it: she was within arm's reach and 66px from the point
+   * her reach was measured from, so her bubble showed and E did nothing.
+   * Reach is judged against whichever of the two the player is nearer.
+   */
+  body?: { x: number; y: number };
   interaction: GuildInteraction;
   /** Set for a floor access point, so the scene can route once one exists. */
   floorAccess?: GuildFloorAccessId;
@@ -353,6 +375,17 @@ export interface GuildNpcPlacement {
   interaction: GuildInteraction;
 }
 
+/**
+ * How close the player has to be for a desk to speak up.
+ *
+ * Every bubble in the hall used to be on from the moment the scene opened,
+ * which on a phone — where the camera is zoomed in and the hall scrolls —
+ * filled the screen with five labels before the player had taken a step. A
+ * bubble is an answer to "what is this one", so it waits to be asked. Wider
+ * than the 46..52 an E reaches, so the label arrives before the prompt does.
+ */
+export const GUILD_BUBBLE_RANGE = 104;
+
 /** An NPC's own interaction target: anchored where E is measured from. */
 export function npcTarget(npc: GuildNpcPlacement): GuildTarget {
   return {
@@ -361,8 +394,32 @@ export function npcTarget(npc: GuildNpcPlacement): GuildTarget {
     range: npc.range,
     hint: npc.hint,
     bubble: { x: npc.x, y: npc.y - npc.hintRise },
+    marker: questMarkerBesideHead(npc.x, npc.y, npc.hintRise),
+    body: { x: npc.x, y: npc.y },
     interaction: npc.interaction,
   };
+}
+
+/**
+ * How near the player is to a desk, for both the bubble and the E.
+ *
+ * The nearer of the two points a desk offers, so an NPC whose counter faces
+ * one way is still reachable from the others. It is deliberately the same
+ * measure for both questions: a bubble that appears where E does nothing is
+ * the game lying about what the player can do.
+ */
+export function guildTargetDistance(target: GuildTarget, x: number, y: number) {
+  const toAnchor = Phaser.Math.Distance.Between(
+    x,
+    y,
+    target.anchor.x,
+    target.anchor.y,
+  );
+  if (!target.body) return toAnchor;
+  return Math.min(
+    toAnchor,
+    Phaser.Math.Distance.Between(x, y, target.body.x, target.body.y),
+  );
 }
 
 export const GUILD_INTERIOR_NPCS: readonly GuildNpcPlacement[] = [
@@ -435,3 +492,29 @@ export const GUILD_INTERIOR_NPCS: readonly GuildNpcPlacement[] = [
     interaction: { type: 'dialogue', dialogue: 'guildArchivist' },
   },
 ];
+
+/**
+ * The desks a player is expected to have visited before the dungeon will let
+ * them in. Every NPC in the hall is on the list: each one holds a piece of the
+ * record, and the dungeon's own gate is what gives walking the hall a point.
+ *
+ * Derived from the roster rather than typed out again, so adding a desk adds
+ * it to the gate and to the badge sweep at once.
+ */
+export const REQUIRED_GUILD_NPC_IDS: readonly string[] =
+  GUILD_INTERIOR_NPCS.map((npc) => npc.id);
+
+/**
+ * Whether the hall has been walked: every desk opened at least once.
+ *
+ * The statue clause is for saves written before any of this was recorded. A
+ * player who has already lifted the golden cat has self-evidently been through
+ * the dungeon, and an older save has no record of the conversations it never
+ * tracked — without this, loading it would shut them out of the western road
+ * and so out of finishing the quest they are halfway through. It can never
+ * open the gate early: the statue is on the far side of it.
+ */
+export function isGuildBriefingComplete() {
+  if (isDragonBossCleared()) return true;
+  return hasTalkedToEveryGuildNpc(REQUIRED_GUILD_NPC_IDS);
+}

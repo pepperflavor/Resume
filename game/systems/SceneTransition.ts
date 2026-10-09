@@ -90,9 +90,23 @@ export class SceneTransition {
     camera.fadeIn(260, 0, 0, 0);
   }
 
-  // Returns true once the player stands in an exit, so the caller can clear its
-  // own prompts before the fade takes the input away.
-  tryExit(x: number, y: number, beforeLeave?: () => void) {
+  /**
+   * Returns true once the player stands in an exit, so the caller can clear its
+   * own prompts before the fade takes the input away.
+   *
+   * `guard` is asked about the destination before anything else happens, and a
+   * `false` leaves the player exactly where they are: no fade, no prompt
+   * clearing, no travel. It is how a scene puts a condition on one of its ways
+   * out without having to re-derive what "standing in an exit" means. The
+   * guard owns what the player is told, and is responsible for making sure the
+   * next frame does not simply ask it again — see the Guild's own.
+   */
+  tryExit(
+    x: number,
+    y: number,
+    beforeLeave?: () => void,
+    guard?: (to: SceneId) => boolean,
+  ) {
     if (this.locked) return false;
     // The world the player was built for, so each scene's own size is used.
     const limit = playerBounds(this.player.worldSize);
@@ -100,6 +114,7 @@ export class SceneTransition {
       atExit(x, y, candidate, limit),
     );
     if (!exit) return false;
+    if (guard && !guard(exit.to)) return false;
     beforeLeave?.();
     this.start(SCENE_KEYS[exit.to], { from: this.sceneId });
     return true;

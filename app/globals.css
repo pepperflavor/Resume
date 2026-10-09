@@ -987,6 +987,64 @@ dialog::backdrop {
   margin: 0;
 }
 
+/* --- first pickup: the nudge toward the bag ---------------------------- */
+/*
+ * The layer itself takes no pointer events at all, which is the whole design:
+ * the thing it is pointing at has to stay as tappable as it was a second ago.
+ * Only its own 확인 opts back in.
+ *
+ * Over the controls (6) so the dim covers them, and under every modal dialog,
+ * which lives in the browser's top layer and is out of z-index's reach anyway
+ * — the guide is only ever drawn when no panel is open.
+ */
+.inventory-guide {
+  position: fixed;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+/* The ring is the hole; its box-shadow is the dim. One element, no seams. */
+.inventory-guide-halo {
+  position: fixed;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  animation: inventory-guide-pulse 1400ms ease-in-out infinite;
+}
+.inventory-guide-note {
+  position: fixed;
+  margin: 0;
+  /* Never wider than the screen, however the HUD is placed. */
+  max-width: min(260px, calc(100vw - 24px));
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  background: #17212ef2;
+  border: 1px solid #c8a86b;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: right;
+}
+.inventory-guide-note button {
+  pointer-events: auto;
+  /* A thumb target, not a link. */
+  min-height: 36px;
+  padding: 4px 16px;
+  font-size: 12px;
+}
+@keyframes inventory-guide-pulse {
+  50% {
+    border-color: #fff4cf;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inventory-guide-halo {
+    animation: none;
+  }
+}
+
 /* --- carried items: HUD button + detail card -------------------------- */
 /* The sprite is the button. Same art, same place as before it answered —
    only a hit area around it, and the three weak signals that it is pressable. */
@@ -1170,11 +1228,63 @@ dialog::backdrop {
 /* Plate rectangles off `quest_complete_panel.png` (1536x1024): banner
    x 29.2%..70.7% / y ~36%..44%, teal body x 23.8%..76.2% / y 46.8%..77.4%,
    button plate x 37.5%..62.4% / y ~80%..89%. */
-.quest-complete {
-  width: min(720px, calc(100vw - 24px));
+/*
+ * Centred in the real viewport at every size, and nowhere else.
+ *
+ * The panel used to be a shrink-wrapped dialog relying on the UA's
+ * `margin: auto` to centre it, and it inherited the landscape phone rules that
+ * size *every* dialog — a 560px cap, a `100dvh` max-height and a padding — none
+ * of which this painted plate wants. Between that and iOS Safari resolving a
+ * modal dialog's auto margins against the large viewport rather than the one
+ * the address bar leaves behind, the plate could sit well below centre.
+ *
+ * So the dialog itself stops being the panel and becomes the full-viewport box
+ * the panel is centred in: fixed, inset 0, flex. No top, no left, no measured
+ * pixel anywhere, nothing to recompute on a rotation or when the address bar
+ * slides away — and no `visualViewport` listener, because there is no longer a
+ * number for it to correct.
+ *
+ * Specificity note: `[data-game-mode='mobile'] dialog` is (0,1,1), so these
+ * carry `dialog` with the class to match it and the mobile pair raises it to
+ * (0,2,1). Nothing is left to a source-order tie.
+ */
+dialog.quest-complete,
+[data-game-mode='mobile'] dialog.quest-complete {
+  position: fixed;
+  inset: 0;
+  width: auto;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  margin: 0;
+  /* The notch, and nothing else. The plate sizes itself inside what is left. */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  border: 0;
+  background: transparent;
+  overflow: visible;
 }
+/* Only while open: a closed dialog keeps the UA's `display: none`, which a
+   bare `display: flex` above would have overridden into a panel on the page. */
+dialog.quest-complete[open],
+[data-game-mode='mobile'] dialog.quest-complete[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*
+ * The plate, bounded by both axes at once. The third term is the width the
+ * viewport's *height* allows at this aspect ratio, which is what keeps a short
+ * landscape phone from pushing the exit button below the fold — the job the
+ * old `max-height: 560px` block did, done by the same expression that handles
+ * every other size. `dvh` is the live viewport; the `vh` line before it is the
+ * fallback for a browser that does not know `dvh` and would drop the whole
+ * declaration.
+ */
 .quest-complete-inner {
   aspect-ratio: 1536 / 1024;
+  width: min(720px, calc(100vw - 24px), calc((100vh - 24px) * 1536 / 1024));
+  width: min(720px, calc(100dvw - 24px), calc((100dvh - 24px) * 1536 / 1024));
 }
 .quest-complete-title-region {
   inset: 36.5% 30% 55.5% 30%;
@@ -1291,17 +1401,6 @@ dialog::backdrop {
   inset: 80% 37.5% 11% 37.5%;
   font-size: 2.1cqw;
 }
-@media (max-height: 560px) {
-  .quest-complete {
-    width: auto;
-  }
-  .quest-complete-inner {
-    --panel-h: min(96svh, 440px);
-    height: var(--panel-h);
-    width: calc(var(--panel-h) * 1536 / 1024);
-  }
-}
-
 /* The art arrives over a dimmed world rather than on top of it, and both the
    backdrop and the panel ease in. Nothing bounces or spins. */
 .quest-complete::backdrop,

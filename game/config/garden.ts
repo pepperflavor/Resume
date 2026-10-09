@@ -63,15 +63,24 @@ export const GARDEN = {
  * 22px against the fairy's own ~45px of drawn height — read at a glance from
  * across the grotto, and still clear of her head at `offsetY`.
  */
-export const QUEST_ALERT = {
-  key: 'ui-quest-alert',
-  url: '/assets/game/ui/icons/generated/icon-quest-alert.png',
-  size: 22,
+/**
+ * Where this grotto's Press E prompt floats above the fairy's feet.
+ *
+ * The fairy's badge is placed from it by `questMarkerBesideHead`, which puts
+ * the badge off her right shoulder rather than above her head — the art is the
+ * game-wide `quest_exclamation` now, and every NPC in the game wears it the
+ * same way. Her own float is 5px of drift on the sprite; the badge is pinned
+ * to her logical position, so it stays put while she bobs.
+ */
+export const FAIRY_PROMPT_RISE = 56;
+
+/**
+ * The altar's badge. The drum's top is at y 253 against a base of 300, so this
+ * sits above the stone and above the statue that comes to stand on it.
+ */
+export const ALTAR_ALERT = {
   offsetX: 0,
-  /** Bottom edge, so the badge hangs above her rather than over her face. */
-  offsetY: -34,
-  bob: 4,
-  bobDuration: 900,
+  offsetY: -64,
 } as const;
 
 export interface GardenPropConfig {

@@ -42,6 +42,10 @@ import {
   SleepingDragon,
   loadDragonAssets,
 } from '@/game/objects/SleepingDragon';
+import {
+  BossRulesNotice,
+  SnoreCaption,
+} from '@/game/objects/BossChamberNotices';
 import { ExitSigns } from '@/game/objects/ExitSigns';
 import { loadWarpAssets } from '@/game/objects/WarpCircle';
 import { WarpPoint } from '@/game/objects/WarpPoint';
@@ -75,6 +79,10 @@ export class DungeonBossScene extends Phaser.Scene {
   private failure?: DragonFailure;
   /** The sleep cycle, clocked by the snore audio rather than by a timer. */
   private cycle!: DragonSnoreCycle;
+  /** "드르렁~ 쿨~", over the player's head while there is cover to walk under. */
+  private caption!: SnoreCaption;
+  /** The rule of the room, shown once on the way in. */
+  private rules?: BossRulesNotice;
   private wake: HTMLAudioElement | null = null;
   /** Whichever sting the encounter ended on, so leaving can silence it. */
   private sting: HTMLAudioElement | null = null;
@@ -197,6 +205,7 @@ export class DungeonBossScene extends Phaser.Scene {
     // camera keeps the boss, the player and the statue readable in one frame.
     configureSceneCamera(this, this.player, DUNGEON, { desktopZoom: 0.8 });
     this.dragon = new SleepingDragon(this);
+    this.caption = new SnoreCaption(this, this.player.body);
     this.lastPosition.set(this.player.body.x, this.player.body.y);
     this.miss = new InteractionMissBubble(this, this.player.body);
     this.prompt = this.add
@@ -264,7 +273,12 @@ export class DungeonBossScene extends Phaser.Scene {
     this.cycle = new DragonSnoreCycle(this, (phase) => {
       if (this.settled) return;
       this.state = phase;
-      this.dragon.setSnoring(phase === 'snoring');
+      const snoring = phase === 'snoring';
+      this.dragon.setSnoring(snoring);
+      // Shown and hidden here, on the cycle's own callback, so the caption and
+      // the sound it stands for can never disagree about which half of the
+      // sleep the room is in — including the very first one.
+      this.caption.setVisible(snoring);
     });
     // Leaving by any door — the warp, a failure, a React unmount — takes the
     // room's sound with it. Nothing may snore into the Dungeon Entrance.
@@ -275,6 +289,10 @@ export class DungeonBossScene extends Phaser.Scene {
       stopSfx(this.sting);
       this.sting = null;
     });
+    // Built here and started with the cycle, on the first frame the player is
+    // in control: the notice holds nothing up, but there is no sense telling
+    // someone the rule while the screen is still black.
+    this.rules = new BossRulesNotice(this);
     // Started on the first frame the player is actually in control, not here:
     // the entry fade would otherwise eat the front of the first snore.
     this.travel.enter(true);
@@ -351,6 +369,7 @@ export class DungeonBossScene extends Phaser.Scene {
     this.state = 'success';
     this.cycle.stop();
     this.dragon.setSnoring(false);
+    this.caption.setVisible(false);
     this.player.stop();
     this.controls.reset();
     this.miss.hide();
@@ -467,6 +486,7 @@ export class DungeonBossScene extends Phaser.Scene {
     // Silence first: the cycle stops dead, so the snore that was already
     // queued behind this one never arrives over the top of the wake.
     this.cycle.stop();
+    this.caption.setVisible(false);
     this.player.stop();
     this.controls.reset();
     this.miss.hide();
@@ -568,7 +588,14 @@ export class DungeonBossScene extends Phaser.Scene {
       this.lastPosition.set(this.player.body.x, this.player.body.y);
       return;
     }
-    if (this.state === 'intro') this.cycle.start();
+    if (this.state === 'intro') {
+      this.cycle.start();
+      // One call: `show` takes itself off the scene when it is done, and the
+      // handle is dropped so a retry in the same scene instance cannot show a
+      // second one over the first.
+      this.rules?.show();
+      this.rules = undefined;
+    }
     this.cycle.setPaused(false);
     this.cycle.update(delta);
     this.player.update(this.controls.movement(), delta);
@@ -587,10 +614,13 @@ export class DungeonBossScene extends Phaser.Scene {
       p.y,
     );
     this.lastPosition.set(p.x, p.y);
+    // SNORING and GRACE both forgive a step; only SILENT costs the run. The
+    // grace window is a judgement rule and nothing more — the snore file's own
+    // length is untouched, so what the player hears is still exactly what the
+    // dragon is doing.
     if (
       this.bossGameplayActive &&
-      this.cycle.phase === 'silent' &&
-      this.cycle.grace <= 0 &&
+      this.cycle.stage === 'silent' &&
       travelled > DRAGON_MOVE_EPSILON
     ) {
       this.fail('moved-during-silence');

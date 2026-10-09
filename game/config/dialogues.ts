@@ -23,6 +23,19 @@ export const DIALOGUES = {
     greeting: '서쪽 길은 길드 관리국으로 이어진다.',
     exit: '확인',
   },
+  /**
+   * The thought that turns the player around at the western road, while the
+   * hall still has a desk with a "!" over it. Phrased as the player's own
+   * second thought rather than as a locked door: nothing is barred, they
+   * simply have not asked enough questions yet.
+   */
+  dungeonLocked: {
+    speaker: '모험가의 생각',
+    role: 'Guild',
+    greeting:
+      '던전에 입장하려면 정보가 더 필요한 것 같다.\n\n(길드 관리국의 !표가 있는 NPC들과 대화해 보세요.)',
+    exit: '확인',
+  },
   guildNoticeBoard: {
     speaker: '길드 관리국 게시판',
     role: 'Guild',

@@ -1,11 +1,14 @@
 import * as Phaser from 'phaser';
 import {
   FRONT_DEPTH,
+  GUILD_BUBBLE_RANGE,
   GUILD_FLOOR_ACCESS,
   GUILD_FLOOR_TARGETS,
   GUILD_INTERIOR_COLLISION,
   GUILD_INTERIOR_NPCS,
   GUILD_INTERIOR_SIGNS,
+  guildTargetDistance,
+  REQUIRED_GUILD_NPC_IDS,
   signPanel,
   GUILD_INTERIOR_WORLD,
   GUILD_WARP,
@@ -19,9 +22,13 @@ import {
   guildNpcFrameName,
 } from '@/game/config/guildAssets';
 import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
-import { loadPlayerAssets } from '@/game/loaders/characters';
+import {
+  loadPlayerAssets,
+  loadQuestMarkerAssets,
+} from '@/game/loaders/characters';
 import { guildInteriorScenery } from '@/game/objects/guildInteriorScenery';
 import { HintBubble } from '@/game/objects/HintBubble';
+import { QuestExclamation } from '@/game/objects/QuestMarker';
 import { WarpCircle, loadWarpAssets } from '@/game/objects/WarpCircle';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
 import { Player } from '@/game/objects/Player';
@@ -30,6 +37,10 @@ import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { CollisionRect, GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
+import {
+  hasTalkedToGuildNpc,
+  markGuildNpcTalked,
+} from '@/game/state/gameState';
 
 const PRESS_HINT = 'Press E';
 /**
@@ -54,6 +65,8 @@ const SIGN_TEXT_MIN_SIZE = 7;
 interface InteriorTarget {
   target: GuildTarget;
   hint: HintBubble;
+  /** Only the desks on the required list carry one. */
+  marker?: QuestExclamation;
 }
 
 export class GuildInteriorScene extends Phaser.Scene {
@@ -77,6 +90,7 @@ export class GuildInteriorScene extends Phaser.Scene {
   preload() {
     loadPlayerAssets(this);
     loadWarpAssets(this);
+    loadQuestMarkerAssets(this);
     for (const asset of GUILD_INTERIOR_TEXTURES)
       if (!this.textures.exists(asset.key))
         this.load.image(asset.key, asset.url);
@@ -189,6 +203,12 @@ export class GuildInteriorScene extends Phaser.Scene {
         this.miss.hide();
         this.player.stop();
         this.controls.reset();
+        // Recorded as the desk is opened, which is what "has been spoken to"
+        // means here: the record panel owns the screen from this point and
+        // never reports back. Only ids on the required list are stored, so the
+        // stairway warp can never count toward the dungeon's gate.
+        if (REQUIRED_GUILD_NPC_IDS.includes(target.target.id))
+          markGuildNpcTalked(target.target.id);
         const { interaction, floorAccess } = target.target;
         // The warp routes to its floor once one exists; until then it opens the
         // locked line, so enabling it later is a config change, not a code one.
@@ -208,6 +228,7 @@ export class GuildInteriorScene extends Phaser.Scene {
         isTravelLocked: () => this.travel.locked,
       },
     );
+    this.refreshQuestMarkers();
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -241,30 +262,49 @@ export class GuildInteriorScene extends Phaser.Scene {
   private addTarget(target: GuildTarget) {
     const hint = new HintBubble(this, target.bubble.x, target.bubble.y);
     hint.setText(target.hint);
-    hint.setVisible(!target.nearOnly);
-    this.targets.push({ target, hint });
+    // Nothing speaks up until it is approached, badge or no badge — see
+    // `refreshHints`, which is now the only thing that turns a bubble on.
+    hint.setVisible(false);
+    const marker =
+      target.marker && REQUIRED_GUILD_NPC_IDS.includes(target.id)
+        ? new QuestExclamation(this, target.marker.x, target.marker.y, {
+            name: `guild-quest-marker-${target.id}`,
+          })
+        : undefined;
+    this.targets.push({ target, hint, marker });
   }
 
-  /** One winner only, so a single E can never fire two desks at once. */
+  /**
+   * One winner only, so a single E can never fire two desks at once.
+   *
+   * Distance is `guildTargetDistance`, the same measure the bubbles use, so
+   * anything close enough to greet the player is close enough to answer them —
+   * from whichever side they walked up.
+   */
   private nearestTarget() {
     const body = this.player.body;
     return this.targets
       .map((target) => ({
         target,
-        distance: Phaser.Math.Distance.Between(
-          body.x,
-          body.y,
-          target.target.anchor.x,
-          target.target.anchor.y,
-        ),
+        distance: guildTargetDistance(target.target, body.x, body.y),
       }))
       .filter((entry) => entry.distance < entry.target.target.range)
       .sort((a, b) => a.distance - b.distance)[0]?.target;
   }
 
-  /** Panel open beats everything, then Press E, then the idle line. */
+  /**
+   * Panel open beats everything, then Press E, then the idle line — and the
+   * idle line now waits to be walked up to.
+   *
+   * The badge and the bubble are independent on purpose. The badge answers
+   * "do I still owe this desk a conversation" and comes out of the save; the
+   * bubble answers "what is the thing I am standing next to" and comes out of
+   * the player's position. So a desk already dealt with still greets the
+   * player when they come back past it, with no "!" over it.
+   */
   private refreshHints(active: InteriorTarget | undefined, silent: boolean) {
     const top = this.cameras.main.scrollY + BUBBLE_SCREEN_MARGIN;
+    const body = this.player.body;
     for (const target of this.targets) {
       if (silent) {
         target.hint.setVisible(false);
@@ -274,11 +314,21 @@ export class GuildInteriorScene extends Phaser.Scene {
         target.target.bubble.x,
         Math.max(target.target.bubble.y, top),
       );
-      // A near-only target — the stairways — shows nothing until it is the one
-      // an E would land on.
-      target.hint.setVisible(!target.target.nearOnly || target === active);
+      const near =
+        guildTargetDistance(target.target, body.x, body.y) < GUILD_BUBBLE_RANGE;
+      // A near-only target — the stairway warp — still shows nothing at all
+      // until it is the one an E would land on.
+      target.hint.setVisible(
+        target === active || (!target.target.nearOnly && near),
+      );
       target.hint.setText(target === active ? PRESS_HINT : target.target.hint);
     }
+  }
+
+  /** The badges, re-derived from the save rather than from a scene flag. */
+  private refreshQuestMarkers() {
+    for (const target of this.targets)
+      target.marker?.setVisible(!hasTalkedToGuildNpc(target.target.id));
   }
 
   update(_time: number, delta: number) {
@@ -291,6 +341,7 @@ export class GuildInteriorScene extends Phaser.Scene {
       return;
     }
     this.player.update(this.controls.movement(), delta);
+    this.refreshQuestMarkers();
     this.refreshHints(this.nearestTarget(), false);
     this.travel.tryExit(this.player.body.x, this.player.body.y, () => {
       this.miss.hide();

@@ -76,11 +76,33 @@ export const DRAGON_SNORE = {
   frameRate: 6,
 } as const;
 
-/** Where "드르렁~ 쿨~" floats. Above the muzzle, clear of the plume. */
+/**
+ * The snore caption — the one thing on screen that says "you may move now".
+ *
+ * It rides over the *player*, not over the dragon's muzzle where it used to
+ * sit. Anchored to the beast it was a label on the thing to be avoided, at the
+ * far side of a room the camera does not always frame whole: on a phone, with
+ * the camera trailing the player, the first cycle's line could play out
+ * entirely off-screen. Over the player's own head it is where their eyes
+ * already are, and it cannot be walked away from.
+ *
+ * `rise` is measured off the player's drawn height (128px art at scale 0.5,
+ * origin near the feet), so the line clears the ears without floating free.
+ */
 export const DRAGON_SNORE_TEXT = {
-  ...toWorld(1496, 783),
   text: '드르렁~ 쿨~',
-  depth: DRAGON_PLACEMENT.depth + 2,
+  rise: 56,
+  /** Over every prompt and bubble, under the two cutscene layers at 2000. */
+  depth: 1500,
+  /**
+   * Bigger and heavier than the 20px it was. This is the rule of the room, in
+   * a room the desktop camera pulls back from (`desktopZoom: 0.8`): at 20 it
+   * was drawn at an effective 16 and read as atmosphere. The stroke is scaled
+   * with it rather than left at 4, and a drop shadow does the rest of the work
+   * of holding it off a hoard of gold.
+   */
+  fontSize: 24,
+  strokeThickness: 6,
 } as const;
 
 /**
@@ -99,11 +121,17 @@ export const DRAGON_BREATH = { amplitude: 0.01, duration: 2600 } as const;
 export const BOSS_SILENT_DURATION_MS = 1100;
 
 /**
- * Grace after a snore ends. A player who was mid-step when it fell quiet gets
- * this long to let go before movement counts against them. Touching the dragon
- * is never graced.
+ * Grace after a snore ends: SNORING -> GRACE -> SILENT.
+ *
+ * A player who was mid-step when the room fell quiet gets this long to let go
+ * before movement counts against them. It is a judgement window and nothing
+ * else — the snore file's own length is untouched, so the sound the player
+ * hears and the cover it grants still begin and end together, and only the
+ * verdict on a late footstep is softened.
+ *
+ * Touching the dragon is never graced: that rule has no window at all.
  */
-export const BOSS_SILENT_GRACE_MS = 100;
+export const SNORE_GRACE_MS = 150;
 
 /**
  * Safety net for the audio clock. `ended` is the source of truth; these only
@@ -207,6 +235,41 @@ export const DRAGON_ESCAPE = {
 
 export type DragonState =
   'intro' | 'snoring' | 'silent' | 'alert' | 'failed' | 'success';
+
+/**
+ * The rule of the room, shown in the room itself rather than in a React
+ * overlay: a panel over the top of the chamber would have to take the keyboard
+ * and hold the sleep cycle to do it, and the cycle is the thing the player is
+ * being told about.
+ *
+ * So it is a Phaser element pinned to the camera, it never pauses the scene,
+ * and it leaves on its own. The wording is free to be rephrased; the two facts
+ * are not — contact wakes the dragon even while it sleeps, and the snore is
+ * when walking is safe.
+ */
+export const BOSS_RULES_NOTICE = {
+  lines: [
+    '용은 아주 예민하다.',
+    '잠든 중에도 몸에 닿으면 바로 깨어난다.',
+    '',
+    '"드르렁~ 쿨~" 코고는 소리가 들릴 때에만 움직이자.',
+  ],
+  /**
+   * Long enough to read, short enough to stay out of the way.
+   *
+   * Two sentences at an ordinary reading pace is about two and a half seconds,
+   * so this leaves a second over for a player who glances away — while the
+   * sleep cycle has already started underneath and the first snore is cover
+   * they can be spending.
+   */
+  hold: 3500,
+  fadeIn: 260,
+  fadeOut: 520,
+  /** Under the two cutscene layers at 2000/2001, over everything else. */
+  depth: 1900,
+  /** Down from the top of the viewport, in screen pixels. */
+  top: 26,
+} as const;
 
 export type DragonFailure = 'moved-during-silence' | 'touched-dragon';
 
