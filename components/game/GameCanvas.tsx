@@ -11,6 +11,7 @@ import { QuestCompletePanel } from '@/components/game/QuestCompletePanel';
 import { ProjectShopPanel } from '@/components/game/ProjectShopPanel';
 import { SettingsPanel } from '@/components/game/SettingsPanel';
 import { InstallGuidePanel } from '@/components/game/InstallGuidePanel';
+import { InventoryGuide } from '@/components/game/InventoryGuide';
 import { MobileControlsLayer } from '@/components/game/MobileControlsLayer';
 import { MobileStartPanel } from '@/components/game/MobileStartPanel';
 import { OrientationGuard } from '@/components/game/OrientationGuard';
@@ -26,6 +27,7 @@ import {
   setGameplayInputEnabled,
 } from '@/game/input/InputManager';
 import { startBgm, stopAllAudio } from '@/game/state/audio';
+import { markChickenInventoryGuideSeen } from '@/game/state/gameState';
 import { useGameState } from '@/game/state/useGameState';
 
 /** The run-up to play, and then play. One step is showing at any moment. */
@@ -37,6 +39,10 @@ export function GameCanvas() {
   // The controls' home while no panel is open. A state node rather than a ref,
   // because the layer has to re-render once the frame exists.
   const [frame, setFrame] = useState<HTMLDivElement | null>(null);
+  // The HUD's carried-items row, for the first-pickup guide to point at. Also
+  // a state node, for the same reason: the guide cannot measure it until it
+  // exists, and that is a render later.
+  const [itemsRow, setItemsRow] = useState<HTMLDivElement | null>(null);
   const overlayOpen = useRef(false);
   const [retry, setRetry] = useState<(() => void) | null>(null);
   const [shopOpen, setShopOpen] = useState(false);
@@ -256,6 +262,26 @@ export function GameCanvas() {
   /** The one condition for every piece of full-screen advice in the app. */
   const showFullscreenGuide = clientMode === 'mobile-browser';
 
+  /**
+   * Whether the first-pickup guide is up.
+   *
+   * Derived, never stored: the save records only that the guide has been seen,
+   * and everything else about when to show it is a question about this moment.
+   * It wants the world on screen, the bag non-empty and nothing else holding
+   * the screen — a modal dialog makes the document outside it inert, so a
+   * guide drawn under one would be a dim layer nobody could dismiss.
+   */
+  const showInventoryGuide =
+    !state.progress.seenChickenInventoryGuide &&
+    // Kkokko specifically, not merely a non-empty bag: she is the first thing
+    // the game ever hands the player, and this is her guide. Read off the
+    // quest rather than off `items`, which is itself derived from it.
+    state.quests.findKkokko === 'CHICKEN_FOUND' &&
+    startStep === 'gameplay' &&
+    status === 'ready' &&
+    !orientationBlocked &&
+    !panelOpen;
+
   function closeGuide() {
     setGuideOpen(false);
     setFullscreenAnswered(true);
@@ -270,11 +296,15 @@ export function GameCanvas() {
         <GameHud
           items={items}
           bgmEnabled={state.settings.bgmEnabled}
+          onItemsRow={setItemsRow}
           onOpenSettings={() => {
             takeOverlay();
             setSettingsOpen(true);
           }}
           onOpenItem={(next) => {
+            // Opening a card *is* the guide being followed, so it is spent
+            // here as well as on its own 확인 button.
+            markChickenInventoryGuideSeen();
             takeOverlay();
             setItem(next);
           }}
@@ -284,6 +314,12 @@ export function GameCanvas() {
           className="game-host"
           onPointerDown={() => startBgm()}
         />
+        {showInventoryGuide && (
+          <InventoryGuide
+            anchor={itemsRow}
+            onDismiss={markChickenInventoryGuideSeen}
+          />
+        )}
         {orientationBlocked && <OrientationGuard />}
         {hasName && status !== 'ready' && (
           <p className="game-status" role="status">

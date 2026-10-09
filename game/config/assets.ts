@@ -88,3 +88,30 @@ export const GOLDEN_CAT_TEXTURES = {
 } as const;
 
 // Source rectangles reference the originals; no derived images are needed.
+
+/**
+ * The shared quest markers: the "!" that hangs over anyone the player still
+ * has to talk to, the arrow that points at wherever they have been sent next,
+ * and the sparkle that sits behind either of them.
+ *
+ * One set of files for the whole game — every scene that needs any of them
+ * calls `loadQuestMarkerAssets` and gets these same three textures.
+ *
+ * The arrow's art points up; a scene rotates it to whichever way its own exit
+ * actually lies. The sparkle is round and carries no direction at all, which
+ * is what lets it turn under a marker that must not.
+ */
+export const QUEST_MARKER_TEXTURES = {
+  exclamation: {
+    key: 'quest-exclamation',
+    url: '/assets/game/shared/quest_exclamation.png',
+  },
+  directionArrow: {
+    key: 'quest-direction-arrow',
+    url: '/assets/game/shared/quest_direction_arrow.png',
+  },
+  sparkle: {
+    key: 'quest-sparkle-effect',
+    url: '/assets/game/shared/quest_sparkle_effect.png',
+  },
+} as const;

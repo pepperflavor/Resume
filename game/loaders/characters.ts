@@ -4,6 +4,7 @@ import {
   NPC_FRAME_CONFIG,
   NPC_SHEETS,
   PLAYER_SHEET,
+  QUEST_MARKER_TEXTURES,
   type NpcKind,
 } from '@/game/config/assets';
 
@@ -27,6 +28,21 @@ export function loadNpcAssets(
 
 export function loadGoldenCatAssets(scene: Phaser.Scene) {
   for (const { key, url } of Object.values(GOLDEN_CAT_TEXTURES)) {
+    if (!scene.textures.exists(key)) scene.load.image(key, url);
+  }
+}
+
+/**
+ * The shared "!", direction arrow and the sparkle behind them. Called from the
+ * preload of every scene that draws any of them, and a no-op in the ones that
+ * already hold them: textures live on the game, not on a scene, so the second
+ * call never re-fetches.
+ *
+ * Driven off `QUEST_MARKER_TEXTURES` itself, so a marker added to that object
+ * is loaded everywhere without a single scene's preload being touched.
+ */
+export function loadQuestMarkerAssets(scene: Phaser.Scene) {
+  for (const { key, url } of Object.values(QUEST_MARKER_TEXTURES)) {
     if (!scene.textures.exists(key)) scene.load.image(key, url);
   }
 }

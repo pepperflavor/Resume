@@ -27,15 +27,23 @@ export function GameHud({
   bgmEnabled,
   onOpenSettings,
   onOpenItem,
+  onItemsRow,
 }: {
   items: readonly ItemInfo[];
   bgmEnabled: boolean;
   onOpenSettings: () => void;
   onOpenItem: (item: ItemInfo) => void;
+  /**
+   * Hands the carried-items row back out, so the first-pickup guide can draw
+   * its halo around wherever the row actually is. A ref rather than a
+   * selector: the guide should not have to know this component's class names
+   * to find the thing it is pointing at.
+   */
+  onItemsRow?: (row: HTMLDivElement | null) => void;
 }) {
   return (
     <div className="game-hud">
-      <div className="quest-items">
+      <div className="quest-items" ref={onItemsRow}>
         {/* The art is unchanged; what is new is that it answers. A button
             rather than a role="img" span, so the keyboard reaches it and the
             label says what pressing it does instead of what it is. */}

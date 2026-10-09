@@ -11,7 +11,14 @@ import {
   GUILD_GROUND,
   GUILD_SHARED_TEXTURES,
 } from '@/game/config/guildAssets';
-import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
+import { isGuildBriefingComplete } from '@/game/config/guildInterior';
+import {
+  SCENE_KEYS,
+  spawnPoint,
+  type SceneEntry,
+  type SceneId,
+} from '@/game/config/scenes';
+import { playerBounds } from '@/game/config/world';
 import { loadPlayerAssets } from '@/game/loaders/characters';
 import { createGuildMap } from '@/game/objects/GuildMap';
 import type { ExitSign } from '@/game/config/exitSigns';
@@ -34,6 +41,18 @@ const DOOR_ZONE = {
   width: GUILD_YARD.east - GUILD_YARD.west,
   height: GUILD_ROAD.foot.south - GUILD_YARD.north,
 };
+
+/**
+ * How far back onto the road the player is set when the western way is
+ * refused.
+ *
+ * It is what stops the notice re-opening on the frame it closes. The exit
+ * fires anywhere within 6px of the clamp, so standing still and dismissing the
+ * panel would simply ask again; a step back out of that band means the player
+ * has to choose to walk west a second time, which is also the gesture that
+ * should re-read the line once they have been to the hall.
+ */
+const REFUSAL_STEP_BACK = 32;
 
 export class AdventurerGuildScene extends Phaser.Scene {
   private player!: Player;
@@ -172,6 +191,37 @@ export class AdventurerGuildScene extends Phaser.Scene {
     return { kind: 'none' };
   }
 
+  /**
+   * The one condition on leaving this forecourt: the dungeon road stays shut
+   * until the bureau's desks have all been spoken to. Every other way out —
+   * the market to the east, the bureau's own door — is untouched.
+   */
+  private allowExit(to: SceneId) {
+    if (to !== 'dungeonEntrance' || isGuildBriefingComplete()) return true;
+    this.refuseDungeon();
+    return false;
+  }
+
+  private refuseDungeon() {
+    const body = this.player.body;
+    // Back onto the road before the panel opens, so the frame after it closes
+    // is not standing in the trigger again. Eastward only: `Math.max` can
+    // never drag a player who is already clear of it backwards.
+    body.x = Math.max(
+      body.x,
+      playerBounds(this.player.worldSize).minX + REFUSAL_STEP_BACK,
+    );
+    this.player.stop();
+    // The same hand-over every other interaction here does: drop whatever is
+    // held, clear the prompts, let the panel own the keyboard.
+    this.controls.reset();
+    this.miss.hide();
+    this.doorHint.setVisible(false);
+    this.boardHint.setVisible(false);
+    this.exitSigns.hide();
+    this.callbacks.onInteract('dungeonLocked');
+  }
+
   update(_time: number, delta: number) {
     if (!this.controls) return;
     if (!this.controls.active) {
@@ -201,11 +251,16 @@ export class AdventurerGuildScene extends Phaser.Scene {
     } else {
       this.doorHint.setVisible(false);
     }
-    this.travel.tryExit(body.x, body.y, () => {
-      this.miss.hide();
-      this.doorHint.setVisible(false);
-      this.boardHint.setVisible(false);
-      this.exitSigns.hide();
-    });
+    this.travel.tryExit(
+      body.x,
+      body.y,
+      () => {
+        this.miss.hide();
+        this.doorHint.setVisible(false);
+        this.boardHint.setVisible(false);
+        this.exitSigns.hide();
+      },
+      (to) => this.allowExit(to),
+    );
   }
 }

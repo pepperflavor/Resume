@@ -15,7 +15,11 @@ import {
 type Action =
   | { kind: 'record'; label: string; record: GuildRecordId }
   | { kind: 'contact'; label: string }
-  | { kind: 'link'; label: string; href: string }
+  // `question` is what the player is asked before this one is followed. The
+  // confirmed 네 carries no question of its own, which is also what tells the
+  // renderer which of the two is the real anchor.
+  | { kind: 'link'; label: string; href: string; question?: string }
+  | { kind: 'cancel'; label: string }
   | { kind: 'back'; label: string }
   | { kind: 'close'; label: string };
 
@@ -24,6 +28,21 @@ type Action =
  * mean different things in each: see the key handler below.
  */
 type GuildPanelMode = 'menu' | 'record' | 'contact';
+
+/**
+ * The connection the player picked, held while they are asked about it.
+ *
+ * `mailto:` and `tel:` leave the game as abruptly as any external link —
+ * further, on a phone, where they hand the whole screen to the mail client or
+ * the dialler. So picking one is now a choice and leaving is a second,
+ * deliberate answer, exactly as the market's Notion links already work.
+ */
+interface PendingContact {
+  href: string;
+  question: string;
+  /** Where the selection goes back to on 아니오, so nothing jumps. */
+  from: number;
+}
 
 /** One arrow press of scroll. Big enough to make progress, small enough to aim. */
 const SCROLL_STEP = 64;
@@ -65,6 +84,7 @@ export function GuildRecordPanel({
   const [mode, setMode] = useState<GuildPanelMode>('menu');
   const [open, setOpen] = useState<GuildRecordId | null>(null);
   const [selected, setSelected] = useState(0);
+  const [pending, setPending] = useState<PendingContact | null>(null);
   const desk = GUILD_MENUS[menu];
   const record = mode === 'record' && open ? GUILD_RECORDS[open] : null;
   const showScrollHint = !!record && bodyRows(record) > SCROLL_HINT_ROWS;
@@ -74,7 +94,7 @@ export function GuildRecordPanel({
     onClose();
   }
 
-  const actions: Action[] =
+  const modeActions: Action[] =
     mode === 'menu'
       ? [
           ...desk.items.map((item): Action =>
@@ -90,11 +110,13 @@ export function GuildRecordPanel({
               kind: 'link',
               label: '이메일 보내기',
               href: `mailto:${GUILD_CONTACT.email}`,
+              question: '이메일 창이 열립니다. 정말 연결하시겠어요?',
             },
             {
               kind: 'link',
               label: '전화 걸기',
               href: `tel:${GUILD_CONTACT.phoneHref}`,
+              question: '통화로 연결됩니다. 정말 연결하시겠어요?',
             },
             { kind: 'back', label: '뒤로가기' },
             { kind: 'close', label: '나가기' },
@@ -104,7 +126,17 @@ export function GuildRecordPanel({
             { kind: 'close', label: '나가기' },
           ];
 
+  // Being asked replaces the row entirely, so 네 is the only thing on screen
+  // that can leave and 아니오 is always right beside it.
+  const actions: Action[] = pending
+    ? [
+        { kind: 'link', label: '네', href: pending.href },
+        { kind: 'cancel', label: '아니오' },
+      ]
+    : modeActions;
+
   function show(next: GuildPanelMode, id: GuildRecordId | null) {
+    setPending(null);
     setMode(next);
     setOpen(id);
     setSelected(0);
@@ -112,14 +144,37 @@ export function GuildRecordPanel({
     bodyRef.current?.scrollTo({ top: 0 });
   }
 
+  /** Leaves the question and puts the selection back where it came from. */
+  function dismiss() {
+    const back = pending?.from ?? 0;
+    // The list it points into is about to be a different length.
+    choiceNodes.current = [];
+    setPending(null);
+    setSelected(back);
+  }
+
   function activate(index: number) {
     const action = actions[index];
     if (!action) return close();
     if (action.kind === 'record') return show('record', action.record);
     if (action.kind === 'contact') return show('contact', null);
-    // mailto: and tel: are real anchors, so the browser's own handling applies
-    // and nothing is forced into a new tab.
-    if (action.kind === 'link') return choiceNodes.current[index]?.click();
+    if (action.kind === 'cancel') return dismiss();
+    if (action.kind === 'link') {
+      // Not asked yet: ask, rather than leave.
+      if (action.question) {
+        choiceNodes.current = [];
+        setPending({
+          href: action.href,
+          question: action.question,
+          from: index,
+        });
+        setSelected(0);
+        return;
+      }
+      // Answered. mailto: and tel: are real anchors, so the browser's own
+      // handling applies and nothing is forced into a new tab.
+      return choiceNodes.current[index]?.click();
+    }
     if (action.kind === 'back') return show('menu', null);
     close();
   }
@@ -133,7 +188,9 @@ export function GuildRecordPanel({
   useInteractionKeys(
     (key, repeat) => {
       if (!ref.current?.open) return;
-      if (key === 'cancel') return close();
+      // Esc backs out of the question without connecting anything; only from
+      // the panel itself does it still close the whole thing.
+      if (key === 'cancel') return pending ? dismiss() : close();
       if (key === 'confirm') return activate(selected);
       // Reading a record: up/down scroll the body, left/right pick the action.
       // Everywhere else all four arrows move the selection, as they always have.
@@ -200,7 +257,9 @@ export function GuildRecordPanel({
         {mode === 'contact' && (
           <>
             <p className="dialogue-text">
-              {'최하진 모험가에게 연락하려면\n아래 연락처를 이용해주세요.'}
+              {pending
+                ? pending.question
+                : '최하진 모험가에게 연락하려면\n아래 연락처를 이용해주세요.'}
             </p>
             <dl className="contact-list">
               <dt>Email</dt>
@@ -252,13 +311,21 @@ export function GuildRecordPanel({
         )}
         <div className="dialogue-choices">
           {actions.map((action, index) =>
-            action.kind === 'link' ? (
+            // Only the answered 네 is a real anchor. Before that a connection
+            // is an ordinary button: an `href` sitting there would hand the
+            // screen to the mail client or the dialler whatever `activate` had
+            // to say about it.
+            action.kind === 'link' && !action.question ? (
               <a
                 key={action.label}
                 ref={(node) => {
                   choiceNodes.current[index] = node;
                 }}
                 href={action.href}
+                // Fires alongside the browser's own handling, so the panel is
+                // back on the contact card when the player returns to it
+                // rather than still sitting on the question.
+                onClick={() => dismiss()}
                 data-selected={selected === index}
                 aria-current={selected === index ? 'true' : undefined}
                 onFocus={() => setSelected(index)}

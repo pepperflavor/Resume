@@ -13,7 +13,16 @@ import {
 import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
 import { WORLD } from '@/game/config/world';
 import type { DialogueId } from '@/game/config/dialogues';
-import { loadPlayerAssets, loadNpcAssets } from '@/game/loaders/characters';
+import {
+  loadPlayerAssets,
+  loadNpcAssets,
+  loadQuestMarkerAssets,
+} from '@/game/loaders/characters';
+import {
+  QuestDirectionArrow,
+  QuestExclamation,
+  questMarkerBesideHead,
+} from '@/game/objects/QuestMarker';
 import { loadAuditedAtlas } from '@/game/objects/AuditedProps';
 import {
   loadRuntimeAtlas,
@@ -35,7 +44,30 @@ import { configureSceneCamera } from '@/game/systems/SceneCamera';
 import { SceneTransition } from '@/game/systems/SceneTransition';
 import type { GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
-import { canEnterDragonBoss, hasGoldenCat } from '@/game/state/gameState';
+import {
+  canEnterDragonBoss,
+  getProgress,
+  hasGoldenCat,
+  markMerchantGoldenCatTalked,
+  markMerchantIntroTalked,
+} from '@/game/state/gameState';
+
+/**
+ * Where this scene's Press E prompt floats above a talker's feet. The
+ * merchant's badge is placed from it, so the two sit under one another instead
+ * of on top of each other — see `questMarkerBesideHead`.
+ *
+ * He is the only talker here that carries a badge: the two campers by the fire
+ * are flavour, and nothing in the quest line waits on them.
+ */
+const ENTRANCE_PROMPT_RISE = 56;
+
+/**
+ * The arrow at the northern passage, pointing up the stairs to the garden.
+ * Below the stair mouth at y 96 and clear of the exit zone it points into, so
+ * it is read on the approach rather than stood on.
+ */
+const GARDEN_ARROW = { x: 384, y: 134 } as const;
 export class DungeonEntranceScene extends Phaser.Scene {
   private player!: Player;
   private merchant!: Npc;
@@ -46,6 +78,8 @@ export class DungeonEntranceScene extends Phaser.Scene {
   private rugSpeech!: ZoneSpeech;
   private exitSigns!: ExitSigns;
   private warp!: WarpPoint;
+  private merchantMarker!: QuestExclamation;
+  private gardenArrow!: QuestDirectionArrow;
   private campers: { npc: Npc; dialogue: DialogueId }[] = [];
   private spiders: AmbientNpc[] = [];
   private entry: SceneEntry = {};
@@ -64,6 +98,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
       'adventurerMerchant',
       ...ENTRANCE_NPCS.map((n) => n.kind),
     ]);
+    loadQuestMarkerAssets(this);
     loadAuditedAtlas(this, 'dungeon_tileset');
     loadRuntimeAtlas(this, 'entranceAmbient');
     // One frame of it — the rune slab beside the boss board. The slab is the
@@ -90,6 +125,21 @@ export class DungeonEntranceScene extends Phaser.Scene {
       mode: 'stationary',
     });
     this.merchant.sprite.setName('adventurer-merchant');
+    const merchantBadge = questMarkerBesideHead(m.x, m.y, ENTRANCE_PROMPT_RISE);
+    this.merchantMarker = new QuestExclamation(
+      this,
+      merchantBadge.x,
+      merchantBadge.y,
+      { name: 'merchant-quest-marker' },
+    );
+    // Guidance only — no collision, no trigger. The passage itself still does
+    // all the travelling.
+    this.gardenArrow = new QuestDirectionArrow(
+      this,
+      GARDEN_ARROW.x,
+      GARDEN_ARROW.y,
+      { facing: 'up', name: 'entrance-garden-arrow' },
+    );
     for (const config of ENTRANCE_NPCS) {
       const npc = new Npc(this, config.kind, config.x, config.y, {
         scale: config.scale,
@@ -188,20 +238,46 @@ export class DungeonEntranceScene extends Phaser.Scene {
         this.miss.hide();
         this.prompt.setVisible(false);
         this.rugSpeech.hide();
-        if (target === 'merchant')
+        if (target === 'merchant') {
+          // Two separate briefings, two separate flags: the second one only
+          // exists once the statue is in hand, and hearing it must not be
+          // mistaken for having heard the first. Recorded as the panel opens,
+          // the same point every other talker in the game records at.
+          const withCat = hasGoldenCat();
+          if (withCat) markMerchantGoldenCatTalked();
+          else markMerchantIntroTalked();
           this.callbacks.onInteract(
-            hasGoldenCat() ? 'merchantWithCat' : 'adventurerMerchant',
+            withCat ? 'merchantWithCat' : 'adventurerMerchant',
           );
-        else this.callbacks.onInteract(target.dialogue);
+        } else this.callbacks.onInteract(target.dialogue);
       },
       {
         isOverlayOpen: () => this.callbacks.isOverlayOpen(),
         isTravelLocked: () => this.travel.locked,
       },
     );
+    this.refreshQuestMarkers();
     this.travel.enter(true);
     this.callbacks.onReady();
   }
+  /**
+   * The merchant's badge and the garden arrow, both re-derived from the save
+   * every frame rather than decided once on entry.
+   *
+   * His "!" is up twice over a run: before his first briefing, and again once
+   * the statue is in hand and he has a second thing to say about it. The arrow
+   * follows that second conversation and goes out again the moment the statue
+   * leaves the player's hands at the altar.
+   */
+  private refreshQuestMarkers() {
+    const { merchantIntroTalked, merchantGoldenCatTalked } = getProgress();
+    const carrying = hasGoldenCat();
+    this.merchantMarker.setVisible(
+      !merchantIntroTalked || (carrying && !merchantGoldenCatTalked),
+    );
+    this.gardenArrow.setVisible(carrying && merchantGoldenCatTalked);
+  }
+
   /** A way-mark only wins an E when it is closer than every camper. */
   private nearestSign() {
     const p = this.player.body;
@@ -260,6 +336,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
       return;
     }
     this.player.update(this.controls.movement(), delta);
+    this.refreshQuestMarkers();
     const p = this.player.body;
     this.warp.refresh(p.x, p.y);
     const onWarp = this.warp.near(p.x, p.y);
@@ -269,7 +346,7 @@ export class DungeonEntranceScene extends Phaser.Scene {
     this.prompt.setVisible(Boolean(target));
     if (target) {
       const point = this.promptPoint(target);
-      this.prompt.setPosition(point.x, point.y - 56);
+      this.prompt.setPosition(point.x, point.y - ENTRANCE_PROMPT_RISE);
     }
     this.travel.tryExit(p.x, p.y, () => {
       this.miss.hide();

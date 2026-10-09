@@ -20,7 +20,11 @@ import {
 } from '@/game/config/marketAssets';
 import { HOME_TEXTURES } from '@/game/config/homeAssets';
 import { SCENE_KEYS, spawnPoint, type SceneEntry } from '@/game/config/scenes';
-import { loadNpcAssets, loadPlayerAssets } from '@/game/loaders/characters';
+import {
+  loadNpcAssets,
+  loadPlayerAssets,
+  loadQuestMarkerAssets,
+} from '@/game/loaders/characters';
 import { AmbientNpc } from '@/game/objects/AmbientNpc';
 import { HintBubble } from '@/game/objects/HintBubble';
 import { InteractionMissBubble } from '@/game/objects/InteractionMissBubble';
@@ -28,7 +32,17 @@ import { Npc } from '@/game/objects/Npc';
 import { Player, type Direction } from '@/game/objects/Player';
 import { createMarketMap } from '@/game/objects/MarketMap';
 import { ExitSigns } from '@/game/objects/ExitSigns';
-import { getKkokkoQuest, getPlayerName } from '@/game/state/gameState';
+import {
+  getKkokkoQuest,
+  getPlayerName,
+  getProgress,
+  markMarketDeerTalked,
+} from '@/game/state/gameState';
+import {
+  QuestDirectionArrow,
+  QuestExclamation,
+  questMarkerBesideHead,
+} from '@/game/objects/QuestMarker';
 import { insideZone } from '@/game/systems/collision';
 import { InputManager } from '@/game/input/InputManager';
 import { configureSceneCamera } from '@/game/systems/SceneCamera';
@@ -37,6 +51,54 @@ import type { CollisionRect, GameCallbacks } from '@/game/types';
 import { setSceneBgm } from '@/game/state/audio';
 
 const PRESS_HINT = 'Press E';
+
+/**
+ * Where a stallholder's bubble floats above their feet. The badge is placed
+ * from this rather than from a height of its own: see `questMarkerBesideHead`,
+ * which drops the badge into the band directly under the bubble.
+ */
+const MARKET_BUBBLE_RISE = 52;
+
+/**
+ * Where the way-home arrow rides while the player is looking for Kkokko.
+ *
+ * It has been three things now, and each move was for the same reason. At the
+ * eastern street mouth it was correct and invisible — 700px from the fox's
+ * stall, where the quest is taken. Planted beside the player it was visible
+ * once and then left behind the moment they walked. So it now lives on the
+ * right-hand edge of whatever the camera is showing, which is the only place
+ * that is both on screen and in the direction being pointed.
+ *
+ * The x is the view's own right edge, so the arrow sits where "east" is from
+ * where the player is standing; the y tracks the player, so it stays level
+ * with them as they move up and down the square. It is not a compass bolted to
+ * the player — walking east does not push it ahead, because the view's edge is
+ * already as far east as the screen goes.
+ *
+ * Both margins hold the whole marker inside the view, sparkle included: the
+ * sparkle is drawn 1.75x the arrow's 30px, so 44 keeps its 53px halo clear of
+ * the edge with room to spare.
+ */
+const HOME_ARROW_MARGIN = { right: 44, vertical: 44 } as const;
+
+/**
+ * Who in the square can carry a "!", and what makes it show.
+ *
+ * Read fresh every frame from the save, never cached into a field: the deer's
+ * badge has to be gone the moment his panel closes, and the fox's has to be
+ * back the moment the player walks in holding Kkokko, whether that is the
+ * first visit or the fifth.
+ */
+const MARKET_QUEST_MARKERS: Readonly<Record<string, () => boolean>> = {
+  // One conversation is all that is asked of him. Whether the Resume link was
+  // actually opened is the player's business, not the badge's.
+  deer: () => !getProgress().marketDeerTalked,
+  // Before the quest, and again once Kkokko is in the bag and owed back.
+  fox: () => {
+    const quest = getKkokkoQuest();
+    return quest === 'NOT_STARTED' || quest === 'CHICKEN_FOUND';
+  },
+};
 
 // `npc` is optional so a future notice board or well can join the same list
 // without the scene becoming NPC-only; a static target just carries x/y.
@@ -54,6 +116,8 @@ interface MarketTarget {
   approach?: { x: number; front: number; back: number };
   npc?: Npc;
   ambient?: AmbientNpc;
+  /** The "!" over this target, for the two that can carry one. */
+  marker?: QuestExclamation;
 }
 
 /** The scripted walk up to the well. */
@@ -82,6 +146,7 @@ export class MarketScene extends Phaser.Scene {
   private ambient: AmbientNpc[] = [];
   private targets: MarketTarget[] = [];
   private exitSigns!: ExitSigns;
+  private homeArrow!: QuestDirectionArrow;
   private obstacles: CollisionRect[] = [];
   private entry: SceneEntry = {};
   private hintClock = 0;
@@ -108,6 +173,7 @@ export class MarketScene extends Phaser.Scene {
   preload() {
     loadPlayerAssets(this);
     loadNpcAssets(this, MARKET_NPC_KINDS);
+    loadQuestMarkerAssets(this);
     if (!this.textures.exists(MARKET_TEXTURE.key))
       this.load.image(MARKET_TEXTURE.key, MARKET_TEXTURE.url);
     if (!this.textures.exists(MARKET_TERRAIN_TEXTURE.key))
@@ -144,8 +210,9 @@ export class MarketScene extends Phaser.Scene {
       ? new AmbientNpc(npc, config.wanderArea, this.obstacles)
       : undefined;
     if (ambient) this.ambient.push(ambient);
-    const hint = new HintBubble(this, config.x, config.y - 52);
+    const hint = new HintBubble(this, config.x, config.y - MARKET_BUBBLE_RISE);
     hint.setText(config.hint);
+    const badge = questMarkerBesideHead(config.x, config.y, MARKET_BUBBLE_RISE);
     this.targets.push({
       id: config.id,
       interaction: config.interaction,
@@ -156,6 +223,11 @@ export class MarketScene extends Phaser.Scene {
       hintLines: [config.hint],
       npc,
       ambient,
+      marker: MARKET_QUEST_MARKERS[config.id]
+        ? new QuestExclamation(this, badge.x, badge.y, {
+            name: `market-quest-marker-${config.id}`,
+          })
+        : undefined,
     });
   }
 
@@ -183,6 +255,14 @@ export class MarketScene extends Phaser.Scene {
     // Built before the NPCs and the player so its posts join the obstacle list.
     this.exitSigns = new ExitSigns(this, 'market');
     this.obstacles.push(...this.exitSigns.collision());
+    // Guidance only: it is not in `obstacles` and triggers nothing. Home is
+    // the eastern road, so it points right and is never re-rotated — moving up
+    // and down the square must not turn "go east" into anything else.
+    // Built off-screen and placed every frame by `refreshQuestMarkers`.
+    this.homeArrow = new QuestDirectionArrow(this, 0, 0, {
+      facing: 'right',
+      name: 'market-home-arrow',
+    });
 
     for (const config of MARKET_NPCS) this.addNpc(config);
     for (const config of MARKET_OBJECTS) this.addObject(config);
@@ -233,6 +313,11 @@ export class MarketScene extends Phaser.Scene {
           this.callbacks.onOpenProjectShop();
           return;
         }
+        // Recorded as the conversation opens rather than as it closes: the
+        // panel owns everything after this point and never reports back, and
+        // "has been spoken to" is exactly what an opened panel means. The
+        // badge is behind the modal while it is up, so nothing flickers.
+        if (target.id === 'deer') markMarketDeerTalked();
         if (target.interaction.confirm === 'approachWell') {
           this.callbacks.onInteract(target.interaction.dialogue, () =>
             this.beginApproach(target),
@@ -246,6 +331,10 @@ export class MarketScene extends Phaser.Scene {
         isTravelLocked: () => this.travel.locked,
       },
     );
+    // Set before the entry fade lifts, so the first frame the player sees is
+    // already showing what their progress warrants rather than popping a badge
+    // in a frame later.
+    this.refreshQuestMarkers();
     this.travel.enter(Boolean(this.entry.from));
     this.callbacks.onReady();
   }
@@ -340,7 +429,10 @@ export class MarketScene extends Phaser.Scene {
     const line = Math.floor(this.hintClock / HINT_ROTATE_MS);
     for (const target of this.targets) {
       if (target.npc)
-        target.hint.moveTo(target.npc.sprite.x, target.npc.sprite.y - 52);
+        target.hint.moveTo(
+          target.npc.sprite.x,
+          target.npc.sprite.y - MARKET_BUBBLE_RISE,
+        );
       const isActive = target === active;
       if (target.zone)
         target.hint.setVisible(
@@ -351,6 +443,45 @@ export class MarketScene extends Phaser.Scene {
           ? PRESS_HINT
           : target.hintLines[line % target.hintLines.length],
       );
+    }
+  }
+
+  /**
+   * The badges, re-derived from the save every frame. Both of them move with
+   * their NPC, because a shopkeeper the wind could blow about would otherwise
+   * walk out from under their own "!".
+   */
+  private refreshQuestMarkers() {
+    const accepted = getKkokkoQuest() === 'ACCEPTED';
+    // Moved rather than rebuilt: one arrow exists for the life of the scene
+    // and this only tells it where to stand this frame.
+    if (accepted) {
+      // World space, not `setScrollFactor(0)`. The view rectangle is in the
+      // same coordinates as everything else in the scene at any zoom, which
+      // scroll-factor space is not — the same reason `BossRulesNotice` follows
+      // `worldView` instead of pinning itself to the camera.
+      const view = this.cameras.main.worldView;
+      this.homeArrow.moveTo(
+        view.right - HOME_ARROW_MARGIN.right,
+        Phaser.Math.Clamp(
+          this.player.body.y,
+          view.top + HOME_ARROW_MARGIN.vertical,
+          view.bottom - HOME_ARROW_MARGIN.vertical,
+        ),
+      );
+    }
+    this.homeArrow.setVisible(accepted);
+    for (const target of this.targets) {
+      if (!target.marker) continue;
+      if (target.npc) {
+        const badge = questMarkerBesideHead(
+          target.npc.sprite.x,
+          target.npc.sprite.y,
+          MARKET_BUBBLE_RISE,
+        );
+        target.marker.moveTo(badge.x, badge.y);
+      }
+      target.marker.setVisible(Boolean(MARKET_QUEST_MARKERS[target.id]?.()));
     }
   }
 
@@ -428,6 +559,7 @@ export class MarketScene extends Phaser.Scene {
       return;
     }
     this.player.update(this.controls.movement(), delta);
+    this.refreshQuestMarkers();
     const sign = this.nearestSign();
     const active = sign ? undefined : this.nearestTarget();
     this.refreshHints(active);
