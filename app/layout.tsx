@@ -1,12 +1,47 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+const SITE_URL = 'https://summer-jin.store';
+const SHARE_TITLE = 'Portfolio World | Developer Portfolio';
+const SHARE_DESCRIPTION =
+  'Node.js · TypeScript · NestJS 개발자 최하진의 인터랙티브 RPG 포트폴리오';
+/** The golden cat statue, the one thing the world is really about. */
+const SHARE_IMAGE = '/portfolio-og.png';
+
 export const metadata: Metadata = {
+  // Everything below may now name its image by path alone; Next resolves them
+  // against this, and a share card needs an absolute URL.
+  metadataBase: new URL(SITE_URL),
   title: 'Developer Portfolio',
   icons: {
     icon: '/assets/game/items/golden_cat_icon.png',
     apple: '/assets/game/items/golden_cat_icon.png',
   },
   description: 'Node.js · TypeScript · NestJS 백엔드 개발자 포트폴리오',
+  // What a link to the site unfurls into in a messenger or a timeline. The
+  // card is deliberately the statue and two words: a preview is read at a
+  // glance, and the world itself is where the detail lives.
+  openGraph: {
+    type: 'website',
+    url: `${SITE_URL}/`,
+    siteName: 'Portfolio World',
+    title: SHARE_TITLE,
+    description: SHARE_DESCRIPTION,
+    locale: 'ko_KR',
+    images: [
+      {
+        url: SHARE_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Portfolio World Golden Cat',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SHARE_TITLE,
+    description: SHARE_DESCRIPTION,
+    images: [SHARE_IMAGE],
+  },
   // A home-screen launch opens without Safari's chrome. `black-translucent`
   // puts the game under the status bar, which is why the controls are laid out
   // against `env(safe-area-inset-*)` rather than the window edges.
