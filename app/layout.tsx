@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 const SITE_URL = 'https://summer-jin.store';
 const SHARE_TITLE = 'Portfolio World | Developer Portfolio';
 const SHARE_DESCRIPTION =
-  'Node.js · TypeScript · NestJS 개발자 최하진의 인터랙티브 RPG 포트폴리오';
+  'Node.js · TypeScript · NestJS 풀스택 개발자 최하진의 인터랙티브 RPG 포트폴리오';
 /** The golden cat statue, the one thing the world is really about. */
 const SHARE_IMAGE = '/portfolio-og.png';
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     icon: '/assets/game/items/golden_cat_icon.png',
     apple: '/assets/game/items/golden_cat_icon.png',
   },
-  description: 'Node.js · TypeScript · NestJS 백엔드 개발자 포트폴리오',
+  description: 'Node.js · TypeScript · NestJS 풀스택 개발자 포트폴리오',
   // What a link to the site unfurls into in a messenger or a timeline. The
   // card is deliberately the statue and two words: a preview is read at a
   // glance, and the world itself is where the detail lives.
@@ -97,7 +98,10 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: GAME_MODE_SCRIPT }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
